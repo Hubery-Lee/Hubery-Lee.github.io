@@ -160,7 +160,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">A snippet has funy soul</p>
+        <p class="site-subtitle">A snippet has funny soul</p>
       
   </div>
 
@@ -274,6 +274,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程工具学习与应用/" itemprop="url" rel="index">
+                    <span itemprop="name">编程工具学习与应用</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -302,25 +324,14 @@
 
       
         
-          
-            <h2 id="hexo-站点配置"><a href="#hexo-站点配置" class="headerlink" title="hexo 站点配置"></a>hexo 站点配置</h2><p>设置_config.yml</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save</span><br><span class="line">$ npm install https://github.com/CodeFalling/hexo-asset-image -- save  <span class="comment">#该方法安装测试成功</span></span><br></pre></td></tr></table></figure>
-<h2 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"newblog"</span></span><br><span class="line"> </span><br><span class="line">会有newblog.md和newblog文件夹，将需要引用的图片放到文件夹内</span><br></pre></td></tr></table></figure>
-<p>在newblog.md中图片的引用</p>
-<p>1.标签引用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &#123;% asset_path slug %&#125;</span><br><span class="line">$ &#123;% asset_img slug [title] %&#125;</span><br><span class="line">$ &#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
-/2018/09/01/图片测试/gitProcess.png
-<img src="/2018/09/01/图片测试/gitProcess.png" title="第二种方法">
-
-<a href="/2018/09/01/图片测试/gitProcess.png" title="第三种方法">第三种方法</a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path gitProcess.png %&#125;</span><br><span class="line">&#123;% asset_img gitProcess.png 第二种方法 %&#125;</span><br><span class="line">&#123;% asset_link  https://image.baidu.com/search/detail?ct=503316480&amp;z=&amp;tn=baiduimagedetail&amp;ipn=d&amp;word=%E7%8C%AB%E5%A4%B4%E9%B9%B0&amp;step_word=&amp;ie=utf-8&amp;<span class="keyword">in</span>=&amp;cl=2&amp;lm=-1&amp;st=-1&amp;cs=2028628767,61876418&amp;os=4058183028,3413382511&amp;pn=0&amp;rn=1&amp;di=196345561830&amp;ln=1940&amp;fr=&amp;fmq=1535807535286_R&amp;fm=&amp;ic=0&amp;s=undefined&amp;se=&amp;sme=&amp;tab=0&amp;width=&amp;height=&amp;face=undefined&amp;is=0,0&amp;istype=2&amp;ist=&amp;jit=&amp;bdtype=0&amp;pi=0&amp;gsm=0&amp;objurl=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fblog%2F201502%2F08%2F20150208122643_s2BMS.jpeg&amp;rpstart=0&amp;rpnum=0&amp;adpicid=0&amp;ctd=1535807540714^3_1354X569%1 owl %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% asset_link  gitProcess.png 第三种方法 %&#125;</span><br></pre></td></tr></table></figure>
-<p>2.利用markdown</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片说明](XXX/图片.jpg)  <span class="comment">#XXX为文件夹名</span></span><br></pre></td></tr></table></figure>
-<p><img src="/Hubery-Lee/2018/09/01/图片测试/gitProcess.png" alt="图片测试1"><br><img src="/Hubery-Lee/2018/09/01/图片测试/gitProcess.png" alt="图片测试2"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![图片测试1](图片测试/gitProcess.png)</span><br><span class="line">![图片测试2](gitProcess.png)</span><br></pre></td></tr></table></figure>
-
-          
+          本文介绍如何在用hexo发布的blog中插入图片
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/01/图片测试/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
