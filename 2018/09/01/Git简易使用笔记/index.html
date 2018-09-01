@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git," />
 
 
 
@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="不做空洞的忙碌，不放弃可期的理想">
+<meta name="description" content="how to use of git">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git简易使用笔记">
 <meta property="og:url" content="https://github.com/Hubery-Lee/2018/09/01/Git简易使用笔记/index.html">
 <meta property="og:site_name" content="LiHui">
-<meta property="og:description" content="不做空洞的忙碌，不放弃可期的理想">
+<meta property="og:description" content="how to use of git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-01T02:23:05.707Z">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/09/01/Git简易使用笔记/relationshipBRepositoryAndWorkspace.jpg">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/09/01/Git简易使用笔记/gitProcess.png">
+<meta property="og:updated_time" content="2018-09-01T10:11:27.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git简易使用笔记">
-<meta name="twitter:description" content="不做空洞的忙碌，不放弃可期的理想">
+<meta name="twitter:description" content="how to use of git">
+<meta name="twitter:image" content="https://github.com/Hubery-Lee/2018/09/01/Git简易使用笔记/relationshipBRepositoryAndWorkspace.jpg">
 
 
 
@@ -272,6 +276,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程工具学习与应用/" itemprop="url" rel="index">
+                    <span itemprop="name">编程工具学习与应用</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -284,6 +310,10 @@
 
           
 
+          
+              <div class="post-description">
+                  how to use of git
+              </div>
           
 
         </div>
@@ -299,7 +329,41 @@
       
 
       
-        
+        <h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>采用git init 在目录创建新的仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir newrepository  <span class="comment">#</span></span><br><span class="line">$ <span class="built_in">cd</span> newrepository</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>或者直接采用 git init 仓库名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init newrepository</span><br></pre></td></tr></table></figure>
+<h2 id="软件仓库下载"><a href="#软件仓库下载" class="headerlink" title="软件仓库下载"></a>软件仓库下载</h2><p>下载仓库 git clone 拷贝到本地<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ get <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure></p>
+<p>例如，从我的github上下载代码到本地<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ get <span class="built_in">clone</span> https://github.com/Hubery-Lee/LeeEmacs-setting</span><br></pre></td></tr></table></figure></p>
+<h2 id="软件仓库的快照"><a href="#软件仓库的快照" class="headerlink" title="软件仓库的快照"></a>软件仓库的快照</h2><h3 id="git的日常使用"><a href="#git的日常使用" class="headerlink" title="git的日常使用"></a>git的日常使用</h3><p><img src="/Hubery-Lee/2018/09/01/Git简易使用笔记/relationshipBRepositoryAndWorkspace.jpg" alt="日常使用"><br>git add 命令可将文件添加到缓存()<br>git status 查看添加到缓存的文件状态 -s 简短结果输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">$ touch README</span><br><span class="line">$ touch hello.php</span><br><span class="line">$ ls</span><br><span class="line">README        hello.php</span><br><span class="line">$ git status -s</span><br><span class="line">?? README</span><br><span class="line">?? hello.php</span><br><span class="line"></span><br><span class="line">$ git add README hello.php </span><br><span class="line"></span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.php</span><br><span class="line">$ </span><br><span class="line"></span><br><span class="line">在 README 添加以下内容：<span class="comment"># Runoob Git 测试，然后保存退出。</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"# Runoob Git"</span>&gt;&gt;README </span><br><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">A  hello.php</span><br><span class="line"></span><br><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.php</span><br></pre></td></tr></table></figure>
+<p>执行 git diff 来查看执行 git status 的结果的详细信息。</p>
+<p>git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。</p>
+<pre><code>尚未缓存的改动：git diff
+查看已缓存的改动： git diff --cached
+查看已缓存的与未缓存的所有改动：git diff HEAD
+显示摘要而非整个 diff：git diff --stat
+</code></pre><p>git status 显示你上次提交更新后的更改或者写入缓存的改动， 而 git diff 一行一行地显示这些改动具体是啥。</p>
+<p>接下来我们来查看下 git diff –cached 的执行效果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">在 hello.php 文件中输入以下内容：</span><br><span class="line">&lt;?php</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'菜鸟教程：www.runoob.com'</span>;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">AM hello.php</span><br><span class="line">$ git diff</span><br><span class="line">diff --git a/hello.php b/hello.php</span><br><span class="line">index e69de29..69b5711 100644</span><br><span class="line">--- a/hello.php</span><br><span class="line">+++ b/hello.php</span><br><span class="line">@@ -0,0 +1,3 @@</span><br><span class="line">+&lt;?php</span><br><span class="line">+<span class="built_in">echo</span> <span class="string">'菜鸟教程：www.runoob.com'</span>;</span><br><span class="line">+?&gt;</span><br><span class="line"></span><br><span class="line">$ git add hello.php </span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.php</span><br><span class="line">$ git diff --cached</span><br><span class="line">diff --git a/README b/README</span><br><span class="line">new file mode 100644</span><br><span class="line">index 0000000..8f87495</span><br><span class="line">--- /dev/null</span><br><span class="line">+++ b/README</span><br><span class="line">@@ -0,0 +1 @@</span><br><span class="line">+<span class="comment"># Runoob Git 测试</span></span><br><span class="line">diff --git a/hello.php b/hello.php</span><br><span class="line">new file mode 100644</span><br><span class="line">index 0000000..69b5711</span><br><span class="line">--- /dev/null</span><br><span class="line">+++ b/hello.php</span><br><span class="line">@@ -0,0 +1,3 @@</span><br><span class="line">+&lt;?php</span><br><span class="line">+<span class="built_in">echo</span> <span class="string">'菜鸟教程：www.runoob.com'</span>;</span><br><span class="line">+?&gt;</span><br></pre></td></tr></table></figure>
+<p>git commit 将缓存区内容添加到仓库中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 配置用户名和邮箱地址</span><br><span class="line">$ git config --global user.name <span class="string">'runoob'</span></span><br><span class="line">$ git config --global user.email <span class="built_in">test</span>@runoob.com</span><br></pre></td></tr></table></figure></p>
+<p>提交缓存到仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">'第一次版本提交'</span></span><br><span class="line">[master (root-commit) d32cf1f] 第一次版本提交</span><br><span class="line"> 2 files changed, 4 insertions(+)</span><br><span class="line"> create mode 100644 README</span><br><span class="line"> create mode 100644 hello.php</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line"><span class="comment"># On branch master</span></span><br><span class="line">nothing to commit (working directory clean)</span><br></pre></td></tr></table></figure></p>
+<p>git reset HEAD 命令用于取消已缓存的内容。<br>同时修改README和hello.php,然后撤销hello.php的缓存<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line"> M README</span><br><span class="line"> M hello.php</span><br><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">M  README</span><br><span class="line">M  hello.pp</span><br><span class="line">$ git reset HEAD hello.php </span><br><span class="line">Unstaged changes after reset:</span><br><span class="line">M    hello.php</span><br><span class="line">$ git status -s</span><br><span class="line">M  README</span><br><span class="line"> M hello.php</span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">'修改'</span></span><br><span class="line">[master f50cfda] 修改</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line">$ git status -s</span><br><span class="line"> M hello.php</span><br></pre></td></tr></table></figure></p>
+<p>仍然可以再次提交hello.php修改的内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -am <span class="string">'修改 hello.php 文件'</span></span><br><span class="line">[master 760f74d] 修改 hello.php 文件</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working directory clean</span><br></pre></td></tr></table></figure></p>
+<p>简而言之，执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存。</p>
+<p>git rm<br>如果只是简单地从工作目录中手工删除文件，运行 git status 时就会在 Changes not staged for commit 的提示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;file&gt;</span><br><span class="line">$ git rm -f  &lt;file&gt;</span><br><span class="line">$ git rm -r &lt;file&gt;</span><br><span class="line">$ git rm --cached &lt;file&gt;</span><br><span class="line">类似有git mv 移动和重命名</span><br><span class="line">$ git mv README  README.md</span><br></pre></td></tr></table></figure>
+<p>要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。可以用以下命令完成此项工作</p>
+<h3 id="git中tags和branch的使用"><a href="#git中tags和branch的使用" class="headerlink" title="git中tags和branch的使用"></a>git中tags和branch的使用</h3><p><img src="/Hubery-Lee/2018/09/01/Git简易使用笔记/gitProcess.png" alt="tags和branch与git管理过程的关系"></p>
+<p>创建分支、列出分支、切换分支、删除分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$ git branch testing <span class="comment">#创建testing分支</span></span><br><span class="line">$ git branch   <span class="comment">#列出分支</span></span><br><span class="line">* master</span><br><span class="line">  testing</span><br><span class="line"></span><br><span class="line">$ git checkout testing</span><br><span class="line">Switched to branch <span class="string">'testing'</span></span><br><span class="line"></span><br><span class="line">$ git checkout master</span><br><span class="line">Switched to branch <span class="string">'master'</span></span><br><span class="line"></span><br><span class="line">$ git checkout -b newtest  <span class="comment">#创建newtest分支并切换到该分支</span></span><br><span class="line">Switched to a new branch <span class="string">'newtest'</span></span><br><span class="line"></span><br><span class="line">$ git branch -d testing  <span class="comment">#删除testing分支</span></span><br><span class="line">Deleted branch testing (was 85fc7e7).</span><br><span class="line"></span><br><span class="line">$ git branch  </span><br><span class="line">* master</span><br><span class="line">  newtest</span><br><span class="line"></span><br><span class="line">$ git merge newtest     <span class="comment">#将newtest分支合并到master分支</span></span><br><span class="line">Updating 2e082b7..556f0a0</span><br><span class="line">Fast-forward</span><br><span class="line"> test2.txt | 1 -</span><br><span class="line"> 1 file changed, 1 deletion(-)</span><br><span class="line"> delete mode 100644 test2.txt</span><br></pre></td></tr></table></figure></p>
+<p>当同时记录到master的修改和branch分支的修改时，会出现合并分支冲突<br>手动修改冲突部分<br>采用git add 告诉git文件冲突已经解决；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">$ git merge change_site</span><br><span class="line">Auto-merging test.txt</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> test.txt</span><br><span class="line">Automatic merge failed; fix conflicts and <span class="keyword">then</span> commit the result.</span><br><span class="line">$ cat test.txt </span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">runoob.com</span><br><span class="line">新增加一行</span><br><span class="line">=======</span><br><span class="line">www.runoob.com</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site</span><br><span class="line"></span><br><span class="line">$ vim test.txt </span><br><span class="line">$ cat test.txt </span><br><span class="line">www.runoob.com</span><br><span class="line">新增加一行</span><br><span class="line">$ git diff</span><br><span class="line">diff --cc test.txt</span><br><span class="line">index f84c2a4,bccb7c2..0000000</span><br><span class="line">--- a/test.txt</span><br><span class="line">+++ b/test.txt</span><br><span class="line">@@@ -1,2 -1,1 +1,2 @@@</span><br><span class="line">- runoob.com</span><br><span class="line">+ www.runoob.com</span><br><span class="line"> +新增加一行</span><br><span class="line"></span><br><span class="line">$ git status -s</span><br><span class="line">UU test.txt</span><br><span class="line">$ git add test.txt </span><br><span class="line">$ git status -s</span><br><span class="line">M  test.txt</span><br><span class="line">$ git commit</span><br><span class="line">[master 88afe0e] Merge branch <span class="string">'change_site'</span></span><br></pre></td></tr></table></figure></p>
+<p>查看提交历史<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span>  <span class="comment">#详细提交历史</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline  <span class="comment">#简洁提交历史</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --graph  <span class="comment">#--graph开启了拓扑图选项</span></span><br><span class="line">$ git <span class="built_in">log</span> --reverse --oneline <span class="comment">#用 '--reverse'参数来逆向显示所有日志。</span></span><br><span class="line">$ git <span class="built_in">log</span> --author=Linus --oneline -5 <span class="comment">#--author查找指定用户提交的记录</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --before=&#123;3.weeks.ago&#125; --after=&#123;2010-04-18&#125; --no-merges<span class="comment">#指定日期，可以执行几个选项：--since 和 --before，但是你也可以用 --until 和 --after --no-merges 选项以隐藏合并提交</span></span><br></pre></td></tr></table></figure></p>
+<p>标签<br>写一句标签注解，就像你给提交写注解一样。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ git tag -a v1.0 </span><br><span class="line">$ git <span class="built_in">log</span> --oneline --decorate --graph  <span class="comment">#执行 git log --decorate 时，可以看到标签</span></span><br><span class="line">$ git tag -a v0.9 85fc7e7       <span class="comment">#给提交代码85fc7e7追加标签</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --decorate --graph</span><br><span class="line">*   88afe0e (HEAD, tag: v1.0, master) Merge branch <span class="string">'change_site'</span></span><br><span class="line">|\  </span><br><span class="line">| * d7e7346 (change_site) changed the site</span><br><span class="line">* | 14b4dca 新增加一行</span><br><span class="line">|/  </span><br><span class="line">* 556f0a0 removed test2.txt</span><br><span class="line">* 2e082b7 add test2.txt</span><br><span class="line">* 048598f add test.txt</span><br><span class="line">* 85fc7e7 (tag: v0.9) <span class="built_in">test</span> comment from runoob.com</span><br><span class="line"></span><br><span class="line">$ git tag  <span class="comment">#查看所有标签</span></span><br><span class="line">v0.9</span><br><span class="line">v1.0</span><br><span class="line"></span><br><span class="line">$ git tag -a &lt;tagname&gt; -m <span class="string">"runoob.com标签"</span>  <span class="comment">#指定标签信息命令</span></span><br><span class="line">$ git tag -s &lt;tagname&gt; -m <span class="string">"runoob.com标签"</span>  <span class="comment">#PGP签名标签命令</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="远程软件仓库的提取"><a href="#远程软件仓库的提取" class="headerlink" title="远程软件仓库的提取"></a>远程软件仓库的提取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git remote   <span class="comment">#查看远程仓库</span></span><br><span class="line">origin</span><br><span class="line">$ git remote -v  <span class="comment">#-v 参数，可以看到每个别名的实际链接地址。</span></span><br><span class="line">origin    git@github.com:tianqixin/runoob-git-test.git (fetch)</span><br><span class="line">origin    git@github.com:tianqixin/runoob-git-test.git (push)</span><br><span class="line"></span><br><span class="line">$ git fetch [<span class="built_in">alias</span>] <span class="comment">#从远程仓库下载分支和数据</span></span><br><span class="line">$ git fetch origin  <span class="comment">#从远程仓库下载origin分支和数据</span></span><br><span class="line">remote: Counting objects: 3, <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">From github.com:tianqixin/runoob-git-test</span><br><span class="line">   0205aab..febd8ed  master     -&gt; origin/master</span><br></pre></td></tr></table></figure>
+<h2 id="远程软件仓库的上传"><a href="#远程软件仓库的上传" class="headerlink" title="远程软件仓库的上传"></a>远程软件仓库的上传</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git merge [<span class="built_in">alias</span>]/[branch] <span class="comment">#以将服务器上的任何更新合并到你的当前分支</span></span><br><span class="line">$ git merge origin/master  <span class="comment">#从远端仓库提取数据并尝试合并到当前分支</span></span><br><span class="line">Updating 0205aab..febd8ed</span><br><span class="line">Fast-forward</span><br><span class="line"> README.md | 1 +</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"></span><br><span class="line">$ git push [<span class="built_in">alias</span>] [branch] <span class="comment">#推送你的新分支与数据到某个远端仓库</span></span><br><span class="line">$ git push origin master    <span class="comment"># 推送到 Github</span></span><br><span class="line"></span><br><span class="line">git remote rm  [<span class="built_in">alias</span>]</span><br><span class="line">git remote mv [aliasA] [aliasB]</span><br></pre></td></tr></table></figure>
+<h2 id="获取软件仓库更改历史"><a href="#获取软件仓库更改历史" class="headerlink" title="获取软件仓库更改历史"></a>获取软件仓库更改历史</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">$ git status -s</span><br><span class="line">$ git diff </span><br><span class="line">$ git diff --cached</span><br><span class="line">$ git <span class="built_in">log</span>  <span class="comment">#详细提交历史</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline  <span class="comment">#简洁提交历史</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --graph  <span class="comment">#--graph开启了拓扑图选项</span></span><br><span class="line">$ git <span class="built_in">log</span> --reverse --oneline <span class="comment">#用 '--reverse'参数来逆向显示所有日志。</span></span><br><span class="line">$ git <span class="built_in">log</span> --author=Linus --oneline -5 <span class="comment">#--author查找指定用户提交的记录</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --before=&#123;3.weeks.ago&#125; --after=&#123;2010-04-18&#125; --no-merges<span class="comment">#指定日期，可以执行几个选项：--since 和 --before，但是你也可以用 --until 和 --after --no-merges 选项以隐藏合并提交</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">$ git tag</span><br><span class="line">$ git remote</span><br></pre></td></tr></table></figure>
+<h2 id="回滚到软件仓库的历史版本"><a href="#回滚到软件仓库的历史版本" class="headerlink" title="回滚到软件仓库的历史版本"></a>回滚到软件仓库的历史版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git reset </span><br><span class="line">$ git reset HEAD [file]</span><br><span class="line">$ git reset --hard &lt;target_commit_id&gt;</span><br><span class="line">$ git reset --soft origin/<span class="built_in">source</span> 命令（<span class="built_in">source</span> 分支）</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -313,6 +377,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
       
 
       
@@ -387,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -429,7 +508,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -486,6 +565,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">1.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件仓库下载"><span class="nav-number">2.</span> <span class="nav-text">软件仓库下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件仓库的快照"><span class="nav-number">3.</span> <span class="nav-text">软件仓库的快照</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git的日常使用"><span class="nav-number">3.1.</span> <span class="nav-text">git的日常使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git中tags和branch的使用"><span class="nav-number">3.2.</span> <span class="nav-text">git中tags和branch的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程软件仓库的提取"><span class="nav-number">4.</span> <span class="nav-text">远程软件仓库的提取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程软件仓库的上传"><span class="nav-number">5.</span> <span class="nav-text">远程软件仓库的上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取软件仓库更改历史"><span class="nav-number">6.</span> <span class="nav-text">获取软件仓库更改历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回滚到软件仓库的历史版本"><span class="nav-number">7.</span> <span class="nav-text">回滚到软件仓库的历史版本</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
