@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="LiHui">
 <meta property="og:description" content="how to use of git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/Hubery-Lee/2018/09/01/GitUseGuide/relationshipBRepositoryAndWorkspace.jpg">
-<meta property="og:image" content="https://github.com/Hubery-Lee/2018/09/01/GitUseGuide/gitProcess.png">
-<meta property="og:updated_time" content="2018-09-01T11:13:21.212Z">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/09/01/GitUseGuide/1.jpg">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/09/01/GitUseGuide/2.png">
+<meta property="og:updated_time" content="2018-09-01T11:41:38.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git简易使用笔记">
 <meta name="twitter:description" content="how to use of git">
-<meta name="twitter:image" content="https://github.com/Hubery-Lee/2018/09/01/GitUseGuide/relationshipBRepositoryAndWorkspace.jpg">
+<meta name="twitter:image" content="https://github.com/Hubery-Lee/2018/09/01/GitUseGuide/1.jpg">
 
 
 
@@ -101,7 +101,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -336,7 +336,7 @@
 <h2 id="软件仓库下载"><a href="#软件仓库下载" class="headerlink" title="软件仓库下载"></a>软件仓库下载</h2><p>下载仓库 git clone 拷贝到本地<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ get <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure></p>
 <p>例如，从我的github上下载代码到本地<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ get <span class="built_in">clone</span> https://github.com/Hubery-Lee/LeeEmacs-setting</span><br></pre></td></tr></table></figure></p>
 <h2 id="软件仓库的快照"><a href="#软件仓库的快照" class="headerlink" title="软件仓库的快照"></a>软件仓库的快照</h2><h3 id="git的日常使用"><a href="#git的日常使用" class="headerlink" title="git的日常使用"></a>git的日常使用</h3><p>git 的日常使用过程</p>
-<p><img src="/Hubery-Lee/2018/09/01/GitUseGuide/relationshipBRepositoryAndWorkspace.jpg" alt="日常使用原理"> </p>
+<p><img src="/Hubery-Lee/2018/09/01/GitUseGuide/1.jpg" alt="日常使用原理"> </p>
 <p>git add 命令可将文件添加到缓存()<br>git status 查看添加到缓存的文件状态 -s 简短结果输出</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">$ touch README</span><br><span class="line">$ touch hello.php</span><br><span class="line">$ ls</span><br><span class="line">README        hello.php</span><br><span class="line">$ git status -s</span><br><span class="line">?? README</span><br><span class="line">?? hello.php</span><br><span class="line"></span><br><span class="line">$ git add README hello.php </span><br><span class="line"></span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.php</span><br><span class="line">$ </span><br><span class="line"></span><br><span class="line">在 README 添加以下内容：<span class="comment"># Runoob Git 测试，然后保存退出。</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"# Runoob Git"</span>&gt;&gt;README </span><br><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">A  hello.php</span><br><span class="line"></span><br><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.php</span><br></pre></td></tr></table></figure>
 <p>执行 git diff 来查看执行 git status 的结果的详细信息。</p>
@@ -356,7 +356,7 @@
 <p>git rm<br>如果只是简单地从工作目录中手工删除文件，运行 git status 时就会在 Changes not staged for commit 的提示。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;file&gt;</span><br><span class="line">$ git rm -f  &lt;file&gt;</span><br><span class="line">$ git rm -r &lt;file&gt;</span><br><span class="line">$ git rm --cached &lt;file&gt;</span><br><span class="line">类似有git mv 移动和重命名</span><br><span class="line">$ git mv README  README.md</span><br></pre></td></tr></table></figure>
 <p>要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。可以用以下命令完成此项工作</p>
-<h3 id="git中tag和branch的使用"><a href="#git中tag和branch的使用" class="headerlink" title="git中tag和branch的使用"></a>git中tag和branch的使用</h3><p><img src="/Hubery-Lee/2018/09/01/GitUseGuide/gitProcess.png" alt="tag和branch"> </p>
+<h3 id="git中tag和branch的使用"><a href="#git中tag和branch的使用" class="headerlink" title="git中tag和branch的使用"></a>git中tag和branch的使用</h3><p><img src="/Hubery-Lee/2018/09/01/GitUseGuide/2.png" alt="tag和branch"> </p>
 <p>创建分支、列出分支、切换分支、删除分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$ git branch testing <span class="comment">#创建testing分支</span></span><br><span class="line">$ git branch   <span class="comment">#列出分支</span></span><br><span class="line">* master</span><br><span class="line">  testing</span><br><span class="line"></span><br><span class="line">$ git checkout testing</span><br><span class="line">Switched to branch <span class="string">'testing'</span></span><br><span class="line"></span><br><span class="line">$ git checkout master</span><br><span class="line">Switched to branch <span class="string">'master'</span></span><br><span class="line"></span><br><span class="line">$ git checkout -b newtest  <span class="comment">#创建newtest分支并切换到该分支</span></span><br><span class="line">Switched to a new branch <span class="string">'newtest'</span></span><br><span class="line"></span><br><span class="line">$ git branch -d testing  <span class="comment">#删除testing分支</span></span><br><span class="line">Deleted branch testing (was 85fc7e7).</span><br><span class="line"></span><br><span class="line">$ git branch  </span><br><span class="line">* master</span><br><span class="line">  newtest</span><br><span class="line"></span><br><span class="line">$ git merge newtest     <span class="comment">#将newtest分支合并到master分支</span></span><br><span class="line">Updating 2e082b7..556f0a0</span><br><span class="line">Fast-forward</span><br><span class="line"> test2.txt | 1 -</span><br><span class="line"> 1 file changed, 1 deletion(-)</span><br><span class="line"> delete mode 100644 test2.txt</span><br></pre></td></tr></table></figure></p>
 <p>当同时记录到master的修改和branch分支的修改时，会出现合并分支冲突<br>手动修改冲突部分<br>采用git add 告诉git文件冲突已经解决；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">$ git merge change_site</span><br><span class="line">Auto-merging test.txt</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> test.txt</span><br><span class="line">Automatic merge failed; fix conflicts and <span class="keyword">then</span> commit the result.</span><br><span class="line">$ cat test.txt </span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">runoob.com</span><br><span class="line">新增加一行</span><br><span class="line">=======</span><br><span class="line">www.runoob.com</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site</span><br><span class="line"></span><br><span class="line">$ vim test.txt </span><br><span class="line">$ cat test.txt </span><br><span class="line">www.runoob.com</span><br><span class="line">新增加一行</span><br><span class="line">$ git diff</span><br><span class="line">diff --cc test.txt</span><br><span class="line">index f84c2a4,bccb7c2..0000000</span><br><span class="line">--- a/test.txt</span><br><span class="line">+++ b/test.txt</span><br><span class="line">@@@ -1,2 -1,1 +1,2 @@@</span><br><span class="line">- runoob.com</span><br><span class="line">+ www.runoob.com</span><br><span class="line"> +新增加一行</span><br><span class="line"></span><br><span class="line">$ git status -s</span><br><span class="line">UU test.txt</span><br><span class="line">$ git add test.txt </span><br><span class="line">$ git status -s</span><br><span class="line">M  test.txt</span><br><span class="line">$ git commit</span><br><span class="line">[master 88afe0e] Merge branch <span class="string">'change_site'</span></span><br></pre></td></tr></table></figure></p>
 <p>查看提交历史<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span>  <span class="comment">#详细提交历史</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline  <span class="comment">#简洁提交历史</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --graph  <span class="comment">#--graph开启了拓扑图选项</span></span><br><span class="line">$ git <span class="built_in">log</span> --reverse --oneline <span class="comment">#用 '--reverse'参数来逆向显示所有日志。</span></span><br><span class="line">$ git <span class="built_in">log</span> --author=Linus --oneline -5 <span class="comment">#--author查找指定用户提交的记录</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --before=&#123;3.weeks.ago&#125; --after=&#123;2010-04-18&#125; --no-merges<span class="comment">#指定日期，可以执行几个选项：--since 和 --before，但是你也可以用 --until 和 --after --no-merges 选项以隐藏合并提交</span></span><br></pre></td></tr></table></figure></p>
@@ -484,7 +484,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -495,7 +495,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -506,7 +506,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -611,7 +611,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
@@ -711,13 +711,6 @@
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
@@ -775,21 +768,6 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
   
