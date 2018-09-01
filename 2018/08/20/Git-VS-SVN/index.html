@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Git,SVN," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Git和svn均是版本控制软件，两者的主要区别是Git是分布式管理的版本控制器，SVN（Subversion）是集中式管理的版本控制器">
+<meta name="keywords" content="Git,SVN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git-VS-SVN">
+<meta property="og:url" content="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/index.html">
+<meta property="og:site_name" content="LiHui">
+<meta property="og:description" content="Git和svn均是版本控制软件，两者的主要区别是Git是分布式管理的版本控制器，SVN（Subversion）是集中式管理的版本控制器">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/20161214020406505.jpg">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/20161214020603227.jpg">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/gitProcess.png">
+<meta property="og:image" content="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/20180227165834705.png">
+<meta property="og:updated_time" content="2018-08-19T16:21:53.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git-VS-SVN">
+<meta name="twitter:description" content="Git和svn均是版本控制软件，两者的主要区别是Git是分布式管理的版本控制器，SVN（Subversion）是集中式管理的版本控制器">
+<meta name="twitter:image" content="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/20161214020406505.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/"/>
+
+
+
+
+
+  <title>Git-VS-SVN | LiHui</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LiHui</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">李会</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Hubery-Lee/2018/08/20/Git-VS-SVN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/owl.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiHui">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Git-VS-SVN</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-20T00:14:35+08:00">
+                2018-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程工具学习与应用/" itemprop="url" rel="index">
+                    <span itemprop="name">编程工具学习与应用</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  Git和svn均是版本控制软件，两者的主要区别是Git是分布式管理的版本控制器，SVN（Subversion）是集中式管理的版本控制器
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Git和SVN主要差别"><a href="#Git和SVN主要差别" class="headerlink" title="Git和SVN主要差别"></a>Git和SVN主要差别</h2><p>SVN只有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。<br>Git每一个终端都是一个仓库，客户端并不只提取最新版本的文件快照，而是把原始的代码仓库完整地镜像下来。每一次的提取操作，实际上都是一次对代码仓库的完整备份。Git不仅仅是个版本控制系统，它也是个内容管理系统（CMS），工作管理系统等。</p>
+<h3 id="1-分布式VS集中式版本控制"><a href="#1-分布式VS集中式版本控制" class="headerlink" title="1.分布式VS集中式版本控制"></a>1.分布式VS集中式版本控制</h3><p>svn采用集中式版本控制</p>
+<p><img src="/Hubery-Lee/2018/08/20/Git-VS-SVN/20161214020406505.jpg" alt="svn集中式版本控制"></p>
+<p>git采用分布式版本控制</p>
+<p><img src="/Hubery-Lee/2018/08/20/Git-VS-SVN/20161214020603227.jpg" alt="git分布式版本控制"></p>
+<p>两种版本控制的区别：<br>（1）svn 过渡依赖中央服务器，出现故障影响其他工作;git中央服务器只用于方便交流，有没有中央服务器都行；<br>（2）svn 版本库只保存在中央服务器，本地检测时不会检出版本库；git每个本地电脑均会保存完整的版本库；<br>（3）svn 的commit依赖连接中央服务器的网络；git由于有本地版本库，可以commit不依赖网络，commit可以频繁使用；git 通过push来实现其他电脑的版本库的同步（synchronize）操作；</p>
+<h3 id="2-分支功能"><a href="#2-分支功能" class="headerlink" title="2.分支功能"></a>2.分支功能</h3><p>（1）svn 创建分支就是创建了一个新文件夹并拥有实际的文件，类似于拷贝了一份源文件，相当于在服务器上创建了分支，会影响到连接服务器的所有本地工作副本；git创建分支并没有创建文件夹，创建分支只是多了一个索引文件，并记录这个分支的变化，占用空间小，分支之间可以自由切换互不影响。<br>（2）git具有代码审核功能，各个成员请求将自己的分子合并到主分支均需要管理人员进行审核。<br>git的工作流程如下：</p>
+<p><img src="/Hubery-Lee/2018/08/20/Git-VS-SVN/gitProcess.png" alt="gitprocess"></p>
+<h3 id="3-git的使用"><a href="#3-git的使用" class="headerlink" title="3.git的使用"></a>3.git的使用</h3><p>（1）安装配置<br>（2）pc上任意获取，运行git clone url，将远程版本库克隆到本地<br>（3）日常场景</p>
+<p><img src="/Hubery-Lee/2018/08/20/Git-VS-SVN/20180227165834705.png" alt="日常使用"></p>
+<p>a.创建一个新文件，并添加到版本库中使用命令：<br>创建了一个新文件，需要添加到版本库里（追踪此文件）使用git add filename命令，我想保存一下，使用git commit -m ….. 我想把我改变的推送给其他人（服务器）git push -u origin master(提交代码)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir newDoc</span><br><span class="line">$ git add newDoc</span><br></pre></td></tr></table></figure></p>
+<p>b.保存一下修改记录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"提交添加一个新文件到版本库"</span>  <span class="comment">#“”内为chang messages</span></span><br></pre></td></tr></table></figure></p>
+<p>c.将我的修改推送给其他人或服务器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>我想把别人改变的代码拉去过来其实有两种方法git fetch与git pull。它们都是将从服务器上拉取最新的代码。那么它们什么区别呢？Git fetch 是仅仅将代码拉取下来，而git pull 不仅将服务器上的代码拉去下来，而且进行了合并merge。总结一下就是git pull 包含了 git fetch + merge。</p>
+<p>d.将别人的代码拉取过来<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure></p>
+<p>我想把别人改变的代码拉去过来其实有两种方法git fetch与git pull。它们都是将从服务器上拉取最新的代码。那么它们什么区别呢？Git fetch 是仅仅将代码拉取下来，而git pull 不仅将服务器上的代码拉去下来，而且进行了合并merge。总结一下就是git pull 包含了 git fetch + git merge。</p>
+<p>e.删除原来的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm file <span class="comment">#将会将file文件从暂存区与磁盘删除</span></span><br></pre></td></tr></table></figure></p>
+<p>原来的有个文件，想删除了，使用git rm file(停止追踪文件并从磁盘上删除),如果我们只想将 停止追踪文件，但是不删除只需要 git rm –cached <file>。然后想把这个改变推送给别人，就应该是用git commit 然后git push 将自己的改变推送到git服务器。</file></p>
+<p>f.git分支功能的使用<br>那么平时我们收到一个新功能的任务，应该是怎样的操作呢？比较正确的操作流程应该是这样，我们先使用git branch 查看一下我们本地到底有多少分支，然后我们先使用git branch <new branch="">从develop分支新建一个分支featureN,然后使用git checkout &lt;branch/tag&gt; 切换到新建的featureN分支里。在新的分支里进行新功能开发。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="comment">#查看分支</span></span><br><span class="line">$ git branch <span class="comment">#新建分支featureN 即 &lt;new branch&gt;</span></span><br><span class="line">$ git checkout &lt;branch/tag&gt; <span class="comment">#切换到新建的featureN分支里，在新的分支里进行新功能的开发。</span></span><br></pre></td></tr></table></figure></new></p>
+<p>g.恢复到某一时刻<br>我们在进行新功能开发的时候，每实现一个小功能的时候，我们就git commit 进行提交一下，刚提交完，突然发现，这次提交的东西会严重影响其他功能，想撤销这次提交，我们需要使用git reset –hart HEAD 来撤销工作目录中所有未提交文件的修改内容。那么如果我们想撤销指定的一次提交呢？我们需要使用git revert <commit> 进行指定的提交。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD <span class="comment">#撤回暂存中未提交的内容</span></span><br><span class="line">$ git revert &lt;commit&gt; <span class="comment">#撤回一次指到定的提交</span></span><br></pre></td></tr></table></figure></commit></p>
+<p>h.分支的合并<br>假设开发完毕后，应该怎么做？对，就是将新功能的分支合并到develop分支里。就是先切换到develop分支里，然后使用git merge 命令进行合并。这时，新功能开发完毕，新建的featureN分支就没用了，我们使用git branch -d <branch>将无用的分支删除。至此，我们新功能开发完毕。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git merge </span><br><span class="line">$ git branch -d &lt;branch&gt;</span><br></pre></td></tr></table></figure></branch></p>
+<p>i.查看工作日志<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
+<p>Git log 作用很大，功能也很多</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/SVN/" rel="tag"># SVN</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/10/my-first-blog/" rel="next" title="my-first-blog">
+                <i class="fa fa-chevron-left"></i> my-first-blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/01/LeeEmacs-setting/" rel="prev" title="LeeEmacs-setting">
+                LeeEmacs-setting <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/owl.jpg"
+                alt="LiHui" />
+            
+              <p class="site-author-name" itemprop="name">LiHui</p>
+              <p class="site-description motion-element" itemprop="description">不做空洞的忙碌，不放弃可期的理想</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Hubery-Lee" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hrbeulh@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/baidu_29950065" title="CSDN" target="_blank">CSDN</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git和SVN主要差别"><span class="nav-number">1.</span> <span class="nav-text">Git和SVN主要差别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-分布式VS集中式版本控制"><span class="nav-number">1.1.</span> <span class="nav-text">1.分布式VS集中式版本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-分支功能"><span class="nav-number">1.2.</span> <span class="nav-text">2.分支功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-git的使用"><span class="nav-number">1.3.</span> <span class="nav-text">3.git的使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LiHui</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
