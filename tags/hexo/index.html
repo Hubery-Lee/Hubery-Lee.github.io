@@ -12,6 +12,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('Input you password') !== ''){
+                alert('Wrong password');
+                history.back();
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -300,6 +311,34 @@
 
       <h2 class="post-title">
         
+            <a class="post-title-link" href="/2018/09/14/icon-download-site/" itemprop="url">
+              
+                <span itemprop="name">icon download site</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-09-14T15:45:38+08:00"
+              content="2018-09-14" >
+          09-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
             <a class="post-title-link" href="/2018/09/14/Hexo-Next-theme-Setting/" itemprop="url">
               
                 <span itemprop="name">Hexo Next theme Setting</span>
@@ -462,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -473,7 +512,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -484,7 +523,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -504,9 +543,33 @@
                   </span>
                 
                   <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/baidu_29950065" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-copyright"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=357692542" target="_blank" title="Netease">
+                      
+                        <i class="fa fa-fw fa-music"></i>Netease</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
                     <a href="mailto:hrbeulh@126.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.runoob.com" target="_blank" title="Runoob">
+                      
+                        <i class="fa fa-fw fa-cube"></i>Runoob</a>
                   </span>
                 
             </div>
@@ -519,14 +582,10 @@
           
             <div class="links-of-blogroll motion-element links-of-blogroll-block">
               <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
+                <i class="fa  fa-fw fa-books"></i>
+                Index
               </div>
               <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/baidu_29950065" title="CSDN" target="_blank">CSDN</a>
-                  </li>
                 
                   <li class="links-of-blogroll-item">
                     <a href="http://geant4.web.cern.ch/" title="Geant4" target="_blank">Geant4</a>
@@ -537,11 +596,11 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Weibo" target="_blank">Weibo</a>
+                    <a href="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html" title="G4ClassIndex" target="_blank">G4ClassIndex</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://music.163.com/#/user/home?id=357692542" title="netease cloud music" target="_blank">netease cloud music</a>
+                    <a href="https://root.cern/doc/master/modules.html" title="ClassIndex" target="_blank">ClassIndex</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -571,7 +630,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -581,7 +641,12 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  You are the <span id="busuanzi_value_site_uv"></span> visitors.
+</span>
+</div>
+Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -595,6 +660,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 

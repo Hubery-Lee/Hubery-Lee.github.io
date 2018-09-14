@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[icon download site]]></title>
+    <url>%2F2018%2F09%2F14%2Ficon-download-site%2F</url>
+    <content type="text"><![CDATA[icon download siteicon download site]]></content>
+      <categories>
+        <category>素材</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Geant4 and Root Class Index]]></title>
     <url>%2F2018%2F09%2F14%2FGeant4-and-Root-Class-Index%2F</url>
     <content type="text"><![CDATA[Geant4 Class IndexGeant4 Class Index Root Class IndexRoot Class Index]]></content>
@@ -15,7 +26,7 @@
   <entry>
     <title><![CDATA[Hexo Next theme Setting]]></title>
     <url>%2F2018%2F09%2F14%2FHexo-Next-theme-Setting%2F</url>
-    <content type="text"><![CDATA[referrence site1referrence site2 文章版权声明、文章加密访问、字数、时长、访问量referrence site3 侧边栏社交小图标设置、设置网站图标、评论功能插件配置referrence site3 添加评论功能Somebody’s blog Note 站外分享referrence sit4 修改主题配色]]></content>
+    <content type="text"><![CDATA[referrence site1referrence site2 文章版权声明、文章加密访问、字数、时长、访问量referrence site3 侧边栏社交小图标设置、设置网站图标、评论功能插件配置referrence site3 添加评论功能another siteSomebody’s blog Note 站外分享referrence sit4 修改主题配色]]></content>
       <categories>
         <category>编程工具学习与应用</category>
       </categories>
@@ -38,11 +49,20 @@
     <title><![CDATA[The use of gnome-screenshot command]]></title>
     <url>%2F2018%2F09%2F11%2FThe-use-of-gnomescreenshot-command%2F</url>
     <content type="text"><![CDATA[gnome-screenshot command12345$ gnome-screenshot #截取整个屏幕$ gnome-screenshot -w #截取当前活动窗口$ gnome-screenshot -a #选择截图区域$ gnome-screenshot -d=5 #延迟5妙截图$ gnome-screenshot -i #交互模式使用截屏工具 当然，遇到不会用gnome-screenshot命令时，最好的方法是问linux系统自带的manual1$ man gnome-screenshot]]></content>
+      <categories>
+        <category>linux tool</category>
+      </categories>
+      <tags>
+        <tag>linux tool</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[geant4DetectorConstruction]]></title>
     <url>%2F2018%2F09%2F11%2Fgeant4DetectorConstruction%2F</url>
     <content type="text"><![CDATA[geant detector construction 几何旋转符合左手法则及RotationMatrix的使用经过验证geant4中的rotate符合左手法则 1234G4RotationMatrix *rot=new G4RotationMatrix;rot-&gt;rotateX(90*degree);rot-&gt;rotateY(90*degree);rot-&gt;rotateZ(90*degree); 注意，再次对rot重复赋值无效，如对上述代码再作如下操作rot-&gt;rotateX(180*degree),该操作将无效，不会改变之前的rot；那么，要对rot再次赋值该怎么办呢？如下：只需在再次赋值前加rot =new G4RotationMatrix即可；123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051 G4RotationMatrix* rotationMatrix_X = new G4RotationMatrix; for(G4int x_col_num = 0; x_col_num &lt;=NBD_colNb; x_col_num++)&#123; if(x_col_num==0)&#123; // the center colume NBDx = NBDx0; for(G4int y_row_num = 0; y_row_num &lt;=NBD_rowNb; y_row_num++ )&#123; // NBDx = NBDx0; NBDy = NBDy0+R*sin(y_row_num*theta); NBDz = NBDz0+R*(1-cos(y_row_num*theta)); if(y_row_num==0)&#123; // center position rotationMatrix_X = new G4RotationMatrix; rotationMatrix_X-&gt;rotateX(y_row_num*theta); new G4PVPlacement(rotationMatrix_X, //no rotation G4ThreeVector(NBDx,NBDy,NBDz), //at (0,0,0) logicAssembleNBD, //its logical volume "AssembleNBD", //its name expHall_logV, //its mother volume false, //no boolean operation 0, //copy number true); //overlaps checking &#125; else&#123; //+y++ rotationMatrix_X = new G4RotationMatrix; rotationMatrix_X-&gt;rotateX(-y_row_num*theta); new G4PVPlacement(rotationMatrix_X, //no rotation G4ThreeVector(NBDx,NBDy,NBDz), //at (0,0,0) logicAssembleNBD, //its logical volume "AssembleNBD", //its name expHall_logV, //its mother volume false, //no boolean operation 0, //copy number true); // overlaps checking //-y++ rotationMatrix_X = new G4RotationMatrix; rotationMatrix_X-&gt;rotateX(y_row_num*theta); new G4PVPlacement(rotationMatrix_X, //no rotation G4ThreeVector(NBDx,-NBDy,NBDz), //at (0,0,0) logicAssembleNBD, //its logical volume "AssembleNBD", //its name expHall_logV, //its mother volume false, //no boolean operation 0, //copy number true); // overlaps checking &#125; &#125;... G4VParameterisation()的使用 ComputeTransformation defines where one of the copies is placed ComputeDimensions defines the size of one copy, and a constructor that initializes any member variables that are required. G4VParameterisation的具体应用可参看Basics/B2/B2b]]></content>
+      <categories>
+        <category>Geant4及Root应用</category>
+      </categories>
       <tags>
         <tag>geant4</tag>
       </tags>
