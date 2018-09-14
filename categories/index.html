@@ -339,9 +339,7 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTcxOC8xNjI0NQ=="></div>
-    </div>
+  <div id="gitalk-container"></div>
 
   
 
@@ -525,6 +523,15 @@
   <span class="author" itemprop="copyrightHolder">LiHui</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">6.2k</span>
+  
 </div>
 
 
@@ -675,17 +682,6 @@ Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -695,6 +691,23 @@ Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>
 
 
 
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '36c44f5894a78d12b7bf',
+          clientSecret: '0c45e994c27b4b788429177c4a4003872e86ceb0',
+          repo: 'Hubery-Lee.github.io',
+          owner: 'Hubery-Lee',
+          admin: ['Hubery-Lee'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
 

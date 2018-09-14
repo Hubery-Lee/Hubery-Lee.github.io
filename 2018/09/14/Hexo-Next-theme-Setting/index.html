@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="LiHui">
 <meta property="og:description" content="The page introduce the configuration of the hexo theme.以下功能待补充：文章版权声明、文章加密访问、字数、时长、访问量、侧边栏社交小图标设置、设置网站图标、评论功能插件配置、主题配色、站外分享">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-14T10:28:46.851Z">
+<meta property="og:updated_time" content="2018-09-14T11:34:27.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Next theme Setting">
 <meta name="twitter:description" content="The page introduce the configuration of the hexo theme.以下功能待补充：文章版权声明、文章加密访问、字数、时长、访问量、侧边栏社交小图标设置、设置网站图标、评论功能插件配置、主题配色、站外分享">
@@ -401,7 +401,7 @@
       
 
       
-        <p><a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">referrence site1</a><br><a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">referrence site2</a>  文章版权声明、文章加密访问、字数、时长、访问量<br><a href="https://blog.csdn.net/qq_32454537/article/details/79482896" target="_blank" rel="noopener">referrence site3</a> 侧边栏社交小图标设置、设置网站图标、评论功能插件配置<br><a href="https://blog.csdn.net/qq_32454537/article/details/79482879" target="_blank" rel="noopener">referrence site3</a> 添加评论功能<a href="https://blog.csdn.net/manmandong123/article/details/80739126" target="_blank" rel="noopener">another site</a><br><a href="https://asdfv1929.github.io/categories/GitBlog/" target="_blank" rel="noopener">Somebody’s blog Note</a> 站外分享<br><a href="https://blog.csdn.net/qq_30242609/article/details/54799019" target="_blank" rel="noopener">referrence sit4</a> 修改主题配色</p>
+        <p><a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">referrence site1</a><br><a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">referrence site2</a>  文章版权声明、文章加密访问、字数、时长、访问量<br><a href="https://blog.csdn.net/qq_32454537/article/details/79482896" target="_blank" rel="noopener">referrence site3</a> 侧边栏社交小图标设置、设置网站图标、评论功能插件配置<br><a href="https://blog.csdn.net/manmandong123/article/details/80739126" target="_blank" rel="noopener">referrence site3</a> 添加评论功能<a href="https://blog.csdn.net/qq_32454537/article/details/79482879" target="_blank" rel="noopener">another site</a><br><a href="https://blog.csdn.net/lanuage/article/details/78991798" target="_blank" rel="noopener">Somebody’s blog Note</a> 站外分享 <a href="https://asdfv1929.github.io/categories/GitBlog/" target="_blank" rel="noopener">another site</a><br><a href="https://blog.csdn.net/qq_30242609/article/details/54799019" target="_blank" rel="noopener">referrence sit4</a> 修改主题配色</p>
 
       
     </div>
@@ -501,9 +501,7 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTcxOC8xNjI0NQ=="></div>
-    </div>
+  <div id="gitalk-container"></div>
 
   
 
@@ -687,6 +685,15 @@
   <span class="author" itemprop="copyrightHolder">LiHui</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">6.2k</span>
+  
 </div>
 
 
@@ -837,17 +844,6 @@ Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -857,6 +853,23 @@ Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>
 
 
 
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '36c44f5894a78d12b7bf',
+          clientSecret: '0c45e994c27b4b788429177c4a4003872e86ceb0',
+          repo: 'Hubery-Lee.github.io',
+          owner: 'Hubery-Lee',
+          admin: ['Hubery-Lee'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
 
