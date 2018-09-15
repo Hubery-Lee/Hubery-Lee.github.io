@@ -99,7 +99,7 @@
 <meta property="og:description" content="本文介绍如何配置Next主题；其中，以下功能待补充：文章版权声明、文章加密访问、字数、时长、访问量、侧边栏社交小图标设置、设置网站图标、评论功能插件配置、主题配色、站外分享">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://github.com/2018/09/14/Hexo-Next-theme-Setting/password.png">
-<meta property="og:updated_time" content="2018-09-14T16:49:35.970Z">
+<meta property="og:updated_time" content="2018-09-15T00:54:56.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Next theme Setting">
 <meta name="twitter:description" content="本文介绍如何配置Next主题；其中，以下功能待补充：文章版权声明、文章加密访问、字数、时长、访问量、侧边栏社交小图标设置、设置网站图标、评论功能插件配置、主题配色、站外分享">
@@ -355,7 +355,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-09-15T00:49:35+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-09-15T08:54:56+08:00">
                 2018-09-15
               </time>
             
@@ -438,16 +438,10 @@
       
         <p><a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">referrence site1</a><br><a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">referrence site2</a>  文章版权声明、文章加密访问、字数、时长、访问量<br><a href="https://blog.csdn.net/qq_32454537/article/details/79482896" target="_blank" rel="noopener">referrence site3</a> 侧边栏社交小图标设置、设置网站图标、评论功能插件配置<br><a href="https://blog.csdn.net/manmandong123/article/details/80739126" target="_blank" rel="noopener">referrence site3</a> 添加评论功能<a href="https://blog.csdn.net/qq_32454537/article/details/79482879" target="_blank" rel="noopener">another site</a><br><a href="https://blog.csdn.net/lanuage/article/details/78991798" target="_blank" rel="noopener">Somebody’s blog Note</a> 站外分享 <a href="https://asdfv1929.github.io/categories/GitBlog/" target="_blank" rel="noopener">another site</a><br><a href="https://blog.csdn.net/qq_30242609/article/details/54799019" target="_blank" rel="noopener">referrence sit4</a> 修改主题配色</p>
 <p>对于文章版权声明功能，可以直接去next主题下的<code>_config.yml</code>中开启，个人认为抱着开源开放特性，这个功能并不是很重要；</p>
-<h2 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h2><ol>
-<li>配置加密功能，打开themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig文件,在以下位置插入这样一段代码：<img src="/2018/09/14/Hexo-Next-theme-Setting/password.png" title="插入位置">
-</li>
-</ol>
+<h2 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h2><p>1.配置加密功能，打开themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig文件,在以下位置插入这样一段代码：<br><img src="/2018/09/14/Hexo-Next-theme-Setting/password.png" title="插入位置"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (prompt(<span class="string">'请输入文章密码'</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span><br><span class="line">                alert(<span class="string">'密码错误！'</span>);</span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p>在scaffolds文件夹post.md文件中，加入<code>password:</code>,新建博客将有如下的形式文件头；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">description:</span><br><span class="line">password: </span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>设置给文章设置访问密码，经过以上的配置，<code>hexo new &quot;newblog&quot;</code>在<code>password: #密码</code>设置密码；也可以在以往的文章设置加密访问，只需在文章头中加入<code>password: #密码</code>即可；<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: The use of gnome-screenshot <span class="built_in">command</span></span><br><span class="line">date: 2018-09-11 16:12:50</span><br><span class="line">tags: [linux tool]</span><br><span class="line">categories: linux tool</span><br><span class="line">description: gnome-screenshot <span class="built_in">command</span></span><br><span class="line">password: pass</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<p>2.设置给文章设置访问密码，经过以上的配置，<code>hexo new &quot;newblog&quot;</code>在<code>password: #密码</code>设置密码；也可以在以往的文章设置加密访问，只需在文章头中加入<code>password: #密码</code>即可；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: The use of gnome-screenshot <span class="built_in">command</span></span><br><span class="line">date: 2018-09-11 16:12:50</span><br><span class="line">tags: [linux tool]</span><br><span class="line">categories: linux tool</span><br><span class="line">description: gnome-screenshot <span class="built_in">command</span></span><br><span class="line">password: pass</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
 <p>如，要访问这篇The use of gnome-screenshot command文章就需要输入密码pass;</p>
 <h2 id="访问量设置"><a href="#访问量设置" class="headerlink" title="访问量设置"></a>访问量设置</h2><p>采用busuanzi 和leancloud设置，在themes的文件夹下<code>_config.yml</code>中打开busuanzi配置，如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line">busuanzi_count:</span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line">  site_uv: <span class="literal">true</span></span><br><span class="line">  site_uv_header: &lt;i class=<span class="string">"fa fa-user"</span>&gt;&lt;/i&gt;</span><br><span class="line">  site_uv_footer:</span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line">  site_pv: <span class="literal">true</span></span><br><span class="line">  site_pv_header: &lt;i class=<span class="string">"fa fa-eye"</span>&gt;&lt;/i&gt;</span><br><span class="line">  site_pv_footer:</span><br><span class="line">  <span class="comment"># custom pv span for one page only</span></span><br><span class="line">  page_pv: <span class="literal">false</span></span><br><span class="line">  page_pv_header: &lt;i class=<span class="string">"fa fa-file-eye"</span>&gt;&lt;/i&gt;</span><br><span class="line">  page_pv_footer:</span><br></pre></td></tr></table></figure></p>
 <p>其中，<code>site_uv</code>指的是user visitors,<code>site_pv</code>指的是passager visitors; <code>&lt;i class=&quot;fa fa-file-eye&quot;&gt;&lt;/i&gt;</code>设置的是显示图标</p>
@@ -536,33 +530,6 @@
 
 
     <div class="post-spread">
-      
-        
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "1",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      },
-      "slide": {
-        "bdImg": "5",
-        "bdPos": "left",
-        "bdTop": "100"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -731,7 +698,7 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://root.cern/doc/master/modules.html" title="ClassIndex" target="_blank">ClassIndex</a>
+                    <a href="https://root.cern/doc/master/modules.html" title="RootClassIndex" target="_blank">RootClassIndex</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
