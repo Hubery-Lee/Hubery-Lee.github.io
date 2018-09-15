@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #39240b;
+  background: #d26a2e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2876,7 +2876,7 @@ hr {
   border-bottom-color: #222;
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
-  display: inline-block;
+  display: block;
 }
 .btn {
   padding: 0 10px;
