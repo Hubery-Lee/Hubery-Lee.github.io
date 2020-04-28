@@ -81,7 +81,7 @@
 <meta name="description" content="Get busy living or get busy dying.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LiHui">
-<meta property="og:url" content="https://Hubery-Lee.github.io/tags/Geant4/index.html">
+<meta property="og:url" content="https://Hubery-Lee.github.io/tags/geant4/index.html">
 <meta property="og:site_name" content="LiHui">
 <meta property="og:description" content="Get busy living or get busy dying.">
 <meta property="og:locale" content="en">
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="https://Hubery-Lee.github.io/tags/Geant4/">
+  <link rel="canonical" href="https://Hubery-Lee.github.io/tags/geant4/">
 
 
 
 
 
-  <title>Tag: Geant4 | LiHui</title>
+  <title>Tag: geant4 | LiHui</title>
   
 
 
@@ -285,7 +285,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Geant4<small>Tag</small>
+        <h1>geant4<small>Tag</small>
         </h1>
       </div>
 
@@ -297,17 +297,121 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/09/09/G4Color选项/" itemprop="url">
+            <a class="post-title-link" href="/2018/10/11/G4-Detector-CopyNo-and-MotherCopyNo-access/" itemprop="url">
               
-                <span itemprop="name">G4Color选项</span>
+                <span itemprop="name">G4 Detector CopyNo and MotherCopyNo access</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-09-09T18:53:53+08:00" content="2018-09-09">
-          09-09
+        <time class="post-time" itemprop="dateCreated" datetime="2018-10-11T11:41:25+08:00" content="2018-10-11">
+          10-11
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/" itemprop="url">
+              
+                <span itemprop="name">How to Use Hit to Get Primary Information in Geant4</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-09-23T13:04:15+08:00" content="2018-09-23">
+          09-23
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/09/17/G4DataReadOutMethods/" itemprop="url">
+              
+                <span itemprop="name">Gean4 Data Read Out Methods</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-09-17T22:21:46+08:00" content="2018-09-17">
+          09-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/09/14/Geant4-and-Root-Class-Index/" itemprop="url">
+              
+                <span itemprop="name">Geant4 and Root Class Index</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-09-14T15:10:01+08:00" content="2018-09-14">
+          09-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/09/11/geant4DetectorConstruction/" itemprop="url">
+              
+                <span itemprop="name">geant4DetectorConstruction</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-09-11T11:39:07+08:00" content="2018-09-11">
+          09-11
         </time>
       </div>
 
@@ -1044,103 +1148,6 @@
           }
         })
         .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-ion (object, error) {
           console.log("Error: " + error.code + " " + error.message);
         });
     }
