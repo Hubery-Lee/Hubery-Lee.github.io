@@ -81,7 +81,7 @@
 <meta name="description" content="Get busy living or get busy dying.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LiHui">
-<meta property="og:url" content="http://lihui-snippets.cn/categories/素材/index.html">
+<meta property="og:url" content="https://Hubery-Lee.github.io/categories/素材/index.html">
 <meta property="og:site_name" content="LiHui">
 <meta property="og:description" content="Get busy living or get busy dying.">
 <meta property="og:locale" content="en">
@@ -97,7 +97,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://lihui-snippets.cn/categories/素材/">
+  <link rel="canonical" href="https://Hubery-Lee.github.io/categories/素材/">
 
 
 
@@ -554,6 +554,8 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
@@ -672,28 +674,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'ooozwlclX00aJabPvk1WTj7J-gzGzoHsz',
-        appKey: 'CnXrRUVdUdMXgEvGbdolWGYX',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
