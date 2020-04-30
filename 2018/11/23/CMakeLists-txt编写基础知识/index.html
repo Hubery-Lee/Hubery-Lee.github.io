@@ -273,7 +273,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="http://www.cnblogs.com/52php/p/5681745.html" target="_blank" rel="noopener">cmake 背景知识</a><br><a href="http://www.cnblogs.com/52php/p/5681751.html" target="_blank" rel="noopener">cmake 基础2</a><br><a href="http://www.cnblogs.com/52php/p/5681755.html" target="_blank" rel="noopener">cmake  共享库文件，外部链接</a></p>
+        <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><span class="exturl" data-url="aHR0cDovL3d3dy5jbmJsb2dzLmNvbS81MnBocC9wLzU2ODE3NDUuaHRtbA==">cmake 背景知识<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy5jbmJsb2dzLmNvbS81MnBocC9wLzU2ODE3NTEuaHRtbA==">cmake 基础2<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy5jbmJsb2dzLmNvbS81MnBocC9wLzU2ODE3NTUuaHRtbA==">cmake  共享库文件，外部链接<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h1><p><strong>说明</strong><br>采用c++的类来写hello world，然后编写教程。</p>
 <ul>
 <li>bin  二进制文档</li>
@@ -305,7 +305,7 @@
 
 <h2 id="设置二进制文件存放地址"><a href="#设置二进制文件存放地址" class="headerlink" title="设置二进制文件存放地址"></a>设置二进制文件存放地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET(EXECUTABLE_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;/bin)</span><br><span class="line">SET(LIBRARY_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;/lib)</span><br></pre></td></tr></table></figure>
 
-<h2 id="如何生成动态库或静态库？"><a href="#如何生成动态库或静态库？" class="headerlink" title="如何生成动态库或静态库？"></a>如何生成动态库或静态库？</h2><p> <a href="https://blog.csdn.net/weixin_42111770/article/details/80595633" target="_blank" rel="noopener">参考文献</a></p>
+<h2 id="如何生成动态库或静态库？"><a href="#如何生成动态库或静态库？" class="headerlink" title="如何生成动态库或静态库？"></a>如何生成动态库或静态库？</h2><p> <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjExMTc3MC9hcnRpY2xlL2RldGFpbHMvODA1OTU2MzM=">参考文献<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.add_library(name SHARED source1, source2, ..., sourceN)</span><br><span class="line">2.add_library(name_static STATIC source1, source2, ... , sourceN)</span><br><span class="line">3.set_target_properties(name_static PROPERTIES OUTPUT_NAME &quot;name&quot;)</span><br><span class="line">4.set_target_properties(name_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)</span><br><span class="line">5.set_target_properties(name PROPERTIES CLEAN_DIRECT_OUTPUT 1)</span><br><span class="line">6.set_target_properties(name PROPERTIES VERSION 1.2 SOVERSION 1)</span><br><span class="line">7.install(TARGETS name name_static </span><br><span class="line">          LIBRARY DESTINATION lib</span><br><span class="line">          ARCHIVE DESTINATION lib)</span><br><span class="line">8.install(DIRECTORY $&#123;titile_H&#125; DESTINATION include/tH)</span><br></pre></td></tr></table></figure>
 
 <p>第一条    指令是生成动态库（扩展名为.so），类型关键字是SHARED，并不需要写全libname.so，只需要填写name即可，cmake系统会自动生成libname.so。</p>
@@ -335,7 +335,7 @@
 
 <p>在链接库文件时，则需要将三个库文件均包含</p>
 <ul>
-<li>API (Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。<a href="https://baike.baidu.com/item/api/10154" target="_blank" rel="noopener">百度百科</a></li>
+<li>API (Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9hcGkvMTAxNTQ=">百度百科<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <h1 id="外部引用库的优势"><a href="#外部引用库的优势" class="headerlink" title="外部引用库的优势"></a>外部引用库的优势</h1><ul>
 <li>隐藏源码</li>
