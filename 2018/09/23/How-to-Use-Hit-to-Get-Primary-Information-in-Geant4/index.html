@@ -9,15 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
   <meta name="description" content="This page introduce the struction of Geant4 and using Hit to get information of PrimaryGeneratorAction.">
@@ -28,10 +29,13 @@
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="This page introduce the struction of Geant4 and using Hit to get information of PrimaryGeneratorAction.">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4Application.png">
 <meta property="og:updated_time" content="2018-09-23T05:20:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Use Hit to Get Primary Information in Geant4">
 <meta name="twitter:description" content="This page introduce the struction of Geant4 and using Hit to get information of PrimaryGeneratorAction.">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png">
 
 <link rel="canonical" href="https://Hubery-Lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/">
 
@@ -80,7 +84,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -177,11 +181,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
 
   <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
@@ -215,24 +214,6 @@
         </h1>
 
         <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2018-09-23 13:04:15 / 修改时间：13:20:18" itemprop="dateCreated datePublished" datetime="2018-09-23T13:04:15+08:00">2018-09-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Geant4及Root应用/" itemprop="url" rel="index"><span itemprop="name">Geant4及Root应用</span></a>
-                </span>
-            </span>
 
           
   
@@ -260,20 +241,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Contact lihui to get the password." />
-    <label for="pass">Contact lihui to get the password.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h2 id="Code-Structure-of-Geant4"><a href="#Code-Structure-of-Geant4" class="headerlink" title="Code Structure of Geant4"></a>Code Structure of Geant4</h2><p>The structure shows as the following pictrue.<br><img src="/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png" alt="Class categories in Geant4"></p>
+<ul>
+<li>Run and Event<br>These are categories related to the generation of events, interfaces to event generators, and any secondary particles produced. Their roles are principally to provide particles to be tracked to the Tracking Management.</li>
+<li>Tracking and Track<br>These are categories related to propagating a particle by analyzing the factors limiting the step and applying the relevant physics processes. The important aspect of the design was that a generalized GEANT4 physics process (or interaction) could perform actions, along a tracking step, either localized in space, or in time, or distributed in space and time (and all the possible combinations that could be built from these cases).</li>
+<li>Geometry and Magnetic Field<br>These categories manage the geometrical definition of a detector (solid modeling) and the computation of distances to solids (also in a magnetic field). The GEANT4 geometry solid modeler is based on the ISO STEP<br>standard and it is fully compliant with it. A key feature of the GEANT4 geometry is that the volume definitions<br>are independent of the solid representation. By this abstract interface for the G4 solids, the tracking component works identically for various representations. The treatment of the propagation in the presence of fields has been provided within specified accuracy. An OO design allows to exchange different numerical algorithms and/or different fields (not only B-field), without affecting any other component of the toolkit.</li>
+<li>Particle Definition and Matter<br>These two categories manage the the definition of materials and particles.</li>
+<li>Physics<br>This category manages all physics processes participating in the interactions of particles in matter. The abstract interface of physics processes allows multiple implementations of physics models per interaction or per channel. Models can be selected by energy range, particle type, material, etc. Data encapsulation and polymorphism make it possible to give transparent access to the cross sections (independently of the choice of reading from an ascii file, or of interpolating from a tabulated set, or of computing analytically from a formula). Electromagnetic and hadronic physics were handled in a uniform way in such a design, opening up the physics to the users.</li>
+<li>Hits and Digitization<br>These two categories manage the creation of hits and their use for the digitization phase. The basic design and<br>implementation of the Hits and Digi had been realized, and also several prototypes, test cases and scenarios<br>had been developed before the alpha-release. Volumes (not necessarily the ones used by the tracking) are<br>aggregated in sensitive detectors, while hits collections represent the logical read out of the detector. Different ways of creating and managing hits collections had been delivered and tested, notably for both single hits and calorimetry hits types. In all cases, hits collections had been successfully stored into and retrieved from an Object Data Base Management System.</li>
+<li>Visualization<br>This manages the visualization of solids, trajectories and hits, and interacts with underlying graphical libraries(the Visualization class category). The basic and most frequently used graphics functionality had been implemented already by the alpha-release. The OO design of the visualization component allowed us to develop<br>several drivers independently, such as for OpenGL, Qt and OpenInventor (for X11 and Windows), DAWN, Postscript (via DAWN) and VRML.</li>
+<li>Interfaces<br>This category handles the production of the graphical user interface (GUI) and the interactions with external<br>software (OODBMS, reconstruction etc.).</li>
+</ul>
+<p><code>MORE DETAIL INFORMATION ABOUT THIS，YOU CAN REFER TO GEANT4 BOOK FOR APPLICATION CHAPTER 3</code></p>
+<h2 id="Collect-information-from-PrimaryGeneratorAction"><a href="#Collect-information-from-PrimaryGeneratorAction" class="headerlink" title="Collect information from PrimaryGeneratorAction"></a>Collect information from PrimaryGeneratorAction</h2><p>Data record in step or event, and stored in hitscollection. data write in EventAction; general understanding of geant4 and its application as follows. Geant is the abbreviation of Geometry and Tracking.<br><img src="/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4Application.png" alt="General UnderStanding of Geant4"></p>
+
     </div>
 
     
@@ -292,23 +273,6 @@ U2FsdGVkX19gqNK+lmnb3DipYbSXZp37ohgt/A0x/tGq9v4/X4ciSHVifD09rOXwjFSy4wT0bda5PgfK
       </div>
 
   </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>LiHui
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://Hubery-Lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/" title="How to Use Hit to Get Primary Information in Geant4">https://Hubery-Lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
 </div>
 
         
@@ -362,12 +326,12 @@ U2FsdGVkX19gqNK+lmnb3DipYbSXZp37ohgt/A0x/tGq9v4/X4ciSHVifD09rOXwjFSy4wT0bda5PgfK
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/09/23/How-to-Use-Root-to-Draw-3D-Histogram/" rel="prev" title="How to Use Root to Draw 3D Histogram">
-      <i class="fa fa-chevron-left"></i> How to Use Root to Draw 3D Histogram
+    <a href="/2018/10/11/G4-Detector-CopyNo-and-MotherCopyNo-access/" rel="prev" title="G4 Detector CopyNo and MotherCopyNo access">
+      <i class="fa fa-chevron-left"></i> G4 Detector CopyNo and MotherCopyNo access
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/10/11/G4-Detector-CopyNo-and-MotherCopyNo-access/" rel="next" title="G4 Detector CopyNo and MotherCopyNo access">
-      G4 Detector CopyNo and MotherCopyNo access <i class="fa fa-chevron-right"></i>
+    <a href="/2018/09/23/How-to-Use-Root-to-Draw-3D-Histogram/" rel="next" title="How to Use Root to Draw 3D Histogram">
+      How to Use Root to Draw 3D Histogram <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -428,6 +392,7 @@ U2FsdGVkX19gqNK+lmnb3DipYbSXZp37ohgt/A0x/tGq9v4/X4ciSHVifD09rOXwjFSy4wT0bda5PgfK
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Structure-of-Geant4"><span class="nav-number">1.</span> <span class="nav-text">Code Structure of Geant4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collect-information-from-PrimaryGeneratorAction"><span class="nav-number">2.</span> <span class="nav-text">Collect information from PrimaryGeneratorAction</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -463,23 +428,26 @@ U2FsdGVkX19gqNK+lmnb3DipYbSXZp37ohgt/A0x/tGq9v4/X4ciSHVifD09rOXwjFSy4wT0bda5PgfK
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i>GitHub</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i>CSDN</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i>Netease</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i>E-Mail</span>
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i>Runoob</span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
   </div>
 
 
@@ -507,6 +475,10 @@ U2FsdGVkX19gqNK+lmnb3DipYbSXZp37ohgt/A0x/tGq9v4/X4ciSHVifD09rOXwjFSy4wT0bda5PgfK
   </div>
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -546,12 +518,11 @@ U2FsdGVkX19gqNK+lmnb3DipYbSXZp37ohgt/A0x/tGq9v4/X4ciSHVifD09rOXwjFSy4wT0bda5PgfK
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
   <script>
 var pjax = new Pjax({
@@ -635,7 +606,7 @@ window.addEventListener('pjax:success', () => {
 if (document.querySelectorAll('pre.mermaid').length) {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
     mermaid.initialize({
-      theme    : 'forest',
+      theme    : '',
       logLevel : 3,
       flowchart: { curve     : 'linear' },
       gantt    : { axisFormat: '%m/%d/%Y' },
@@ -647,6 +618,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
     <div id="pjax">
+  
+
   
 
   

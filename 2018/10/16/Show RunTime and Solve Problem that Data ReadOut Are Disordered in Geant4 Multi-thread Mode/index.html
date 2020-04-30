@@ -9,29 +9,30 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
-  <meta name="description" content="The article has been encrypted, please enter your password to view.">
+  <meta name="description" content="How to show runtimeUsing G4Timer in RunActiontime count start at the begin of run and stop at the end of run.  Detail Consturcitondeclare a pionter to G4Timer in construct function. 1fTimer = new G4Ti">
 <meta name="keywords" content="Geant">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">
 <meta property="og:url" content="https://Hubery-Lee.github.io/2018/10/16/Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="The article has been encrypted, please enter your password to view.">
+<meta property="og:description" content="How to show runtimeUsing G4Timer in RunActiontime count start at the begin of run and stop at the end of run.  Detail Consturcitondeclare a pionter to G4Timer in construct function. 1fTimer = new G4Ti">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-04-28T00:41:10.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">
-<meta name="twitter:description" content="The article has been encrypted, please enter your password to view.">
+<meta name="twitter:description" content="How to show runtimeUsing G4Timer in RunActiontime count start at the begin of run and stop at the end of run.  Detail Consturcitondeclare a pionter to G4Timer in construct function. 1fTimer = new G4Ti">
 
 <link rel="canonical" href="https://Hubery-Lee.github.io/2018/10/16/Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode/">
 
@@ -80,7 +81,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -177,11 +178,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
 
   <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
@@ -215,30 +211,6 @@
         </h1>
 
         <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-10-16 20:29:30" itemprop="dateCreated datePublished" datetime="2018-10-16T20:29:30+08:00">2018-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-28 08:41:10" itemprop="dateModified" datetime="2020-04-28T08:41:10+08:00">2020-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Geant4及Root应用/" itemprop="url" rel="index"><span itemprop="name">Geant4及Root应用</span></a>
-                </span>
-            </span>
 
           
   
@@ -265,20 +237,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog." />
-    <label for="pass">Please enter the password to read the blog.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h1 id="How-to-show-runtime"><a href="#How-to-show-runtime" class="headerlink" title="How to show runtime"></a>How to show runtime</h1><h2 id="Using-G4Timer-in-RunAction"><a href="#Using-G4Timer-in-RunAction" class="headerlink" title="Using G4Timer in RunAction"></a>Using G4Timer in RunAction</h2><p>time count start at the begin of run and stop at the end of run. </p>
+<h2 id="Detail-Consturciton"><a href="#Detail-Consturciton" class="headerlink" title="Detail Consturciton"></a>Detail Consturciton</h2><p>declare a pionter to G4Timer in construct function.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fTimer = new G4Timer;</span><br></pre></td></tr></table></figure>
+
+<p>free memory of G4Timer in distruct function</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete fTimer;</span><br></pre></td></tr></table></figure>
+
+<p>time count start in BeginOfRunAction()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fTimer -&gt;Start()</span><br></pre></td></tr></table></figure>
+
+<p>time count stop in EndOfRunAction()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fTimer -&gt;Stop();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Result-Shows"><a href="#Result-Shows" class="headerlink" title="Result Shows"></a>Result Shows</h2><p>Time used will be showed in the end of run.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">number of event = ... User=...s Real=...s Sys=...s</span><br></pre></td></tr></table></figure>
+
+<h1 id="Solve-Problem-that-Data-ReadOut-Are-Disordered-in-Geant4-Multi-thread-Mode"><a href="#Solve-Problem-that-Data-ReadOut-Are-Disordered-in-Geant4-Multi-thread-Mode" class="headerlink" title="Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode"></a>Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode</h1><h2 id="problem-discription"><a href="#problem-discription" class="headerlink" title="problem discription"></a>problem discription</h2><p> I encountered a problem in Geant4 multi-thread run mode. The data readout from two different sensitive detector with hits  are corrected in single thread mode but disordered  in multi-thread run mode. I don&#39;t know how this problem should happen. I think there must be something wrong in the Merge() function. Memory storage may be disordered in the multi-thread mode.</p>
+<h2 id="problem-solving"><a href="#problem-solving" class="headerlink" title="problem solving"></a>problem solving</h2><p>Do not use Geant4 Data Merge() in root mode</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//analysisManager-&gt;SetNtupleMerging(<span class="literal">true</span>);</span><br><span class="line">//or</span><br><span class="line">analysisManager-&gt;SetNtupleMerging(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -297,23 +276,6 @@ U2FsdGVkX1+s9GEuPwUgEVFrzMShBucec9kbEeKV2h66oZ1V4G8qbxvkP5gYRynMl6FQZ+UTz8nk/KN1
       </div>
 
   </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>LiHui
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://Hubery-Lee.github.io/2018/10/16/Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode/" title="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">https://Hubery-Lee.github.io/2018/10/16/Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
 </div>
 
         
@@ -367,12 +329,12 @@ U2FsdGVkX1+s9GEuPwUgEVFrzMShBucec9kbEeKV2h66oZ1V4G8qbxvkP5gYRynMl6FQZ+UTz8nk/KN1
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/10/11/Emacs-yasnippets-and-markdown-configure/" rel="prev" title="Emacs yasnippets and markdown configure">
-      <i class="fa fa-chevron-left"></i> Emacs yasnippets and markdown configure
+    <a href="/2018/11/23/CMakeLists-txt编写基础知识/" rel="prev" title="CMakeLists.txt编写基础知识">
+      <i class="fa fa-chevron-left"></i> CMakeLists.txt编写基础知识
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/11/23/CMakeLists-txt编写基础知识/" rel="next" title="CMakeLists.txt编写基础知识">
-      CMakeLists.txt编写基础知识 <i class="fa fa-chevron-right"></i>
+    <a href="/2018/10/11/Emacs-yasnippets-and-markdown-configure/" rel="next" title="Emacs yasnippets and markdown configure">
+      Emacs yasnippets and markdown configure <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -433,6 +395,7 @@ U2FsdGVkX1+s9GEuPwUgEVFrzMShBucec9kbEeKV2h66oZ1V4G8qbxvkP5gYRynMl6FQZ+UTz8nk/KN1
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-show-runtime"><span class="nav-number">1.</span> <span class="nav-text">How to show runtime</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-G4Timer-in-RunAction"><span class="nav-number">1.1.</span> <span class="nav-text">Using G4Timer in RunAction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Detail-Consturciton"><span class="nav-number">1.2.</span> <span class="nav-text">Detail Consturciton</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-Shows"><span class="nav-number">1.3.</span> <span class="nav-text">Result Shows</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solve-Problem-that-Data-ReadOut-Are-Disordered-in-Geant4-Multi-thread-Mode"><span class="nav-number">2.</span> <span class="nav-text">Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-discription"><span class="nav-number">2.1.</span> <span class="nav-text">problem discription</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-solving"><span class="nav-number">2.2.</span> <span class="nav-text">problem solving</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -468,23 +431,26 @@ U2FsdGVkX1+s9GEuPwUgEVFrzMShBucec9kbEeKV2h66oZ1V4G8qbxvkP5gYRynMl6FQZ+UTz8nk/KN1
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i>GitHub</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i>CSDN</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i>Netease</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i>E-Mail</span>
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i>Runoob</span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
   </div>
 
 
@@ -512,6 +478,10 @@ U2FsdGVkX1+s9GEuPwUgEVFrzMShBucec9kbEeKV2h66oZ1V4G8qbxvkP5gYRynMl6FQZ+UTz8nk/KN1
   </div>
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -551,12 +521,11 @@ U2FsdGVkX1+s9GEuPwUgEVFrzMShBucec9kbEeKV2h66oZ1V4G8qbxvkP5gYRynMl6FQZ+UTz8nk/KN1
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
   <script>
 var pjax = new Pjax({
@@ -640,7 +609,7 @@ window.addEventListener('pjax:success', () => {
 if (document.querySelectorAll('pre.mermaid').length) {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
     mermaid.initialize({
-      theme    : 'forest',
+      theme    : '',
       logLevel : 3,
       flowchart: { curve     : 'linear' },
       gantt    : { axisFormat: '%m/%d/%Y' },
@@ -652,6 +621,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
     <div id="pjax">
+  
+
   
 
   

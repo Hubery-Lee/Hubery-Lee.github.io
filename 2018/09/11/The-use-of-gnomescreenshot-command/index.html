@@ -9,15 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
   <meta name="description" content="gnome-screenshot command;encrypt this article">
@@ -80,7 +81,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -177,11 +178,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
 
   <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
@@ -215,30 +211,6 @@
         </h1>
 
         <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-09-11 16:12:50" itemprop="dateCreated datePublished" datetime="2018-09-11T16:12:50+08:00">2018-09-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2018-09-15 23:20:52" itemprop="dateModified" datetime="2018-09-15T23:20:52+08:00">2018-09-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux-tool/" itemprop="url" rel="index"><span itemprop="name">linux tool</span></a>
-                </span>
-            </span>
 
           
   
@@ -266,20 +238,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Please input password to read" />
-    <label for="pass">Please input password to read</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkbEsK8VAq/KX+DdGynhjEtLctZKJKyVKbVgFTL52e8mgo0U46cgaGaTnkD4+LcFmsRJoXjQtHuaYSF4wSinN2ZH/lHzVrxnkZXryGl98jcAFWRiBlhg+b97j6VshWSFjx8zIwH2kbxQgyooGRjFgh9BHnqt4g/vykjFI57P0ZWjNfu+YPSEAygRlLGLq3u6HAIEZpPM8E3AZRCcT/UXgfule0/HoELqqbm9BJ75H65HNJvwys18e2+tmapO5cfXHToWML4R3Uadi5LIQpDF8Lsn0pyRqY3e8PI2vCHOnuap24nuQ2VTcU7kqxf8LNnZA9WVc8LmJ2B8DdKX0UW7+PnyKdLjGhvX26W51qT5YUEk5fUA9D6cQQxdiqFzvTTVsChRiaN447Z0qTa1Z0xe3dyFxGZEyvwBcFtm/UJoNLq3gA0+gijedsjLwnY8TvKnLXwBaoWJsju9cTKlbYv6jU1ifWgvViPhJOKS0hSizEHiICQnNfJsujA3DjHRCH9noRHdcWtVmRq2rxt5ElWhnrnFwbbyn1IhwUtZuD9NfcB/O4mP1wrfFk/ca4ESWGsdmt2kXVYIAPqzl9su10fJuphQY5rj5ltNa6+qAqDfoypXHKNOV0HZh19YkO4yXGxFpki0GSforORwSKUoWfXb7sq0CA8KM7PkixM5AYPtvbIglcw4anVOc69q5JgC2J0LM5V9/RNhh2nh1u6xL75qnfAVRFKjcon42a1nRxXZcKPED5gwzfvdWBPDiC6XG0uTlSYjtuQIAAtd8IRdVu9a5bqDvgJoAt5X0qYjSaFr5A2kuzWC9hCnaf2q/Lu8cmOYuoyXhbZtGlllKiPrLPMrUAS7MljkMV0SVLompB/HslnmoSgphqGn5Aqtx2P2mtphYcl4+YvPcrhoScYyM5vgD151JuqkiJjI4eBWhk2GhANx71fo3xCyaGAW00dMwqVe2qSq22jivDWqWwTD02bfV9v1xmQGkN60jZFj7wkHXFnUKExEqhKvEjk3h6/VFNqJlLVlexBVBLqRb1PYB9dYPAdP+XDQrF4Gvsl04x1NfTD2YiOsAdAaiEO1xOmpvyyiRfqh/1yt3wLLZRCK0uTqwm92YKdLMJJ4OZj9y1h3vc7+hm87k+t9+aBjWzaVf0D9JStSiwBJNZWKfSRb/SHxhdn1cgErCRJEkEQ2RPKxA+7dLm0yjkzqG0seZiJja1tsG1Qobf86hZWt+vI1b3OmzUSCwhmRSG24aIIirgO+0yOEY/4J2AkGyZ//lBupFfIn7exdJGsBGm1BiwXdSp58K77VUlwOHyWlKcWGlq7teYb59bnp132MOJt+y9BGXyuwwE8YLt6P5wHUddR0BxEbOhGZesdGjlk1EemdALTdJ79O9rbE4q/4H4IPjkyGuN+2k+gYPp+u3jsW1yt0Z8FNHn14/xzVbEm5W9un06IX+9iYaZ1XtkxMpX8a5xEmt93Vn0FXFhEvDPIvZkaE+u8vqVT62QhumpqI/1vV8zI8C00klATVRzpmr7WTns16eJNIRDnKIrdVmJq9RdlqoRQpFXTn8BUGxqF+7uD9VZJhFtWfG7Tqb0QrGBhTKh4ywdk/rDbqyp5f5ngYYPmCdt3PjdBTRIgQ7RpB2CLYVuWJsTuM+JTiSTkn7iwLJmjyIh3HVLurx+YEMsbvIYGccif810LvD9Y2TFSQtUUT5nN59Br8JKJdUvZQeif2DJoiU5aSvOIz9TYrWV6F+MWUJ+pUst4bsY/ylALqJX21TkZ0YXd/4CwyBdtl/frOBj5loEZT6cT+YLyighBlc9CEwxDssprUmb3XVOxRWUG1ST53qMHNgtydrJEL3iC4ZaXsNY7qWlfhrmzU/tcWwurj1Rzca3JMyeLwCqZ4AL6pcmusnOAX7NEC3QKYlWWsHisQnF/bD4+OEsMKErwcJTqEc9IaO3mgZpeOEFN0i7j+/QCM+PKlJMlK1Q1hKzXRFFmd6E/PotEzCUw1T59Ycy1bMzJ/VY2trxh5kKnjH2CdxqBbziJ9bjyUoSxNGmYMo/+4pTCtBwYKZjUr/N8uGFouJv0YLUNoLC6WdLokSGIeLdMODNVu4zPdd90J3hXm92s/R+NrghF5PApUnwiQCDuqSXNNyh3yeNzXk2ZbEAYdBKh/TcV1KGYMW5hper3D1FecITFs+UToz9r0JTVLOfWVG7icJ8BXZdrrddelsdX94PZv7fwoK/nPG0FQaXcZ8/DFOWnHbhtQC2u4nL03EUVDcrMcC7J26HK3pXm+oQdWI8oOyKo9MDnRjvtqotyS5ra4QDF+8goFHxP55hHw7G1kfMyA/m6KVjvejcbxtnEPeYT85MgQlge9cWx1OinzhjjR6wETpWHivJKM+KpZo58v0tJV7/DcUlISdz2vNW5b3U7uyTiXlcBVxvjqHafttO9oHyFu/jGwa5QSqp94odAJpDMlzoG8zASCI6lrjcm5171ZSFdAzYjVXHF/EhnQLTiRXiy0PQ+SvAKoTzQOLNsE12GScE9KuXb+BYyfh+mg3pT8nmlIW5NymMeTqdbzJgMqJmMO9N0BvfodG11wi4ApGkowAkDAKJZIOolPAePyX2LKwGFYlnw5iTtx2N7EDE6vbShZZe55XJL55p1rjCVKg8MeofFAps82S42x/WBCzW07N34HHn8cUbpKegF3PCpZz9SWPGZF4Rma1R1TTKGsnH9G5PgXz+f9fteRx8qAXt67+5l8M2mKLEV9GGPMV/ko144iw7wjBZ+X5ib5SKTiPS8lF4jFfvM97HhT1EWW2kFFDYyjI4g4eoQ1oaEl+EHp23Sh9n7NHXq0RUWQt4ufjqU4n5Ueuory9N9G53wGKvmz+djQJq5ocRGKJCo+NSSRPd37A7/o2JGAzpGg9wIlfxi4K5dSFqh3JphAKdNX5NHbxm93b0Mj2l2QRi8rZzNosqOrY5guPEXpOuncDuj/jkVFNyAqBIAektMGHIbJMi3mei6TsESUV/AH3MKwjiKPjWMSrdqiokMKc5CFeocovFQQ/y54nyJjT+pNPhMkrquoyROaDmF4v2AA6w0XaXYW3Lrdtw77sCD6kL4+/S/pJtaHXH52euAcbW1O4s8NClRZvwpWYl3R9uzjAB+uh79UY1gADVlZU/F1/YE17dQJv8qFmJzyIIAvLaDLni9Nf2S5W/KP3mhpDVqdDrEYvVcDFK1oaiimkG5ClV6TMX/J4Yuyd9JaA0AmO1JXD8ca8C6KSbchI+dv3wXiBUNmmK/U/fqlPGMPbIbPwf1KEPpMHaY60tY0B61NOIMI3DE5S95TVQtjvEnYRO9a2oeEScpVteyRQuPJzQa1wP/7vOfe8f48aGomU9HGm4/BoS5Y+/MG6npIdTnAW2qtAPC/KGIT8PTLDRctoYf75IPwAHEVm/R94iQAiF80qt8AUiHExyU462BWO6ct0ZxmSEStycUJ8JnCmuwBiRdIxt3r1PMdBw7mmTkXCtFCcubNdV3yl/CZlUw9zl2GToA5FU309f0vNURzdhj/IVuAbVs9SdTMMXpGXy7OQfCztbGWiUWDvJH6yP/FVwTHUuIelHayCRwcOFfdHjSNlYP0RPPst3ZNuRDJSVtCSkO3T+BzTOH1bTzDx9rBGDcBAUPtjWs1GCTyMwgum1W/0FvVA==
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h2 id="gnome-screenshot-command"><a href="#gnome-screenshot-command" class="headerlink" title="gnome-screenshot command"></a>gnome-screenshot command</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ gnome-screenshot  <span class="comment">#截取整个屏幕</span></span><br><span class="line">$ gnome-screenshot -w <span class="comment">#截取当前活动窗口</span></span><br><span class="line">$ gnome-screenshot -a <span class="comment">#选择截图区域</span></span><br><span class="line">$ gnome-screenshot -d=5 <span class="comment">#延迟5妙截图</span></span><br><span class="line">$ gnome-screenshot -i <span class="comment">#交互模式使用截屏工具</span></span><br></pre></td></tr></table></figure>
+
+<p>当然，遇到不会用gnome-screenshot命令时，最好的方法是问linux系统自带的manual</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man gnome-screenshot</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -298,23 +262,6 @@ U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkb
       </div>
 
   </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>LiHui
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://Hubery-Lee.github.io/2018/09/11/The-use-of-gnomescreenshot-command/" title="The use of gnome-screenshot command">https://Hubery-Lee.github.io/2018/09/11/The-use-of-gnomescreenshot-command/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
 </div>
 
         
@@ -368,12 +315,12 @@ U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkb
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/09/11/geant4DetectorConstruction/" rel="prev" title="geant4DetectorConstruction">
-      <i class="fa fa-chevron-left"></i> geant4DetectorConstruction
+    <a href="/2018/09/13/Git-Remote-Repository-UserGuide/" rel="prev" title="Git Remote Repository UserGuide ">
+      <i class="fa fa-chevron-left"></i> Git Remote Repository UserGuide 
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/09/13/Git-Remote-Repository-UserGuide/" rel="next" title="Git Remote Repository UserGuide ">
-      Git Remote Repository UserGuide  <i class="fa fa-chevron-right"></i>
+    <a href="/2018/09/11/geant4DetectorConstruction/" rel="next" title="geant4DetectorConstruction">
+      geant4DetectorConstruction <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -434,6 +381,7 @@ U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkb
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gnome-screenshot-command"><span class="nav-number">1.</span> <span class="nav-text">gnome-screenshot command</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -469,23 +417,26 @@ U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkb
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i>GitHub</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i>CSDN</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i>Netease</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i>E-Mail</span>
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i>Runoob</span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
   </div>
 
 
@@ -513,6 +464,10 @@ U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkb
   </div>
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -552,12 +507,11 @@ U2FsdGVkX1/FJ1l0PDuvx/LfvfVROOOsF/g8vqUcfceCI12mTFAGBgX3j7Bm9sL5lgRCH2JgyO/9jwkb
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
   <script>
 var pjax = new Pjax({
@@ -641,7 +595,7 @@ window.addEventListener('pjax:success', () => {
 if (document.querySelectorAll('pre.mermaid').length) {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
     mermaid.initialize({
-      theme    : 'forest',
+      theme    : '',
       logLevel : 3,
       flowchart: { curve     : 'linear' },
       gantt    : { axisFormat: '%m/%d/%Y' },
@@ -653,6 +607,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
     <div id="pjax">
+  
+
   
 
   
