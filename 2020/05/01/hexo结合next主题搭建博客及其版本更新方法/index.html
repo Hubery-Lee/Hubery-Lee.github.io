@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="博客搭建及主题切换与更新方法">
+<meta name="keywords" content="hexo,博客搭建,next主题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo结合next主题搭建博客及其版本更新方法">
+<meta property="og:url" content="https://Hubery-Lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/index.html">
+<meta property="og:site_name" content="Hubery-Lee">
+<meta property="og:description" content="博客搭建及主题切换与更新方法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/comp.jpg">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/frame.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png">
+<meta property="og:updated_time" content="2020-05-01T07:30:20.844Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo结合next主题搭建博客及其版本更新方法">
+<meta name="twitter:description" content="博客搭建及主题切换与更新方法">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/comp.jpg">
+
+<link rel="canonical" href="https://Hubery-Lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>hexo结合next主题搭建博客及其版本更新方法 | Hubery-Lee</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Hubery-Lee" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hubery-Lee</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">蒹葭苍苍，白露为霜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">18</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">26</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          hexo结合next主题搭建博客及其版本更新方法
+        </h1>
+
+        <div class="post-meta">
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description">博客搭建及主题切换与更新方法</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="🍳此文要解决的问题"><a href="#🍳此文要解决的问题" class="headerlink" title="🍳此文要解决的问题"></a>🍳此文要解决的问题</h1><ul>
+<li>原博客本地文件库在linux系统下，现在想迁移到windows下。</li>
+<li>原博客使用的next主题版本落后</li>
+<li>如何使配置文件不依赖next主题配置文件，使next主题文档更新更方便？</li>
+</ul>
+<h1 id="🚲方法"><a href="#🚲方法" class="headerlink" title="🚲方法"></a>🚲方法</h1><h2 id="🍗博客搭建工具有哪些？"><a href="#🍗博客搭建工具有哪些？" class="headerlink" title="🍗博客搭建工具有哪些？"></a>🍗博客搭建工具有哪些？</h2><ol>
+<li>hexo  速度快，中文文档和教程比较多</li>
+<li>jekyll  基于ruby语言</li>
+<li>hugo  基于go语言 部署最快</li>
+<li>pelican 基于python语言 快与安全</li>
+</ol>
+<p><img src="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/comp.jpg" alt></p>
+<h2 id="🧨基本原理，"><a href="#🧨基本原理，" class="headerlink" title="🧨基本原理，"></a>🧨基本原理，</h2><pre class="mermaid" style="text-align: center;">
+            graph LR
+            A[模板] --> B[编译]
+C(内容) --> B
+B --> D[网络发布]
+          </pre>
+<p><img src="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/frame.png" alt></p>
+<h2 id="🍔我们用哪个工具？"><a href="#🍔我们用哪个工具？" class="headerlink" title="🍔我们用哪个工具？"></a>🍔我们用哪个工具？</h2><p><strong>在此，作者选择采用hexo工具。原因如下</strong></p>
+<ol>
+<li>作者以前的博客既是使用hexo搭建的，配置和上手较快。</li>
+<li>作者尝试过使用github服务器自带的jekyll，发现生成速度比较慢，除此之外还需要<code>git</code>命令行操作，记住命令行比较麻烦。</li>
+<li>hexo 开发者是台湾人，故而中文社区比较庞大；</li>
+<li>hexo的模板个人感觉比较jekyll模板功能更加丰富。</li>
+</ol>
+<p>*<em>hexo主题模板有很多，配置文件中文文档最全的当属next主题 *</em></p>
+<ol>
+<li><span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v">老版本中文配置文档<i class="fa fa-external-link-alt"></i></span>  <code>不推荐使用</code></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZy8=">next 主题官网说明文档<i class="fa fa-external-link-alt"></i></span> <code>具有官方维护团队，推荐使用该文档进行学习</code></li>
+</ol>
+<h1 id="🚆如何将博客的本地文档迁移到windows下"><a href="#🚆如何将博客的本地文档迁移到windows下" class="headerlink" title="🚆如何将博客的本地文档迁移到windows下"></a>🚆如何将博客的本地文档迁移到windows下</h1><ol>
+<li><p>将博客文件夹拷贝到windows</p>
+</li>
+<li><p>安装<code>node.js</code></p>
+</li>
+<li><p>进入博客文件夹，安装npm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hexo生成部署即可</p>
+</li>
+</ol>
+<h1 id="👼如何更新next主题"><a href="#👼如何更新next主题" class="headerlink" title="👼如何更新next主题"></a>👼如何更新next主题</h1><p>1.从github上下载next主题，解压后放置到themes主题下；</p>
+<div class="tabs" id="fourth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#fourth-unique-name-1">Solution 1</a></li><li class="tab"><a href="#fourth-unique-name-2">Solution 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="fourth-unique-name-1"><p>github网页下载并解压</p></div><div class="tab-pane" id="fourth-unique-name-2"><p>在博客根文件夹下，命令行克隆</p>
+undefined</div></div></div>
+
+<ol start="2">
+<li>修改<code>themes/next/_config.yml</code>配置文件，具体配置方法参考<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZy8=">next 主题官网说明文档<i class="fa fa-external-link-alt"></i></span> </li>
+</ol>
+<h1 id="😍如何使配置文件不依赖themes-next-config-yml"><a href="#😍如何使配置文件不依赖themes-next-config-yml" class="headerlink" title="😍如何使配置文件不依赖themes/next/_config.yml"></a>😍如何使配置文件不依赖<code>themes/next/_config.yml</code></h1><p>只需将<code>themes/next/_config.yml</code>中你想修改的内容，拷贝到你的博客根目录下的<code>_config.yml</code>文件中就可以了。</p>
+<p><strong>注意</strong> ：在拷贝到根目录下的<code>_config.yml</code>文件中前，需要添加<code>theme_config:</code>, 拷贝内容为其子内容，注意格式。拷贝内容每行前需要有两个空格，可以通过文档列编辑添加。</p>
+<p>下次更新next版本，只需到next文件夹下，运行命令行<code>get pull</code>即可。</p>
+<h1 id="🎈如何自定义配色布局等"><a href="#🎈如何自定义配色布局等" class="headerlink" title="🎈如何自定义配色布局等"></a>🎈如何自定义配色布局等</h1><h2 id="🎩页面布局配置"><a href="#🎩页面布局配置" class="headerlink" title="🎩页面布局配置"></a>🎩页面布局配置</h2><p>编辑根目录下<code>source\_data</code>下的配置文档，如<code>styles.styl``variables.styl</code>等即可。</p>
+<h1 id="🎃配置成功测试"><a href="#🎃配置成功测试" class="headerlink" title="🎃配置成功测试"></a>🎃配置成功测试</h1><p>插件测试具体见<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZy9kb2NzL3RhZy1wbHVnaW5zLw==">官方网站说明<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="🧨Label测试"><a href="#🧨Label测试" class="headerlink" title="🧨Label测试"></a>🧨Label测试</h2><figure class="highlight md"><figcaption><span>label.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label [class]@Text %&#125;</span><br><span class="line"></span><br><span class="line">[class] : default | primary | success | info | warning | danger.</span><br><span class="line"><span class="code">          '@Text' can be specified with or without space</span></span><br><span class="line"><span class="code">          E.g. 'success @text' similar to 'success@text'.</span></span><br><span class="line"><span class="code">          If not specified, default class will be selected.</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label @ipsum %&#125; &#123;% label primary@dolor sit %&#125; &#123;% label success@adipiscing elit, %&#125; sed &#123;% label info@do eiusmod %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Lorem <span class="label default">ipsum</span> <span class="label primary">dolor sit</span> amet, consectetur <span class="label success">adipiscing elit,</span> sed <span class="label info">do eiusmod</span> tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim *<span class="label warning">ad</span>* minim veniam, quis <strong><span class="label danger">nostrud</span></strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate <del><span class="label default">velit</span></del> <mark>esse</mark> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 id="✨图片组加载配置，3副图两行排列"><a href="#✨图片组加载配置，3副图两行排列" class="headerlink" title="✨图片组加载配置，3副图两行排列"></a>✨图片组加载配置，3副图两行排列</h2><figure class="highlight md"><figcaption><span>grouppicture.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% grouppicture [group]-[layout] %&#125;&#123;% endgrouppicture %&#125;</span><br><span class="line">&#123;% gp [group]-[layout] %&#125;&#123;% endgp %&#125;</span><br><span class="line"></span><br><span class="line">[group]  : Total number of pictures to add in the group.</span><br><span class="line">[layout] : Default picture under the group to show.</span><br></pre></td></tr></table></figure>
+
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png" alt></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png" alt></div><div class="group-picture-column" style="width: 50%;"><img src="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png" alt></div></div></div></div>
+<h2 id="🎄mermaid-测试"><a href="#🎄mermaid-测试" class="headerlink" title="🎄mermaid 测试"></a>🎄mermaid 测试</h2><figure class="highlight md"><figcaption><span>mermaid.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mermaid type %&#125;</span><br><span class="line">&#123;% endmermaid %&#125;</span><br><span class="line"></span><br><span class="line">type : type of the mermaid chart, visit https://github.com/knsv/mermaid for more information.</span><br></pre></td></tr></table></figure>
+
+<pre class="mermaid" style="text-align: center;">
+            sequenceDiagram
+            participant Alice
+participant Bob
+participant John as John<br>Second Line
+Alice ->> Bob: Hello Bob, how are you?
+Bob-->>John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long<br>long time, so long<br>that the text does<br>not fit on a row.
+Bob-->Alice: Checking with John...
+alt either this
+Alice->>John: Yes
+else or this
+Alice->>John: No
+else or this will happen
+Alice->John: Maybe
+end
+par this happens in parallel
+Alice -->> Bob: Parallel message 1
+and
+Alice -->> John: Parallel message 2
+end
+          </pre>
+
+<h2 id="🎉tabs测试"><a href="#🎉tabs测试" class="headerlink" title="🎉tabs测试"></a>🎉tabs测试</h2><p>使用方法</p>
+<figure class="highlight md"><figcaption><span>tabs.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- tab [Tab caption] [@icon] --&gt;</span></span></span><br><span class="line">Any content (support inline tags too).</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- endtab --&gt;</span></span></span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">Unique name   : Unique name of tabs block tag without comma.</span><br><span class="line"><span class="code">                Will be used in #id's as prefix for each tab with their index numbers.</span></span><br><span class="line"><span class="code">                If there are whitespaces in name, for generate #id all whitespaces will replaced by dashes.</span></span><br><span class="line"><span class="code">                Only for current url of post/page must be unique!</span></span><br><span class="line">[index]       : Index number of active tab.</span><br><span class="line"><span class="code">                If not specified, first tab (1) will be selected.</span></span><br><span class="line"><span class="code">                If index is -1, no tab will be selected. It's will be something like spoiler.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br><span class="line">[Tab caption] : Caption of current tab.</span><br><span class="line"><span class="code">                If not caption specified, unique name with tab index suffix will be used as caption of tab.</span></span><br><span class="line"><span class="code">                If not caption specified, but specified icon, caption will empty.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br><span class="line">[@icon]       : FontAwesome icon name (without 'fa-' at the begining).</span><br><span class="line"><span class="code">                Can be specified with or without space; e.g. 'Tab caption @icon' similar to 'Tab caption@icon'.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">Tags 1</a></li><li class="tab"><a href="#tags-2">Tags 2</a></li><li class="tab"><a href="#tags-3">Tags 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><strong>This is Tab 1.</strong></p>
+<ol>
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ol>
+<p>4-spaces code block:</p>
+<pre><code>nano /etc</code></pre><p>Tagged code block:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br></pre></td></tr></table></figure>
+
+<div class="note default">
+            <p>Note default tag.</p>
+          </div></div><div class="tab-pane" id="tags-2"><p><strong>This is Tab 2.</strong></p>
+<ul>
+<li>Five</li>
+<li>Six</li>
+<li>Seven</li>
+</ul>
+<div class="note primary">
+            <div class="video-container"><iframe src="//www.youtube.com/embed/Kt7u5kr_P5o" frameborder="0" allowfullscreen></iframe></div>
+          </div></div><div class="tab-pane" id="tags-3"><p><strong>This is Tab 3.</strong></p>
+<div class="tabs" id="sub-tabs"><ul class="nav-tabs"><li class="tab active"><a href="#sub-tabs-1">Sub Tabs 1</a></li><li class="tab"><a href="#sub-tabs-2">Sub Tabs 2</a></li><li class="tab"><a href="#sub-tabs-3">Sub Tabs 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sub-tabs-1"><p><strong>This is Sub Tab 1.</strong></p>
+<div class="note success">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p><div class="note warning">            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>          </div><p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+          </div></div><div class="tab-pane" id="sub-tabs-2"><p><strong>This is Sub Tab 2.</strong></p>
+<div class="note success">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p><div class="note danger">            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>          </div>
+          </div></div><div class="tab-pane" id="sub-tabs-3"><p><strong>This is Sub Tab 3.</strong></p>
+<div class="tabs" id="sub-sub-tabs"><ul class="nav-tabs"><li class="tab active"><a href="#sub-sub-tabs-1">Sub-Sub Tabs 1</a></li><li class="tab"><a href="#sub-sub-tabs-2">Sub-Sub Tabs 2</a></li><li class="tab"><a href="#sub-sub-tabs-3">Sub-Sub Tabs 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sub-sub-tabs-1"><p><strong>This is Sub-Sub Tab 1 of Sub Tab 3.</strong></p>
+<div class="note success">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p><p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+          </div></div><div class="tab-pane" id="sub-sub-tabs-2"><p><strong>This is Sub-Sub Tab 2 of Sub Tab 3.</strong></p>
+<div class="note success">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p><div class="note warning">            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p><p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>          </div>
+          </div></div><div class="tab-pane" id="sub-sub-tabs-3"><p><strong>This is Sub-Sub Tab 3 of Sub Tab 3.</strong></p>
+<div class="note success">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p><div class="note warning">            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p><div class="note danger">            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>          </div>          </div>
+          </div></div></div></div></div></div></div></div></div></div>
+
+<h2 id="🎊Note测试"><a href="#🎊Note测试" class="headerlink" title="🎊Note测试"></a>🎊Note测试</h2><p>使用方法：</p>
+<figure class="highlight md"><figcaption><span>note.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">[class]   : default | primary | success | info | warning | danger.</span><br><span class="line">[no-icon] : Disable icon in note.</span><br><span class="line"></span><br><span class="line">All parameters are optional.</span><br></pre></td></tr></table></figure>
+
+<div class="note primary">
+            <h4 id="Primary-Header"><a href="#Primary-Header" class="headerlink" title="Primary Header"></a>Primary Header</h4><p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+          </div>
+
+<div class="note info">
+            <h3 id="Info-Header"><a href="#Info-Header" class="headerlink" title="Info Header"></a>Info Header</h3><p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+          </div>
+
+<div class="note success">
+            <h4 id="Success-Header"><a href="#Success-Header" class="headerlink" title="Success Header"></a>Success Header</h4><p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+          </div>
+<div class="note warning">
+            <h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+          </div>
+<div class="note danger">
+            <h4 id="Danger-Header"><a href="#Danger-Header" class="headerlink" title="Danger Header"></a>Danger Header</h4><p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+          </div>
+<p><code>等等</code></p>
+<h2 id="🎋button测试"><a href="#🎋button测试" class="headerlink" title="🎋button测试"></a>🎋button测试</h2><figure class="highlight md"><figcaption><span>button.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- Tag Alias --&gt;</span></span></span><br><span class="line">&#123;% btn url, text, icon [class], [title] %&#125;</span><br><span class="line"></span><br><span class="line">url     : Absolute or relative path to URL.</span><br><span class="line">text    : Button text. Required if no icon specified.</span><br><span class="line">icon    : FontAwesome icon name (without 'fa-' at the begining). Required if no text specified.</span><br><span class="line">[class] : FontAwesome class(es): fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x</span><br><span class="line"><span class="code">          Optional parameter.</span></span><br><span class="line">[title] : Tooltip at mouseover.</span><br><span class="line"><span class="code">          Optional parameter.</span></span><br></pre></td></tr></table></figure>
+
+<a class="btn" href="#">
+            <i class="fa fa-"></i>Text
+          </a>
+<a class="btn" href="#" title="Title">
+            <i class="fa fa-"></i>Text & Title
+          </a>
+<p><a class="btn" href="#">
+            <i class="fa fa-home fa-fw fa-lg"></i>Text & Large Icon
+          </a>
+<a class="btn" href="#" title="Title">
+            <i class="fa fa-home fa-fw fa-lg"></i>Text & Large Icon & Title
+          </a></p>
+Lorem <a class="btn" href="#">
+            <i class="fa fa-home fa-fw fa-lg"></i>Lorem
+          </a> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident <a class="btn" href="#">
+            <i class="fa fa-home fa-fw fa-lg"></i>Ipsum
+          </a>, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="note info">
+            <a class="btn" href="#">            <i class="fa fa-home fa-fw"></i>Text & Icon          </a><a class="btn" href="#" title="Title">            <i class="fa fa-home"></i>          </a><a class="btn" href="#">            <i class="fa fa-"></i>Text          </a><p><a href="#">Link</a></p>
+          </div>
+
+<div class="text-center"><div><a class="btn" href="#">
+            <i class="fa fa-heading"></i>
+          </a><a class="btn" href="#">
+            <i class="fab fa-edge"></i>
+          </a><a class="btn" href="#">
+            <i class="fa fa-times"></i>
+          </a><a class="btn" href="#">
+            <i class="far fa-circle"></i>
+          </a></div>
+<div><a class="btn" href="#">
+            <i class="fa fa-italic"></i>
+          </a><a class="btn" href="#">
+            <i class="fab fa-scribd"></i>
+          </a></div>
+<div><a class="btn" href="#">
+            <i class="fab fa-google"></i>
+          </a><a class="btn" href="#">
+            <i class="fab fa-chrome"></i>
+          </a><a class="btn" href="#">
+            <i class="fab fa-opera"></i>
+          </a><a class="btn" href="#">
+            <i class="fa fa-gem fa-rotate-270"></i>
+          </a></div></div>
+
+<div class="text-center"><a class="btn" href="#" title="Previous Chapter (Full Image)">
+            <i class="fa fa-arrow-left fa-fw fa-lg"></i>Previous Chapter
+          </a> <a class="btn" href="#" title="Next Chapter (Label)">
+            <i class="fa fa-arrow-right fa-fw fa-lg"></i>Next Chapter
+          </a></div>
+
+<div class="text-center"><a class="btn" href="https://github.com/theme-next/hexo-theme-next" title="NexT source code" target="_blank" rel="noopener">
+            <i class="fab fa-github fa-fw fa-lg"></i>NexT
+          </a></div>
+
+<h2 id="🎏Caniuse测试"><a href="#🎏Caniuse测试" class="headerlink" title="🎏Caniuse测试"></a>🎏Caniuse测试</h2><figure class="highlight md"><figcaption><span>canius.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% caniuse feature @ periods %&#125;</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- Tag Alias --&gt;</span></span></span><br><span class="line">&#123;% can feature @ periods %&#125;</span><br><span class="line"></span><br><span class="line">feature : Search for the feature you want on https://caniuse.com, then click on the hash sign to the left of the search result heading and you will get the unique name of this feature.</span><br><span class="line">periods : Select the browser versions to display. Supported values: past<span class="emphasis">_1, past_</span>2, past<span class="emphasis">_3, past_</span>4, past<span class="emphasis">_5, current, future_</span>3, future<span class="emphasis">_2, future_</span>1. If this value is empty, the default value 'current' will be used.</span><br></pre></td></tr></table></figure>
+
+<iframe data-feature="sharedarraybuffer" src="https://caniuse.bitsofco.de/embed/index.html?feat=sharedarraybuffer&periods=current&accessible-colours=false" frameborder="0" width="100%" height="400px"></iframe>
+<iframe data-feature="link-rel-modulepreload" src="https://caniuse.bitsofco.de/embed/index.html?feat=link-rel-modulepreload&periods=past_1,past_2,past_3,past_4,past_5&accessible-colours=false" frameborder="0" width="100%" height="400px"></iframe>
+
+<h2 id="🧧pdf测试"><a href="#🧧pdf测试" class="headerlink" title="🧧pdf测试"></a>🧧pdf测试</h2><figure class="highlight md"><figcaption><span>pdf.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf url [height] %&#125;</span><br><span class="line"></span><br><span class="line">[url]    : Relative path to PDF file.</span><br><span class="line">[height] : Optional. Height of the PDF display element, e.g. 800px.</span><br></pre></td></tr></table></figure>
+
+<div class="pdfobject-container" data-target="fulltext.pdf" data-height="600px"></div>
+
+
+
+<h2 id="🎞video测试"><a href="#🎞video测试" class="headerlink" title="🎞video测试"></a>🎞video测试</h2><figure class="highlight md"><figcaption><span>video.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% video url %&#125;</span><br></pre></td></tr></table></figure>
+
+<video src="https://www.bilibili.com/video/BV1D54y1Q7cw" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
+
+            <span class="label">CSDN</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/博客搭建/" rel="tag"><i class="fa fa-tag"></i> 博客搭建</a>
+              <a href="/tags/next主题/" rel="tag"><i class="fa fa-tag"></i> next主题</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2050/04/30/作者github项目导航/" rel="prev" title="作者github项目导航">
+      <i class="fa fa-chevron-left"></i> 作者github项目导航
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/28/archlinux安装与使用体验/" rel="next" title="archlinux安装与使用体验">
+      archlinux安装与使用体验 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#🍳此文要解决的问题"><span class="nav-number">1.</span> <span class="nav-text">🍳此文要解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#🚲方法"><span class="nav-number">2.</span> <span class="nav-text">🚲方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🍗博客搭建工具有哪些？"><span class="nav-number">2.1.</span> <span class="nav-text">🍗博客搭建工具有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🧨基本原理，"><span class="nav-number">2.2.</span> <span class="nav-text">🧨基本原理，</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🍔我们用哪个工具？"><span class="nav-number">2.3.</span> <span class="nav-text">🍔我们用哪个工具？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#🚆如何将博客的本地文档迁移到windows下"><span class="nav-number">3.</span> <span class="nav-text">🚆如何将博客的本地文档迁移到windows下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#👼如何更新next主题"><span class="nav-number">4.</span> <span class="nav-text">👼如何更新next主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#😍如何使配置文件不依赖themes-next-config-yml"><span class="nav-number">5.</span> <span class="nav-text">😍如何使配置文件不依赖themes/next/_config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#🎈如何自定义配色布局等"><span class="nav-number">6.</span> <span class="nav-text">🎈如何自定义配色布局等</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🎩页面布局配置"><span class="nav-number">6.1.</span> <span class="nav-text">🎩页面布局配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#🎃配置成功测试"><span class="nav-number">7.</span> <span class="nav-text">🎃配置成功测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🧨Label测试"><span class="nav-number">7.1.</span> <span class="nav-text">🧨Label测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#✨图片组加载配置，3副图两行排列"><span class="nav-number">7.2.</span> <span class="nav-text">✨图片组加载配置，3副图两行排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎄mermaid-测试"><span class="nav-number">7.3.</span> <span class="nav-text">🎄mermaid 测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎉tabs测试"><span class="nav-number">7.4.</span> <span class="nav-text">🎉tabs测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎊Note测试"><span class="nav-number">7.5.</span> <span class="nav-text">🎊Note测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Primary-Header"><span class="nav-number">7.5.0.1.</span> <span class="nav-text">Primary Header</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Info-Header"><span class="nav-number">7.5.1.</span> <span class="nav-text">Info Header</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Success-Header"><span class="nav-number">7.5.1.1.</span> <span class="nav-text">Success Header</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Warning-Header"><span class="nav-number">7.5.1.2.</span> <span class="nav-text">Warning Header</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Danger-Header"><span class="nav-number">7.5.1.3.</span> <span class="nav-text">Danger Header</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎋button测试"><span class="nav-number">7.6.</span> <span class="nav-text">🎋button测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎏Caniuse测试"><span class="nav-number">7.7.</span> <span class="nav-text">🎏Caniuse测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🧧pdf测试"><span class="nav-number">7.8.</span> <span class="nav-text">🧧pdf测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎞video测试"><span class="nav-number">7.9.</span> <span class="nav-text">🎞video测试</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李会"
+      src="/images/owl.jpg">
+  <p class="site-author-name" itemprop="name">李会</p>
+  <div class="site-description" itemprop="description">Get busy living or get busy dying.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+        </li>
+    </ul>
+  </div>
+<div class="cc-license motion-element" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李会</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ooozwlclX00aJabPvk1WTj7J-gzGzoHsz',
+      appKey     : 'CnXrRUVdUdMXgEvGbdolWGYX',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
