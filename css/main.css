@@ -901,11 +901,6 @@ pre .javascript .function {
   content: "\f056";
   color: #d9534f;
 }
-.pdfobject-container iframe,
-.pdfobject-container embed {
-  height: 500px;
-  width: 100%;
-}
 .pagination .prev,
 .pagination .next,
 .pagination .page-number,
@@ -1335,7 +1330,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4f5359;
+  background: #8ce8ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2594,7 +2589,7 @@ hr {
   }
 }
 .footer {
-  background: #87daff;
+  background: var(--content-bg-color);
   color: var(--text-color);
   padding: 10px 0;
 }
