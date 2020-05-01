@@ -44,6 +44,31 @@
   </entry>
   
   <entry>
+    <title>test</title>
+    <link href="https://hubery-lee.github.io/2020/05/01/test/"/>
+    <id>https://hubery-lee.github.io/2020/05/01/test/</id>
+    <published>2020-05-01T08:40:05.000Z</published>
+    <updated>2020-05-01T08:43:07.680Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="🎃牛牛"><a href="#🎃牛牛" class="headerlink" title="🎃牛牛"></a>🎃牛牛</h1><pre class="mermaid" style="text-align: center;">            graph LR            A[模板] --> B[编译]C(内容) --> BB --> D[网络发布]          </pre><div class="note success">            <p>Welcome to <a href="https://hubery-lee.github.io">Hubery-Lee&#39;s Blog!</a></p>          </div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;🎃牛牛&quot;&gt;&lt;a href=&quot;#🎃牛牛&quot; class=&quot;headerlink&quot; title=&quot;🎃牛牛&quot;&gt;&lt;/a&gt;🎃牛牛&lt;/h1&gt;&lt;pre class=&quot;mermaid&quot; style=&quot;text-align: center;&quot;&gt;
+            gra
+      
+    
+    </summary>
+    
+    
+    
+      <category term="牛牛" scheme="https://Hubery-Lee.github.io/tags/%E7%89%9B%E7%89%9B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo结合next主题搭建博客及其版本更新方法</title>
     <link href="https://hubery-lee.github.io/2020/05/01/hexo%E7%BB%93%E5%90%88next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/"/>
     <id>https://hubery-lee.github.io/2020/05/01/hexo%E7%BB%93%E5%90%88next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95/</id>
@@ -468,32 +493,6 @@
     
     
       <category term="geant4" scheme="https://Hubery-Lee.github.io/tags/geant4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>G4Color选项</title>
-    <link href="https://hubery-lee.github.io/2018/09/09/G4Color%E9%80%89%E9%A1%B9/"/>
-    <id>https://hubery-lee.github.io/2018/09/09/G4Color%E9%80%89%E9%A1%B9/</id>
-    <published>2018-09-09T10:53:53.000Z</published>
-    <updated>2018-09-09T11:08:24.453Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="颜色的配置"><a href="#颜色的配置" class="headerlink" title="颜色的配置"></a>颜色的配置</h2><p>Geant4中的颜色配置由红、绿、蓝、是否透明四个构成；red、green、blue、alpha(opacity/opaque)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">G4Colour::G4Colour ( G4double  r = 1.0,</span><br><span class="line">     G4double  g = 1.0,</span><br><span class="line">     G4double  b = 1.0,</span><br><span class="line">                     G4double  a = 1.0);</span><br><span class="line">                 //0&lt;=red, green, blue &lt;= 1.0</span><br></pre></td></tr></table></figure><h2 id="颜色的实例化应用"><a href="#颜色的实例化应用" class="headerlink" title="颜色的实例化应用"></a>颜色的实例化应用</h2><p>1.颜色配置实例化</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">G4Colour  white  ();  //white</span><br><span class="line">G4Colour  white  (1.0,1.0,1.0);  //white</span><br><span class="line">G4Colour  gray   (0.5,0.5,0.5);  //gray</span><br><span class="line">G4Colour  black  (0.0,0.0,0.0); //black</span><br><span class="line">G4Colour  red    (1.0,0.0,0.0);  //red</span><br><span class="line">G4Colour  green  (0.0,1.0,0.0);  //green</span><br><span class="line">G4Colour  blue   (0.0,0.0,1.0);  //blue</span><br><span class="line">G4Colour  cyan   (0.0,1.0,1.0); //cyan</span><br><span class="line">G4Colour  magenta(1.0,0.0,1.0);  //magenta</span><br><span class="line">G4Colour  yellow (1.0,1.0,0.0);  //yellow</span><br></pre></td></tr></table></figure><p>example </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">G4VisAttributes* Assemble_VisAtt= new G4VisAttributes(G4Colour(0.0,0.0,1.0));//blue</span><br></pre></td></tr></table></figure><p>2.静态公用数据函数实例化</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">static const G4Colour&amp; White   ();</span><br><span class="line">static const G4Colour&amp; Gray    ();</span><br><span class="line">static const G4Colour&amp; Grey    ();</span><br><span class="line">static const G4Colour&amp; Black   ();</span><br><span class="line">static const G4Colour&amp; Red     ();</span><br><span class="line">static const G4Colour&amp; Green   ();</span><br><span class="line">static const G4Colour&amp; Blue    ();</span><br><span class="line">static const G4Colour&amp; Cyan    ();</span><br><span class="line">static const G4Colour&amp; Magenta ();</span><br><span class="line">static const G4Colour&amp; Yellow  ();</span><br></pre></td></tr></table></figure><p>example</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">G4Colour myRed(G4Colour::Red());</span><br></pre></td></tr></table></figure><p>实例化Colour对象后，可以采用如下方式获得函数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">G4double G4Colour::GetRed   () const;</span><br><span class="line">G4double G4Colour::GetGreen () const;</span><br><span class="line">G4double G4Colour::GetBlue  () const;</span><br></pre></td></tr></table></figure><h2 id="Colour-Map的应用"><a href="#Colour-Map的应用" class="headerlink" title="Colour Map的应用"></a>Colour Map的应用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">G4StringG4Colour</span><br><span class="line">---------------------------------------</span><br><span class="line">whiteG4Colour::White()</span><br><span class="line">grayG4Colour::Gray()</span><br><span class="line">greyG4Colour::Grey()</span><br><span class="line">blackG4Colour::Black()</span><br><span class="line">redG4Colour::Red()</span><br><span class="line">greenG4Colour::Green()</span><br><span class="line">blueG4Colour::Blue()</span><br><span class="line">cyanG4Colour::Cyan()</span><br><span class="line">magentaG4Colour::Magenta ()</span><br><span class="line">yellowG4Colour::Yellow ()</span><br></pre></td></tr></table></figure><p>Colours的检索可以采用如下方式</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool G4Colour::GetColour(const G4String&amp; key, G4Colour&amp; result)</span><br></pre></td></tr></table></figure><p>example</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">G4Colour myColour(G4Colour::Black());</span><br><span class="line"><span class="keyword">if</span> (G4Colour::GetColour(<span class="string">"red"</span>, myColour)) &#123;</span><br><span class="line">// Successfully retrieved colour <span class="string">"red"</span>. myColour is now red</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">// Colour did not exist <span class="keyword">in</span> map. myColour is still black</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;颜色的配置&quot;&gt;&lt;a href=&quot;#颜色的配置&quot; class=&quot;headerlink&quot; title=&quot;颜色的配置&quot;&gt;&lt;/a&gt;颜色的配置&lt;/h2&gt;&lt;p&gt;Geant4中的颜色配置由红、绿、蓝、是否透明四个构成；red、green、blue、alpha(opacity/o
-      
-    
-    </summary>
-    
-    
-      <category term="Geant4及Root应用" scheme="https://Hubery-Lee.github.io/categories/Geant4%E5%8F%8ARoot%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="Geant4" scheme="https://Hubery-Lee.github.io/tags/Geant4/"/>
     
   </entry>
   
