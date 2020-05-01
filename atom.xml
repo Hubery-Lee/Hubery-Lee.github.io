@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubery-lee.github.io/"/>
-  <updated>2020-04-30T08:39:55.237Z</updated>
+  <updated>2020-05-01T08:59:10.985Z</updated>
   <id>https://hubery-lee.github.io/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>作者github项目导航</title>
-    <link href="https://hubery-lee.github.io/2050/04/30/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/"/>
-    <id>https://hubery-lee.github.io/2050/04/30/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/</id>
-    <published>2050-04-29T16:00:00.000Z</published>
-    <updated>2020-04-30T08:39:55.237Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="个人笔记"><a href="#个人笔记" class="headerlink" title="个人笔记"></a>个人笔记</h1><ol><li>日常学习笔记<a href="https://hubery-lee.github.io/Notes/">Notes</a></li></ol><h1 id="Bilibili视频资料"><a href="#Bilibili视频资料" class="headerlink" title="Bilibili视频资料"></a>Bilibili视频资料</h1><ol><li>Geant4教程<a href="https://hubery-lee.github.io/Geant4-jiaocheng/">Geant4-jiaocheng</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;个人笔记&quot;&gt;&lt;a href=&quot;#个人笔记&quot; class=&quot;headerlink&quot; title=&quot;个人笔记&quot;&gt;&lt;/a&gt;个人笔记&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;日常学习笔记&lt;a href=&quot;https://hubery-lee.github.io/Notes/&quot;&gt;Note
-      
-    
-    </summary>
-    
-    
-      <category term="作者github项目导航" scheme="https://Hubery-Lee.github.io/categories/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/"/>
-    
-    
-      <category term="作者github项目导航" scheme="https://Hubery-Lee.github.io/tags/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/"/>
-    
-  </entry>
   
   <entry>
     <title>hexo结合next主题搭建博客及其版本更新方法</title>
@@ -67,6 +40,33 @@
       <category term="博客搭建" scheme="https://Hubery-Lee.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
       <category term="next主题" scheme="https://Hubery-Lee.github.io/tags/next%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作者github项目导航</title>
+    <link href="https://hubery-lee.github.io/2020/04/30/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/"/>
+    <id>https://hubery-lee.github.io/2020/04/30/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/</id>
+    <published>2020-04-29T16:00:00.000Z</published>
+    <updated>2020-05-01T09:19:35.366Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="个人笔记"><a href="#个人笔记" class="headerlink" title="个人笔记"></a>个人笔记</h1><ol><li>日常学习笔记<a href="https://hubery-lee.github.io/Notes/">Notes</a></li></ol><h1 id="Bilibili视频资料"><a href="#Bilibili视频资料" class="headerlink" title="Bilibili视频资料"></a>Bilibili视频资料</h1><ol><li>Geant4教程<a href="https://hubery-lee.github.io/Geant4-jiaocheng/">Geant4-jiaocheng</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;个人笔记&quot;&gt;&lt;a href=&quot;#个人笔记&quot; class=&quot;headerlink&quot; title=&quot;个人笔记&quot;&gt;&lt;/a&gt;个人笔记&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;日常学习笔记&lt;a href=&quot;https://hubery-lee.github.io/Notes/&quot;&gt;Note
+      
+    
+    </summary>
+    
+    
+      <category term="作者github项目导航" scheme="https://Hubery-Lee.github.io/categories/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/"/>
+    
+    
+      <category term="作者github项目导航" scheme="https://Hubery-Lee.github.io/tags/%E4%BD%9C%E8%80%85github%E9%A1%B9%E7%9B%AE%E5%AF%BC%E8%88%AA/"/>
     
   </entry>
   
