@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%AE%80%E8%A1%A8.png">
-<meta property="og:updated_time" content="2020-05-01T08:10:15.013Z">
+<meta property="og:updated_time" content="2020-05-01T08:59:10.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo结合next主题搭建博客及其版本更新方法">
 <meta name="twitter:description" content="博客搭建及主题切换与更新方法">
@@ -145,7 +145,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">27</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">26</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -503,13 +503,13 @@ Lorem <a class="btn" href="#">
 
 <h2 id="🧧pdf测试"><a href="#🧧pdf测试" class="headerlink" title="🧧pdf测试"></a>🧧pdf测试</h2><figure class="highlight md"><figcaption><span>pdf.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf url [height] %&#125;</span><br><span class="line"></span><br><span class="line">[url]    : Relative path to PDF file.</span><br><span class="line">[height] : Optional. Height of the PDF display element, e.g. 800px.</span><br></pre></td></tr></table></figure>
 
-<div class="pdfobject-container" data-target="fulltext.pdf" data-height="600px"></div>
+<div class="pdfobject-container" data-target="https://sci-hub.tw/downloads-ii/2020-03-01/f0/licata2020.pdf" data-height="600px"></div>
 
 
 
 <h2 id="🎞video测试"><a href="#🎞video测试" class="headerlink" title="🎞video测试"></a>🎞video测试</h2><figure class="highlight md"><figcaption><span>video.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% video url %&#125;</span><br></pre></td></tr></table></figure>
 
-<video src="https://mixkit.co/free-stock-video/watering-a-flower-pot-1780/" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
+<video src="https://assets.mixkit.co/videos/download/mixkit-watering-a-flower-pot-1780.mp4" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
     </div>
 
     
@@ -584,8 +584,8 @@ Lorem <a class="btn" href="#">
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/01/test/" rel="prev" title="test">
-      <i class="fa fa-chevron-left"></i> test
+    <a href="/2050/04/30/作者github项目导航/" rel="prev" title="作者github项目导航">
+      <i class="fa fa-chevron-left"></i> 作者github项目导航
     </a></div>
       <div class="post-nav-item">
     <a href="/2020/04/28/archlinux安装与使用体验/" rel="next" title="archlinux安装与使用体验">
@@ -666,7 +666,7 @@ Lorem <a class="btn" href="#">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -857,6 +857,26 @@ window.addEventListener('pjax:success', () => {
 
 
 
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
 
 
 <script data-pjax>
