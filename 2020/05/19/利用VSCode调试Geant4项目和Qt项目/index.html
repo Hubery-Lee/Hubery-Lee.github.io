@@ -21,18 +21,20 @@
     var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
-  <meta name="description" content="Get busy living or get busy dying.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hubery-Lee">
-<meta property="og:url" content="https://Hubery-Lee.github.io/archives/2018/page/2/index.html">
+  <meta name="description" content="vscode在手，天下我有">
+<meta name="keywords" content="vscode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用VSCode调试Geant4项目和Qt项目">
+<meta property="og:url" content="https://Hubery-Lee.github.io/2020/05/19/利用VSCode调试Geant4项目和Qt项目/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="Get busy living or get busy dying.">
+<meta property="og:description" content="vscode在手，天下我有">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-19T13:10:14.414Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hubery-Lee">
-<meta name="twitter:description" content="Get busy living or get busy dying.">
+<meta name="twitter:title" content="利用VSCode调试Geant4项目和Qt项目">
+<meta name="twitter:description" content="vscode在手，天下我有">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/archives/2018/page/2/">
+<link rel="canonical" href="https://Hubery-Lee.github.io/2020/05/19/利用VSCode调试Geant4项目和Qt项目/">
 
 
 <script id="page-configurations">
@@ -40,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Hubery-Lee</title>
+  <title>利用VSCode调试Geant4项目和Qt项目 | Hubery-Lee</title>
   
 
 
@@ -191,239 +193,163 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/05/19/利用VSCode调试Geant4项目和Qt项目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          利用VSCode调试Geant4项目和Qt项目
+        </h1>
+
+        <div class="post-meta">
+
+          
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 29 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description">vscode在手，天下我有</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2018</span>
+        <h1 id="🌌利用VSCode调试Geant4项目和Qt项目"><a href="#🌌利用VSCode调试Geant4项目和Qt项目" class="headerlink" title="🌌利用VSCode调试Geant4项目和Qt项目"></a>🌌利用VSCode调试Geant4项目和Qt项目</h1><p>==<strong>注意</strong>==</p>
+<ul>
+<li><p>VSCode只是一个具有用户交互界面、可设置断点调试的集成开发环境，并具有编辑器的一些特色功能，如：代码补全、格式自动化和语法自动检查等。直白的理解，他是一个具有很多集成功能的高端编辑器，属于前端，代码的编译链接执行需要交给其他一些软件，如CMake等。</p>
+</li>
+<li><p>Geant4和Qt均是基于c++语言，调试程序需要用gdb。那么，调试geant4和Qt程序与调试C++程序一样没有什么区别。</p>
+</li>
+</ul>
+<h2 id="🧭c-如何开启调试模式"><a href="#🧭c-如何开启调试模式" class="headerlink" title="🧭c++如何开启调试模式"></a>🧭c++如何开启调试模式</h2><p>C++单文件编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ main.cpp -o a.out</span><br></pre></td></tr></table></figure>
+
+<p>C++单文件gdb调试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g++ -g main.cpp -o a.out</span><br><span class="line">gdb a.out</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚀geant4-和qt等项目文件如何用调试"><a href="#🚀geant4-和qt等项目文件如何用调试" class="headerlink" title="🚀geant4 和qt等项目文件如何用调试"></a>🚀geant4 和qt等项目文件如何用调试</h2><p>C++项目的链接通常采用可采用CMake，需要编写<code>CMakeLists.txt</code><br>如需打开调试模式，只需奖<code>CMAKE_BUILD_TYPE</code> 设置成<code>&quot;Debug&quot;</code>模式即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(CMAKE_BUILD_TYPE &quot;Debug&quot;)</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-13T23:00:46+08:00"
-              content="2018-09-13">
-          09-13
-        </time>
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/13/Git-Remote-Repository-UserGuide/" itemprop="url">
-            <span itemprop="name">Git Remote Repository UserGuide </span>
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
           </a>
-      </div>
+        </div>
 
-    </header>
-  </article>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-11T16:12:50+08:00"
-              content="2018-09-11">
-          09-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/11/The-use-of-gnomescreenshot-command/" itemprop="url">
-            <span itemprop="name">The use of gnome-screenshot command</span>
+            <span class="label">GitHub</span>
           </a>
-      </div>
+        </div>
 
-    </header>
-  </article>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-11T11:39:07+08:00"
-              content="2018-09-11">
-          09-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/11/geant4DetectorConstruction/" itemprop="url">
-            <span itemprop="name">geant4DetectorConstruction</span>
+            <span class="label">CSDN</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-09T18:53:53+08:00"
-              content="2018-09-09">
-          09-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/09/G4Color选项/" itemprop="url">
-            <span itemprop="name">G4Color选项</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-09T14:04:25+08:00"
-              content="2018-09-09">
-          09-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/09/How-to-add-menubar-and-search-function-to-blog-with-hexo/" itemprop="url">
-            <span itemprop="name">Add menubar and search function to hexo blog</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-01T21:02:05+08:00"
-              content="2018-09-01">
-          09-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/01/图片测试/" itemprop="url">
-            <span itemprop="name">hexo中插入图片测试</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-01T18:49:17+08:00"
-              content="2018-09-01">
-          09-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/01/GitUseGuide/" itemprop="url">
-            <span itemprop="name">Git简易使用笔记</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-01T10:23:42+08:00"
-              content="2018-09-01">
-          09-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/01/hexo简易使用笔记/" itemprop="url">
-            <span itemprop="name">hexo简易使用笔记</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-01T01:19:16+08:00"
-              content="2018-09-01">
-          09-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/01/LeeEmacs-setting/" itemprop="url">
-            <span itemprop="name">LeeEmacs-setting</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-08-20T00:14:35+08:00"
-              content="2018-08-20">
-          08-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/08/20/Git-VS-SVN/" itemprop="url">
-            <span itemprop="name">Git-VS-SVN</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/vscode/" rel="tag"><i class="fa fa-tag"></i> vscode</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/08/科学上网方法/" rel="next" title="科学上网方法">
+      科学上网方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-  </nav>
+  
+  
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -470,6 +396,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#🌌利用VSCode调试Geant4项目和Qt项目"><span class="nav-number">1.</span> <span class="nav-text">🌌利用VSCode调试Geant4项目和Qt项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🧭c-如何开启调试模式"><span class="nav-number">1.1.</span> <span class="nav-text">🧭c++如何开启调试模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🚀geant4-和qt等项目文件如何用调试"><span class="nav-number">1.2.</span> <span class="nav-text">🚀geant4 和qt等项目文件如何用调试</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

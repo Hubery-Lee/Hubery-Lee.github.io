@@ -127,17 +127,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">21</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">27</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">29</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -193,6 +193,156 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2018/09/11/The-use-of-gnomescreenshot-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/11/The-use-of-gnomescreenshot-command/" class="post-title-link" itemprop="url">The use of gnome-screenshot command</a>
+        </h2>
+
+        <div class="post-meta">
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2018/09/11/The-use-of-gnomescreenshot-command/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/09/11/The-use-of-gnomescreenshot-command/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>gnome-screenshot command;encrypt this article</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/09/11/The-use-of-gnomescreenshot-command/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2018/09/11/geant4DetectorConstruction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/11/geant4DetectorConstruction/" class="post-title-link" itemprop="url">geant4DetectorConstruction</a>
+        </h2>
+
+        <div class="post-meta">
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2018/09/11/geant4DetectorConstruction/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/09/11/geant4DetectorConstruction/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="geant-detector-construction"><a href="#geant-detector-construction" class="headerlink" title="geant detector construction"></a>geant detector construction</h2><ol>
+<li>几何旋转符合<code>左手法则</code>及RotationMatrix的使用<br>经过验证geant4中的rotate符合<code>左手法则</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">G4RotationMatrix *rot=new G4RotationMatrix;</span><br><span class="line">rot-&gt;rotateX(90*degree);</span><br><span class="line">rot-&gt;rotateY(90*degree);</span><br><span class="line">rot-&gt;rotateZ(90*degree);</span><br></pre></td></tr></table></figure>
+
+<p>注意，再次对rot重复赋值无效，如对上述代码再作如下操作<code>rot-&gt;rotateX(180*degree)</code>,该操作将无效，不会改变之前的rot；<br>那么，要对rot再次赋值该怎么办呢？如下：只需在再次赋值前加<code>rot =new G4RotationMatrix</code>即可；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">  G4RotationMatrix* rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(G4int x_col_num = 0; x_col_num &lt;=NBD_colNb; x_col_num++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(x_col_num==0)&#123;  // the center colume</span><br><span class="line">      NBDx = NBDx0;</span><br><span class="line">      <span class="keyword">for</span>(G4int y_row_num = 0; y_row_num &lt;=NBD_rowNb; y_row_num++ )&#123;</span><br><span class="line">	// NBDx = NBDx0;</span><br><span class="line">	NBDy = NBDy0+R*sin(y_row_num*theta);</span><br><span class="line">	NBDz = NBDz0+R*(1-cos(y_row_num*theta));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(y_row_num==0)&#123;</span><br><span class="line">	  // center position</span><br><span class="line">	  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">	  rotationMatrix_X-&gt;rotateX(y_row_num*theta);</span><br><span class="line"></span><br><span class="line">	  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">			    G4ThreeVector(NBDx,NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">			    logicAssembleNBD,                    //its logical volume</span><br><span class="line">			    <span class="string">"AssembleNBD"</span>,         //its name</span><br><span class="line">			    expHall_logV,          //its mother  volume</span><br><span class="line">			    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">			    0,                     //copy number</span><br><span class="line">			    <span class="literal">true</span>);                    //overlaps checking    </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">	  //+y++</span><br><span class="line">	  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">	  rotationMatrix_X-&gt;rotateX(-y_row_num*theta);</span><br><span class="line"></span><br><span class="line">	  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">			    G4ThreeVector(NBDx,NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">			    logicAssembleNBD,                    //its logical volume</span><br><span class="line">			    <span class="string">"AssembleNBD"</span>,         //its name</span><br><span class="line">			    expHall_logV,          //its mother  volume</span><br><span class="line">			    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">			    0,                     //copy number</span><br><span class="line">			    <span class="literal">true</span>);               // overlaps checking </span><br><span class="line">	  //-y++</span><br><span class="line">	  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">	  rotationMatrix_X-&gt;rotateX(y_row_num*theta);</span><br><span class="line">	  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">			    G4ThreeVector(NBDx,-NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">			    logicAssembleNBD,                    //its logical volume</span><br><span class="line">			    <span class="string">"AssembleNBD"</span>,         //its name</span><br><span class="line">			    expHall_logV,          //its mother  volume</span><br><span class="line">			    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">			    0,                     //copy number</span><br><span class="line">			    <span class="literal">true</span>);               // overlaps checking    </span><br><span class="line">	&#125;</span><br><span class="line">      &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>G4VParameterisation()的使用</li>
+</ol>
+<ul>
+<li><code>ComputeTransformation</code> defines where one of the copies is placed</li>
+<li><code>ComputeDimensions</code> defines the size of one copy, and a constructor that initializes any member variables that are required.</li>
+</ul>
+<p>G4VParameterisation的具体应用可参看Basics/B2/B2b</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -779,20 +929,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

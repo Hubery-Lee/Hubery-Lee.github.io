@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubery-lee.github.io/"/>
-  <updated>2020-05-05T01:50:09.856Z</updated>
+  <updated>2020-05-19T13:10:14.414Z</updated>
   <id>https://hubery-lee.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用VSCode调试Geant4项目和Qt项目</title>
+    <link href="https://hubery-lee.github.io/2020/05/19/%E5%88%A9%E7%94%A8VSCode%E8%B0%83%E8%AF%95Geant4%E9%A1%B9%E7%9B%AE%E5%92%8CQt%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://hubery-lee.github.io/2020/05/19/%E5%88%A9%E7%94%A8VSCode%E8%B0%83%E8%AF%95Geant4%E9%A1%B9%E7%9B%AE%E5%92%8CQt%E9%A1%B9%E7%9B%AE/</id>
+    <published>2020-05-19T12:57:46.000Z</published>
+    <updated>2020-05-19T13:10:14.414Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="🌌利用VSCode调试Geant4项目和Qt项目"><a href="#🌌利用VSCode调试Geant4项目和Qt项目" class="headerlink" title="🌌利用VSCode调试Geant4项目和Qt项目"></a>🌌利用VSCode调试Geant4项目和Qt项目</h1><p>==<strong>注意</strong>==</p><ul><li><p>VSCode只是一个具有用户交互界面、可设置断点调试的集成开发环境，并具有编辑器的一些特色功能，如：代码补全、格式自动化和语法自动检查等。直白的理解，他是一个具有很多集成功能的高端编辑器，属于前端，代码的编译链接执行需要交给其他一些软件，如CMake等。</p></li><li><p>Geant4和Qt均是基于c++语言，调试程序需要用gdb。那么，调试geant4和Qt程序与调试C++程序一样没有什么区别。</p></li></ul><h2 id="🧭c-如何开启调试模式"><a href="#🧭c-如何开启调试模式" class="headerlink" title="🧭c++如何开启调试模式"></a>🧭c++如何开启调试模式</h2><p>C++单文件编译</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ main.cpp -o a.out</span><br></pre></td></tr></table></figure><p>C++单文件gdb调试</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g++ -g main.cpp -o a.out</span><br><span class="line">gdb a.out</span><br></pre></td></tr></table></figure><h2 id="🚀geant4-和qt等项目文件如何用调试"><a href="#🚀geant4-和qt等项目文件如何用调试" class="headerlink" title="🚀geant4 和qt等项目文件如何用调试"></a>🚀geant4 和qt等项目文件如何用调试</h2><p>C++项目的链接通常采用可采用CMake，需要编写<code>CMakeLists.txt</code><br>如需打开调试模式，只需奖<code>CMAKE_BUILD_TYPE</code> 设置成<code>&quot;Debug&quot;</code>模式即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(CMAKE_BUILD_TYPE &quot;Debug&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      vscode在手，天下我有
+    
+    </summary>
+    
+    
+      <category term="编程工具学习与应用" scheme="https://Hubery-Lee.github.io/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="vscode" scheme="https://Hubery-Lee.github.io/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科学上网方法</title>
+    <link href="https://hubery-lee.github.io/2020/05/08/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95/"/>
+    <id>https://hubery-lee.github.io/2020/05/08/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95/</id>
+    <published>2020-05-07T16:07:51.000Z</published>
+    <updated>2020-05-07T16:29:32.614Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="🚚科学上网方法"><a href="#🚚科学上网方法" class="headerlink" title="🚚科学上网方法"></a>🚚科学上网方法</h1><h2 id="⚓google-bing检索"><a href="#⚓google-bing检索" class="headerlink" title="⚓google/bing检索"></a>⚓google/bing检索</h2><ul><li><code>谷歌上网助手</code></li><li><code>iGuge插件</code></li></ul><p>安装方法：</p><p><img src="/2020/05/08/科学上网方法/a.png" alt></p><h2 id="🚍文献搜索神器"><a href="#🚍文献搜索神器" class="headerlink" title="🚍文献搜索神器"></a>🚍文献搜索神器</h2><p><a href="https://www.researcher-app.com/" target="_blank" rel="noopener"><code>researcher</code></a></p>]]></content>
+    
+    <summary type="html">
+    
+      推荐两款谷歌上网插件
+    
+    </summary>
+    
+    
+      <category term="软件体验" scheme="https://Hubery-Lee.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/"/>
+    
+    
+      <category term="google" scheme="https://Hubery-Lee.github.io/tags/google/"/>
+    
+  </entry>
   
   <entry>
     <title>用VSCode的IDE调试CPP</title>
@@ -442,55 +488,6 @@
     
     
       <category term="git" scheme="https://Hubery-Lee.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The use of gnome-screenshot command</title>
-    <link href="https://hubery-lee.github.io/2018/09/11/The-use-of-gnomescreenshot-command/"/>
-    <id>https://hubery-lee.github.io/2018/09/11/The-use-of-gnomescreenshot-command/</id>
-    <published>2018-09-11T08:12:50.000Z</published>
-    <updated>2018-09-15T15:20:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="gnome-screenshot-command"><a href="#gnome-screenshot-command" class="headerlink" title="gnome-screenshot command"></a>gnome-screenshot command</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ gnome-screenshot  <span class="comment">#截取整个屏幕</span></span><br><span class="line">$ gnome-screenshot -w <span class="comment">#截取当前活动窗口</span></span><br><span class="line">$ gnome-screenshot -a <span class="comment">#选择截图区域</span></span><br><span class="line">$ gnome-screenshot -d=5 <span class="comment">#延迟5妙截图</span></span><br><span class="line">$ gnome-screenshot -i <span class="comment">#交互模式使用截屏工具</span></span><br></pre></td></tr></table></figure><p>当然，遇到不会用gnome-screenshot命令时，最好的方法是问linux系统自带的manual</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man gnome-screenshot</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      gnome-screenshot command;encrypt this article
-    
-    </summary>
-    
-    
-      <category term="linux tool" scheme="https://Hubery-Lee.github.io/categories/linux-tool/"/>
-    
-    
-      <category term="linux tool" scheme="https://Hubery-Lee.github.io/tags/linux-tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>geant4DetectorConstruction</title>
-    <link href="https://hubery-lee.github.io/2018/09/11/geant4DetectorConstruction/"/>
-    <id>https://hubery-lee.github.io/2018/09/11/geant4DetectorConstruction/</id>
-    <published>2018-09-11T03:39:07.000Z</published>
-    <updated>2018-09-14T10:29:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="geant-detector-construction"><a href="#geant-detector-construction" class="headerlink" title="geant detector construction"></a>geant detector construction</h2><ol><li>几何旋转符合<code>左手法则</code>及RotationMatrix的使用<br>经过验证geant4中的rotate符合<code>左手法则</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">G4RotationMatrix *rot=new G4RotationMatrix;</span><br><span class="line">rot-&gt;rotateX(90*degree);</span><br><span class="line">rot-&gt;rotateY(90*degree);</span><br><span class="line">rot-&gt;rotateZ(90*degree);</span><br></pre></td></tr></table></figure><p>注意，再次对rot重复赋值无效，如对上述代码再作如下操作<code>rot-&gt;rotateX(180*degree)</code>,该操作将无效，不会改变之前的rot；<br>那么，要对rot再次赋值该怎么办呢？如下：只需在再次赋值前加<code>rot =new G4RotationMatrix</code>即可；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">  G4RotationMatrix* rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(G4int x_col_num = 0; x_col_num &lt;=NBD_colNb; x_col_num++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(x_col_num==0)&#123;  // the center colume</span><br><span class="line">      NBDx = NBDx0;</span><br><span class="line">      <span class="keyword">for</span>(G4int y_row_num = 0; y_row_num &lt;=NBD_rowNb; y_row_num++ )&#123;</span><br><span class="line">// NBDx = NBDx0;</span><br><span class="line">NBDy = NBDy0+R*sin(y_row_num*theta);</span><br><span class="line">NBDz = NBDz0+R*(1-cos(y_row_num*theta));</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(y_row_num==0)&#123;</span><br><span class="line">  // center position</span><br><span class="line">  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">  rotationMatrix_X-&gt;rotateX(y_row_num*theta);</span><br><span class="line"></span><br><span class="line">  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">    G4ThreeVector(NBDx,NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">    logicAssembleNBD,                    //its logical volume</span><br><span class="line">    <span class="string">"AssembleNBD"</span>,         //its name</span><br><span class="line">    expHall_logV,          //its mother  volume</span><br><span class="line">    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">    0,                     //copy number</span><br><span class="line">    <span class="literal">true</span>);                    //overlaps checking    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">  //+y++</span><br><span class="line">  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">  rotationMatrix_X-&gt;rotateX(-y_row_num*theta);</span><br><span class="line"></span><br><span class="line">  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">    G4ThreeVector(NBDx,NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">    logicAssembleNBD,                    //its logical volume</span><br><span class="line">    <span class="string">"AssembleNBD"</span>,         //its name</span><br><span class="line">    expHall_logV,          //its mother  volume</span><br><span class="line">    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">    0,                     //copy number</span><br><span class="line">    <span class="literal">true</span>);               // overlaps checking </span><br><span class="line">  //-y++</span><br><span class="line">  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">  rotationMatrix_X-&gt;rotateX(y_row_num*theta);</span><br><span class="line">  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">    G4ThreeVector(NBDx,-NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">    logicAssembleNBD,                    //its logical volume</span><br><span class="line">    <span class="string">"AssembleNBD"</span>,         //its name</span><br><span class="line">    expHall_logV,          //its mother  volume</span><br><span class="line">    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">    0,                     //copy number</span><br><span class="line">    <span class="literal">true</span>);               // overlaps checking    </span><br><span class="line">&#125;</span><br><span class="line">      &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure><ol start="2"><li>G4VParameterisation()的使用</li></ol><ul><li><code>ComputeTransformation</code> defines where one of the copies is placed</li><li><code>ComputeDimensions</code> defines the size of one copy, and a constructor that initializes any member variables that are required.</li></ul><p>G4VParameterisation的具体应用可参看Basics/B2/B2b</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;geant-detector-construction&quot;&gt;&lt;a href=&quot;#geant-detector-construction&quot; class=&quot;headerlink&quot; title=&quot;geant detector construction&quot;&gt;&lt;/a&gt;geant
-      
-    
-    </summary>
-    
-    
-      <category term="Geant4及Root应用" scheme="https://Hubery-Lee.github.io/categories/Geant4%E5%8F%8ARoot%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="geant4" scheme="https://Hubery-Lee.github.io/tags/geant4/"/>
     
   </entry>
   
