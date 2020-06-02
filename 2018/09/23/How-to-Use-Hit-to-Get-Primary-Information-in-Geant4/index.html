@@ -18,26 +18,26 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery_lee123.gitee.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
   <meta name="description" content="This page introduce the struction of Geant4 and using Hit to get information of PrimaryGeneratorAction.">
 <meta name="keywords" content="geant4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to Use Hit to Get Primary Information in Geant4">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/index.html">
+<meta property="og:url" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="This page introduce the struction of Geant4 and using Hit to get information of PrimaryGeneratorAction.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4Application.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4Application.png">
 <meta property="og:updated_time" content="2018-09-23T05:20:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Use Hit to Get Primary Information in Geant4">
 <meta name="twitter:description" content="This page introduce the struction of Geant4 and using Hit to get information of PrimaryGeneratorAction.">
-<meta name="twitter:image" content="https://hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png">
+<meta name="twitter:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/">
+<link rel="canonical" href="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/">
 
 
 <script id="page-configurations">
@@ -142,7 +142,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">30</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">31</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -203,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/">
+    <link itemprop="mainEntityOfPage" href="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -247,7 +247,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Code-Structure-of-Geant4"><a href="#Code-Structure-of-Geant4" class="headerlink" title="Code Structure of Geant4"></a>Code Structure of Geant4</h2><p>The structure shows as the following pictrue.<br><img src="/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png" alt="Class categories in Geant4"></p>
+        <h2 id="Code-Structure-of-Geant4"><a href="#Code-Structure-of-Geant4" class="headerlink" title="Code Structure of Geant4"></a>Code Structure of Geant4</h2><p>The structure shows as the following pictrue.<br><img src="/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4CodeStructure.png" alt="Class categories in Geant4"></p>
 <ul>
 <li>Run and Event<br>These are categories related to the generation of events, interfaces to event generators, and any secondary particles produced. Their roles are principally to provide particles to be tracked to the Tracking Management.</li>
 <li>Tracking and Track<br>These are categories related to propagating a particle by analyzing the factors limiting the step and applying the relevant physics processes. The important aspect of the design was that a generalized GEANT4 physics process (or interaction) could perform actions, along a tracking step, either localized in space, or in time, or distributed in space and time (and all the possible combinations that could be built from these cases).</li>
@@ -259,7 +259,7 @@
 <li>Interfaces<br>This category handles the production of the graphical user interface (GUI) and the interactions with external<br>software (OODBMS, reconstruction etc.).</li>
 </ul>
 <p><code>MORE DETAIL INFORMATION ABOUT THIS，YOU CAN REFER TO GEANT4 BOOK FOR APPLICATION CHAPTER 3</code></p>
-<h2 id="Collect-information-from-PrimaryGeneratorAction"><a href="#Collect-information-from-PrimaryGeneratorAction" class="headerlink" title="Collect information from PrimaryGeneratorAction"></a>Collect information from PrimaryGeneratorAction</h2><p>Data record in step or event, and stored in hitscollection. data write in EventAction; general understanding of geant4 and its application as follows. Geant is the abbreviation of Geometry and Tracking.<br><img src="/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4Application.png" alt="General UnderStanding of Geant4"></p>
+<h2 id="Collect-information-from-PrimaryGeneratorAction"><a href="#Collect-information-from-PrimaryGeneratorAction" class="headerlink" title="Collect information from PrimaryGeneratorAction"></a>Collect information from PrimaryGeneratorAction</h2><p>Data record in step or event, and stored in hitscollection. data write in EventAction; general understanding of geant4 and its application as follows. Geant is the abbreviation of Geometry and Tracking.<br><img src="/hubery-lee.github.io/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/Geant4Application.png" alt="General UnderStanding of Geant4"></p>
 
     </div>
 
@@ -415,7 +415,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

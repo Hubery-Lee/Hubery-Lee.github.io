@@ -18,44 +18,44 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery_lee123.gitee.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
   <meta name="description" content="描述二维CT图像重建算法的一般思想">
 <meta name="keywords" content="二维CT图像重建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二维图像重建的一般流程">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2020/06/02/二维图像重建的一般流程/index.html">
+<meta property="og:url" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="描述二维CT图像重建算法的一般思想">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090416943.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090501929.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090809554.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601104859436.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105629394.pn">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105835965.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105911448.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111126392.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/%20image-20200601111254399.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111254399.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111406287.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111430225.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111533233.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602082326836.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083037903.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083341855.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083414444.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084149649.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084308687.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084333949.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090416943.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090501929.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090809554.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601104859436.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105629394.pn">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105835965.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105911448.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111126392.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/%20image-20200601111254399.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111254399.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111406287.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111430225.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111533233.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602082326836.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083037903.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083341855.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083414444.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084149649.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084308687.png">
+<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084333949.png">
 <meta property="og:updated_time" content="2020-06-02T15:22:56.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维图像重建的一般流程">
 <meta name="twitter:description" content="描述二维CT图像重建算法的一般思想">
-<meta name="twitter:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090416943.png">
+<meta name="twitter:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090416943.png">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2020/06/02/二维图像重建的一般流程/">
+<link rel="canonical" href="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/">
 
 
 <script id="page-configurations">
@@ -160,7 +160,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">30</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">31</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -221,7 +221,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/02/二维图像重建的一般流程/">
+    <link itemprop="mainEntityOfPage" href="https://hubery_lee123.gitee.io/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -268,34 +268,34 @@
         <h1 id="二维图像重建的一般流程"><a href="#二维图像重建的一般流程" class="headerlink" title="二维图像重建的一般流程"></a>二维图像重建的一般流程</h1><p>[toc]</p>
 <h2 id="❓什么是图像重建？"><a href="#❓什么是图像重建？" class="headerlink" title="❓什么是图像重建？"></a>❓什么是图像重建？</h2><p>断层成像顾名思义就是要得到一个物体内部的截面图像。比如你想知道西瓜里面是什么样的，最简单的办法就是把西瓜切开 (图1.1)。显然对病人来说，这是万不可行之举。我们真想有个办法，不用动刀，就可把病人内部看得清清楚楚。</p>
 <p>另一个例子。你想到一个美丽的街心公园去参观。可惜，公园正在维修，游人不得入内。你只好在公园的外围走走，拍几张照片。公园<br>内有两棵参天大树，极为壮观。你在公园的东面和南面对公园拍了照 ，颇为满意。回到家后，你用你的得意照片，居然画出了公园地图，并确定了那两棵树的位置 (图1.2右)。其实，要确定那两棵树的位置并不难。你只要把那两张照片按原本的方位放好。从照片上的每棵树画出一条垂线。</p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601090416943.png" alt="image-20200601090416943"><img src="/2020/06/02/二维图像重建的一般流程/image-20200601090501929.png" alt="image-20200601090501929"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090416943.png" alt="image-20200601090416943"><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090501929.png" alt="image-20200601090501929"></p>
 <h2 id="💫图像重建的算法思想是什么？"><a href="#💫图像重建的算法思想是什么？" class="headerlink" title="💫图像重建的算法思想是什么？"></a>💫图像重建的算法思想是什么？</h2><p>断层成像是个数学问题。让我们一起做个有趣的数学习题吧。这里有个 2x2 的矩阵。 矩阵中的元素的数值暂时保密。我给你一些暗示： 第一行的和是 5。第二行的和是 4。第一列的和是 7。第二列的和是 2 (图1.3)。你可以算出这个 2x2 矩阵吗?</p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601090809554.png" alt="image-20200601090809554"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090809554.png" alt="image-20200601090809554"></p>
 <p>这个问题可以用解方程组的方法解决。设那些矩阵元素为未知数，列一个线性方程组：<br>$$<br>\begin{equation}<br>\begin{aligned}<br>x_1+x_2=5;\<br>x_3+x_4=4;\<br>x_1+x_3=7;\<br>x_2+x_4=2;\<br>\end{aligned}<br>\end{equation}<br>$$</p>
 <p>解这个方程组便得到;</p>
 <p>$$<br>\begin{equation}x_1=3,x_2=2,x_3=4,x_4=0\end{equation}<br>$$<br>通过探测物体的投影数据，重建出物体的实际内部构造。这就是图像重建的一般思想。</p>
 <h2 id="✔图像重建算法的数学基础有哪些？"><a href="#✔图像重建算法的数学基础有哪些？" class="headerlink" title="✔图像重建算法的数学基础有哪些？"></a>✔图像重建算法的数学基础有哪些？</h2><h3 id="🍕中心切片定理"><a href="#🍕中心切片定理" class="headerlink" title="🍕中心切片定理"></a>🍕中心切片定理</h3><p>中心切片定理是断层成像的理论基础。这个定理还有其它的称谓，如投影切片定理和傅里叶中心切片定理。二维图像的中心切片定理指出：二维函数 f(x, y) 的投影 p(s) 之傅里叶变换 P(ω) 等于函数 f(x, y) 的傅里叶变换 F(ωx, ωy) 沿与探测器平行的方向过原点的片段。</p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601104859436.png" alt="image-20200601104859436"></p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105629394.pn" alt></p>
-<h3 id="🚩为什么要引入滤波？"><a href="#🚩为什么要引入滤波？" class="headerlink" title="🚩为什么要引入滤波？"></a>🚩为什么要引入滤波？</h3><p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105835965.png" alt><br><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105911448.png" alt></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601104859436.png" alt="image-20200601104859436"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105629394.pn" alt></p>
+<h3 id="🚩为什么要引入滤波？"><a href="#🚩为什么要引入滤波？" class="headerlink" title="🚩为什么要引入滤波？"></a>🚩为什么要引入滤波？</h3><p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105835965.png" alt><br><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105911448.png" alt></p>
 <p>第二个方案通常被称作处理FBP (Filtered Backprojection 先滤波后反投影) 算法。第二个方案比第一个方案知名度高得多。在断层成像领域里，函数|ω| 被称作斜坡滤波器。</p>
 <h3 id="❤有哪些滤波重建方法？"><a href="#❤有哪些滤波重建方法？" class="headerlink" title="❤有哪些滤波重建方法？"></a>❤有哪些滤波重建方法？</h3><p>==<strong>滤波的思想</strong>==：在中心切片定理中，旋转中心被切片涂抹的更浓密，这将导致图像像素比较均匀（低频区域；高频区域是指图像对比度比较大的图像边缘区域），进而重构的图像中心区域比较模糊。那么滤波器的思想是将中心切片函数乘以一个与旋转中心距离相关的权重因子，使得切片在图像上涂抹的比较均匀。这样重构出来的图像才不会出现旋转中心模糊的现象。下面介绍一下有哪些图像重建及滤波方法。</p>
-<h4 id="🛴方法1"><a href="#🛴方法1" class="headerlink" title="🛴方法1"></a>🛴方法1</h4><p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601111126392.png" alt></p>
-<h4 id="🛵方法2"><a href="#🛵方法2" class="headerlink" title="🛵方法2"></a>🛵方法2</h4><img src="/2020/06/02/二维图像重建的一般流程/ image-20200601111254399.png" alt="image-20200601111254399" style="zoom:80%;">
+<h4 id="🛴方法1"><a href="#🛴方法1" class="headerlink" title="🛴方法1"></a>🛴方法1</h4><p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111126392.png" alt></p>
+<h4 id="🛵方法2"><a href="#🛵方法2" class="headerlink" title="🛵方法2"></a>🛵方法2</h4><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/ image-20200601111254399.png" alt="image-20200601111254399" style="zoom:80%;">
 
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601111254399.png" alt></p>
-<h4 id="🏍方法3"><a href="#🏍方法3" class="headerlink" title="🏍方法3"></a>🏍方法3</h4><p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601111406287.png" alt><br><img src="/2020/06/02/二维图像重建的一般流程/image-20200601111430225.png" alt></p>
-<h4 id="🧭算法一览表"><a href="#🧭算法一览表" class="headerlink" title="🧭算法一览表"></a>🧭算法一览表</h4><p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601111533233.png" alt></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111254399.png" alt></p>
+<h4 id="🏍方法3"><a href="#🏍方法3" class="headerlink" title="🏍方法3"></a>🏍方法3</h4><p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111406287.png" alt><br><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111430225.png" alt></p>
+<h4 id="🧭算法一览表"><a href="#🧭算法一览表" class="headerlink" title="🧭算法一览表"></a>🧭算法一览表</h4><p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111533233.png" alt></p>
 <h2 id="👼扇形束投影算法如何转换到平行束投影算法"><a href="#👼扇形束投影算法如何转换到平行束投影算法" class="headerlink" title="👼扇形束投影算法如何转换到平行束投影算法"></a>👼扇形束投影算法如何转换到平行束投影算法</h2><p>==<strong>基本思想</strong>==：根据利用点扩散函数的移动不变性，可将扇形束投影重组成平行束投影；然而，在进行重组时将需要进行插值运算，这将导入不必要的误差。故而需要根据重组变换原理，采用变量替换原理，将适用于平行束投影算法中的变量替换成扇形束中的转换关系。</p>
-<h3 id="🍚点扩散函数的移动不变性"><a href="#🍚点扩散函数的移动不变性" class="headerlink" title="🍚点扩散函数的移动不变性"></a>🍚点扩散函数的移动不变性</h3><p><img src="/2020/06/02/二维图像重建的一般流程/image-20200602082326836.png" alt="image-20200602082326836"></p>
+<h3 id="🍚点扩散函数的移动不变性"><a href="#🍚点扩散函数的移动不变性" class="headerlink" title="🍚点扩散函数的移动不变性"></a>🍚点扩散函数的移动不变性</h3><p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602082326836.png" alt="image-20200602082326836"></p>
 <p>对于平行光束成像，我们用极为重要的中心切片定理推导出了一些图像重建的算法。可是，对与扇形束成像，我们并没有相应的中心切片定理。我们只好想个别的办法来推导扇形束的图像重建算法。这个办法就是把扇形束的成像问题转化成平行光束的成像问题，把平行光束图像重建的算法修正一下然后应用于解决扇形束的成像问题中。 </p>
 <p>假定探测器是匀速地绕物体转动，而且数据采样的角度区间也是均匀的。在这个假设下，平行光束的投影/反投影的点扩散函数 (PSF) 是移动不变的。换句话说，如果你把一个点源放在 x-y 平面上。放到哪里到无所谓，只要放在探测器的视野内就好。</p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200602083037903.png" alt="image-20200602083037903"></p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200602083341855.png" alt="image-20200602083341855"></p>
-<h3 id="🍳扇形束射线如何用平行束来描述"><a href="#🍳扇形束射线如何用平行束来描述" class="headerlink" title="🍳扇形束射线如何用平行束来描述"></a>🍳扇形束射线如何用平行束来描述</h3><p>一个直截了当的方法是把所有的扇形束射线放在一起进行分组，把互相平行的射线分在一组，这样就把扇形束的成像问题简化为平行光束的成像问题。正如图3.4所示，每一条扇形束的射线都刚好对应一条平行光束的射线。这两条线是完全重合的。也就是说，每一个扇形束的数据 g(γ, β) 都刚好对应一个平行光束的数据 p(s, θ)，它们的坐标满足下列关系:<br>$$<br>\theta = \gamma +\beta \<br>s=Dsin\gamma<br>$$<br>其中 $$D$$ 为焦距，也就是从扇形的焦点到旋转中心的距离。当上面这两个关系成立时，这两个成像系统所测的数据是相同的:<br>$$<br>p(s,\theta)=g(\gamma,\beta)<br>$$<br><img src="/2020/06/02/二维图像重建的一般流程/image-20200602083414444.png" alt="image-20200602083414444"></p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200602084149649.png" alt="image-20200602084149649"></p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200602084308687.png" alt="image-20200602084308687"></p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200602084333949.png" alt="image-20200602084333949"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083037903.png" alt="image-20200602083037903"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083341855.png" alt="image-20200602083341855"></p>
+<h3 id="🍳扇形束射线如何用平行束来描述"><a href="#🍳扇形束射线如何用平行束来描述" class="headerlink" title="🍳扇形束射线如何用平行束来描述"></a>🍳扇形束射线如何用平行束来描述</h3><p>一个直截了当的方法是把所有的扇形束射线放在一起进行分组，把互相平行的射线分在一组，这样就把扇形束的成像问题简化为平行光束的成像问题。正如图3.4所示，每一条扇形束的射线都刚好对应一条平行光束的射线。这两条线是完全重合的。也就是说，每一个扇形束的数据 g(γ, β) 都刚好对应一个平行光束的数据 p(s, θ)，它们的坐标满足下列关系:<br>$$<br>\theta = \gamma +\beta \<br>s=Dsin\gamma<br>$$<br>其中 $$D$$ 为焦距，也就是从扇形的焦点到旋转中心的距离。当上面这两个关系成立时，这两个成像系统所测的数据是相同的:<br>$$<br>p(s,\theta)=g(\gamma,\beta)<br>$$<br><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602083414444.png" alt="image-20200602083414444"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084149649.png" alt="image-20200602084149649"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084308687.png" alt="image-20200602084308687"></p>
+<p><img src="/hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084333949.png" alt="image-20200602084333949"></p>
 <p><strong>参考文献：</strong></p>
 <p>[1] 曾更生，医学图像重建</p>
 
@@ -370,7 +370,10 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/02/如何搭建感知器并使用其进行分类/" rel="prev" title="如何搭建感知器并使用其进行分类">
+      <i class="fa fa-chevron-left"></i> 如何搭建感知器并使用其进行分类
+    </a></div>
       <div class="post-nav-item">
     <a href="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/" rel="next" title="利用VSCode调试Geant4项目和Qt项目">
       利用VSCode调试Geant4项目和Qt项目 <i class="fa fa-chevron-right"></i>
@@ -450,7 +453,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
