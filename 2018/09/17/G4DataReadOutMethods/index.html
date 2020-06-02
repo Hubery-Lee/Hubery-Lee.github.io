@@ -18,26 +18,26 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery_lee123.gitee.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
   <meta name="description" content="This page introduce different methods to read out data from geant4 simulation; This page focus on StepAction and Hit with SD method.">
 <meta name="keywords" content="geant4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gean4 Data Read Out Methods">
-<meta property="og:url" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/index.html">
+<meta property="og:url" content="https://Hubery-Lee.github.io/2018/09/17/G4DataReadOutMethods/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="This page introduce different methods to read out data from geant4 simulation; This page focus on StepAction and Hit with SD method.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F.png">
-<meta property="og:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4SD_Hit.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4SD_Hit.png">
 <meta property="og:updated_time" content="2020-04-28T00:37:02.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gean4 Data Read Out Methods">
 <meta name="twitter:description" content="This page introduce different methods to read out data from geant4 simulation; This page focus on StepAction and Hit with SD method.">
-<meta name="twitter:image" content="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F.png">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F.png">
 
-<link rel="canonical" href="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/">
+<link rel="canonical" href="https://Hubery-Lee.github.io/2018/09/17/G4DataReadOutMethods/">
 
 
 <script id="page-configurations">
@@ -203,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hubery_lee123.gitee.io/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/">
+    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2018/09/17/G4DataReadOutMethods/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -253,7 +253,7 @@
 <li>TrackingAction</li>
 <li>SensitiveDetctor + HitCollection</li>
 </ul>
-<p><img src="/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F.png" alt="Geant4 Data Read Out Method"></p>
+<p><img src="/2018/09/17/G4DataReadOutMethods/Geant4%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F.png" alt="Geant4 Data Read Out Method"></p>
 <p>More detail information about these methods to get data can you refer to <span class="exturl" data-url="aHR0cHM6Ly93ZW5rdS5iYWlkdS5jb20vdmlldy9mMTNmNDcyNWJlMjM0ODJmYjVkYTRjNjMuaHRtbA==">this site<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">A: To get the information at tracking time in a given volume A, one can adopt either one or a combination of the following strategies:</span><br><span class="line"></span><br><span class="line">1.  If the geometry is simple enough, and wish to score some commonly used physics quantities (e.g. energy deposition, dose, flux, etc.), just activate G4ScoringManager in your main program, and use the scorer-based UI commands to transform volume A into a scorer.</span><br><span class="line"></span><br><span class="line">    See Option 6 below, and the example examples/extended/runAndEvent/RE03.</span><br><span class="line"></span><br><span class="line">2.  Through the SteppingAction, check that the particle is inside volume A and do whatever needed. Hints can be found in the previous chapter of this FAQ document.</span><br><span class="line"></span><br><span class="line">    Usually, the hits containers and histograms are attributes of a Track, Event or Run and can be managed through either a TrackingAction, EventAction and/or RunAction and eventually messaging their pointer to the SteppingAction.</span><br><span class="line"></span><br><span class="line">    A similar approach is illustrated in examples/basic/B2, B4, extended/electromagnetic, optical, and many others…</span><br><span class="line"></span><br><span class="line">3.  In DetectorConstruction, by declaring volume A as a SensitiveDetector. At stepping time, the Geant4 kernel will automatically check that a particle is inside volume A and will handle the control to a specific function G4VSensitiveDetector::ProcessHits(). It is just necessary to instanciate a class inherited from G4VSensitiveDetector, say VolumeA_SD, and do whatever needed by implementing the function VolumeA_SD::ProcessHits(), as described in Option 2 above.</span><br><span class="line"></span><br><span class="line">4.  In addition to Option 3 above, should create a HitsCollection to store the information. A HitsCollection can be created in VolumeA_SD::Initialize(). A Hit can be created or filled in VolumeA_SD::ProcessHits(). Additional operations on HitsCollection can be performed in VolumeA_SD::EndOfEvent().</span><br><span class="line"></span><br><span class="line">    This approach is illustrated in examples/basic/B2, B4 and extended/analysis, extended/runAndEvent/RE01, etc…</span><br><span class="line"></span><br><span class="line">5.  In DetectorConstruction, volume A can be declared as SensitiveDetector, and one or several pre-defined scorers can be attached to volume A. In this case, neither a SteppingAction nor a spcific VolumeA_SD sensitive detector is needed any longer. It is just necessary to create a dedicated scorer, e.g. MyRunScorer, inherited from G4Run, and handle the HitsCollections within MyRunScorer::RecordEvent(). MyRunScorer itself can be instanciated from RunAction::GenerateRun().</span><br><span class="line"></span><br><span class="line">    This approach is illustrated in examples/novice/N07, extended/runAndEvent/RE02.</span><br><span class="line"></span><br><span class="line">6.  A set of build-in scorer-based UI commands allows to perform most possible operations described through the previous Option 5 directly from run-time macros.</span><br><span class="line"></span><br><span class="line">    See example extended/runAndEvent/RE03.</span><br></pre></td></tr></table></figure>
 
@@ -345,7 +345,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">void APNISTrackSD::Initialize(G4HCofThisEvent* HCE)</span><br><span class="line">&#123;</span><br><span class="line">  // static int HCID = -1;</span><br><span class="line">  fTrackHitCollection = new APNISTrackHitsCollection</span><br><span class="line">                      (SensitiveDetectorName,collectionName[0]); </span><br><span class="line">  // if(HCID&lt;0)</span><br><span class="line">  // &#123; HCID = GetCollectionID(0); &#125;</span><br><span class="line"></span><br><span class="line">  // get the collection name according to the object(name).</span><br><span class="line">  if(HCID&lt;0)&#123;</span><br><span class="line">    HCID = G4SDManager::GetSDMpointer()</span><br><span class="line">      -&gt;GetCollectionID(fTrackHitCollection);</span><br><span class="line">  &#125;</span><br><span class="line">  HCE-&gt;AddHitsCollection(HCID,fTrackHitCollection);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>到这里，数据文件打开，写入；数据的传递与存储就介绍完了；RunAction中实现对数据文件的打开与关闭；EventAction中实现将数据写入到文件，当然，如果你采用SteppingAction方式也可以将数据写入文件（此文不再介绍）；Hit中实现给需要传递的数据分配内存空间；SensitiveDetector中实现将数据传递给Hit分配的内存空间；如果将这个问题表述为送快递的过程，那么RunAction就是告诉快递员有堆快递需要在什么时候开始送，什么时候完全送达；EventAction就是需要送的快递，Hit就是送一份快递，给快递员分配的货箱大小；SensitiveDetector就是告诉快递员将货物放到货箱里；</p>
-<p><img src="/hubery-lee.github.io/2018/09/17/G4DataReadOutMethods/Geant4SD_Hit.png" alt="SensitiveDetector+HitsCollection方式存储数据方法示意图"></p>
+<p><img src="/2018/09/17/G4DataReadOutMethods/Geant4SD_Hit.png" alt="SensitiveDetector+HitsCollection方式存储数据方法示意图"></p>
 
     </div>
 
