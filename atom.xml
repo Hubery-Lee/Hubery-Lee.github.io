@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubery-lee.github.io/"/>
-  <updated>2020-06-02T16:20:05.654Z</updated>
+  <updated>2020-06-03T12:45:29.215Z</updated>
   <id>https://hubery-lee.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PET_SPECT成像与CT成像的区别</title>
+    <link href="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2020-06-03T12:38:26.000Z</published>
+    <updated>2020-06-03T12:45:29.215Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PET-SPECT成像与CT成像的区别"><a href="#PET-SPECT成像与CT成像的区别" class="headerlink" title="PET/SPECT成像与CT成像的区别"></a>PET/SPECT成像与CT成像的区别</h1><h2 id="成像原理的区别"><a href="#成像原理的区别" class="headerlink" title="成像原理的区别"></a>成像原理的区别</h2><p>PET和SPECT是属于发射成像，CT属于透射成像。</p><p>所谓发射型成像就是把放射源放在病人身体的内部，放射线从病人身体内部射出，最后被探测器接收。 具有短半衰期的放射性的原子可以由回旋加速器或核反应堆生产出来。这些放射性元素再用来制造放射性药物。 通常放射性药物是通过手臂静脉血管注射而进入体内的。放射性药物进入人体后会跟踪病理过程。放射性药物也可以通过病人的呼吸道或消化道进入人体。放射性药物实际上是个分子载体，它依附于特定的生理组织或病理过程。放射性物质在药物的带领下在人体内做有目的的分布。发射型断层成像的目的就是要得到一个放射<br>性物质在人体内部的分布图。 </p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603105809886.png" alt="image-20200603105809886"></p><p>PET和SPECT的主要区别是采用的核药不同，PET全程叫正电子发射成像，通常采用的是能够发射正电子的核药，如==C-11，N-13，O-15和 F-18==，在放射性衰退时会释放出正电子 (即带一个正电荷的电子)。正电子在自然界中生存的时间十分短暂，因为在自然界中正电子很快就会遇到一个 (带负电的) 电子。当正电子与电子发生作用时，它们的质量会湮灭 (即完全消失)，它们的质量完全转换为能量而产生出两个能量为 511 keV 的伽玛光子。这两个光子沿着相隔 180º 角的方向传播。也就是说，它们在一条直线上朝相反的方向射出。有一种特殊的伽玛照相机可专门用来检测这一对光子。这种特殊的伽玛照相机运用的是同时检测技术。当两个探测器同时各接收到一个能量为 511 keV 的伽玛光子时，说明在连接这两个探测器的线段上曾经有过一个正电子。</p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603110137644.png" alt="image-20200603110137644"></p><p>而SPECT全称叫单光子发射断层成像，采用发射单个光子的核药，如$^{99}Tc、^{131}I、^{113}In、^{67}Ga、^{201}Tl、^{113}Xn$;</p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111107360.png" alt="image-20200603111107360"></p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111146266.png" alt="image-20200603111146266"></p><h2 id="图像重建方法上的不同点"><a href="#图像重建方法上的不同点" class="headerlink" title="图像重建方法上的不同点"></a>图像重建方法上的不同点</h2><p>发射成像需要对成像介质进行射线衰减修正；</p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111313807.png" alt="image-20200603111313807"></p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111400117.png" alt="image-20200603111400117"></p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111438883.png" alt="image-20200603111438883"></p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111455329.png" alt="image-20200603111455329"></p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111535455.png" alt="image-20200603111535455"></p><p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111656132.png" alt="image-20200603111656132"></p><p>比较复杂。</p><p><strong>参考文献：</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;PET-SPECT成像与CT成像的区别&quot;&gt;&lt;a href=&quot;#PET-SPECT成像与CT成像的区别&quot; class=&quot;headerlink&quot; title=&quot;PET/SPECT成像与CT成像的区别&quot;&gt;&lt;/a&gt;PET/SPECT成像与CT成像的区别&lt;/h1&gt;&lt;h2 i
+      
+    
+    </summary>
+    
+    
+      <category term="医学图像重建" scheme="https://Hubery-Lee.github.io/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E9%87%8D%E5%BB%BA/"/>
+    
+    
+      <category term="PET" scheme="https://Hubery-Lee.github.io/tags/PET/"/>
+    
+      <category term="SPECT" scheme="https://Hubery-Lee.github.io/tags/SPECT/"/>
+    
+      <category term="CT" scheme="https://Hubery-Lee.github.io/tags/CT/"/>
+    
+  </entry>
   
   <entry>
     <title>如何搭建感知器并使用其进行分类</title>
@@ -466,29 +496,6 @@
     
     
       <category term="编程工具学习与应用" scheme="https://Hubery-Lee.github.io/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="hexo" scheme="https://Hubery-Lee.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>icon download site</title>
-    <link href="https://hubery-lee.github.io/2018/09/14/icon-download-site/"/>
-    <id>https://hubery-lee.github.io/2018/09/14/icon-download-site/</id>
-    <published>2018-09-14T07:45:38.000Z</published>
-    <updated>2020-05-05T01:18:12.061Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="icon-download-site"><a href="#icon-download-site" class="headerlink" title="icon download site"></a>icon download site</h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20vaWNvbnM/ZnJvbT1pbw==">icon download site<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    <summary type="html">
-    
-      icon download site
-    
-    </summary>
-    
-    
-      <category term="素材" scheme="https://Hubery-Lee.github.io/categories/%E7%B4%A0%E6%9D%90/"/>
     
     
       <category term="hexo" scheme="https://Hubery-Lee.github.io/tags/hexo/"/>
