@@ -21,13 +21,13 @@
     var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
-  <meta name="description" content="😋如何搭建感知器并使用其进行分类[toc] 💨python 编程基础，需要掌握几个库 numpy pandas matplotlib  💖什么是感知器？🎈神经元与机器学习感知机信号在神经元中的传播过程如下：信号通过神经粒质与神经元树突结合，通过神经细胞的认知处理（分类等），由神经末梢输出信号。  感知器类似于生物神经系统中的神经元。特征数据$x_1,x_2,...x_m$，作为输入信号，权">
+  <meta name="description" content="神经元与机器学习感知器">
 <meta name="keywords" content="感知器,神经元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何搭建感知器并使用其进行分类">
 <meta property="og:url" content="https://Hubery-Lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="😋如何搭建感知器并使用其进行分类[toc] 💨python 编程基础，需要掌握几个库 numpy pandas matplotlib  💖什么是感知器？🎈神经元与机器学习感知机信号在神经元中的传播过程如下：信号通过神经粒质与神经元树突结合，通过神经细胞的认知处理（分类等），由神经末梢输出信号。  感知器类似于生物神经系统中的神经元。特征数据$x_1,x_2,...x_m$，作为输入信号，权">
+<meta property="og:description" content="神经元与机器学习感知器">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/image-20200602160802363.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/image-20200602161216932.png">
@@ -39,10 +39,10 @@
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/3.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/image-20200602223450727.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/4.png">
-<meta property="og:updated_time" content="2020-06-02T16:20:05.654Z">
+<meta property="og:updated_time" content="2020-06-04T16:26:45.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何搭建感知器并使用其进行分类">
-<meta name="twitter:description" content="😋如何搭建感知器并使用其进行分类[toc] 💨python 编程基础，需要掌握几个库 numpy pandas matplotlib  💖什么是感知器？🎈神经元与机器学习感知机信号在神经元中的传播过程如下：信号通过神经粒质与神经元树突结合，通过神经细胞的认知处理（分类等），由神经末梢输出信号。  感知器类似于生物神经系统中的神经元。特征数据$x_1,x_2,...x_m$，作为输入信号，权">
+<meta name="twitter:description" content="神经元与机器学习感知器">
 <meta name="twitter:image" content="https://hubery-lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/image-20200602160802363.png">
 
 <link rel="canonical" href="https://Hubery-Lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/">
@@ -140,7 +140,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">27</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">29</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -150,7 +150,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">33</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -244,6 +244,7 @@
   </span>
   
   
+            <div class="post-description">神经元与机器学习感知器</div>
 
         </div>
       </header>
@@ -434,7 +435,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -447,7 +448,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
