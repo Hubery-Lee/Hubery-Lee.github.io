@@ -21,31 +21,32 @@
     var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
   </script>
 
-  <meta name="description" content="Get busy living or get busy dying.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hubery-Lee">
-<meta property="og:url" content="https://Hubery-Lee.github.io/index.html">
+  <meta name="description" content="Geant4中如何添加复杂组件1. bool 运算123#include &quot;G4SubtractionSolid.hh&quot; G4SubtractionSolid*	Tsubtraction = new G4SubtractionSolid(&quot;PipeWall-Strips&quot;,solidPWall,solidStrips,rotz0,G4ThreeVector());  用例： 12345678910">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Geant4中如何添加复杂组件">
+<meta property="og:url" content="https://Hubery-Lee.github.io/2020/06/05/Geant4中如何添加复杂组件/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="Get busy living or get busy dying.">
+<meta property="og:description" content="Geant4中如何添加复杂组件1. bool 运算123#include &quot;G4SubtractionSolid.hh&quot; G4SubtractionSolid*	Tsubtraction = new G4SubtractionSolid(&quot;PipeWall-Strips&quot;,solidPWall,solidStrips,rotz0,G4ThreeVector());  用例： 12345678910">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-05T00:16:18.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hubery-Lee">
-<meta name="twitter:description" content="Get busy living or get busy dying.">
+<meta name="twitter:title" content="Geant4中如何添加复杂组件">
+<meta name="twitter:description" content="Geant4中如何添加复杂组件1. bool 运算123#include &quot;G4SubtractionSolid.hh&quot; G4SubtractionSolid*	Tsubtraction = new G4SubtractionSolid(&quot;PipeWall-Strips&quot;,solidPWall,solidStrips,rotz0,G4ThreeVector());  用例： 12345678910">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/">
+<link rel="canonical" href="https://Hubery-Lee.github.io/2020/06/05/Geant4中如何添加复杂组件/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Hubery-Lee - 蒹葭苍苍，白露为霜</title>
+  <title>Geant4中如何添加复杂组件 | Hubery-Lee</title>
   
 
 
@@ -191,9 +192,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -209,10 +211,9 @@
       <meta itemprop="name" content="Hubery-Lee">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/05/Geant4中如何添加复杂组件/" class="post-title-link" itemprop="url">Geant4中如何添加复杂组件</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Geant4中如何添加复杂组件
+        </h1>
 
         <div class="post-meta">
 
@@ -241,7 +242,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Geant4中如何添加复杂组件"><a href="#Geant4中如何添加复杂组件" class="headerlink" title="Geant4中如何添加复杂组件"></a>Geant4中如何添加复杂组件</h1><h2 id="1-bool-运算"><a href="#1-bool-运算" class="headerlink" title="1. bool 运算"></a>1. bool 运算</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"G4SubtractionSolid.hh"</span></span></span><br><span class="line"></span><br><span class="line"> G4SubtractionSolid*	Tsubtraction = <span class="keyword">new</span> G4SubtractionSolid(<span class="string">"PipeWall-Strips"</span>,solidPWall,solidStrips,rotz0,G4ThreeVector());</span><br></pre></td></tr></table></figure>
+        <h1 id="Geant4中如何添加复杂组件"><a href="#Geant4中如何添加复杂组件" class="headerlink" title="Geant4中如何添加复杂组件"></a>Geant4中如何添加复杂组件</h1><h2 id="1-bool-运算"><a href="#1-bool-运算" class="headerlink" title="1. bool 运算"></a>1. bool 运算</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"G4SubtractionSolid.hh"</span></span></span><br><span class="line"></span><br><span class="line"> G4SubtractionSolid*	Tsubtraction = <span class="keyword">new</span> G4SubtractionSolid(<span class="string">"PipeWall-Strips"</span>,solidPWall,solidStrips,rotz0,G4ThreeVector());</span><br></pre></td></tr></table></figure>
 
 <p>用例：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//=====================================</span></span><br><span class="line"> <span class="comment">// 圆柱形准直器</span></span><br><span class="line"> <span class="comment">//</span></span><br><span class="line"> <span class="keyword">double</span> I_R1=<span class="number">90.0</span>*mm;<span class="comment">//,I_R2=100.0*mm;</span></span><br><span class="line"> <span class="comment">//double O_R1=97.1*mm,O_R2=107.1*mm;</span></span><br><span class="line"> <span class="keyword">double</span> O_R1=<span class="number">140.0</span>*mm;<span class="comment">//,O_R2=135.4*mm;</span></span><br><span class="line"> <span class="keyword">double</span> C_z =<span class="number">150.0</span>*mm;</span><br><span class="line"></span><br><span class="line"> pSPhi= <span class="number">0.</span>*degree;</span><br><span class="line"> pDPhi= <span class="number">360.</span>*degree;</span><br><span class="line"></span><br><span class="line"> G4Tubs* solidCol =   </span><br><span class="line">   <span class="keyword">new</span> G4Tubs(<span class="string">"Collimator"</span>,     I_R1, O_R1,C_z,pSPhi,pDPhi);     <span class="comment">//its size</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="comment">//====================================</span></span><br><span class="line"> <span class="comment">// void in collimator</span></span><br><span class="line"> pSPhi = <span class="number">0.</span>;</span><br><span class="line"> pDPhi = <span class="number">2.0</span>*pi/(<span class="number">90.0</span>*pi);</span><br><span class="line"></span><br><span class="line"> G4Tubs* solidVoidC = <span class="keyword">new</span> G4Tubs(<span class="string">"VCollimator"</span>,I_R1<span class="number">-0.1</span>*mm, O_R1+<span class="number">0.1</span>*mm,C_z+<span class="number">0.1</span>*mm,pSPhi,pDPhi);</span><br><span class="line"></span><br><span class="line"> <span class="comment">// G4SubtractionSolid* subtraction[94];</span></span><br><span class="line"> G4SubtractionSolid* subtraction[<span class="number">141</span>];</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">141</span>;i++)&#123;</span><br><span class="line">   G4RotationMatrix* rotz= <span class="keyword">new</span> G4RotationMatrix;</span><br><span class="line">   rotz-&gt;rotateZ(<span class="number">-2</span>*i*<span class="number">2.0</span>*pi/(<span class="number">90.0</span>*pi));</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>(i==<span class="number">1</span>)</span><br><span class="line">     subtraction[<span class="number">0</span>]=</span><br><span class="line"> 	<span class="keyword">new</span> G4SubtractionSolid(<span class="string">"Collimator-Void"</span>, solidCol, solidVoidC,rotz,G4ThreeVector(<span class="number">0.0</span>*mm,<span class="number">0.0</span>*mm,<span class="number">10.0</span>*mm));</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">     subtraction[i<span class="number">-1</span>]=</span><br><span class="line"> 	<span class="keyword">new</span> G4SubtractionSolid(<span class="string">"Collimator-Void"</span>, subtraction[i<span class="number">-2</span>], solidVoidC,rotz,G4ThreeVector(<span class="number">0.0</span>*mm,<span class="number">0.0</span>*mm,<span class="number">10.0</span>*mm));</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> G4LogicalVolume* logicCol =                         </span><br><span class="line">   <span class="keyword">new</span> G4LogicalVolume(subtraction[<span class="number">140</span>],          <span class="comment">//its solid</span></span><br><span class="line">                       col_mat,           <span class="comment">//its material</span></span><br><span class="line">                       <span class="string">"Collimator"</span>);            <span class="comment">//its name</span></span><br><span class="line"></span><br><span class="line"> G4PVPlacement* physCol = </span><br><span class="line">   <span class="keyword">new</span> G4PVPlacement(<span class="number">0</span>,                     <span class="comment">//no rotation</span></span><br><span class="line">                     G4ThreeVector(<span class="number">0.</span>*mm,<span class="number">0.</span>*mm,<span class="number">160.0</span>*mm),<span class="comment">//65.0*mm),       //at (0,0,0)</span></span><br><span class="line">                     logicCol,              <span class="comment">//its logical volume</span></span><br><span class="line">                     <span class="string">"Collimator"</span>,                 <span class="comment">//its name</span></span><br><span class="line">                     logicWorld,            <span class="comment">//its mother  volume</span></span><br><span class="line">                     <span class="literal">false</span>,                 <span class="comment">//no boolean operation</span></span><br><span class="line">                     <span class="number">0</span>,                     <span class="comment">//copy number</span></span><br><span class="line">                     checkOverlaps);        <span class="comment">//overlaps checking</span></span><br></pre></td></tr></table></figure>
@@ -258,667 +259,91 @@
 <p>光导构建图：</p>
 <p>![](Screenshot from 2020-03-06 15-00-25.png)</p>
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/05/迭代重建算法的基本思想/">
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
+  </div>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/05/迭代重建算法的基本思想/" class="post-title-link" itemprop="url">迭代重建算法的基本思想</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/05/迭代重建算法的基本思想/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/05/迭代重建算法的基本思想/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>迭代重建的基本思想</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/05/迭代重建算法的基本思想/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/">
+    <div class="social-list">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/03/PET-SPECT成像与CT成像的区别/" class="post-title-link" itemprop="url">PET_SPECT成像与CT成像的区别</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/03/PET-SPECT成像与CT成像的区别/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/03/PET-SPECT成像与CT成像的区别/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
+            <span class="label">WeChat</span>
+          </a>
         </div>
-      </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
 
-      
-          <p>透射成像和发射成像的区别</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/03/PET-SPECT成像与CT成像的区别/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
+
+            <span class="label">CSDN</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/02/如何搭建感知器并使用其进行分类/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/02/如何搭建感知器并使用其进行分类/" class="post-title-link" itemprop="url">如何搭建感知器并使用其进行分类</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/02/如何搭建感知器并使用其进行分类/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/02/如何搭建感知器并使用其进行分类/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>神经元与机器学习感知器</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/02/如何搭建感知器并使用其进行分类/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/05/迭代重建算法的基本思想/" rel="next" title="迭代重建算法的基本思想">
+      迭代重建算法的基本思想 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/02/二维图像重建的一般流程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/02/二维图像重建的一般流程/" class="post-title-link" itemprop="url">二维图像重建的一般流程</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/02/二维图像重建的一般流程/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/02/二维图像重建的一般流程/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>描述二维CT图像重建算法的一般思想</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/02/二维图像重建的一般流程/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/05/19/利用VSCode调试Geant4项目和Qt项目/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/" class="post-title-link" itemprop="url">利用VSCode调试Geant4项目和Qt项目</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>vscode在手，天下我有</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/19/利用VSCode调试Geant4项目和Qt项目/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/05/08/科学上网方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/08/科学上网方法/" class="post-title-link" itemprop="url">科学上网方法</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/08/科学上网方法/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/08/科学上网方法/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>推荐两款谷歌上网插件</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/08/科学上网方法/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/05/05/用VSCode的IDE调试CPP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/05/用VSCode的IDE调试CPP/" class="post-title-link" itemprop="url">用VSCode的IDE调试CPP</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/05/用VSCode的IDE调试CPP/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/05/用VSCode的IDE调试CPP/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>VSCode你值得拥有。跨平台IDE编辑器VSCode，有了她你还要什么emacs?</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/05/用VSCode的IDE调试CPP/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/" class="post-title-link" itemprop="url">hexo结合next主题搭建博客及其版本更新方法</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>博客搭建及主题切换与更新方法</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/01/hexo结合next主题搭建博客及其版本更新方法/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/04/30/作者github项目导航/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/owl.jpg">
-      <meta itemprop="name" content="李会">
-      <meta itemprop="description" content="Get busy living or get busy dying.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hubery-Lee">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/30/作者github项目导航/" class="post-title-link" itemprop="url">作者github项目导航</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/30/作者github项目导航/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/30/作者github项目导航/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="个人笔记"><a href="#个人笔记" class="headerlink" title="个人笔记"></a>个人笔记</h1><ol>
-<li>日常学习笔记<a href="https://hubery-lee.github.io/Notes/">Notes</a></li>
-</ol>
-<h1 id="Bilibili视频资料"><a href="#Bilibili视频资料" class="headerlink" title="Bilibili视频资料"></a>Bilibili视频资料</h1><ol>
-<li>Geant4教程<a href="https://hubery-lee.github.io/Geant4-jiaocheng/">Geant4-jiaocheng</a></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -965,6 +390,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Geant4中如何添加复杂组件"><span class="nav-number">1.</span> <span class="nav-text">Geant4中如何添加复杂组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-bool-运算"><span class="nav-number">1.1.</span> <span class="nav-text">1. bool 运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Assemble组件"><span class="nav-number">1.2.</span> <span class="nav-text">2. Assemble组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Parameterised"><span class="nav-number">1.3.</span> <span class="nav-text">3. Parameterised</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1212,59 +638,6 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
