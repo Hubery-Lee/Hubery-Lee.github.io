@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090501929.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601090809554.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601104859436.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105629394.pn">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105629394.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105835965.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601105911448.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200601111126392.png">
@@ -49,7 +49,7 @@
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084149649.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084308687.png">
 <meta property="og:image" content="https://hubery-lee.github.io/2020/06/02/二维图像重建的一般流程/image-20200602084333949.png">
-<meta property="og:updated_time" content="2020-06-02T15:22:56.914Z">
+<meta property="og:updated_time" content="2020-07-12T16:32:49.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维图像重建的一般流程">
 <meta name="twitter:description" content="描述二维CT图像重建算法的一般思想">
@@ -276,7 +276,7 @@
 <p>$$<br>\begin{equation}x_1=3,x_2=2,x_3=4,x_4=0\end{equation}<br>$$<br>通过探测物体的投影数据，重建出物体的实际内部构造。这就是图像重建的一般思想。</p>
 <h2 id="✔图像重建算法的数学基础有哪些？"><a href="#✔图像重建算法的数学基础有哪些？" class="headerlink" title="✔图像重建算法的数学基础有哪些？"></a>✔图像重建算法的数学基础有哪些？</h2><h3 id="🍕中心切片定理"><a href="#🍕中心切片定理" class="headerlink" title="🍕中心切片定理"></a>🍕中心切片定理</h3><p>中心切片定理是断层成像的理论基础。这个定理还有其它的称谓，如投影切片定理和傅里叶中心切片定理。二维图像的中心切片定理指出：二维函数 f(x, y) 的投影 p(s) 之傅里叶变换 P(ω) 等于函数 f(x, y) 的傅里叶变换 F(ωx, ωy) 沿与探测器平行的方向过原点的片段。</p>
 <p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601104859436.png" alt="image-20200601104859436"></p>
-<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105629394.pn" alt></p>
+<p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105629394.png" alt></p>
 <h3 id="🚩为什么要引入滤波？"><a href="#🚩为什么要引入滤波？" class="headerlink" title="🚩为什么要引入滤波？"></a>🚩为什么要引入滤波？</h3><p><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105835965.png" alt><br><img src="/2020/06/02/二维图像重建的一般流程/image-20200601105911448.png" alt></p>
 <p>第二个方案通常被称作处理FBP (Filtered Backprojection 先滤波后反投影) 算法。第二个方案比第一个方案知名度高得多。在断层成像领域里，函数|ω| 被称作斜坡滤波器。</p>
 <h3 id="❤有哪些滤波重建方法？"><a href="#❤有哪些滤波重建方法？" class="headerlink" title="❤有哪些滤波重建方法？"></a>❤有哪些滤波重建方法？</h3><p>==<strong>滤波的思想</strong>==：在中心切片定理中，旋转中心被切片涂抹的更浓密，这将导致图像像素比较均匀（低频区域；高频区域是指图像对比度比较大的图像边缘区域），进而重构的图像中心区域比较模糊。那么滤波器的思想是将中心切片函数乘以一个与旋转中心距离相关的权重因子，使得切片在图像上涂抹的比较均匀。这样重构出来的图像才不会出现旋转中心模糊的现象。下面介绍一下有哪些图像重建及滤波方法。</p>
