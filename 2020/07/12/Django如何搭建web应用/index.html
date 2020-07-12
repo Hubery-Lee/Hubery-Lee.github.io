@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="利用python和django搭建web应用">
+<meta name="keywords" content="web,django,数据库sqlite">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django如何搭建web应用">
+<meta property="og:url" content="https://Hubery-Lee.github.io/2020/07/12/Django如何搭建web应用/index.html">
+<meta property="og:site_name" content="Hubery-Lee">
+<meta property="og:description" content="利用python和django搭建web应用">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/07/12/Django如何搭建web应用/%E6%A0%B9%E7%9B%AE%E5%BD%95">
+<meta property="og:updated_time" content="2020-07-12T13:47:39.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django如何搭建web应用">
+<meta name="twitter:description" content="利用python和django搭建web应用">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2020/07/12/Django如何搭建web应用/%E6%A0%B9%E7%9B%AE%E5%BD%95">
+
+<link rel="canonical" href="https://Hubery-Lee.github.io/2020/07/12/Django如何搭建web应用/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Django如何搭建web应用 | Hubery-Lee</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Hubery-Lee" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hubery-Lee</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">蒹葭苍苍，白露为霜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">33</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">36</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/07/12/Django如何搭建web应用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Django如何搭建web应用
+        </h1>
+
+        <div class="post-meta">
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/12/Django如何搭建web应用/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/12/Django如何搭建web应用/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description">利用python和django搭建web应用</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Django如何搭建web应用"><a href="#Django如何搭建web应用" class="headerlink" title="Django如何搭建web应用"></a>Django如何搭建web应用</h1><h2 id="🛒Django的特点"><a href="#🛒Django的特点" class="headerlink" title="🛒Django的特点"></a>🛒Django的特点</h2><p>Django 最初被设计用于具有快速开发需求的新闻类站点，目的是要实现简单快捷的网站开发。以下内容简要介绍了如何使用 Django 实现一个数据库驱动的 Web 应用。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2ludHJvL292ZXJ2aWV3Lw==">https://docs.djangoproject.com/zh-hans/3.0/intro/overview/<i class="fa fa-external-link-alt"></i></span></p>
+<ul>
+<li><p><strong><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2JqZWN0LXJlbGF0aW9uYWxfbWFwcGluZw==">对象关系映射器<i class="fa fa-external-link-alt"></i></span></strong> </p>
+<p>可以使用强大的 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL3RvcGljcy9kYi9tb2RlbHMv">数据-模型语句<i class="fa fa-external-link-alt"></i></span> 来描述你的数据模型，这解决了数年以来在数据库模式中的难题。</p>
+</li>
+<li><p><strong>享用便捷的 API</strong></p>
+<p>可以使用一套便捷而丰富的 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL3RvcGljcy9kYi9xdWVyaWVzLw==">Python API<i class="fa fa-external-link-alt"></i></span> 访问你的数据。API是动态创建的，不需要代码生成</p>
+</li>
+<li><p><strong>动态管理接口</strong></p>
+<p>当你的模型完成定义，Django 就会自动生成一个专业的生产级 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL3JlZi9jb250cmliL2FkbWluLw==">管理接口<i class="fa fa-external-link-alt"></i></span> ——一个允许认证用户添加、更改和删除对象的 Web 站点。你只需在 admin 站点上注册你的模型即可：</p>
+</li>
+<li><p><strong>规划 URLs</strong></p>
+<p>Django 推崇优美的 URL 设计，所以不要把诸如 <code>.php</code> 和 <code>.asp</code> 之类的冗余的后缀放到 URL 里。</p>
+<p>需要创建一个叫做 URLconf 的 Python 模块。这是网站的目录，它包含了一张 URL 和 Python 回调函数之间的映射表。URLconf 也有利于将 Python 代码与 URL 进行解耦（译注：使各个模块分离，独立）</p>
+</li>
+<li><p><strong>编写视图</strong></p>
+<p>视图函数的执行结果只可能有两种：返回一个包含请求页面元素的 <a href="https://docs.djangoproject.com/zh-hans/3.0/ref/request-response/#django.http.HttpResponse" target="_blank" rel="noopener"><code>HttpResponse</code></a> 对象，或者是抛出 <a href="https://docs.djangoproject.com/zh-hans/3.0/topics/http/views/#django.http.Http404" target="_blank" rel="noopener"><code>Http404</code></a> 这类异常。至于执行过程中的其它的动作则由你决定。</p>
+</li>
+<li><p><strong>设计模板</strong><br>Django 允许设置搜索模板路径，这样可以最小化模板之间的冗余。在 Django 设置中，你可以通过 DIRS 参数指定一个路径列表用于检索模板。如果第一个路径中不包含任何模板，就继续检查第二个，以此类推。</p>
+</li>
+</ul>
+<h2 id="🎈项目框架"><a href="#🎈项目框架" class="headerlink" title="🎈项目框架"></a>🎈项目框架</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysite/</span><br><span class="line">    manage.py</span><br><span class="line">    mysite/</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py</span><br></pre></td></tr></table></figure>
+
+<p>这些目录和文件的用处是：</p>
+<ul>
+<li><p>最外层的 <code>mysite/</code> 根目录只是你项目的容器， 根目录名称对Django没有影响，你可以将它重命名为任何你喜欢的名称。</p>
+</li>
+<li><p><code>manage.py</code>: 一个让你用各种方式管理 Django 项目的命令行工具。你可以阅读 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL3JlZi9kamFuZ28tYWRtaW4v">django-admin and manage.py<i class="fa fa-external-link-alt"></i></span> 获取所有 <code>manage.py</code> 的细节。</p>
+</li>
+<li><p>里面一层的 <code>mysite/</code> 目录包含你的项目，它是一个纯 Python 包。它的名字就是当你引用它内部任何东西时需要用到的 Python 包名。 (比如 <code>mysite.urls</code>).</p>
+</li>
+<li><p><code>mysite/__init__.py</code>：一个空文件，告诉 Python 这个目录应该被认为是一个 Python 包。如果你是 Python 初学者，阅读官方文档中的 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy90dXRvcmlhbC9tb2R1bGVzLmh0bWwjdHV0LXBhY2thZ2Vz">更多关于包的知识<i class="fa fa-external-link-alt"></i></span>。</p>
+</li>
+<li><p><code>mysite/settings.py</code>：Django 项目的配置文件。如果你想知道这个文件是如何工作的，请查看 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL3RvcGljcy9zZXR0aW5ncy8=">Django 配置<i class="fa fa-external-link-alt"></i></span> 了解细节。</p>
+</li>
+<li><p><code>mysite/urls.py</code>：Django 项目的 URL 声明，就像你网站的“目录”。阅读 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL3RvcGljcy9odHRwL3VybHMv">URL调度器<i class="fa fa-external-link-alt"></i></span> 文档来获取更多关于 URL 的内容。</p>
+</li>
+<li><p><code>mysite/asgi.py</code>：作为你的项目的运行在 ASGI 兼容的Web服务器上的入口。阅读 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2hvd3RvL2RlcGxveW1lbnQvd3NnaS8=">如何使用 WSGI 进行部署<i class="fa fa-external-link-alt"></i></span> 了解更多细节。</p>
+</li>
+<li><p><code>mysite/wsgi.py</code>：作为你的项目的运行在 WSGI 兼容的Web服务器上的入口。阅读 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2hvd3RvL2RlcGxveW1lbnQvd3NnaS8=">如何使用 WSGI 进行部署<i class="fa fa-external-link-alt"></i></span> 了解更多细节。</p>
+</li>
+</ul>
+<h2 id="🍎应用框架"><a href="#🍎应用框架" class="headerlink" title="🍎应用框架"></a>🍎应用框架</h2><h3 id="🍏应用与项目的关系"><a href="#🍏应用与项目的关系" class="headerlink" title="🍏应用与项目的关系"></a>🍏应用与项目的关系</h3><p><img src="/2020/07/12/Django如何搭建web应用/%E6%A0%B9%E7%9B%AE%E5%BD%95" alt></p>
+<h3 id="🔱创建应用的框架"><a href="#🔱创建应用的框架" class="headerlink" title="🔱创建应用的框架"></a>🔱创建应用的框架</h3><p>创建一个 <code>polls</code> 目录，它的目录结构大致如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">polls/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations/</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure>
+
+<p>这个目录结构包括了投票应用的全部内容。</p>
+<h3 id="❗应用的调试模块"><a href="#❗应用的调试模块" class="headerlink" title="❗应用的调试模块"></a>❗应用的调试模块</h3><p><strong><code>为什么要进行调试？</code><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2ludHJvL3R1dG9yaWFsMDUv">参考<i class="fa fa-external-link-alt"></i></span></strong></p>
+<ul>
+<li><h4 id="测试将节约你的时间"><a href="#测试将节约你的时间" class="headerlink" title="测试将节约你的时间"></a>测试将节约你的时间</h4><p>当某人写出错误的代码时，自动化测试还能帮助你定位错误代码的位置。</p>
+</li>
+<li><h4 id="测试不仅能发现错误，而且能预防错误"><a href="#测试不仅能发现错误，而且能预防错误" class="headerlink" title="测试不仅能发现错误，而且能预防错误"></a>测试不仅能发现错误，而且能预防错误</h4><p>测试就好像是从内部仔细检查你的代码，当有些地方出错时，这些地方将会变得很显眼——<em>就算你自己没有意识到那里写错了</em>。</p>
+</li>
+<li><h4 id="测试使你的代码更有吸引力"><a href="#测试使你的代码更有吸引力" class="headerlink" title="测试使你的代码更有吸引力"></a>测试使你的代码更有吸引力</h4><p>复杂的应用可能由团队维护。测试的存在保证了协作者不会不小心破坏了了你的代码（也保证你不会不小心弄坏他们的）。</p>
+</li>
+</ul>
+<p><strong>unittest 和django.test   TestCase 类似</strong></p>
+<h2 id="❓如何编写可重用程序"><a href="#❓如何编写可重用程序" class="headerlink" title="❓如何编写可重用程序"></a>❓如何编写可重用程序</h2><h3 id="☯可重用很重要"><a href="#☯可重用很重要" class="headerlink" title="☯可重用很重要"></a>☯可重用很重要</h3><p>可重用性是 Python 的根本。<span class="exturl" data-url="aHR0cHM6Ly9weXBpLnB5dGhvbi5vcmcvcHlwaQ==">The Python Package Index (PyPI)<i class="fa fa-external-link-alt"></i></span> 有许大量的包，都可被用在你自己的 Python 项目中。同样可以在 <span class="exturl" data-url="aHR0cHM6Ly9kamFuZ29wYWNrYWdlcy5vcmcv">Django Packages<i class="fa fa-external-link-alt"></i></span> 中查找已发布的可重用应用，也可将其引入到你的项目中。Django 本身也是一个 Python 包，也就是说你可以将已有的 Python 包或 Django 应用并入你的项目。你只需要编写属于你的那部分即可。</p>
+<h3 id="🚀​你的项目和可复用应用¶"><a href="#🚀​你的项目和可复用应用¶" class="headerlink" title="🚀​你的项目和可复用应用¶"></a>🚀​你的项目和可复用应用<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2ludHJvL3JldXNhYmxlLWFwcHMvI3lvdXItcHJvamVjdC1hbmQteW91ci1yZXVzYWJsZS1hcHA=">¶<i class="fa fa-external-link-alt"></i></span></h3><p>通过前面的教程，我们的工程应该看起来像这样:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">mysite/</span><br><span class="line">    manage.py</span><br><span class="line">    mysite/</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py</span><br><span class="line">    polls/</span><br><span class="line">        __init__.py</span><br><span class="line">        admin.py</span><br><span class="line">        apps.py</span><br><span class="line">        migrations/</span><br><span class="line">            __init__.py</span><br><span class="line">            0001_initial.py</span><br><span class="line">        models.py</span><br><span class="line">        static/</span><br><span class="line">            polls/</span><br><span class="line">                images/</span><br><span class="line">                    background.gif</span><br><span class="line">                style.css</span><br><span class="line">        templates/</span><br><span class="line">            polls/</span><br><span class="line">                detail.html</span><br><span class="line">                index.html</span><br><span class="line">                results.html</span><br><span class="line">        tests.py</span><br><span class="line">        urls.py</span><br><span class="line">        views.py</span><br><span class="line">    templates/</span><br><span class="line">        admin/</span><br><span class="line">            base_site.html</span><br></pre></td></tr></table></figure>
+
+<p>目录 <code>polls</code> 现在可以被拷贝至一个新的 Django 工程，且立刻被复用。不过现在还不是发布它的时候。为了这样做，我们需要打包这个应用，便于其他人安装它。</p>
+<h3 id="💯打包你的应用"><a href="#💯打包你的应用" class="headerlink" title="💯打包你的应用"></a>💯打包你的应用</h3><p>目前，打包 Python 程序需要工具，有许多工具可以完成此项工作。在此教程中，我们将使用 <span class="exturl" data-url="aHR0cHM6Ly9weXBpLm9yZy9wcm9qZWN0L3NldHVwdG9vbHMv">setuptools<i class="fa fa-external-link-alt"></i></span> 来打包我们的程序。</p>
+<p><strong><code>具体</code><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2ludHJvL3JldXNhYmxlLWFwcHMv">参考链接<i class="fa fa-external-link-alt"></i></span></strong></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
+
+            <span class="label">CSDN</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/web/" rel="tag"><i class="fa fa-tag"></i> web</a>
+              <a href="/tags/django/" rel="tag"><i class="fa fa-tag"></i> django</a>
+              <a href="/tags/数据库sqlite/" rel="tag"><i class="fa fa-tag"></i> 数据库sqlite</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/07/数据拟合/" rel="next" title="数据拟合">
+      数据拟合 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Django如何搭建web应用"><span class="nav-number">1.</span> <span class="nav-text">Django如何搭建web应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🛒Django的特点"><span class="nav-number">1.1.</span> <span class="nav-text">🛒Django的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎈项目框架"><span class="nav-number">1.2.</span> <span class="nav-text">🎈项目框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🍎应用框架"><span class="nav-number">1.3.</span> <span class="nav-text">🍎应用框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#🍏应用与项目的关系"><span class="nav-number">1.3.1.</span> <span class="nav-text">🍏应用与项目的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🔱创建应用的框架"><span class="nav-number">1.3.2.</span> <span class="nav-text">🔱创建应用的框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#❗应用的调试模块"><span class="nav-number">1.3.3.</span> <span class="nav-text">❗应用的调试模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试将节约你的时间"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">测试将节约你的时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试不仅能发现错误，而且能预防错误"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">测试不仅能发现错误，而且能预防错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试使你的代码更有吸引力"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">测试使你的代码更有吸引力</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#❓如何编写可重用程序"><span class="nav-number">1.4.</span> <span class="nav-text">❓如何编写可重用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#☯可重用很重要"><span class="nav-number">1.4.1.</span> <span class="nav-text">☯可重用很重要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🚀​你的项目和可复用应用¶"><span class="nav-number">1.4.2.</span> <span class="nav-text">🚀​你的项目和可复用应用¶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#💯打包你的应用"><span class="nav-number">1.4.3.</span> <span class="nav-text">💯打包你的应用</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李会"
+      src="/images/owl.jpg">
+  <p class="site-author-name" itemprop="name">李会</p>
+  <div class="site-description" itemprop="description">Get busy living or get busy dying.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+        </li>
+    </ul>
+  </div>
+<div class="cc-license motion-element" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李会</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ooozwlclX00aJabPvk1WTj7J-gzGzoHsz',
+      appKey     : 'CnXrRUVdUdMXgEvGbdolWGYX',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
