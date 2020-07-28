@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubery-lee.github.io/"/>
-  <updated>2020-07-12T16:33:40.593Z</updated>
+  <updated>2020-07-28T02:44:04.494Z</updated>
   <id>https://hubery-lee.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>opencv-python哔哩哔哩视频解说代码</title>
+    <link href="https://hubery-lee.github.io/2020/07/28/opencv-python%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A7%86%E9%A2%91%E4%BB%A3%E7%A0%81/"/>
+    <id>https://hubery-lee.github.io/2020/07/28/opencv-python%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A7%86%E9%A2%91%E4%BB%A3%E7%A0%81/</id>
+    <published>2020-07-28T02:38:27.000Z</published>
+    <updated>2020-07-28T02:44:04.494Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL211cnRhemFoYXNzYW4vTGVhcm4tT3BlbkNWLWluLTMtaG91cnM=">https://github.com/murtazahassan/Learn-OpenCV-in-3-hours<i class="fa fa-external-link-alt"></i></span></p><h1 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h1><p>其中，<code>chapter 11~17</code> 待更新</p><ul><li><p>chapter 1  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMS5weQ==">资源读取：图片、视频、摄像头<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 2  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMi5weQ==">二值化、滤波模糊、膨胀、腐蚀<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 3  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMy5weQ==">画图、形状、文字<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 4 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyNC5weQ==">图像的旋转与仿生变换<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 5 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyNS5weQ==">拼图<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 6 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyNi5weQ==">全景图像拼接<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 7 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyNy5weQ==">检测颜色<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 8 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyOC5weQ==">检测形状<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 9 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyOS5weQ==">人脸检测<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 10 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTAucHk=">虚拟油画<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 11 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTEucHk=">文档识别<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 12 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTIucHk=">车牌识别、信用卡号识别<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 13 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTMucHk=">答题卡识别<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 14 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTQucHk=">目标追踪<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 15 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTUucHk=">人脸疲劳检测<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 16 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTYucHk=">dnn 神经网络识别<i class="fa fa-external-link-alt"></i></span></p></li><li><p>chapter 17 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvb3BlbmN2LXB5dGhvbi9jaGFwdGVyMTcucHk=">光流估计和背景建模<i class="fa fa-external-link-alt"></i></span></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      参考https://github.com/murtazahassan/Learn-OpenCV-in-3-hours
+    
+    </summary>
+    
+    
+      <category term="openCV" scheme="https://Hubery-Lee.github.io/categories/openCV/"/>
+    
+    
+      <category term="openCV" scheme="https://Hubery-Lee.github.io/tags/openCV/"/>
+    
+      <category term="python" scheme="https://Hubery-Lee.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Django如何搭建web应用</title>
@@ -64,9 +89,9 @@
     
       <category term="root" scheme="https://Hubery-Lee.github.io/tags/root/"/>
     
-      <category term="matlab" scheme="https://Hubery-Lee.github.io/tags/matlab/"/>
-    
       <category term="python" scheme="https://Hubery-Lee.github.io/tags/python/"/>
+    
+      <category term="matlab" scheme="https://Hubery-Lee.github.io/tags/matlab/"/>
     
   </entry>
   
@@ -477,29 +502,6 @@
       <category term="Emacs24.3" scheme="https://Hubery-Lee.github.io/tags/Emacs24-3/"/>
     
       <category term="markdown" scheme="https://Hubery-Lee.github.io/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>G4 Detector CopyNo and MotherCopyNo access</title>
-    <link href="https://hubery-lee.github.io/2018/10/11/G4-Detector-CopyNo-and-MotherCopyNo-access/"/>
-    <id>https://hubery-lee.github.io/2018/10/11/G4-Detector-CopyNo-and-MotherCopyNo-access/</id>
-    <published>2018-10-11T03:41:25.000Z</published>
-    <updated>2020-04-28T00:33:43.815Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="How-to-construct-assembly-or-replices"><a href="#How-to-construct-assembly-or-replices" class="headerlink" title="How to construct assembly or replices"></a>How to construct assembly or replices</h2><p>You can refer to Geant4 Book for Application Developers <span class="exturl" data-url="aHR0cDovL2dlYW50NC11c2VyZG9jLndlYi5jZXJuLmNoL2dlYW50NC11c2VyZG9jL1VzZXJzR3VpZGVzL0ZvckFwcGxpY2F0aW9uRGV2ZWxvcGVyL2h0bWwvRGV0ZWN0b3IvR2VvbWV0cnkvZ2VvbUFzc2VtYmx5Lmh0bWw=">User Guide<i class="fa fa-external-link-alt"></i></span></p><p>There are discriptions in the chapter4 Geometry/Assembly、Navigator、TouchableHandles.</p><h2 id="How-to-distinguish-different-detector-array-components"><a href="#How-to-distinguish-different-detector-array-components" class="headerlink" title="How to distinguish different detector array components"></a>How to distinguish different detector array components</h2><p>Using the ‘step’ to retrieve geometrical information</p><p>During the tracking run, geometrical information can be retrieved through the touchable handle associated to the current step. For example, to identify the exact copy-number of a specific physical volume in the mass geometry, one should do the following:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// Given the pointer to the step object ...</span><br><span class="line">//</span><br><span class="line">G4Step* aStep = ..;</span><br><span class="line"></span><br><span class="line">// ... retrieve the <span class="string">'pre-step'</span> point</span><br><span class="line">//</span><br><span class="line">G4StepPoint* preStepPoint = aStep-&gt;GetPreStepPoint();</span><br><span class="line"></span><br><span class="line">// ... retrieve a touchable handle and access to the information</span><br><span class="line">//</span><br><span class="line">G4TouchableHandle theTouchable = preStepPoint-&gt;GetTouchableHandle();</span><br><span class="line">G4int copyNo = theTouchable-&gt;GetCopyNumber();</span><br><span class="line">G4int motherCopyNo = theTouchable-&gt;GetCopyNumber(1);</span><br><span class="line"></span><br><span class="line">To determine the exact position <span class="keyword">in</span> global coordinates <span class="keyword">in</span> the mass geometry and convert to <span class="built_in">local</span> coordinates (<span class="built_in">local</span> to the current volume):</span><br><span class="line"></span><br><span class="line">G4ThreeVector worldPosition = preStepPoint-&gt;GetPosition();</span><br><span class="line">G4ThreeVector localPosition = theTouchable-&gt;GetHistory()-&gt;</span><br><span class="line">              GetTopTransform().TransformPoint(worldPosition);</span><br></pre></td></tr></table></figure><h2 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h2><p>the motherCopyNo start from 2 to motherNoCopy+1,  copyNo start from 0 to NoCopy-1;</p>]]></content>
-    
-    <summary type="html">
-    
-      This page introduce the mehtods to construct detector arrays and how to discriminate the different components with copyNo and motherCopyNo.
-    
-    </summary>
-    
-    
-      <category term="Geant4及Root应用" scheme="https://Hubery-Lee.github.io/categories/Geant4%E5%8F%8ARoot%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="geant4" scheme="https://Hubery-Lee.github.io/tags/geant4/"/>
     
   </entry>
   
