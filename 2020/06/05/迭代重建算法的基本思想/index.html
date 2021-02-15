@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,33 +18,33 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="迭代重建的基本思想">
-<meta name="keywords" content="迭代重建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="迭代重建算法的基本思想">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2020/06/05/迭代重建算法的基本思想/index.html">
+<meta property="og:url" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="迭代重建的基本思想">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604225353193.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604233955301.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234408677.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234429947.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234506653.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234525715.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234558326.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234618809.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604234633400.png">
-<meta property="og:updated_time" content="2020-06-09T08:35:36.095Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604225353193.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604233955301.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234408677.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234429947.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234506653.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234525715.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234558326.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234618809.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234633400.png">
+<meta property="article:published_time" content="2020-06-04T16:15:12.000Z">
+<meta property="article:modified_time" content="2020-06-09T08:35:36.095Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="迭代重建">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迭代重建算法的基本思想">
-<meta name="twitter:description" content="迭代重建的基本思想">
-<meta name="twitter:image" content="https://hubery-lee.github.io/2020/06/05/迭代重建算法的基本思想/image-20200604225353193.png">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604225353193.png">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2020/06/05/迭代重建算法的基本思想/">
+<link rel="canonical" href="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/">
 
 
 <script id="page-configurations">
@@ -132,6 +132,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
@@ -145,11 +150,6 @@
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -210,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/05/迭代重建算法的基本思想/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -227,6 +227,23 @@
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-05 00:15:12" itemprop="dateCreated datePublished" datetime="2020-06-05T00:15:12+08:00">2020-06-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%9B%BE%E5%83%8F%E9%87%8D%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">图像重建</span></a>
+                </span>
+            </span>
 
           
   
@@ -237,8 +254,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/06/05/迭代重建算法的基本思想/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/05/迭代重建算法的基本思想/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -255,19 +272,19 @@
 
       
         <h1 id="迭代重建算法的基本思想"><a href="#迭代重建算法的基本思想" class="headerlink" title="迭代重建算法的基本思想"></a>迭代重建算法的基本思想</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>图像重建除了通过中心切片定理来实现外，还可以通过解线性方程组来得到。对于二维图像就是像素，对于三维图像就是体素。</p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604225353193.png" alt="image-20200604225353193"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604225353193.png" alt="image-20200604225353193"></p>
 <p>$\left{\begin{array}{c}x_{1}+x_{2}+x_{3}=p_{1} \ x_{4}+x_{5}+x_{6}=p_{2} \ x_{7}+x_{8}+x_{9}=p_{3} \ x_{3}+x_{6}+x_{9}=p_{4} \ x_{2}+x_{5}+x_{8}=p_{5} \ x_{1}+x_{4}+x_{7}=p_{6} \ 2(\sqrt{2}-1) x_{4}+(2-\sqrt{2}) x_{7}+2(\sqrt{2}-1) x_{8}=p_{7} \ \sqrt{2} x_{1}+\sqrt{2} x_{5}+\sqrt{2} x_{9}=p_{8} \ 2(\sqrt{2}-1) x_{2}+(2-\sqrt{2}) x_{3}+2(\sqrt{2}-1) x_{6}=p_{9}\end{array}\right.$</p>
 <p>这个方程组也可以用矩阵的形式写出<br>$$<br>AX=p<br>$$<br>其中，$X=\left[x_{1}, x_{2}, \ldots, x_{9}\right]^{T}, \quad P=\left[p_{1}, p_{2}, \ldots, p_{9}\right]^{T}$迭代算法的思想使将$AX=p$变换成，迭代形式<br>$$<br>X^{(i+1)}=GX^{(i)}+b<br>$$<br>通过不同的变换方式变成迭代格式，就长生了不同的的迭代算法。比如：</p>
 <h2 id="常用迭代算法"><a href="#常用迭代算法" class="headerlink" title="常用迭代算法"></a>常用迭代算法</h2><h3 id="代数迭代重建技术（ARO，algebraic-reconstruction-technique"><a href="#代数迭代重建技术（ARO，algebraic-reconstruction-technique" class="headerlink" title="代数迭代重建技术（ARO，algebraic reconstruction technique)"></a>代数迭代重建技术（ARO，algebraic reconstruction technique)</h3><p>ART 算法是个“行运算”算法。它每次考虑一条射线就更新一次图像。ART 算法的表达式是 </p>
 <p>$$<br>X^{下一个}=X^{\text {当前}}-\frac{A_{i} X^{\text {当前}}-p_{i}}{\left|A_{i}\right|^{2}} A_{i}^{T}<br>$$<br>$A_iX$ 执行的是沿着第$i$条射线的投影运算，$p_i$ 是在第 $i $个探测像元上测到的投影数据，$\left|A_{i}\right|^{2}=\sum_{j} a_{i j}^{2}$是沿着第 $i$ 条射线上各“贡献”因子的平方和，$cA^{T}<em>{i}$ 是把数值 $c $沿着第$ i$ 条射线做反投影。如果我们把上面的算法改写成下面的形式 .<br>$$<br>X^{\text {next }}=X^{\text {current }}-\left(\frac{A</em>{i} X^{\text {current }}}{\left|A_{i}\right|}-\frac{p_{i}}{\left|A_{i}\right|}\right) \frac{A_{i}^{T}}{\left|A_{i}\right|}<br>$$<br>该算法的几何意义就比较明显了:</p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604233955301.png" alt="image-20200604233955301"></p>
-<h3 id="最大期望极大似然算法（ML-EM，Maximum-Likelihood-Expectation-Maximization）"><a href="#最大期望极大似然算法（ML-EM，Maximum-Likelihood-Expectation-Maximization）" class="headerlink" title="最大期望极大似然算法（ML-EM，Maximum-Likelihood Expectation-Maximization）"></a>最大期望极大似然算法（ML-EM，Maximum-Likelihood Expectation-Maximization）</h3><p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234408677.png" alt="image-20200604234408677"></p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234429947.png" alt="image-20200604234429947"></p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234506653.png" alt="image-20200604234506653"></p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234525715.png" alt="image-20200604234525715"></p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234558326.png" alt="image-20200604234558326"></p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234618809.png" alt="image-20200604234618809"></p>
-<p><img src="/2020/06/05/迭代重建算法的基本思想/image-20200604234633400.png" alt="image-20200604234633400"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604233955301.png" alt="image-20200604233955301"></p>
+<h3 id="最大期望极大似然算法（ML-EM，Maximum-Likelihood-Expectation-Maximization）"><a href="#最大期望极大似然算法（ML-EM，Maximum-Likelihood-Expectation-Maximization）" class="headerlink" title="最大期望极大似然算法（ML-EM，Maximum-Likelihood Expectation-Maximization）"></a>最大期望极大似然算法（ML-EM，Maximum-Likelihood Expectation-Maximization）</h3><p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234408677.png" alt="image-20200604234408677"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234429947.png" alt="image-20200604234429947"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234506653.png" alt="image-20200604234506653"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234525715.png" alt="image-20200604234525715"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234558326.png" alt="image-20200604234558326"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234618809.png" alt="image-20200604234618809"></p>
+<p><img src="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/image-20200604234633400.png" alt="image-20200604234633400"></p>
 <p><strong>参考文献：</strong></p>
 <p>[1] 曾更生，医学图像重建</p>
 
@@ -334,7 +351,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/迭代重建/" rel="tag"><i class="fa fa-tag"></i> 迭代重建</a>
+              <a href="/tags/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA/" rel="tag"><i class="fa fa-tag"></i> 迭代重建</a>
           </div>
 
         
@@ -343,11 +360,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/05/Geant4中如何添加复杂组件/" rel="prev" title="Geant4中如何添加复杂组件">
+    <a href="/2020/06/05/Geant4%E4%B8%AD%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%8D%E6%9D%82%E7%BB%84%E4%BB%B6/" rel="prev" title="Geant4中如何添加复杂组件">
       <i class="fa fa-chevron-left"></i> Geant4中如何添加复杂组件
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/06/03/PET-SPECT成像与CT成像的区别/" rel="next" title="PET_SPECT成像与CT成像的区别">
+    <a href="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="PET_SPECT成像与CT成像的区别">
       PET_SPECT成像与CT成像的区别 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -409,7 +426,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代重建算法的基本思想"><span class="nav-number">1.</span> <span class="nav-text">迭代重建算法的基本思想</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本思想"><span class="nav-number">1.1.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用迭代算法"><span class="nav-number">1.2.</span> <span class="nav-text">常用迭代算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代数迭代重建技术（ARO，algebraic-reconstruction-technique"><span class="nav-number">1.2.1.</span> <span class="nav-text">代数迭代重建技术（ARO，algebraic reconstruction technique)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大期望极大似然算法（ML-EM，Maximum-Likelihood-Expectation-Maximization）"><span class="nav-number">1.2.2.</span> <span class="nav-text">最大期望极大似然算法（ML-EM，Maximum-Likelihood Expectation-Maximization）</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">1.</span> <span class="nav-text">迭代重建算法的基本思想</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">1.1.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%BF%AD%E4%BB%A3%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">常用迭代算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E6%8A%80%E6%9C%AF%EF%BC%88ARO%EF%BC%8Calgebraic-reconstruction-technique"><span class="nav-number">1.2.1.</span> <span class="nav-text">代数迭代重建技术（ARO，algebraic reconstruction technique)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E6%9C%9F%E6%9C%9B%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E7%AE%97%E6%B3%95%EF%BC%88ML-EM%EF%BC%8CMaximum-Likelihood-Expectation-Maximization%EF%BC%89"><span class="nav-number">1.2.2.</span> <span class="nav-text">最大期望极大似然算法（ML-EM，Maximum-Likelihood Expectation-Maximization）</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -445,22 +462,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
@@ -474,19 +491,19 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
         </li>
     </ul>
   </div>
@@ -512,8 +529,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -537,9 +554,15 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
 <script src="/js/utils.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -607,7 +630,9 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

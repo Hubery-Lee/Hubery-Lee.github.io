@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,23 +18,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="利用python代码自动爬取妹子图">
-<meta name="keywords" content="python爬妹子图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何利用python爬取网页图片-你懂的">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2020/04/28/如何利用python爬取网页图片-你懂的/index.html">
+<meta property="og:url" content="https://hubery-lee.github.io/2020/04/28/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87-%E4%BD%A0%E6%87%82%E7%9A%84/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="利用python代码自动爬取妹子图">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-30T17:46:44.186Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-28T08:27:37.000Z">
+<meta property="article:modified_time" content="2020-04-30T17:46:44.186Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="python爬妹子图">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何利用python爬取网页图片-你懂的">
-<meta name="twitter:description" content="利用python代码自动爬取妹子图">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2020/04/28/如何利用python爬取网页图片-你懂的/">
+<link rel="canonical" href="https://hubery-lee.github.io/2020/04/28/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87-%E4%BD%A0%E6%87%82%E7%9A%84/">
 
 
 <script id="page-configurations">
@@ -122,6 +122,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
@@ -135,11 +140,6 @@
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -200,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/04/28/如何利用python爬取网页图片-你懂的/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2020/04/28/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87-%E4%BD%A0%E6%87%82%E7%9A%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -217,6 +217,23 @@
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-28 16:27:37" itemprop="dateCreated datePublished" datetime="2020-04-28T16:27:37+08:00">2020-04-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">python代码应用</span></a>
+                </span>
+            </span>
 
           
   
@@ -227,8 +244,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/04/28/如何利用python爬取网页图片-你懂的/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/28/如何利用python爬取网页图片-你懂的/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/28/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87-%E4%BD%A0%E6%87%82%E7%9A%84/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/28/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87-%E4%BD%A0%E6%87%82%E7%9A%84/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -251,11 +268,9 @@
 </li>
 </ul>
 <h2 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2.代码实现"></a>2.代码实现</h2><p>代码编写调试过程，可以参考简书📕 <span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8zNzIwMmJlYzhmOTc=">小董不太懂<i class="fa fa-external-link-alt"></i></span>的教程，其代码编写思路如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">e=&gt;end: 保存或处理爬去的信息</span><br><span class="line">op1=&gt;operation: 利用获取爬取的网页网址的html</span><br><span class="line">op2=&gt;operation: 利用BeautifulSoup将html信息转换成xml信息</span><br><span class="line">op3=&gt;operation: 利用BeautifulSoup挑选xml中想要的信息</span><br><span class="line"></span><br><span class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">e&#x3D;&gt;end: 保存或处理爬去的信息</span><br><span class="line">op1&#x3D;&gt;operation: 利用获取爬取的网页网址的html</span><br><span class="line">op2&#x3D;&gt;operation: 利用BeautifulSoup将html信息转换成xml信息</span><br><span class="line">op3&#x3D;&gt;operation: 利用BeautifulSoup挑选xml中想要的信息</span><br><span class="line"></span><br><span class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</span><br></pre></td></tr></table></figure>
 <p>下面贴出代码全文</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> RequestException</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'If-None-Match'</span>: <span class="string">'W/"5cc2cd8f-2c58"'</span>,</span><br><span class="line">           <span class="string">"Referer"</span>: <span class="string">"http://www.mzitu.com/all/"</span>,</span><br><span class="line">           <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 UBrowser/6.1.2107.204 SafarMozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>&#125;</span><br><span class="line"><span class="comment">#请求头的这个Referer一定要加，妹子网有反爬，反正粘贴复制就行，多加几个信息无所谓</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_page</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(url, headers=headers)</span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            <span class="comment">#print(response.text)</span></span><br><span class="line">            <span class="keyword">return</span> response.text</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> RequestException:</span><br><span class="line">        print(<span class="string">'获取索引页失败'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_page</span><span class="params">(html)</span>:</span></span><br><span class="line">    soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">    items = soup.select(<span class="string">'#pins li'</span>)</span><br><span class="line">    <span class="keyword">for</span> link <span class="keyword">in</span> items:</span><br><span class="line">        href = link.a[<span class="string">'href'</span>]</span><br><span class="line">        <span class="comment">#print(href)</span></span><br><span class="line">        get_detail_page(href)</span><br><span class="line">    <span class="comment"># print(items)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_detail_page</span><span class="params">(href)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">100</span>):</span><br><span class="line">        detail_url = href + <span class="string">'/'</span> + str(i)</span><br><span class="line">        <span class="keyword">if</span> requests.get(detail_url, headers=headers).status_code == <span class="number">200</span>:</span><br><span class="line">            <span class="comment">#print(detail_url)</span></span><br><span class="line">            parse_detail_page(detail_url)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">'已至末尾页'</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_detail_page</span><span class="params">(detail_url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(detail_url, headers=headers)</span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            print(<span class="string">'获取详情页成功'</span>)</span><br><span class="line">            detail_html = response.text</span><br><span class="line">            <span class="comment"># print(detail_html)</span></span><br><span class="line">            get_image(detail_html)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> RequestException:</span><br><span class="line">        print(<span class="string">'获取详情页失败'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_image</span><span class="params">(detail_html)</span>:</span></span><br><span class="line">    soup = BeautifulSoup(detail_html, <span class="string">'lxml'</span>)</span><br><span class="line">    items= soup.select(<span class="string">'.main-image'</span>)</span><br><span class="line">    <span class="comment"># print(items)</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">        <span class="comment">#return item.img['src']</span></span><br><span class="line">    	image = item.img[<span class="string">'src'</span>]</span><br><span class="line">        save_image(image)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_image</span><span class="params">(image)</span>:</span></span><br><span class="line">   response = requests.get(image,headers=headers)</span><br><span class="line">   <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">       data = response.content</span><br><span class="line">       file_path = <span class="string">'&#123;0&#125;/&#123;1&#125;.&#123;2&#125;'</span>.format(os.getcwd(), md5(data).hexdigest(), <span class="string">'jpg'</span>)</span><br><span class="line">       print(file_path)</span><br><span class="line">       <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(file_path):</span><br><span class="line">           <span class="keyword">with</span> open(file_path, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">               f.write(data)</span><br><span class="line">               f.close()</span><br><span class="line">               print(<span class="string">'保存成功'</span>)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       print(<span class="string">'保存失败'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">'https://www.mzitu.com/tag/youhuo/'</span></span><br><span class="line">    html = get_page(url)</span><br><span class="line">    parse_page(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> RequestException</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;If-None-Match&#x27;</span>: <span class="string">&#x27;W/&quot;5cc2cd8f-2c58&quot;&#x27;</span>,</span><br><span class="line">           <span class="string">&quot;Referer&quot;</span>: <span class="string">&quot;http://www.mzitu.com/all/&quot;</span>,</span><br><span class="line">           <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 UBrowser/6.1.2107.204 SafarMozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36&#x27;</span>&#125;</span><br><span class="line"><span class="comment">#请求头的这个Referer一定要加，妹子网有反爬，反正粘贴复制就行，多加几个信息无所谓</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_page</span>(<span class="params">url</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(url, headers=headers)</span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            <span class="comment">#print(response.text)</span></span><br><span class="line">            <span class="keyword">return</span> response.text</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> RequestException:</span><br><span class="line">        print(<span class="string">&#x27;获取索引页失败&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_page</span>(<span class="params">html</span>):</span></span><br><span class="line">    soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    items = soup.select(<span class="string">&#x27;#pins li&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> link <span class="keyword">in</span> items:</span><br><span class="line">        href = link.a[<span class="string">&#x27;href&#x27;</span>]</span><br><span class="line">        <span class="comment">#print(href)</span></span><br><span class="line">        get_detail_page(href)</span><br><span class="line">    <span class="comment"># print(items)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_detail_page</span>(<span class="params">href</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">100</span>):</span><br><span class="line">        detail_url = href + <span class="string">&#x27;/&#x27;</span> + <span class="built_in">str</span>(i)</span><br><span class="line">        <span class="keyword">if</span> requests.get(detail_url, headers=headers).status_code == <span class="number">200</span>:</span><br><span class="line">            <span class="comment">#print(detail_url)</span></span><br><span class="line">            parse_detail_page(detail_url)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">&#x27;已至末尾页&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_detail_page</span>(<span class="params">detail_url</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(detail_url, headers=headers)</span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            print(<span class="string">&#x27;获取详情页成功&#x27;</span>)</span><br><span class="line">            detail_html = response.text</span><br><span class="line">            <span class="comment"># print(detail_html)</span></span><br><span class="line">            get_image(detail_html)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> RequestException:</span><br><span class="line">        print(<span class="string">&#x27;获取详情页失败&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_image</span>(<span class="params">detail_html</span>):</span></span><br><span class="line">    soup = BeautifulSoup(detail_html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    items= soup.select(<span class="string">&#x27;.main-image&#x27;</span>)</span><br><span class="line">    <span class="comment"># print(items)</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">        <span class="comment">#return item.img[&#x27;src&#x27;]</span></span><br><span class="line">    	image = item.img[<span class="string">&#x27;src&#x27;</span>]</span><br><span class="line">        save_image(image)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_image</span>(<span class="params">image</span>):</span></span><br><span class="line">   response = requests.get(image,headers=headers)</span><br><span class="line">   <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">       data = response.content</span><br><span class="line">       file_path = <span class="string">&#x27;&#123;0&#125;/&#123;1&#125;.&#123;2&#125;&#x27;</span>.<span class="built_in">format</span>(os.getcwd(), md5(data).hexdigest(), <span class="string">&#x27;jpg&#x27;</span>)</span><br><span class="line">       print(file_path)</span><br><span class="line">       <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(file_path):</span><br><span class="line">           <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">               f.write(data)</span><br><span class="line">               f.close()</span><br><span class="line">               print(<span class="string">&#x27;保存成功&#x27;</span>)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       print(<span class="string">&#x27;保存失败&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.mzitu.com/tag/youhuo/&#x27;</span></span><br><span class="line">    html = get_page(url)</span><br><span class="line">    parse_page(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 <p>[^1] <span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8zNzIwMmJlYzhmOTc=">https://www.jianshu.com/p/37202bec8f97<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
@@ -321,7 +336,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/python爬妹子图/" rel="tag"><i class="fa fa-tag"></i> python爬妹子图</a>
+              <a href="/tags/python%E7%88%AC%E5%A6%B9%E5%AD%90%E5%9B%BE/" rel="tag"><i class="fa fa-tag"></i> python爬妹子图</a>
           </div>
 
         
@@ -330,11 +345,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/28/archlinux安装与使用体验/" rel="prev" title="archlinux安装与使用体验">
+    <a href="/2020/04/28/archlinux%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/" rel="prev" title="archlinux安装与使用体验">
       <i class="fa fa-chevron-left"></i> archlinux安装与使用体验
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/04/28/如何利用python发送邮件进行表白和问安/" rel="next" title="如何利用python发送邮件进行表白和问安">
+    <a href="/2020/04/28/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E8%BF%9B%E8%A1%8C%E8%A1%A8%E7%99%BD%E5%92%8C%E9%97%AE%E5%AE%89/" rel="next" title="如何利用python发送邮件进行表白和问安">
       如何利用python发送邮件进行表白和问安 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -396,7 +411,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何利用python爬取网页图片"><span class="nav-number">1.</span> <span class="nav-text">如何利用python爬取网页图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-相关依赖库"><span class="nav-number">1.1.</span> <span class="nav-text">1.相关依赖库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-代码实现"><span class="nav-number">1.2.</span> <span class="nav-text">2.代码实现</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8python%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87"><span class="nav-number">1.</span> <span class="nav-text">如何利用python爬取网页图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">1.相关依赖库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2.代码实现</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -432,22 +447,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
@@ -461,19 +476,19 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
         </li>
     </ul>
   </div>
@@ -499,8 +514,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -524,9 +539,15 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
 <script src="/js/utils.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -594,7 +615,9 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,23 +18,24 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="Focus on how to use emacs to edit markdown scripts.">
-<meta name="keywords" content="Emacs24.3,markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Emacs yasnippets and markdown configure">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/index.html">
+<meta property="og:url" content="https://hubery-lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="Focus on how to use emacs to edit markdown scripts.">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-28T00:35:03.794Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-10-11T14:07:58.000Z">
+<meta property="article:modified_time" content="2021-02-15T13:24:26.041Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="Emacs24.3">
+<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Emacs yasnippets and markdown configure">
-<meta name="twitter:description" content="Focus on how to use emacs to edit markdown scripts.">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/">
+<link rel="canonical" href="https://hubery-lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/">
 
 
 <script id="page-configurations">
@@ -122,6 +123,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
@@ -135,11 +141,6 @@
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -200,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -217,6 +218,23 @@
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-10-11 22:07:58" itemprop="dateCreated datePublished" datetime="2018-10-11T22:07:58+08:00">2018-10-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">编程工具学习与应用</span></a>
+                </span>
+            </span>
 
           
   
@@ -244,17 +262,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>@[TOC](emacs yasnippets 和makrdown的配置)</p>
+        <p>[toc]</p>
 <h2 id="yasnippets-的配置"><a href="#yasnippets-的配置" class="headerlink" title="yasnippets 的配置"></a>yasnippets 的配置</h2><ul>
 <li>安装</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.emacs.d/site-lisp</span><br><span class="line">git clone https://github.com/capitaomorte/yasnippet</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>配置==init.el==</li>
 </ul>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">add-to-list</span> 'load-path</span><br><span class="line">              <span class="string">"~/.emacs.d/site-lisp/yasnippet"</span>)</span><br><span class="line">(<span class="name">require</span> 'yasnippet)</span><br><span class="line">(<span class="name">setq</span> yas-snippet-dirs</span><br><span class="line">      '(<span class="string">"~/.emacs.d/snippets"</span> ;; personal snippets</span><br><span class="line">        ))</span><br><span class="line">(<span class="name">yas-global-mode</span> <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">add-to-list</span> &#x27;load-path</span><br><span class="line">              <span class="string">&quot;~/.emacs.d/site-lisp/yasnippet&quot;</span>)</span><br><span class="line">(<span class="name">require</span> &#x27;yasnippet)</span><br><span class="line">(<span class="name">setq</span> yas-snippet-dirs</span><br><span class="line">      &#x27;(<span class="string">&quot;~/.emacs.d/snippets&quot;</span> ;; personal snippets</span><br><span class="line">        ))</span><br><span class="line">(<span class="name">yas-global-mode</span> <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>添加自定义模板</p>
 <p> M-x yas-new-snippet 创建新模板<br> C-c C-c 保存</p>
@@ -355,7 +371,7 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/10/16/Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode/" rel="prev" title="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">
+    <a href="/2018/10/16/Show%20RunTime%20and%20Solve%20Problem%20that%20Data%20ReadOut%20Are%20Disordered%20in%20Geant4%20Multi-thread%20Mode/" rel="prev" title="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">
       <i class="fa fa-chevron-left"></i> Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode
     </a></div>
       <div class="post-nav-item">
@@ -421,7 +437,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#yasnippets-的配置"><span class="nav-number">1.</span> <span class="nav-text">yasnippets 的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-的配置"><span class="nav-number">2.</span> <span class="nav-text">markdown 的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#yasnippets-%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">yasnippets 的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">markdown 的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -457,22 +473,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
@@ -486,19 +502,19 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
         </li>
     </ul>
   </div>
@@ -524,8 +540,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -549,9 +565,15 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
 <script src="/js/utils.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -619,7 +641,9 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

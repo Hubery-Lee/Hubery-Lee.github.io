@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,23 +18,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="Focus on how to use cmake to compile scripts and library and hide source files.">
-<meta name="keywords" content="cmake">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CMakeLists.txt编写基础知识">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2018/11/23/CMakeLists-txt编写基础知识/index.html">
+<meta property="og:url" content="https://hubery-lee.github.io/2018/11/23/CMakeLists-txt%E7%BC%96%E5%86%99%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="Focus on how to use cmake to compile scripts and library and hide source files.">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-28T00:25:34.845Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-11-22T16:20:51.000Z">
+<meta property="article:modified_time" content="2020-04-28T00:25:34.845Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="cmake">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CMakeLists.txt编写基础知识">
-<meta name="twitter:description" content="Focus on how to use cmake to compile scripts and library and hide source files.">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2018/11/23/CMakeLists-txt编写基础知识/">
+<link rel="canonical" href="https://hubery-lee.github.io/2018/11/23/CMakeLists-txt%E7%BC%96%E5%86%99%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 
 
 <script id="page-configurations">
@@ -122,6 +122,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
@@ -135,11 +140,6 @@
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -200,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2018/11/23/CMakeLists-txt编写基础知识/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2018/11/23/CMakeLists-txt%E7%BC%96%E5%86%99%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -217,6 +217,23 @@
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-11-23 00:20:51" itemprop="dateCreated datePublished" datetime="2018-11-23T00:20:51+08:00">2018-11-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">编程工具学习与应用</span></a>
+                </span>
+            </span>
 
           
   
@@ -227,8 +244,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/11/23/CMakeLists-txt编写基础知识/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/11/23/CMakeLists-txt编写基础知识/" itemprop="commentCount"></span>
+    <a title="valine" href="/2018/11/23/CMakeLists-txt%E7%BC%96%E5%86%99%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/11/23/CMakeLists-txt%E7%BC%96%E5%86%99%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -258,52 +275,41 @@
 <li>main.cc</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;hello.hh&quot;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  </span><br><span class="line">  HelloFunc hi;</span><br><span class="line">  hi.Hello();</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>hello.hh</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#ifndef HELLO_hh</span><br><span class="line">#define HELLO_hh 1</span><br><span class="line"></span><br><span class="line">class HelloFunc</span><br><span class="line">&#123;</span><br><span class="line"> public:</span><br><span class="line">  HelloFunc();</span><br><span class="line">  virtual ~HelloFunc();  </span><br><span class="line">  </span><br><span class="line">  void Hello();</span><br><span class="line"> private:</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>hello.cc</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;hello.hh&quot;</span><br><span class="line">#include &quot;iostream&quot;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">HelloFunc::HelloFunc()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">HelloFunc::~HelloFunc()</span><br><span class="line">&#123;&#125;</span><br><span class="line"></span><br><span class="line">void HelloFunc::Hello()</span><br><span class="line">&#123;</span><br><span class="line">  cout&lt;&lt;&quot;Hello World&quot;&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>-CMakeList.txt 编译文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">##</span><br><span class="line">##  cmake module authored by Hubery Lee(李会)</span><br><span class="line">##  2018年11月22日 </span><br><span class="line">##</span><br><span class="line"></span><br><span class="line">cmake_minimum_required(VERSION 2.6 FATAL_ERROR) #</span><br><span class="line">set(PROJ_NAME hello)</span><br><span class="line">project($&#123;PROJ_NAME&#125;)</span><br><span class="line"></span><br><span class="line">#project($&#123;PROJ_NAME&#125; C CXX Fortran)</span><br><span class="line">#enable_language(Fortran) ##允许使用语言类型</span><br><span class="line">#set(CMAKE_BUILD_TYPE release) ##release or debug</span><br><span class="line">#set(CMAKE_CXX_FLAGS &quot;-std=c++11 $&#123;CMAKE_CXX_FLAGS&#125;&quot;) ##</span><br><span class="line"></span><br><span class="line">#------------------------------------</span><br><span class="line"># Include directory for this project</span><br><span class="line">#</span><br><span class="line">include_directories($&#123;PROJECT_SOURCE_DIR&#125;/inc)</span><br><span class="line"></span><br><span class="line">#------------------------------------</span><br><span class="line"># Locate sources and headers for this project</span><br><span class="line">#</span><br><span class="line">file(GLOB sources $&#123;PROJECT_SOURCE_DIR&#125;/src/*.cc)</span><br><span class="line">file(GLOB headers $&#123;PROJECT_SOURCE_DIR&#125;/inc/*.hh)</span><br><span class="line"></span><br><span class="line">#------------------------------------</span><br><span class="line"># Add the executable and link it to the libraries</span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">add_executable($&#123;PROJ_NAME&#125; main.cc $&#123;sources&#125; $&#123;headers&#125;)</span><br><span class="line"></span><br><span class="line">#target_link_libraries($&#123;PROJ_NAME&#125; -L$&#123;PROJECT_SOURE_DIR&#125;/lib hello.so) ##链接库文件</span><br><span class="line"></span><br><span class="line">#-------------------------------------</span><br><span class="line"># Install the executable or files to &apos;bin&apos; directory</span><br><span class="line"># under CMAKE_INSTALL_PREFIX</span><br><span class="line">#</span><br><span class="line">install(TARGETS $&#123;PROJ_NAME&#125; DESTINATION bin)</span><br></pre></td></tr></table></figure>
-
-<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><h2 id="如何外部编译-？"><a href="#如何外部编译-？" class="headerlink" title="如何外部编译 ？"></a>如何外部编译 ？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib</span><br><span class="line">cd build</span><br><span class="line">cmake -DCMAKE_INSTALL_PREFIX=../ ../</span><br><span class="line">make -j4</span><br><span class="line">make install</span><br><span class="line">cd ../bin</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置二进制文件存放地址"><a href="#设置二进制文件存放地址" class="headerlink" title="设置二进制文件存放地址"></a>设置二进制文件存放地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET(EXECUTABLE_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;/bin)</span><br><span class="line">SET(LIBRARY_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;/lib)</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">##</span><br><span class="line">##  cmake module authored by Hubery Lee(李会)</span><br><span class="line">##  2018年11月22日 </span><br><span class="line">##</span><br><span class="line"></span><br><span class="line">cmake_minimum_required(VERSION 2.6 FATAL_ERROR) #</span><br><span class="line">set(PROJ_NAME hello)</span><br><span class="line">project($&#123;PROJ_NAME&#125;)</span><br><span class="line"></span><br><span class="line">#project($&#123;PROJ_NAME&#125; C CXX Fortran)</span><br><span class="line">#enable_language(Fortran) ##允许使用语言类型</span><br><span class="line">#set(CMAKE_BUILD_TYPE release) ##release or debug</span><br><span class="line">#set(CMAKE_CXX_FLAGS &quot;-std&#x3D;c++11 $&#123;CMAKE_CXX_FLAGS&#125;&quot;) ##</span><br><span class="line"></span><br><span class="line">#------------------------------------</span><br><span class="line"># Include directory for this project</span><br><span class="line">#</span><br><span class="line">include_directories($&#123;PROJECT_SOURCE_DIR&#125;&#x2F;inc)</span><br><span class="line"></span><br><span class="line">#------------------------------------</span><br><span class="line"># Locate sources and headers for this project</span><br><span class="line">#</span><br><span class="line">file(GLOB sources $&#123;PROJECT_SOURCE_DIR&#125;&#x2F;src&#x2F;*.cc)</span><br><span class="line">file(GLOB headers $&#123;PROJECT_SOURCE_DIR&#125;&#x2F;inc&#x2F;*.hh)</span><br><span class="line"></span><br><span class="line">#------------------------------------</span><br><span class="line"># Add the executable and link it to the libraries</span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">add_executable($&#123;PROJ_NAME&#125; main.cc $&#123;sources&#125; $&#123;headers&#125;)</span><br><span class="line"></span><br><span class="line">#target_link_libraries($&#123;PROJ_NAME&#125; -L$&#123;PROJECT_SOURE_DIR&#125;&#x2F;lib hello.so) ##链接库文件</span><br><span class="line"></span><br><span class="line">#-------------------------------------</span><br><span class="line"># Install the executable or files to &#39;bin&#39; directory</span><br><span class="line"># under CMAKE_INSTALL_PREFIX</span><br><span class="line">#</span><br><span class="line">install(TARGETS $&#123;PROJ_NAME&#125; DESTINATION bin)</span><br></pre></td></tr></table></figure>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><h2 id="如何外部编译-？"><a href="#如何外部编译-？" class="headerlink" title="如何外部编译 ？"></a>如何外部编译 ？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export LD_LIBRARY_PATH&#x3D;$LD_LIBRARY_PATH:$(pwd)&#x2F;lib</span><br><span class="line">cd build</span><br><span class="line">cmake -DCMAKE_INSTALL_PREFIX&#x3D;..&#x2F; ..&#x2F;</span><br><span class="line">make -j4</span><br><span class="line">make install</span><br><span class="line">cd ..&#x2F;bin</span><br></pre></td></tr></table></figure>
+<h2 id="设置二进制文件存放地址"><a href="#设置二进制文件存放地址" class="headerlink" title="设置二进制文件存放地址"></a>设置二进制文件存放地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET(EXECUTABLE_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;&#x2F;bin)</span><br><span class="line">SET(LIBRARY_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;&#x2F;lib)</span><br></pre></td></tr></table></figure>
 <h2 id="如何生成动态库或静态库？"><a href="#如何生成动态库或静态库？" class="headerlink" title="如何生成动态库或静态库？"></a>如何生成动态库或静态库？</h2><p> <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjExMTc3MC9hcnRpY2xlL2RldGFpbHMvODA1OTU2MzM=">参考文献<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.add_library(name SHARED source1, source2, ..., sourceN)</span><br><span class="line">2.add_library(name_static STATIC source1, source2, ... , sourceN)</span><br><span class="line">3.set_target_properties(name_static PROPERTIES OUTPUT_NAME &quot;name&quot;)</span><br><span class="line">4.set_target_properties(name_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)</span><br><span class="line">5.set_target_properties(name PROPERTIES CLEAN_DIRECT_OUTPUT 1)</span><br><span class="line">6.set_target_properties(name PROPERTIES VERSION 1.2 SOVERSION 1)</span><br><span class="line">7.install(TARGETS name name_static </span><br><span class="line">          LIBRARY DESTINATION lib</span><br><span class="line">          ARCHIVE DESTINATION lib)</span><br><span class="line">8.install(DIRECTORY $&#123;titile_H&#125; DESTINATION include/tH)</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.add_library(name SHARED source1, source2, ..., sourceN)</span><br><span class="line">2.add_library(name_static STATIC source1, source2, ... , sourceN)</span><br><span class="line">3.set_target_properties(name_static PROPERTIES OUTPUT_NAME &quot;name&quot;)</span><br><span class="line">4.set_target_properties(name_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)</span><br><span class="line">5.set_target_properties(name PROPERTIES CLEAN_DIRECT_OUTPUT 1)</span><br><span class="line">6.set_target_properties(name PROPERTIES VERSION 1.2 SOVERSION 1)</span><br><span class="line">7.install(TARGETS name name_static </span><br><span class="line">          LIBRARY DESTINATION lib</span><br><span class="line">          ARCHIVE DESTINATION lib)</span><br><span class="line">8.install(DIRECTORY $&#123;titile_H&#125; DESTINATION include&#x2F;tH)</span><br></pre></td></tr></table></figure>
 <p>第一条    指令是生成动态库（扩展名为.so），类型关键字是SHARED，并不需要写全libname.so，只需要填写name即可，cmake系统会自动生成libname.so。</p>
 <p>第二条    指令是在支持动态库的基础上为工程添加一个静态库，因为静态库和动态库同名时，构建静态库的指令是无效的，所以把上面的name修改为name_static，就可以构建一个libname_static的静态库；然而我们需要的是名字相同的静态库和动态库，因为target的唯一性，所以就不能通过add_library指令实现，所以用到第三条指令</p>
 <p>第三条    指令是为了能够同时得到libname.so/libname.a两个库文件，但是因为cmake在构建一个新的target时，会尝试清理掉具有相同命名的库文件，所以，在构建libname.a的时候会将libname.so库文件清理掉，因此需要再次使用set_target_properties定义的CLEAN_DIRECT_OUTPUT属性，如第四条和第五条指令所示，至此，我们再次进行构建，就会发现在目录中同时生成libname.so动态库文件和libname.a静态库文件</p>
 <p>第六条    指令是因为按照规则，动态库是应当包含一个版本号的， 为了实现动态库版本号，仍然需要使用SET_TARGET_PROPERTIES指令，其中VERSON指代动态库版本，SOVERSION指代API版本。</p>
 <p>第七条    指令是将动态库和静态库文件安装到系统目录，才能够真正地让其他人开发使用，我们将库文件安装到<prefix>/lib目录下</prefix></p>
 <p>第八条    指令是将头文件安装到<prefix>/include/tH目录中。</prefix></p>
-<h2 id="外部引用动态库和静态库"><a href="#外部引用动态库和静态库" class="headerlink" title="外部引用动态库和静态库"></a>外部引用动态库和静态库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.INCLUDE_DIRECTORIES(头文件在系统中的位置)</span><br><span class="line">2.ADD_EXECUTABLE(main source/main.cpp)</span><br><span class="line">3.TARGET_LINK_LIBRARIES(main libfaceDetection.a)</span><br></pre></td></tr></table></figure>
-
+<h2 id="外部引用动态库和静态库"><a href="#外部引用动态库和静态库" class="headerlink" title="外部引用动态库和静态库"></a>外部引用动态库和静态库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.INCLUDE_DIRECTORIES(头文件在系统中的位置)</span><br><span class="line">2.ADD_EXECUTABLE(main source&#x2F;main.cpp)</span><br><span class="line">3.TARGET_LINK_LIBRARIES(main libfaceDetection.a)</span><br></pre></td></tr></table></figure>
 <p>因为编译安装将动态库安装到/usr/local/lib，/usr/bin目录下，对于动态库的外部引用有些麻烦；</p>
 <h1 id="库文件的编译和封装"><a href="#库文件的编译和封装" class="headerlink" title="库文件的编译和封装"></a>库文件的编译和封装</h1><ul>
 <li>新建<code>build</code>文件夹，将要编译成库文件的<code>inc</code>和<code>src</code>拷贝到<code>build</code>文件夹下，然后在此编写CMakeLists.txt 文件,在将头文件和源文件安装成库，CMakeLists的编写如下：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Setup the project</span><br><span class="line">cmake_minimum_required(VERSION 2.6 FATAL_ERROR)</span><br><span class="line">set(PROJ_NAME hello)</span><br><span class="line">project($PROJ_NAME)</span><br><span class="line"></span><br><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Setup Geant4 include directories and compile definitions</span><br><span class="line"># Setup include directory for this project</span><br><span class="line">#</span><br><span class="line">include_directories($&#123;PROJECT_SOURCE_DIR&#125;/inc)</span><br><span class="line"></span><br><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Locate sources and headers for this project</span><br><span class="line"># NB: headers are included so they will show up in IDEs</span><br><span class="line">#</span><br><span class="line">file(GLOB sources $&#123;PROJECT_SOURCE_DIR&#125;/src/*.cc)</span><br><span class="line">file(GLOB headers $&#123;PROJECT_SOURCE_DIR&#125;/inc/*.hh)</span><br><span class="line"></span><br><span class="line">#-------------------------------------------</span><br><span class="line"># Create static and dynamic library</span><br><span class="line">#</span><br><span class="line">add_library($&#123;PROJ_NAME&#125; SHARED $&#123;sources&#125; $&#123;headers&#125;)</span><br><span class="line">set_target_properties($&#123;PROJ_NAME&#125; PROPERTIES VERSION 1.2 SOVERSION 1)</span><br><span class="line"></span><br><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Install the executable to &apos;bin&apos; directory under CMAKE_INSTALL_PREFIX</span><br><span class="line">#</span><br><span class="line">#install(TARGETS $&#123;PROJ_NAME&#125;  DESTINATION lib)</span><br><span class="line">#install(FILES $&#123;headers&#125; DESTINATION inc)</span><br><span class="line">SET(LIBRARY_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;../../../lib)</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Setup the project</span><br><span class="line">cmake_minimum_required(VERSION 2.6 FATAL_ERROR)</span><br><span class="line">set(PROJ_NAME hello)</span><br><span class="line">project($PROJ_NAME)</span><br><span class="line"></span><br><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Setup Geant4 include directories and compile definitions</span><br><span class="line"># Setup include directory for this project</span><br><span class="line">#</span><br><span class="line">include_directories($&#123;PROJECT_SOURCE_DIR&#125;&#x2F;inc)</span><br><span class="line"></span><br><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Locate sources and headers for this project</span><br><span class="line"># NB: headers are included so they will show up in IDEs</span><br><span class="line">#</span><br><span class="line">file(GLOB sources $&#123;PROJECT_SOURCE_DIR&#125;&#x2F;src&#x2F;*.cc)</span><br><span class="line">file(GLOB headers $&#123;PROJECT_SOURCE_DIR&#125;&#x2F;inc&#x2F;*.hh)</span><br><span class="line"></span><br><span class="line">#-------------------------------------------</span><br><span class="line"># Create static and dynamic library</span><br><span class="line">#</span><br><span class="line">add_library($&#123;PROJ_NAME&#125; SHARED $&#123;sources&#125; $&#123;headers&#125;)</span><br><span class="line">set_target_properties($&#123;PROJ_NAME&#125; PROPERTIES VERSION 1.2 SOVERSION 1)</span><br><span class="line"></span><br><span class="line">#----------------------------------------------------------------------------</span><br><span class="line"># Install the executable to &#39;bin&#39; directory under CMAKE_INSTALL_PREFIX</span><br><span class="line">#</span><br><span class="line">#install(TARGETS $&#123;PROJ_NAME&#125;  DESTINATION lib)</span><br><span class="line">#install(FILES $&#123;headers&#125; DESTINATION inc)</span><br><span class="line">SET(LIBRARY_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;..&#x2F;..&#x2F;..&#x2F;lib)</span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong> </p>
 <ul>
 <li>将可执行二进制文件安装到文件夹时，采用<code>install(TARGETS )</code>方式存在一定问题，生存的二进制文件在<code>usr/bin</code>，同理，头文件安装在<code>usr/local/inc</code>下。</li>
 <li><code>SET(LIBRARY_OUTPUT_PATH )</code>可以设置库文件安装位置。</li>
 <li>在<code>main()</code>的编译链接中，CMakeLists.txt将会存在以下问题，头文件必须包含生成库文件所用的全部头文件，链接生成的所有动态库文件；如，在上述的</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set_target_properties($&#123;PROJ_NAME&#125; PROPERTIES VERSION 1.2 SOVERSION 1)</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set_target_properties($&#123;PROJ_NAME&#125; PROPERTIES VERSION 1.2 SOVERSION 1) </span><br></pre></td></tr></table></figure>
 <p>其将，生成三个库文件，分别如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">libhello.so</span><br><span class="line">libhello.so.1</span><br><span class="line">libhello.so.1.2</span><br></pre></td></tr></table></figure>
-
 <p>在链接库文件时，则需要将三个库文件均包含</p>
 <ul>
 <li>API (Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9hcGkvMTAxNTQ=">百度百科<i class="fa fa-external-link-alt"></i></span></li>
@@ -386,11 +392,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/28/多人协同在线编辑文档软件使用体验/" rel="prev" title="多人协同在线编辑文档软件使用体验">
+    <a href="/2020/04/28/%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E6%96%87%E6%A1%A3%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/" rel="prev" title="多人协同在线编辑文档软件使用体验">
       <i class="fa fa-chevron-left"></i> 多人协同在线编辑文档软件使用体验
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/10/16/Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode/" rel="next" title="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">
+    <a href="/2018/10/16/Show%20RunTime%20and%20Solve%20Problem%20that%20Data%20ReadOut%20Are%20Disordered%20in%20Geant4%20Multi-thread%20Mode/" rel="next" title="Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode">
       Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -452,7 +458,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">1.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用实例"><span class="nav-number">2.</span> <span class="nav-text">应用实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">3.</span> <span class="nav-text">问题描述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何外部编译-？"><span class="nav-number">3.1.</span> <span class="nav-text">如何外部编译 ？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置二进制文件存放地址"><span class="nav-number">3.2.</span> <span class="nav-text">设置二进制文件存放地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何生成动态库或静态库？"><span class="nav-number">3.3.</span> <span class="nav-text">如何生成动态库或静态库？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外部引用动态库和静态库"><span class="nav-number">3.4.</span> <span class="nav-text">外部引用动态库和静态库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#库文件的编译和封装"><span class="nav-number">4.</span> <span class="nav-text">库文件的编译和封装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#外部引用库的优势"><span class="nav-number">5.</span> <span class="nav-text">外部引用库的优势</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">1.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">应用实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">问题描述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%A4%96%E9%83%A8%E7%BC%96%E8%AF%91-%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">如何外部编译 ？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80"><span class="nav-number">3.2.</span> <span class="nav-text">设置二进制文件存放地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E5%BA%93%E6%88%96%E9%9D%99%E6%80%81%E5%BA%93%EF%BC%9F"><span class="nav-number">3.3.</span> <span class="nav-text">如何生成动态库或静态库？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E5%BC%95%E7%94%A8%E5%8A%A8%E6%80%81%E5%BA%93%E5%92%8C%E9%9D%99%E6%80%81%E5%BA%93"><span class="nav-number">3.4.</span> <span class="nav-text">外部引用动态库和静态库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%93%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E8%AF%91%E5%92%8C%E5%B0%81%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">库文件的编译和封装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E5%BC%95%E7%94%A8%E5%BA%93%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">5.</span> <span class="nav-text">外部引用库的优势</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -488,22 +494,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
@@ -517,19 +523,19 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
         </li>
     </ul>
   </div>
@@ -555,8 +561,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -580,9 +586,15 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
 <script src="/js/utils.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -650,7 +662,9 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

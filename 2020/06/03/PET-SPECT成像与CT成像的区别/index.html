@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,34 +18,36 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="透射成像和发射成像的区别">
-<meta name="keywords" content="PET,SPECT,CT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PET_SPECT成像与CT成像的区别">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/index.html">
+<meta property="og:url" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="透射成像和发射成像的区别">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603105809886.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603110137644.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111107360.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111146266.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111313807.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111400117.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111438883.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111455329.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111535455.png">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111656132.png">
-<meta property="og:updated_time" content="2020-06-04T16:25:51.276Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603105809886.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603110137644.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111107360.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111146266.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111313807.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111400117.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111438883.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111455329.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111535455.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111656132.png">
+<meta property="article:published_time" content="2020-06-03T12:38:26.000Z">
+<meta property="article:modified_time" content="2020-06-04T16:25:51.276Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="PET">
+<meta property="article:tag" content="SPECT">
+<meta property="article:tag" content="CT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PET_SPECT成像与CT成像的区别">
-<meta name="twitter:description" content="透射成像和发射成像的区别">
-<meta name="twitter:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603105809886.png">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603105809886.png">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/">
+<link rel="canonical" href="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/">
 
 
 <script id="page-configurations">
@@ -133,6 +135,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
@@ -146,11 +153,6 @@
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -211,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/06/03/PET-SPECT成像与CT成像的区别/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -228,6 +230,23 @@
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-03 20:38:26" itemprop="dateCreated datePublished" datetime="2020-06-03T20:38:26+08:00">2020-06-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E9%87%8D%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">医学图像重建</span></a>
+                </span>
+            </span>
 
           
   
@@ -238,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/06/03/PET-SPECT成像与CT成像的区别/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/03/PET-SPECT成像与CT成像的区别/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -257,19 +276,19 @@
       
         <h1 id="PET-SPECT成像与CT成像的区别"><a href="#PET-SPECT成像与CT成像的区别" class="headerlink" title="PET/SPECT成像与CT成像的区别"></a>PET/SPECT成像与CT成像的区别</h1><h2 id="成像原理的区别"><a href="#成像原理的区别" class="headerlink" title="成像原理的区别"></a>成像原理的区别</h2><p>PET和SPECT是属于发射成像，CT属于透射成像。</p>
 <p>所谓发射型成像就是把放射源放在病人身体的内部，放射线从病人身体内部射出，最后被探测器接收。 具有短半衰期的放射性的原子可以由回旋加速器或核反应堆生产出来。这些放射性元素再用来制造放射性药物。 通常放射性药物是通过手臂静脉血管注射而进入体内的。放射性药物进入人体后会跟踪病理过程。放射性药物也可以通过病人的呼吸道或消化道进入人体。放射性药物实际上是个分子载体，它依附于特定的生理组织或病理过程。放射性物质在药物的带领下在人体内做有目的的分布。发射型断层成像的目的就是要得到一个放射<br>性物质在人体内部的分布图。 </p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603105809886.png" alt="image-20200603105809886"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603105809886.png" alt="image-20200603105809886"></p>
 <p>PET和SPECT的主要区别是采用的核药不同，PET全程叫正电子发射成像，通常采用的是能够发射正电子的核药，如==C-11，N-13，O-15和 F-18==，在放射性衰退时会释放出正电子 (即带一个正电荷的电子)。正电子在自然界中生存的时间十分短暂，因为在自然界中正电子很快就会遇到一个 (带负电的) 电子。当正电子与电子发生作用时，它们的质量会湮灭 (即完全消失)，它们的质量完全转换为能量而产生出两个能量为 511 keV 的伽玛光子。这两个光子沿着相隔 180º 角的方向传播。也就是说，它们在一条直线上朝相反的方向射出。有一种特殊的伽玛照相机可专门用来检测这一对光子。这种特殊的伽玛照相机运用的是同时检测技术。当两个探测器同时各接收到一个能量为 511 keV 的伽玛光子时，说明在连接这两个探测器的线段上曾经有过一个正电子。</p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603110137644.png" alt="image-20200603110137644"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603110137644.png" alt="image-20200603110137644"></p>
 <p>而SPECT全称叫单光子发射断层成像，采用发射单个光子的核药，如$^{99}Tc、^{131}I、^{113}In、^{67}Ga、^{201}Tl、^{113}Xn$;</p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111107360.png" alt="image-20200603111107360"></p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111146266.png" alt="image-20200603111146266"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111107360.png" alt="image-20200603111107360"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111146266.png" alt="image-20200603111146266"></p>
 <h2 id="图像重建方法上的不同点"><a href="#图像重建方法上的不同点" class="headerlink" title="图像重建方法上的不同点"></a>图像重建方法上的不同点</h2><p>发射成像需要对成像介质进行射线衰减修正；</p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111313807.png" alt="image-20200603111313807"></p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111400117.png" alt="image-20200603111400117"></p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111438883.png" alt="image-20200603111438883"></p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111455329.png" alt="image-20200603111455329"></p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111535455.png" alt="image-20200603111535455"></p>
-<p><img src="/2020/06/03/PET-SPECT成像与CT成像的区别/image-20200603111656132.png" alt="image-20200603111656132"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111313807.png" alt="image-20200603111313807"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111400117.png" alt="image-20200603111400117"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111438883.png" alt="image-20200603111438883"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111455329.png" alt="image-20200603111455329"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111535455.png" alt="image-20200603111535455"></p>
+<p><img src="/2020/06/03/PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200603111656132.png" alt="image-20200603111656132"></p>
 <p>比较复杂。</p>
 <p><strong>参考文献：</strong></p>
 
@@ -347,11 +366,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/05/迭代重建算法的基本思想/" rel="prev" title="迭代重建算法的基本思想">
+    <a href="/2020/06/05/%E8%BF%AD%E4%BB%A3%E9%87%8D%E5%BB%BA%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3/" rel="prev" title="迭代重建算法的基本思想">
       <i class="fa fa-chevron-left"></i> 迭代重建算法的基本思想
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/06/02/如何搭建感知器并使用其进行分类/" rel="next" title="如何搭建感知器并使用其进行分类">
+    <a href="/2020/06/02/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%84%9F%E7%9F%A5%E5%99%A8%E5%B9%B6%E4%BD%BF%E7%94%A8%E5%85%B6%E8%BF%9B%E8%A1%8C%E5%88%86%E7%B1%BB/" rel="next" title="如何搭建感知器并使用其进行分类">
       如何搭建感知器并使用其进行分类 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -413,7 +432,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PET-SPECT成像与CT成像的区别"><span class="nav-number">1.</span> <span class="nav-text">PET/SPECT成像与CT成像的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#成像原理的区别"><span class="nav-number">1.1.</span> <span class="nav-text">成像原理的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图像重建方法上的不同点"><span class="nav-number">1.2.</span> <span class="nav-text">图像重建方法上的不同点</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PET-SPECT%E6%88%90%E5%83%8F%E4%B8%8ECT%E6%88%90%E5%83%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">PET&#x2F;SPECT成像与CT成像的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.1.</span> <span class="nav-text">成像原理的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E9%87%8D%E5%BB%BA%E6%96%B9%E6%B3%95%E4%B8%8A%E7%9A%84%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">图像重建方法上的不同点</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -449,22 +468,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
@@ -478,19 +497,19 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
         </li>
     </ul>
   </div>
@@ -516,8 +535,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -541,9 +560,15 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
 <script src="/js/utils.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -611,7 +636,9 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

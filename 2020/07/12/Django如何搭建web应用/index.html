@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,25 +18,27 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":false},"path":"search.json"};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="利用python和django搭建web应用">
-<meta name="keywords" content="web,django,数据库sqlite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django如何搭建web应用">
-<meta property="og:url" content="https://Hubery-Lee.github.io/2020/07/12/Django如何搭建web应用/index.html">
+<meta property="og:url" content="https://hubery-lee.github.io/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
 <meta property="og:description" content="利用python和django搭建web应用">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hubery-lee.github.io/2020/07/12/Django如何搭建web应用/%E6%A0%B9%E7%9B%AE%E5%BD%95.png">
-<meta property="og:updated_time" content="2020-07-12T16:33:40.593Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hubery-lee.github.io/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/%E6%A0%B9%E7%9B%AE%E5%BD%95.png">
+<meta property="article:published_time" content="2020-07-12T13:40:31.000Z">
+<meta property="article:modified_time" content="2020-07-12T16:33:40.593Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="django">
+<meta property="article:tag" content="数据库sqlite">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django如何搭建web应用">
-<meta name="twitter:description" content="利用python和django搭建web应用">
-<meta name="twitter:image" content="https://hubery-lee.github.io/2020/07/12/Django如何搭建web应用/%E6%A0%B9%E7%9B%AE%E5%BD%95.png">
+<meta name="twitter:image" content="https://hubery-lee.github.io/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/%E6%A0%B9%E7%9B%AE%E5%BD%95.png">
 
-<link rel="canonical" href="https://Hubery-Lee.github.io/2020/07/12/Django如何搭建web应用/">
+<link rel="canonical" href="https://hubery-lee.github.io/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -124,6 +126,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
@@ -137,11 +144,6 @@
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -202,7 +204,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://Hubery-Lee.github.io/2020/07/12/Django如何搭建web应用/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -219,6 +221,23 @@
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-12 21:40:31" itemprop="dateCreated datePublished" datetime="2020-07-12T21:40:31+08:00">2020-07-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">Web应用</span></a>
+                </span>
+            </span>
 
           
   
@@ -229,8 +248,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/07/12/Django如何搭建web应用/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/12/Django如何搭建web应用/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -263,13 +282,12 @@
 <p>需要创建一个叫做 URLconf 的 Python 模块。这是网站的目录，它包含了一张 URL 和 Python 回调函数之间的映射表。URLconf 也有利于将 Python 代码与 URL 进行解耦（译注：使各个模块分离，独立）</p>
 </li>
 <li><p><strong>编写视图</strong></p>
-<p>视图函数的执行结果只可能有两种：返回一个包含请求页面元素的 <a href="https://docs.djangoproject.com/zh-hans/3.0/ref/request-response/#django.http.HttpResponse" target="_blank" rel="noopener"><code>HttpResponse</code></a> 对象，或者是抛出 <a href="https://docs.djangoproject.com/zh-hans/3.0/topics/http/views/#django.http.Http404" target="_blank" rel="noopener"><code>Http404</code></a> 这类异常。至于执行过程中的其它的动作则由你决定。</p>
+<p>视图函数的执行结果只可能有两种：返回一个包含请求页面元素的 <a target="_blank" rel="noopener" href="https://docs.djangoproject.com/zh-hans/3.0/ref/request-response/#django.http.HttpResponse"><code>HttpResponse</code></a> 对象，或者是抛出 <a target="_blank" rel="noopener" href="https://docs.djangoproject.com/zh-hans/3.0/topics/http/views/#django.http.Http404"><code>Http404</code></a> 这类异常。至于执行过程中的其它的动作则由你决定。</p>
 </li>
 <li><p><strong>设计模板</strong><br>Django 允许设置搜索模板路径，这样可以最小化模板之间的冗余。在 Django 设置中，你可以通过 DIRS 参数指定一个路径列表用于检索模板。如果第一个路径中不包含任何模板，就继续检查第二个，以此类推。</p>
 </li>
 </ul>
-<h2 id="🎈项目框架"><a href="#🎈项目框架" class="headerlink" title="🎈项目框架"></a>🎈项目框架</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysite/</span><br><span class="line">    manage.py</span><br><span class="line">    mysite/</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py</span><br></pre></td></tr></table></figure>
-
+<h2 id="🎈项目框架"><a href="#🎈项目框架" class="headerlink" title="🎈项目框架"></a>🎈项目框架</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysite&#x2F;</span><br><span class="line">    manage.py</span><br><span class="line">    mysite&#x2F;</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py</span><br></pre></td></tr></table></figure>
 <p>这些目录和文件的用处是：</p>
 <ul>
 <li><p>最外层的 <code>mysite/</code> 根目录只是你项目的容器， 根目录名称对Django没有影响，你可以将它重命名为任何你喜欢的名称。</p>
@@ -289,10 +307,9 @@
 <li><p><code>mysite/wsgi.py</code>：作为你的项目的运行在 WSGI 兼容的Web服务器上的入口。阅读 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2hvd3RvL2RlcGxveW1lbnQvd3NnaS8=">如何使用 WSGI 进行部署<i class="fa fa-external-link-alt"></i></span> 了解更多细节。</p>
 </li>
 </ul>
-<h2 id="🍎应用框架"><a href="#🍎应用框架" class="headerlink" title="🍎应用框架"></a>🍎应用框架</h2><h3 id="🍏应用与项目的关系"><a href="#🍏应用与项目的关系" class="headerlink" title="🍏应用与项目的关系"></a>🍏应用与项目的关系</h3><p><img src="/2020/07/12/Django如何搭建web应用/%E6%A0%B9%E7%9B%AE%E5%BD%95.png" alt></p>
+<h2 id="🍎应用框架"><a href="#🍎应用框架" class="headerlink" title="🍎应用框架"></a>🍎应用框架</h2><h3 id="🍏应用与项目的关系"><a href="#🍏应用与项目的关系" class="headerlink" title="🍏应用与项目的关系"></a>🍏应用与项目的关系</h3><p><img src="/2020/07/12/Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8/%E6%A0%B9%E7%9B%AE%E5%BD%95.png" alt></p>
 <h3 id="🔱创建应用的框架"><a href="#🔱创建应用的框架" class="headerlink" title="🔱创建应用的框架"></a>🔱创建应用的框架</h3><p>创建一个 <code>polls</code> 目录，它的目录结构大致如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">polls/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations/</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">polls&#x2F;</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations&#x2F;</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure>
 <p>这个目录结构包括了投票应用的全部内容。</p>
 <h3 id="❗应用的调试模块"><a href="#❗应用的调试模块" class="headerlink" title="❗应用的调试模块"></a>❗应用的调试模块</h3><p><strong><code>为什么要进行调试？</code><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2ludHJvL3R1dG9yaWFsMDUv">参考<i class="fa fa-external-link-alt"></i></span></strong></p>
 <ul>
@@ -306,7 +323,8 @@
 <p><strong>unittest 和django.test   TestCase 类似</strong></p>
 <h2 id="❓如何编写可重用程序"><a href="#❓如何编写可重用程序" class="headerlink" title="❓如何编写可重用程序"></a>❓如何编写可重用程序</h2><h3 id="☯可重用很重要"><a href="#☯可重用很重要" class="headerlink" title="☯可重用很重要"></a>☯可重用很重要</h3><p>可重用性是 Python 的根本。<span class="exturl" data-url="aHR0cHM6Ly9weXBpLnB5dGhvbi5vcmcvcHlwaQ==">The Python Package Index (PyPI)<i class="fa fa-external-link-alt"></i></span> 有许大量的包，都可被用在你自己的 Python 项目中。同样可以在 <span class="exturl" data-url="aHR0cHM6Ly9kamFuZ29wYWNrYWdlcy5vcmcv">Django Packages<i class="fa fa-external-link-alt"></i></span> 中查找已发布的可重用应用，也可将其引入到你的项目中。Django 本身也是一个 Python 包，也就是说你可以将已有的 Python 包或 Django 应用并入你的项目。你只需要编写属于你的那部分即可。</p>
 <h3 id="🚀​你的项目和可复用应用¶"><a href="#🚀​你的项目和可复用应用¶" class="headerlink" title="🚀​你的项目和可复用应用¶"></a>🚀​你的项目和可复用应用<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRqYW5nb3Byb2plY3QuY29tL3poLWhhbnMvMy4wL2ludHJvL3JldXNhYmxlLWFwcHMvI3lvdXItcHJvamVjdC1hbmQteW91ci1yZXVzYWJsZS1hcHA=">¶<i class="fa fa-external-link-alt"></i></span></h3><p>通过前面的教程，我们的工程应该看起来像这样:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">mysite/</span><br><span class="line">    manage.py</span><br><span class="line">    mysite/</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py</span><br><span class="line">    polls/</span><br><span class="line">        __init__.py</span><br><span class="line">        admin.py</span><br><span class="line">        apps.py</span><br><span class="line">        migrations/</span><br><span class="line">            __init__.py</span><br><span class="line">            0001_initial.py</span><br><span class="line">        models.py</span><br><span class="line">        static/</span><br><span class="line">            polls/</span><br><span class="line">                images/</span><br><span class="line">                    background.gif</span><br><span class="line">                style.css</span><br><span class="line">        templates/</span><br><span class="line">            polls/</span><br><span class="line">                detail.html</span><br><span class="line">                index.html</span><br><span class="line">                results.html</span><br><span class="line">        tests.py</span><br><span class="line">        urls.py</span><br><span class="line">        views.py</span><br><span class="line">    templates/</span><br><span class="line">        admin/</span><br><span class="line">            base_site.html</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">mysite&#x2F;</span><br><span class="line">    manage.py</span><br><span class="line">    mysite&#x2F;</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py</span><br><span class="line">    polls&#x2F;</span><br><span class="line">        __init__.py</span><br><span class="line">        admin.py</span><br><span class="line">        apps.py</span><br><span class="line">        migrations&#x2F;</span><br><span class="line">            __init__.py</span><br><span class="line">            0001_initial.py</span><br><span class="line">        models.py</span><br><span class="line">        static&#x2F;</span><br><span class="line">            polls&#x2F;</span><br><span class="line">                images&#x2F;</span><br><span class="line">                    background.gif</span><br><span class="line">                style.css</span><br><span class="line">        templates&#x2F;</span><br><span class="line">            polls&#x2F;</span><br><span class="line">                detail.html</span><br><span class="line">                index.html</span><br><span class="line">                results.html</span><br><span class="line">        tests.py</span><br><span class="line">        urls.py</span><br><span class="line">        views.py</span><br><span class="line">    templates&#x2F;</span><br><span class="line">        admin&#x2F;</span><br><span class="line">            base_site.html</span><br></pre></td></tr></table></figure>
+
 
 <p>目录 <code>polls</code> 现在可以被拷贝至一个新的 Django 工程，且立刻被复用。不过现在还不是发布它的时候。为了这样做，我们需要打包这个应用，便于其他人安装它。</p>
 <h3 id="💯打包你的应用"><a href="#💯打包你的应用" class="headerlink" title="💯打包你的应用"></a>💯打包你的应用</h3><p>目前，打包 Python 程序需要工具，有许多工具可以完成此项工作。在此教程中，我们将使用 <span class="exturl" data-url="aHR0cHM6Ly9weXBpLm9yZy9wcm9qZWN0L3NldHVwdG9vbHMv">setuptools<i class="fa fa-external-link-alt"></i></span> 来打包我们的程序。</p>
@@ -377,7 +395,7 @@
           <div class="post-tags">
               <a href="/tags/web/" rel="tag"><i class="fa fa-tag"></i> web</a>
               <a href="/tags/django/" rel="tag"><i class="fa fa-tag"></i> django</a>
-              <a href="/tags/数据库sqlite/" rel="tag"><i class="fa fa-tag"></i> 数据库sqlite</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93sqlite/" rel="tag"><i class="fa fa-tag"></i> 数据库sqlite</a>
           </div>
 
         
@@ -386,11 +404,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/28/opencv-python哔哩哔哩视频代码/" rel="prev" title="opencv-python哔哩哔哩视频解说代码">
+    <a href="/2020/07/28/opencv-python%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A7%86%E9%A2%91%E4%BB%A3%E7%A0%81/" rel="prev" title="opencv-python哔哩哔哩视频解说代码">
       <i class="fa fa-chevron-left"></i> opencv-python哔哩哔哩视频解说代码
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/06/07/数据拟合/" rel="next" title="数据拟合">
+    <a href="/2020/06/07/%E6%95%B0%E6%8D%AE%E6%8B%9F%E5%90%88/" rel="next" title="数据拟合">
       数据拟合 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -452,7 +470,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Django如何搭建web应用"><span class="nav-number">1.</span> <span class="nav-text">Django如何搭建web应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🛒Django的特点"><span class="nav-number">1.1.</span> <span class="nav-text">🛒Django的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎈项目框架"><span class="nav-number">1.2.</span> <span class="nav-text">🎈项目框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🍎应用框架"><span class="nav-number">1.3.</span> <span class="nav-text">🍎应用框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#🍏应用与项目的关系"><span class="nav-number">1.3.1.</span> <span class="nav-text">🍏应用与项目的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🔱创建应用的框架"><span class="nav-number">1.3.2.</span> <span class="nav-text">🔱创建应用的框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#❗应用的调试模块"><span class="nav-number">1.3.3.</span> <span class="nav-text">❗应用的调试模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试将节约你的时间"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">测试将节约你的时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试不仅能发现错误，而且能预防错误"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">测试不仅能发现错误，而且能预防错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试使你的代码更有吸引力"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">测试使你的代码更有吸引力</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#❓如何编写可重用程序"><span class="nav-number">1.4.</span> <span class="nav-text">❓如何编写可重用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#☯可重用很重要"><span class="nav-number">1.4.1.</span> <span class="nav-text">☯可重用很重要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🚀​你的项目和可复用应用¶"><span class="nav-number">1.4.2.</span> <span class="nav-text">🚀​你的项目和可复用应用¶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#💯打包你的应用"><span class="nav-number">1.4.3.</span> <span class="nav-text">💯打包你的应用</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Django%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAweb%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">Django如何搭建web应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9B%92Django%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">🛒Django的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%88%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6"><span class="nav-number">1.2.</span> <span class="nav-text">🎈项目框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8D%8E%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6"><span class="nav-number">1.3.</span> <span class="nav-text">🍎应用框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8D%8F%E5%BA%94%E7%94%A8%E4%B8%8E%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.1.</span> <span class="nav-text">🍏应用与项目的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%B1%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="nav-number">1.3.2.</span> <span class="nav-text">🔱创建应用的框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9D%97%E5%BA%94%E7%94%A8%E7%9A%84%E8%B0%83%E8%AF%95%E6%A8%A1%E5%9D%97"><span class="nav-number">1.3.3.</span> <span class="nav-text">❗应用的调试模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%B0%86%E8%8A%82%E7%BA%A6%E4%BD%A0%E7%9A%84%E6%97%B6%E9%97%B4"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">测试将节约你的时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E4%B8%8D%E4%BB%85%E8%83%BD%E5%8F%91%E7%8E%B0%E9%94%99%E8%AF%AF%EF%BC%8C%E8%80%8C%E4%B8%94%E8%83%BD%E9%A2%84%E9%98%B2%E9%94%99%E8%AF%AF"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">测试不仅能发现错误，而且能预防错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E4%BD%BF%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81%E6%9B%B4%E6%9C%89%E5%90%B8%E5%BC%95%E5%8A%9B"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">测试使你的代码更有吸引力</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9D%93%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E5%8F%AF%E9%87%8D%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.4.</span> <span class="nav-text">❓如何编写可重用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%98%AF%E5%8F%AF%E9%87%8D%E7%94%A8%E5%BE%88%E9%87%8D%E8%A6%81"><span class="nav-number">1.4.1.</span> <span class="nav-text">☯可重用很重要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%9A%80%E2%80%8B%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%92%8C%E5%8F%AF%E5%A4%8D%E7%94%A8%E5%BA%94%E7%94%A8%C2%B6"><span class="nav-number">1.4.2.</span> <span class="nav-text">🚀​你的项目和可复用应用¶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%AF%E6%89%93%E5%8C%85%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.4.3.</span> <span class="nav-text">💯打包你的应用</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -488,22 +506,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https://github.com/Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https://blog.csdn.net/baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https://weibo.com/2823926590/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"><i class="fab fa-weibo fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https://music.163.com/#/user/home?id=357692542"><i class="fas fa-music fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https://www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
@@ -517,19 +535,19 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http://geant4.web.cern.ch/">Geant4</span>
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https://root.cern.ch/">Root</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http://www.apc.univ-paris7.fr/~franco/g4doxy4.10/html/annotated.html">G4ClassIndex</span>
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https://root.cern/doc/master/modules.html">RootClassIndex</span>
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
         </li>
         <li class="links-of-blogroll-item">
-          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https://wuhongyi.cn">wuhongyi</span>
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
         </li>
     </ul>
   </div>
@@ -555,8 +573,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -580,9 +598,15 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
 <script src="/js/utils.js"></script>
+
+
 <script src="/js/schemes/muse.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -650,7 +674,9 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
