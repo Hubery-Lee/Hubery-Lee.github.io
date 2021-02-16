@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubery-lee.github.io/"/>
-  <updated>2021-02-15T16:25:06.781Z</updated>
+  <updated>2021-02-15T14:29:29.879Z</updated>
   <id>https://hubery-lee.github.io/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>💖站点介绍与导航💖</title>
-    <link href="https://hubery-lee.github.io/3000/02/15/%E7%AB%99%E7%82%B9%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AF%BC%E8%88%AA/"/>
-    <id>https://hubery-lee.github.io/3000/02/15/%E7%AB%99%E7%82%B9%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AF%BC%E8%88%AA/</id>
-    <published>3000-02-15T14:53:36.000Z</published>
-    <updated>2021-02-15T16:25:06.781Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="💢关于此网站"><a href="#💢关于此网站" class="headerlink" title="💢关于此网站"></a>💢关于此网站</h2><ul><li>这是LiHui的个人博客，该博客主要用于记录工作和学习所遇到的问题和有趣的事情，俗称碎碎念。</li><li>主要内容为编程工具的配置及使用，项目的问题解决及个人见解。</li><li>主要涉及到的知识有<span class="exturl" data-url="aHR0cHM6Ly9nZWFudDQud2ViLmNlcm4uY2gvbm9kZS8x">Geant4<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4v">Root<i class="fa fa-external-link-alt"></i></span>、<a href>机器视觉</a>和<a href>深度学习</a>等领域。</li></ul><h2 id="💫关于LiHui"><a href="#💫关于LiHui" class="headerlink" title="💫关于LiHui"></a>💫关于LiHui</h2><ul><li>LiHui的英文名为Hubery Lee. </li><li>出生年月: 1993年1月   <code>单身</code></li><li>LiHui本硕毕业于哈尔滨工程大学.</li><li>研究领域为核科学与技术，辐射探测与应用.</li><li>爱好音乐、运动和旅游；网易云音乐中毒重度症患者；<code>微博</code>和<code>网易云音乐</code>主页可以通过此博客的侧边栏超链接关注；在此，我也给出我的个人主页链接:<span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=">微博<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==">网易云音乐<i class="fa fa-external-link-alt"></i></span>，欢迎交朋友。</li><li>目前工作单位:  中国辐射防护研究院</li></ul><p>详细简历请查看 <a href="https://hubery-lee.github.io/about/">关于</a></p><h2 id="相关项目"><a href="#相关项目" class="headerlink" title="相关项目"></a>相关项目</h2><ul><li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWUvR2VhbnQ0LWppYW9jaGVuZw==">Geant4 入门哔哩哔哩视频教程代码<i class="fa fa-external-link-alt"></i></span><span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTk5MzEzNTI=">视频连接<i class="fa fa-external-link-alt"></i></span></p></li><li><p><span class="exturl" data-url="aHR0cHM6Ly9ob3ctdG8tdXNlLXNwaGlueC5yZWFkdGhlZG9jcy5pby9lbi9sYXRlc3Qv">如何使用sphinx编写技术文档<i class="fa fa-external-link-alt"></i></span></p></li><li><p><span class="exturl" data-url="aHR0cHM6Ly9oYW5kYm9va2ZvcmdpdC5yZWFkdGhlZG9jcy5pby9lbi9sYXRlc3Qv">Git使用手册<i class="fa fa-external-link-alt"></i></span></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;💢关于此网站&quot;&gt;&lt;a href=&quot;#💢关于此网站&quot; class=&quot;headerlink&quot; title=&quot;💢关于此网站&quot;&gt;&lt;/a&gt;💢关于此网站&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;这是LiHui的个人博客，该博客主要用于记录工作和学习所遇到的问题和有趣的事情，俗称碎碎
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>opencv-python哔哩哔哩视频解说代码</title>
@@ -503,6 +480,31 @@
     
     
       <category term="Geant" scheme="https://Hubery-Lee.github.io/tags/Geant/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Emacs yasnippets and markdown configure</title>
+    <link href="https://hubery-lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/"/>
+    <id>https://hubery-lee.github.io/2018/10/11/Emacs-yasnippets-and-markdown-configure/</id>
+    <published>2018-10-11T14:07:58.000Z</published>
+    <updated>2021-02-15T13:24:26.041Z</updated>
+    
+    <content type="html"><![CDATA[<p>[toc]</p><h2 id="yasnippets-的配置"><a href="#yasnippets-的配置" class="headerlink" title="yasnippets 的配置"></a>yasnippets 的配置</h2><ul><li>安装</li></ul><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.emacs.d/site-lisp</span><br><span class="line">git clone https://github.com/capitaomorte/yasnippet</span><br></pre></td></tr></table></figure><ul><li>配置==init.el==</li></ul><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">add-to-list</span> &#x27;load-path</span><br><span class="line">              <span class="string">&quot;~/.emacs.d/site-lisp/yasnippet&quot;</span>)</span><br><span class="line">(<span class="name">require</span> &#x27;yasnippet)</span><br><span class="line">(<span class="name">setq</span> yas-snippet-dirs</span><br><span class="line">      &#x27;(<span class="string">&quot;~/.emacs.d/snippets&quot;</span> ;; personal snippets</span><br><span class="line">        ))</span><br><span class="line">(<span class="name">yas-global-mode</span> <span class="number">1</span>)</span><br></pre></td></tr></table></figure><ul><li><p>添加自定义模板</p><p> M-x yas-new-snippet 创建新模板<br> C-c C-c 保存</p></li><li><p>模板内容说明</p><p>contributor: snippet作者名称及电邮<br>snippet的语法变量是以$美元符开始的，根据变量$1 $2 $... 定义顺序光标移动位置，特殊的$0是最后光标停位置，语法${N:default value}。</p></li></ul><h2 id="markdown-的配置"><a href="#markdown-的配置" class="headerlink" title="markdown 的配置"></a>markdown 的配置</h2><ul><li><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG5tb25rZXkvYXJ0aWNsZS9kZXRhaWxzLzU0OTM0NjYz">参看这篇文章<i class="fa fa-external-link-alt"></i></span><br>google markdown emacs 配置<br><span class="exturl" data-url="aHR0cHM6Ly9saW51eHRveS5vcmcvYXJjaGl2ZXMvZW1hY3MtbWFya2Rvd24tbW9kZS5odG1s">https://linuxtoy.org/archives/emacs-markdown-mode.html<i class="fa fa-external-link-alt"></i></span></p></li><li><p>重点看下面这个，此为产品原网址。该网站介绍了产品的多种安装方式。<br>google markdown-mode<br>==<span class="exturl" data-url="aHR0cDovL2pibGV2aW5zLm9yZy9wcm9qZWN0cy9tYXJrZG93bi1tb2RlLz09">http://jblevins.org/projects/markdown-mode/==<i class="fa fa-external-link-alt"></i></span>  </p></li><li><p>常用命令</p></li></ul><ul><li><code>C-c C-c m: markdown-command</code> &gt; <code>*markdown-output*</code> buffer.</li><li><code>C-c C-c p: markdown-command</code>&gt; temporary file&gt; browser.</li><li><code>C-c C-c e: markdown-command</code> &gt; <code>basename.html</code>.</li><li><code>C-c C-c v: markdown-command</code> &gt; <code>basename.html</code> &gt; browser.</li><li><code>C-c C-c w: markdown-command</code> &gt; kill ring.</li><li><code>C-c C-c o: markdown-open-command</code>.</li><li><code>C-c C-c l: markdown-live-preview-mode</code> &gt;<code>*eww*</code> buffer.</li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vbGl3ZWlsaWppZS9hcmNoaXZlLzIwMTIvMTIvMzAvMjg0MDA4MS5odG1s">https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html<i class="fa fa-external-link-alt"></i></span><br>[2] <span class="exturl" data-url="aHR0cHM6Ly93d3cuZG91YmFuLmNvbS9ub3RlLzU1MTk4MDc0MC8=">https://www.douban.com/note/551980740/<i class="fa fa-external-link-alt"></i></span><br>[3] <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG5tb25rZXkvYXJ0aWNsZS9kZXRhaWxzLzU0OTM0NjYz">https://blog.csdn.net/csdnmonkey/article/details/54934663<i class="fa fa-external-link-alt"></i></span><br>[4] <span class="exturl" data-url="aHR0cHM6Ly9qYmxldmlucy5vcmcvcHJvamVjdHMvbWFya2Rvd24tbW9kZS8=">https://jblevins.org/projects/markdown-mode/<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    <summary type="html">
+    
+      Focus on how to use emacs to edit markdown scripts.
+    
+    </summary>
+    
+    
+      <category term="编程工具学习与应用" scheme="https://Hubery-Lee.github.io/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="Emacs24.3" scheme="https://Hubery-Lee.github.io/tags/Emacs24-3/"/>
+    
+      <category term="markdown" scheme="https://Hubery-Lee.github.io/tags/markdown/"/>
     
   </entry>
   
