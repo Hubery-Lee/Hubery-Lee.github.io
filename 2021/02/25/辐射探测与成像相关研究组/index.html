@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="辐射探测与成像相关知名研究组 核工程师和放射学家对开发更先进的电离辐射测量和探测系统以及利用这些系统改进成像技术感兴趣。这包括探测器的设计、制造和分析、基本原子和核参数的测量、探测器系统的方法开发、中子活化分析、辐射成像系统、使用穿透辐射对部件进行无损检测和评估，放射卫生工程与医学物理应用。  密西根大学 核工程与辐射科学辐射成像组由镉、锌和碲组成的透明、半导体立方体，通过识别核材料发出的伽马射线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="辐射探测与成像相关研究组">
+<meta property="og:url" content="https://hubery-lee.github.io/2021/02/25/%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E7%BB%84/index.html">
+<meta property="og:site_name" content="Hubery-Lee">
+<meta property="og:description" content="辐射探测与成像相关知名研究组 核工程师和放射学家对开发更先进的电离辐射测量和探测系统以及利用这些系统改进成像技术感兴趣。这包括探测器的设计、制造和分析、基本原子和核参数的测量、探测器系统的方法开发、中子活化分析、辐射成像系统、使用穿透辐射对部件进行无损检测和评估，放射卫生工程与医学物理应用。  密西根大学 核工程与辐射科学辐射成像组由镉、锌和碲组成的透明、半导体立方体，通过识别核材料发出的伽马射线">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224110453854.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224110406931.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224113237602.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
+<meta property="article:published_time" content="2021-02-25T01:30:42.000Z">
+<meta property="article:modified_time" content="2021-02-25T01:33:19.883Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="辐射探测与成像">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224110453854.png">
+
+<link rel="canonical" href="https://hubery-lee.github.io/2021/02/25/%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E7%BB%84/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>辐射探测与成像相关研究组 | Hubery-Lee</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Hubery-Lee" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hubery-Lee</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">蒹葭苍苍，白露为霜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">39</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/02/25/%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          辐射探测与成像相关研究组
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-25 09:30:42" itemprop="dateCreated datePublished" datetime="2021-02-25T09:30:42+08:00">2021-02-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BB%BC%E8%BF%B0/" itemprop="url" rel="index"><span itemprop="name">综述</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/02/25/%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E7%BB%84/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/25/%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E7%BB%84/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="辐射探测与成像相关知名研究组"><a href="#辐射探测与成像相关知名研究组" class="headerlink" title="辐射探测与成像相关知名研究组"></a>辐射探测与成像相关知名研究组</h1><blockquote>
+<p>核工程师和放射学家对开发更先进的电离辐射测量和探测系统以及利用这些系统改进成像技术感兴趣。这包括探测器的设计、制造和分析、基本原子和核参数的测量、探测器系统的方法开发、中子活化分析、辐射成像系统、使用穿透辐射对部件进行无损检测和评估，放射卫生工程与医学物理应用。</p>
+</blockquote>
+<h2 id="密西根大学-核工程与辐射科学"><a href="#密西根大学-核工程与辐射科学" class="headerlink" title="密西根大学 核工程与辐射科学"></a>密西根大学 核工程与辐射科学</h2><h3 id="辐射成像组"><a href="#辐射成像组" class="headerlink" title="辐射成像组"></a>辐射成像组</h3><p>由镉、锌和碲组成的透明、半导体立方体，通过识别核材料发出的伽马射线的能量和方向，可以揭示核材料的身份和下落。钟和教授的实验室开发了基于CdZnTe的探测器，用于国家安全和天文学等领域。探测器可以定位脏弹和其他核武器，也可以揭示月球或火星的成分。他的团队正在开发成像技术、数据采集系统和替代性的、更便宜的半导体，可能取代CdZnTe。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jenRsYWIuZW5naW4udW1pY2guZWR1Lw==">MIT He Zhong 团队<i class="fa fa-external-link-alt"></i></span></p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224110453854.png" alt="image-20210224110453854"></p>
+<h3 id="探测方法组"><a href="#探测方法组" class="headerlink" title="探测方法组"></a>探测方法组</h3><p>由大卫·韦赫教授领导的探测方法小组探索半导体辐射探测器材料、处理探测器信号的集成电路以及伽马射线辐射成像。这项研究的主要目标是在广泛的应用中增强辐射检测的可用选项：国土安全、医疗和工业用途以及科学研究。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9yYWRtZWFzLmVuZ2luLnVtaWNoLmVkdS8=">David Wehe 团队<i class="fa fa-external-link-alt"></i></span></p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224110406931.png" alt="image-20210224110406931"></p>
+<h3 id="核不扩散组"><a href="#核不扩散组" class="headerlink" title="核不扩散组"></a>核不扩散组</h3><p>萨拉·波齐教授的研究小组致力于开发新的工具和技术，以探测和识别可制成核武器的铀和钚等材料。他们的研究包括建立既能测量中子又能测量光子的探测器阵列，开发解释探测器数据的算法，以及使用可测量的特征来评估核材料的成分。这些类型的探测器可用于边境口岸和海港扫描行李和海运集装箱。它们还可以监测核燃料的生产，并测量与裂变物理有关的核数据。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kbm5nLmVuZ2luLnVtaWNoLmVkdS8=">Sara Pozzi 团队<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="应用核科学组"><a href="#应用核科学组" class="headerlink" title="应用核科学组"></a>应用核科学组</h3><p>伊戈尔·约万诺维奇教授领导的应用核科学小组利用电离辐射和激光与物质相互作用的物理学来解决核安全、能源和基础科学的新应用。他的小组开发了中子探测器和主动询问方法，以及用于核不扩散应用的各种规模的反中微子探测器。在Gérard Mourou超快光学科学中心，他开发了新的超快光源和方法，用于通过激光光谱进行远程和痕量材料检测，以及用于高场科学和核光子学的强激光科学和技术。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9hbnNnLmVuZ2luLnVtaWNoLmVkdS8=">Igor Jovanovic 团队<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="辐射剂量机理组"><a href="#辐射剂量机理组" class="headerlink" title="辐射剂量机理组"></a>辐射剂量机理组</h3><p>Alex Bielajew教授及其同事建立了电子和光子如何在物质中移动的数学和计算机模型，以精确预测人体中的剂量沉积，并更准确地解释辐射剂量计读数，从而减少了通过放射疗法治疗癌症所需的总辐射剂量。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9uZXJzLmVuZ2luLnVtaWNoLmVkdS9wZW9wbGUvYWxleC1iaWVsYWpldy8=">Alex Bielajew 团队<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="放射卫生工程组"><a href="#放射卫生工程组" class="headerlink" title="放射卫生工程组"></a>放射卫生工程组</h3><p>Kimberlee Kearfott教授的实验室正在开发新颖的探测器和剂量计设计，并改进了用于医疗，工业，实验室和核电辐射安全应用的测量方法。 该小组将精力集中在可在不久的将来部署的实用系统和辐射测量方法上。</p>
+<p><a href>Kimberlee Kearfott</a></p>
+<p>正在认证成为医学物理培训资格，密歇根大学具备这种资格</p>
+<h2 id="麻省理工大学-核科学与工程"><a href="#麻省理工大学-核科学与工程" class="headerlink" title="麻省理工大学 核科学与工程"></a>麻省理工大学 核科学与工程</h2><p><span class="exturl" data-url="aHR0cHM6Ly93ZWIubWl0LmVkdS9uc2UvaW5kZXguaHRtbA==">麻省理工大学核科学与工程<i class="fa fa-external-link-alt"></i></span> 主要研究领域包括：裂变、聚变、核安全、【辐射源、探测与测量】、建模与仿真、极端环境下的材料特性分析</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210224113237602.png" alt="image-20210224113237602"></p>
+<p>其中，有关【辐射源、探测与测量】相关的研究方向介绍如下：</p>
+<blockquote>
+<p>核科学与工程系的主要目标是提高实现辐射科学与技术的新有益应用所需的核心学科。 这些学科包括辐射的产生和控制以及辐射与物质相互作用的研究和应用。</p>
+<p>我们研究新颖的辐射源，这些辐射源将在医学成像，基于辐射的治疗，违禁品检测以及纳米和介观系统的化学和物理性质研究中找到应用，还使用新的辐射源，例如Oak实验室的散列中子源使推动探索化学和物理学的距离和时间维度成为可能。</p>
+<p>我们还对非电离辐射的精确控制和表征感兴趣。 这些辐射场的完整量子力学描述将允许它们应用于量子系统的相干控制。 实现这种精致的控制将使量子信息处理（QIP）概念的实际实现成为可能。</p>
+</blockquote>
+<p>【建模与仿真】</p>
+<blockquote>
+<p>在多尺度和多物理场建模方面令人振奋的新发展，再加上高性能计算机以及相关算法和仿真方法的迅速发展，使人们有可能以比以往更高的保真度来模拟核系统。 该部门所有主要应用领域均以对高级计算建模和仿真研究的综合关注为基础。 NSE的教师和学生在许多重要领域从事前沿研究，包括反应堆中子学和热力学，等离子体湍流建模以及原子分辨率，核环境中的长期材料模拟。 在这些领域中的每一个领域，研究都与实验计划紧密结合，以进行模型验证以及促进对科学的理解和新机制模型的开发。</p>
+</blockquote>
+<p>【极端环境下材料特性】</p>
+<blockquote>
+<p>对材料性能的限制是提高核能系统安全性和经济性的最大技术障碍之一。确保结构和其他材料在老化的商用轻水堆动力反应堆群中的生存能力，对于目前将这些核电站的寿命延长到60年以上的努力至关重要。下一代快裂变反应堆和未来的聚变装置将需要克服更严峻的材料挑战，包括高原子位移率以及快中子谱中质子/氦的产生。安全处置高放射性废物需要将放射性核素控制在工程屏障内，这些屏障必须能承受数千年的高温、应力和辐射场，还可能承受腐蚀性液体的渗透。</p>
+<p>开发能在这些恶劣工作环境中发挥良好性能的材料是材料科学面临的一个重大挑战，需要对辐射通量、温度和应力等极端条件下的材料响应有基本的了解。化学和物理过程必须在从原子到宏观的多个物理尺度上理解和控制，时间尺度从不到一纳秒到几十年（对于核废料来说，时间更长）。令人兴奋的新的科学工具的集合正在出现，这将使这一点成为可能，包括先进的紧凑适用于大学规模实验室的辐射源；纳米尺度的材料探针和表征；以及具有大规模计算能力的最先进数值模型。</p>
+</blockquote>
+<h2 id="田纳西大学核工程部"><a href="#田纳西大学核工程部" class="headerlink" title="田纳西大学核工程部"></a>田纳西大学核工程部</h2><p> <span class="exturl" data-url="aHR0cHM6Ly9uZS51dGsuZWR1Lw==">核工程系<i class="fa fa-external-link-alt"></i></span> 成立于1957年，是美国历史最悠久，最负盛名的计划之一。<br>师资力量以卓越的研究和教学能力而享誉国际，并且通过与橡树岭国家实验室，Y-12核安保综合体，UCOR，东田纳西州技术园（ETTP）等的紧密联系来加强我们的高级研究计划。 位于诺克斯维尔五十英里范围内的一百多家核相关公司。<br>田纳西州东部可能是世界上核工业最集中的地区，因此是进行核教育的理想之地。</p>
+<p>与八个大学研究中心（包括核安全研究所，先进材料联合研究所，中子科学联合研究所，可靠性和可维护性中心，闪烁材料研究中心）一起在八个不同的研究领域中探索和提出了思想和概念。 ，以及本地合作者，例如Oak Ridge国家实验室。</p>
+<p>主要研究方向先进建模与仿真、核聚变技术、【核设施控制、可靠性与安全】、核反应堆燃料与材料、辐射探测与测量、放射科学与保健物理</p>
+<p>其中，辐射探测与测量主要研究方向包括：</p>
+<h3 id="闪烁体探测器材料与应用工程"><a href="#闪烁体探测器材料与应用工程" class="headerlink" title="闪烁体探测器材料与应用工程"></a>闪烁体探测器材料与应用工程</h3><p>对闪烁材料的研究范围从新化合物的发现到独特性能的表征，再到在创新的探测和成像系统中引入新材料。研究生们经常种植以前未知成分的晶体，研究辐射与新材料的相互作用，有时与国家实验室的研究人员合作。达到更发达阶段的闪烁材料可用于在核安全和/或医学成像中具有重要应用的新型探测系统。具有精确测量吸收伽马辐射能量能力的特殊闪烁体对于识别放射性物质非法来源至关重要，而具有更快时间响应的闪烁探测器最终可能使癌症和阿尔茨海默病等疾病的诊断更早、更准确</p>
+<h3 id="半导体探测器的研发"><a href="#半导体探测器的研发" class="headerlink" title="半导体探测器的研发"></a>半导体探测器的研发</h3><p>在这个领域中有几个正在进行的项目，它们跨越了许多应用空间。 当前的半导体开发项目包括氮化硼，二硒化锂铟，金刚石和三溴化甲基铵铅，其应用范围从第四代反应堆中的先进多模式传感器到冷中子成像。</p>
+<h3 id="用于中子科学设施的中子仪器"><a href="#用于中子科学设施的中子仪器" class="headerlink" title="用于中子科学设施的中子仪器"></a>用于中子科学设施的中子仪器</h3><p>我们的闪烁体和半导体系统开发的一个重要重点是在全球的中子科学设施中启用新的仪器功能。 其中有数十个正在运行，还有更多正在建设中，包括欧洲散裂源。 一个特别关注的是用于中子成像的高分辨率传感器，朝着1微米空间分辨率的目标努力。 一项用于反射测定法和He-3替代技术的高速率仪器正在进行或已完成其他工作。 我们与ORNL中子科学和Paul Scherrer研究所有着紧密的合作关系。  ORNL是散裂中子源和高通量同位素反应堆之间的许多光束线，是中子科学领域的全球领导者。  Paul Scherrer研究所是高分辨率中子成像领域的全球领导者。</p>
+<h3 id="核材料辐射成像系统"><a href="#核材料辐射成像系统" class="headerlink" title="核材料辐射成像系统"></a>核材料辐射成像系统</h3><p>正在进行的工作或最近完成的工作涉及对伽马，X射线，快中子，慢中子或μ子成像的系统。 许多工作与核材料或核材料组件的成像有关，旨在检测，定位和表征它们。 辐射的被动和主动传感都在研究中，其中主动传感需要询问源，例如X射线线性加速器或氘-中子发生器。 在许多工作中，ORNL都是重要的合作伙伴。 该领域的另一个合作伙伴是Varex Imaging。</p>
+<h3 id="辐射探测器数据处理与算法开发"><a href="#辐射探测器数据处理与算法开发" class="headerlink" title="辐射探测器数据处理与算法开发"></a>辐射探测器数据处理与算法开发</h3><p>小组还研究了从所述材料和系统生成的数据的处理，以及与核材料和放射材料的检测，定位和表征相关的算法开发。</p>
+<h3 id="🏡实验设施"><a href="#🏡实验设施" class="headerlink" title="🏡实验设施"></a>🏡实验设施</h3><h4 id="微处理研究设施"><a href="#微处理研究设施" class="headerlink" title="微处理研究设施"></a>微处理研究设施</h4><p>田纳西大学的微处理研究设施（MPRF）是UT的核心设施，位于先进材料联合研究所（JIAM）内。 MPRF使研究人员能够进行微处理制造过程。服务包括光刻，薄膜沉积，电容耦合反应性离子蚀刻以及基于硅的等离子体增强化学气相沉积工艺。该设备位于具有所有必要设施和辅助处理设备的100级无尘室中。结合其他JIAM设施，MPRF为研究人员提供了进行材料科学和工程学前沿研究的方法。</p>
+<h4 id="散射体材料研究中心-SMRC"><a href="#散射体材料研究中心-SMRC" class="headerlink" title="散射体材料研究中心(SMRC)"></a>散射体材料研究中心<strong><span class="exturl" data-url="aHR0cHM6Ly90aWNrbGUudXRrLmVkdS9zbXJjLg==">(SMRC)<i class="fa fa-external-link-alt"></i></span></strong></h4><p>该中心位于大学科学与工程研究设施的主校区，结合了包括核工程在内的多个部门的资源，用于研究项目，这些研究项目致力于为最先进的辐射传感器和成像系统开发创新材料。 SMRC为核工程，材料科学与工程，能源科学与工程和化学领域的研究生和本科生提供了支持。它具有广泛的晶体生长设备，以及用于研究基本材料特性和新型材料对辐射的响应的众多仪器。 SMRC积极研究各种物理形式的闪烁材料，包括无机单晶，多晶陶瓷和有机塑料。</p>
+<h4 id="辐射成像，检测，算法和系统（Rad-IDEAS）实验室"><a href="#辐射成像，检测，算法和系统（Rad-IDEAS）实验室" class="headerlink" title="辐射成像，检测，算法和系统（Rad IDEAS）实验室"></a>辐射成像，检测，算法和系统（Rad IDEAS）实验室</h4><p>在Rad IDEAS实验室中，我们拥有大量的伽马，中子和阿尔法源。辐射传感器和光学组件；单通道和多通道核电子模块；数据采集电子设备；示波器;高性能的多核工作站，用于数据采集，处理和仿真。该实验室主要用于辐射检测和成像中新的概念验证水平实验，或用于准备在现场进行测量的实验系统。</p>
+<h4 id="双重混合检测定位成像（双重混合DLI）系统"><a href="#双重混合检测定位成像（双重混合DLI）系统" class="headerlink" title="双重混合检测定位成像（双重混合DLI）系统"></a>双重混合检测定位成像（双重混合DLI）系统</h4><p>双混合检测定位成像（DLI）拖车包含内置于一维编码孔径成像阵列中的大量NaI检测器和有机闪烁体。它可用于移动伽马成像和检测，移动或固定背景测量或伽马或中子或研究生实验室练习。</p>
+<h4 id="ORNL相关实验设备"><a href="#ORNL相关实验设备" class="headerlink" title="ORNL相关实验设备"></a>ORNL相关实验设备</h4><p>其他相关设备和设施包括：伴随粒子成像（API）（D-T）中子发生器； Cf-252电离室;核材料识别系统（NMIS），包括实验室和现场版本；便携式中子编码孔径成像系统；其他伽马射线编码孔径成像系统；进入储存铀标准的核保障实验室；和门户监视工具。</p>
+<h4 id="Varex影像设备"><a href="#Varex影像设备" class="headerlink" title="Varex影像设备"></a>Varex影像设备</h4><p>UT在芝加哥奥黑尔（ORD）机场附近的Varex Imaging设施拥有并运营着6/9 MV线性加速器。 该直线加速器可用于与安全，工业或医疗应用中的货物扫描有关的实验。</p>
+<h2 id="橡树岭实验室"><a href="#橡树岭实验室" class="headerlink" title="橡树岭实验室"></a>橡树岭实验室</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cub3JubC5nb3YvZ3JvdXAvYWR2YW5jZWQtcmFkaWF0aW9uLWRldGVjdGlvbi1pbWFnaW5nLWRhdGEtc2NpZW5jZS1hbmQtYXBwbGljYXRpb25z">辐射探测、成像、数据科学和应用研究组<i class="fa fa-external-link-alt"></i></span></p>
+<p>进行研究和开发是为了了解和利用辐射衰减，射线照相/断层扫描，系统建模和检测网络的组合特征，这些特征可用于一系列基础物理学，下一代高级概念系统以及当前的实际应用中</p>
+<h2 id="伊利诺伊大学香槟分校-辐射探测与成像研究组"><a href="#伊利诺伊大学香槟分校-辐射探测与成像研究组" class="headerlink" title="伊利诺伊大学香槟分校 辐射探测与成像研究组"></a>伊利诺伊大学香槟分校 辐射探测与成像研究组</h2><p><span class="exturl" data-url="aHR0cDovL3JhZGltZy5ucHJlLmlsbGlub2lzLmVkdS9pbmRleC5odG1s">伊利诺伊大学香槟分校 辐射探测与成像研究组<i class="fa fa-external-link-alt"></i></span></p>
+<p>采用系统的方法来开发先进的放射成像技术，以帮助解决当今我们面临的一些最具挑战性的疾病，例如脑癌，心脏病和神经退行性疾病。我们的工作重点是探索各种技术前沿，以开发能够以更高的效率，空间，能量和定时精度检测入射粒子的辐射传感器。</p>
+<p>1）我们为要求苛刻的SPECT和PET应用开发和应用超高性能伽马射线成像传感器。</p>
+<p>2）我们研究了先进的图像形成技术，例如人工复眼伽马相机和自适应光圈设计，以改善空间分辨率和灵敏度之间的权衡。</p>
+<p>3）我们开发了统计技术，例如改进的统一Cramer-Rao边界（M-UCRB），以设计和优化复杂的放射成像系统，从而可以提供最佳效率来获得有用的成像信息和</p>
+<p>4）我们探索利用广泛的EM辐射（从射频，可见照片，软X射线到高能伽马射线）的成像技术，以及多种物理和化学原理来生成断层图像，以可视化生物样品内部的生理过程，活体动物和患者。</p>
+<h2 id="其他国内外其他知名研究机构"><a href="#其他国内外其他知名研究机构" class="headerlink" title="其他国内外其他知名研究机构"></a>其他国内外其他知名研究机构</h2><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ob21lLmNlcm4v">欧洲核子中心<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5paGVwLmNhcy5jbi8=">中科院高能物理研究所<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5pbXBjYXMuYWMuY24v">中科院近代物理研究所<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="主要杂志"><a href="#主要杂志" class="headerlink" title="主要杂志"></a>主要杂志</h2><p><strong>英文期刊</strong></p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL251Y2xlYXItaW5zdHJ1bWVudHMtYW5kLW1ldGhvZHMtaW4tcGh5c2ljcy1yZXNlYXJjaC1zZWN0aW9uLWEtYWNjZWxlcmF0b3JzLXNwZWN0cm9tZXRlcnMtZGV0ZWN0b3JzLWFuZC1hc3NvY2lhdGVkLWVxdWlwbWVudA==">Nuclear Instruments and Methods in Physics Research Section A : Accelerators, Spectrometers, Detectors and Associated Equipment<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL251Y2xlYXItaW5zdHJ1bWVudHMtYW5kLW1ldGhvZHMtaW4tcGh5c2ljcy1yZXNlYXJjaC1zZWN0aW9uLWItYmVhbS1pbnRlcmFjdGlvbnMtd2l0aC1tYXRlcmlhbHMtYW5kLWF0b21z">Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL3Byb2dyZXNzLWluLXBhcnRpY2xlLWFuZC1udWNsZWFyLXBoeXNpY3M=">Progress in Particle and Nuclear Physics<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL251Y2xlYXItYW5kLXBhcnRpY2xlLXBoeXNpY3MtcHJvY2VlZGluZ3M=">Nuclear and Particle Physics Proceedings<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL2FwcGxpZWQtcmFkaWF0aW9uLWFuZC1pc290b3Blcw==">Applied Radiation and Isotopes<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL251Y2xlYXItcGh5c2ljcy1h">Nuclear Physics A<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuam91cm5hbHMuZWxzZXZpZXIuY29tL251Y2xlYXItcGh5c2ljcy1i">Nuclear Physics B<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p><strong>中文期刊</strong></p>
+<ul>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5hZXN0Lm9yZy5jbi9DTi92b2x1bW4vY3VycmVudC5zaHRtbA==">原子能科学技术<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5qLnNpbmFwLmFjLmNuL2hqcy9DTi8wMjUzLTMyMTkvaG9tZS5zaHRtbA==">核技术<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5ucHIuYWMuY24v">原子核物理评论<i class="fa fa-external-link-alt"></i></span></li>
+<li><a href>各大学学报</a></li>
+</ul>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt="Screenshot 2021-02-23 120116 (2)"></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
+
+            <span class="label">CSDN</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/" rel="tag"><i class="fa fa-tag"></i> 辐射探测与成像</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/3000/02/15/%E7%AB%99%E7%82%B9%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AF%BC%E8%88%AA/" rel="prev" title="💖站点介绍与导航💖">
+      <i class="fa fa-chevron-left"></i> 💖站点介绍与导航💖
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/28/opencv-python%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A7%86%E9%A2%91%E4%BB%A3%E7%A0%81/" rel="next" title="opencv-python哔哩哔哩视频解说代码">
+      opencv-python哔哩哔哩视频解说代码 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%9B%B8%E5%85%B3%E7%9F%A5%E5%90%8D%E7%A0%94%E7%A9%B6%E7%BB%84"><span class="nav-number">1.</span> <span class="nav-text">辐射探测与成像相关知名研究组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E8%A5%BF%E6%A0%B9%E5%A4%A7%E5%AD%A6-%E6%A0%B8%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%BE%90%E5%B0%84%E7%A7%91%E5%AD%A6"><span class="nav-number">1.1.</span> <span class="nav-text">密西根大学 核工程与辐射科学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E6%88%90%E5%83%8F%E7%BB%84"><span class="nav-number">1.1.1.</span> <span class="nav-text">辐射成像组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A2%E6%B5%8B%E6%96%B9%E6%B3%95%E7%BB%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">探测方法组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E4%B8%8D%E6%89%A9%E6%95%A3%E7%BB%84"><span class="nav-number">1.1.3.</span> <span class="nav-text">核不扩散组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E6%A0%B8%E7%A7%91%E5%AD%A6%E7%BB%84"><span class="nav-number">1.1.4.</span> <span class="nav-text">应用核科学组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E5%89%82%E9%87%8F%E6%9C%BA%E7%90%86%E7%BB%84"><span class="nav-number">1.1.5.</span> <span class="nav-text">辐射剂量机理组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E5%B0%84%E5%8D%AB%E7%94%9F%E5%B7%A5%E7%A8%8B%E7%BB%84"><span class="nav-number">1.1.6.</span> <span class="nav-text">放射卫生工程组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BA%BB%E7%9C%81%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-%E6%A0%B8%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B7%A5%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">麻省理工大学 核科学与工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B0%E7%BA%B3%E8%A5%BF%E5%A4%A7%E5%AD%A6%E6%A0%B8%E5%B7%A5%E7%A8%8B%E9%83%A8"><span class="nav-number">1.3.</span> <span class="nav-text">田纳西大学核工程部</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AA%E7%83%81%E4%BD%93%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%9D%90%E6%96%99%E4%B8%8E%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B"><span class="nav-number">1.3.1.</span> <span class="nav-text">闪烁体探测器材料与应用工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E7%A0%94%E5%8F%91"><span class="nav-number">1.3.2.</span> <span class="nav-text">半导体探测器的研发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BA%8E%E4%B8%AD%E5%AD%90%E7%A7%91%E5%AD%A6%E8%AE%BE%E6%96%BD%E7%9A%84%E4%B8%AD%E5%AD%90%E4%BB%AA%E5%99%A8"><span class="nav-number">1.3.3.</span> <span class="nav-text">用于中子科学设施的中子仪器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E6%9D%90%E6%96%99%E8%BE%90%E5%B0%84%E6%88%90%E5%83%8F%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.3.4.</span> <span class="nav-text">核材料辐射成像系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8E%E7%AE%97%E6%B3%95%E5%BC%80%E5%8F%91"><span class="nav-number">1.3.5.</span> <span class="nav-text">辐射探测器数据处理与算法开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8F%A1%E5%AE%9E%E9%AA%8C%E8%AE%BE%E6%96%BD"><span class="nav-number">1.3.6.</span> <span class="nav-text">🏡实验设施</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E5%A4%84%E7%90%86%E7%A0%94%E7%A9%B6%E8%AE%BE%E6%96%BD"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">微处理研究设施</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%A3%E5%B0%84%E4%BD%93%E6%9D%90%E6%96%99%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83-SMRC"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">散射体材料研究中心(SMRC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E6%88%90%E5%83%8F%EF%BC%8C%E6%A3%80%E6%B5%8B%EF%BC%8C%E7%AE%97%E6%B3%95%E5%92%8C%E7%B3%BB%E7%BB%9F%EF%BC%88Rad-IDEAS%EF%BC%89%E5%AE%9E%E9%AA%8C%E5%AE%A4"><span class="nav-number">1.3.6.3.</span> <span class="nav-text">辐射成像，检测，算法和系统（Rad IDEAS）实验室</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E9%87%8D%E6%B7%B7%E5%90%88%E6%A3%80%E6%B5%8B%E5%AE%9A%E4%BD%8D%E6%88%90%E5%83%8F%EF%BC%88%E5%8F%8C%E9%87%8D%E6%B7%B7%E5%90%88DLI%EF%BC%89%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.3.6.4.</span> <span class="nav-text">双重混合检测定位成像（双重混合DLI）系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ORNL%E7%9B%B8%E5%85%B3%E5%AE%9E%E9%AA%8C%E8%AE%BE%E5%A4%87"><span class="nav-number">1.3.6.5.</span> <span class="nav-text">ORNL相关实验设备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Varex%E5%BD%B1%E5%83%8F%E8%AE%BE%E5%A4%87"><span class="nav-number">1.3.6.6.</span> <span class="nav-text">Varex影像设备</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A9%A1%E6%A0%91%E5%B2%AD%E5%AE%9E%E9%AA%8C%E5%AE%A4"><span class="nav-number">1.4.</span> <span class="nav-text">橡树岭实验室</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%8A%E5%88%A9%E8%AF%BA%E4%BC%8A%E5%A4%A7%E5%AD%A6%E9%A6%99%E6%A7%9F%E5%88%86%E6%A0%A1-%E8%BE%90%E5%B0%84%E6%8E%A2%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F%E7%A0%94%E7%A9%B6%E7%BB%84"><span class="nav-number">1.5.</span> <span class="nav-text">伊利诺伊大学香槟分校 辐射探测与成像研究组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%9B%BD%E5%86%85%E5%A4%96%E5%85%B6%E4%BB%96%E7%9F%A5%E5%90%8D%E7%A0%94%E7%A9%B6%E6%9C%BA%E6%9E%84"><span class="nav-number">1.6.</span> <span class="nav-text">其他国内外其他知名研究机构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%9D%82%E5%BF%97"><span class="nav-number">1.7.</span> <span class="nav-text">主要杂志</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李会"
+      src="/images/owl.jpg">
+  <p class="site-author-name" itemprop="name">李会</p>
+  <div class="site-description" itemprop="description">Get busy living or get busy dying.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
+        </li>
+    </ul>
+  </div>
+<div class="cc-license motion-element" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李会</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ooozwlclX00aJabPvk1WTj7J-gzGzoHsz',
+      appKey     : 'CnXrRUVdUdMXgEvGbdolWGYX',
+      placeholder: "若有想咨询的事情，请留下你的邮箱！",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
