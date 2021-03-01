@@ -21,23 +21,25 @@
     var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="肿瘤放射物理（ROP）以放射物理的基本原理和概念为基础的放射治疗，与手术、化学药物治疗共同组成了目前恶性肿瘤的三大治疗手段。据世界卫生组织（WHO）的统计，肿瘤治疗后45%左右的五年生存率中，22%为手术治疗、18%为放射治疗、5%为药物和其它方法治疗；随着技术发展，放射治疗的应用更加广泛，相关统计表明50%~70%的肿瘤病人需要进行放射治疗。">
+  <meta name="description" content="机器学习是人工智能的一大类重要方法，也是目 前发展最迅速、效果最显著的方法。机器学习解决的是让机器自主地从数据中获取知识，从 而应用于新的问题中。迁移学习作为机器学习的一个重要分支，侧重于将已经学习过的知 识迁移应用于新的问题中。 迁移学习的核心问题是，找到新问题和原问题之间的相似性，才可以顺利地实现知识 的迁移。比如在我们一开始说的天气问题中，那些北半球的天气之所以相似，是因为它们的 地理位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="肿瘤放射物理">
-<meta property="og:url" content="https://hubery-lee.github.io/2021/02/27/%E8%82%BF%E7%98%A4%E6%94%BE%E5%B0%84%E7%89%A9%E7%90%86/index.html">
+<meta property="og:title" content="迁移学习基本概念">
+<meta property="og:url" content="https://hubery-lee.github.io/2021/03/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="肿瘤放射物理（ROP）以放射物理的基本原理和概念为基础的放射治疗，与手术、化学药物治疗共同组成了目前恶性肿瘤的三大治疗手段。据世界卫生组织（WHO）的统计，肿瘤治疗后45%左右的五年生存率中，22%为手术治疗、18%为放射治疗、5%为药物和其它方法治疗；随着技术发展，放射治疗的应用更加广泛，相关统计表明50%~70%的肿瘤病人需要进行放射治疗。">
+<meta property="og:description" content="机器学习是人工智能的一大类重要方法，也是目 前发展最迅速、效果最显著的方法。机器学习解决的是让机器自主地从数据中获取知识，从 而应用于新的问题中。迁移学习作为机器学习的一个重要分支，侧重于将已经学习过的知 识迁移应用于新的问题中。 迁移学习的核心问题是，找到新问题和原问题之间的相似性，才可以顺利地实现知识 的迁移。比如在我们一开始说的天气问题中，那些北半球的天气之所以相似，是因为它们的 地理位">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/clip_image002.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/qrsearch2.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210301223124770.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210301230620912.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210301231518157.png">
 <meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
-<meta property="article:published_time" content="2021-02-27T14:52:22.000Z">
-<meta property="article:modified_time" content="2021-02-27T14:56:02.845Z">
+<meta property="article:published_time" content="2021-03-01T15:26:47.000Z">
+<meta property="article:modified_time" content="2021-03-01T15:28:15.018Z">
 <meta property="article:author" content="李会">
-<meta property="article:tag" content="放疗">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/clip_image002.png">
+<meta name="twitter:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/qrsearch2.png">
 
-<link rel="canonical" href="https://hubery-lee.github.io/2021/02/27/%E8%82%BF%E7%98%A4%E6%94%BE%E5%B0%84%E7%89%A9%E7%90%86/">
+<link rel="canonical" href="https://hubery-lee.github.io/2021/03/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
 
 
 <script id="page-configurations">
@@ -50,7 +52,7 @@
   };
 </script>
 
-  <title>肿瘤放射物理 | Hubery-Lee</title>
+  <title>迁移学习基本概念 | Hubery-Lee</title>
   
 
 
@@ -203,7 +205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/02/27/%E8%82%BF%E7%98%A4%E6%94%BE%E5%B0%84%E7%89%A9%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/03/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -216,7 +218,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          肿瘤放射物理
+          迁移学习基本概念
         </h1>
 
         <div class="post-meta">
@@ -226,16 +228,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-02-27 22:52:22" itemprop="dateCreated datePublished" datetime="2021-02-27T22:52:22+08:00">2021-02-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%A0%B8%E5%8C%BB%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">核医学</span></a>
-                </span>
+              <time title="创建时间：2021-03-01 23:26:47" itemprop="dateCreated datePublished" datetime="2021-03-01T23:26:47+08:00">2021-03-01</time>
             </span>
 
           
@@ -247,8 +240,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/02/27/%E8%82%BF%E7%98%A4%E6%94%BE%E5%B0%84%E7%89%A9%E7%90%86/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/27/%E8%82%BF%E7%98%A4%E6%94%BE%E5%B0%84%E7%89%A9%E7%90%86/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/03/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/01/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -263,18 +256,64 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="肿瘤放射物理（ROP）"><a href="#肿瘤放射物理（ROP）" class="headerlink" title="肿瘤放射物理（ROP）"></a><strong>肿瘤放射物理（</strong>ROP）</h1><p>以放射物理的基本原理和概念为基础的放射治疗，与手术、化学药物治疗共同组成了目前恶性肿瘤的三大治疗手段。据世界卫生组织（WHO）的统计，肿瘤治疗后45%左右的五年生存率中，22%为手术治疗、18%为放射治疗、5%为药物和其它方法治疗；随着技术发展，放射治疗的应用更加广泛，相关统计表明50%~70%的肿瘤病人需要进行放射治疗。</p>
-<a id="more"></a>
+        <p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/qrsearch2.png" alt="qrsearch2"></p>
+<blockquote>
+<p>机器学习是人工智能的一大类重要方法，也是目 前发展最迅速、效果最显著的方法。机器学习解决的是让机器自主地从数据中获取知识，从 而应用于新的问题中。迁移学习作为机器学习的一个重要分支，侧重于将已经学习过的知 识迁移应用于新的问题中。 迁移学习的核心问题是，找到新问题和原问题之间的相似性，才可以顺利地实现知识 的迁移。比如在我们一开始说的天气问题中，那些北半球的天气之所以相似，是因为它们的 地理位置相似；而南北半球的天气之所以有差异，也是因为地理位置有根本不同。</p>
+</blockquote>
+<h2 id="❓为什么需要迁移学习"><a href="#❓为什么需要迁移学习" class="headerlink" title="❓为什么需要迁移学习"></a>❓为什么需要迁移学习</h2><a id="more"></a>
 
-<p>以最大限度提高肿瘤的控制概率（TCP）、减少正常组织/器官的并发症概率（NTCP）为根本目标，肿瘤放射治疗的照射方式在不断进步，<strong>推动放疗技术向精准治疗发展</strong>。</p>
-<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/clip_image002.png" alt="img"></p>
-<h2 id="肿瘤照射方式"><a href="#肿瘤照射方式" class="headerlink" title="肿瘤照射方式"></a><strong>肿瘤照射方式</strong></h2><p>以加速器技术发展为前提，肿瘤照射方式在传统光子（X/γ射线）、电子放疗的基础上，<strong>发展了粒子放疗（质子、重离子）、硼中子俘获治疗（**</strong>BNCT<strong>**）、闪光放疗等技术</strong>。</p>
-<p>由于质子和重离子穿过物质形成布拉格峰的物理特性以及重离子（主要是C离子）优越的放射生物学特性，相对于光子可以增强靶区剂量并降低正常组织损害，特别适合于眼黑色素瘤等不可切除或不完全切除的局部侵犯性肿瘤、儿科恶性肿瘤等辐射耐受性差的肿瘤。随着对粒子治疗的需求不断增加以及加速器技术的日趋成熟，粒子治疗技术发展迅速；根据粒子治疗合作机构（PTCOG）截止2020年8月的统计：全球在运粒子治疗设施104座（质子92、C离子12），在建41座（质子35、C离子5、质子+C离子1），计划建设28座（质子26、质子+C离子2）。但<strong>粒子放射物理学和生物学的优势是否能转化为患者的治疗获益需要在临床中证实，还需要进一步的技术探索和临床研究</strong>，例如：器官运动造成的剂量波动、穿过不同密度组织的靶程不确定问题、剂量分布的均匀性控制、C离子生物效应、离子治疗在线监测成像等。</p>
-<p>BNCT利用含硼（10B）药物在癌细胞内选择性富集的特点，在中子照射时发生硼俘获反应，释放α粒子和7Li粒子来杀死肿瘤细胞，是具有靶向治疗、低毒高效的一种放疗技术，适合于脑胶质瘤、黑色素瘤等肿瘤。近年来随着加速器强流中子源的技术发展，是BNCT大规模临床应用成为可能；例如，日本政府就规划每百万人口配置0.55套BNCT设备。目前BNCT的临床应用还面临诸多问题，如具有特异亲和力的高效含硼药物研发、高精度的硼剂量测量系统等，需要开展大量的技术研发及细胞和动物实验研究工作。</p>
-<p>极高剂量率的射线照射生物体时，会出现肿瘤组织对射线依然敏感但正常组织敏感性降低的“闪光效应”；闪光放疗基于闪光效应的一种具有治疗前景的放疗方式，具有治疗时间极短（50ms）的优点，可避免治疗过程中的移动误差。闪光放疗在2014年从体外研究阶段转向动物体内研究阶段，并于2019年开展了首例人类皮肤淋巴瘤临床试验。目前，闪光放疗尚处于探索阶段，还需要深入开展放射生物学机制、剂量精确控制等方面的探索研究。</p>
-<h2 id="放疗技术"><a href="#放疗技术" class="headerlink" title="放疗技术"></a><strong>放疗技术</strong></h2><p>随着与计算机和影像学技术的有机结合，放射治疗从常规放疗向精准放疗发展，<strong>在**</strong>2<strong><strong>维放疗的基础上实现了</strong></strong>3<strong><strong>维适形放疗和</strong></strong>4<strong><strong>维动态放疗技术，正在探索自适应放疗技术，并提出了基于生物靶向的</strong></strong>5<strong>**维放疗概念</strong>。</p>
-<p>二维放疗是通过遮挡方式实现不规则形状射野进行均匀剂量照射。三维适形放疗（3D-CRT）以三维解剖影像为基础，通过多叶准直器自动控制和正向三维治疗计划，提高射线剂量体积和靶体积在三维形状上的适形指数；调强适形放疗（IMRT）通过逆向三维治疗计划、细分射束子野并动态调强的方式，使靶体积内各点的剂量分布高度适形。影像引导放疗（IGRT）在三维放疗的基础上引入时间因素，通过图像引导来降低摆位误差、器官运动、解剖结构变化对剂量分布的影响；自适应放疗（ART）则是通过影像信息的动态变化修正治疗计划，实施个体化治疗。生物靶向放疗（BIMRT/BIGRT）通过获取代谢、功能、生理和基因表型等生物影像信息，将肿瘤的放射敏感性差异引入放疗计划，是一种将物理适形和生物适形相结合的5维适形放疗概念。</p>
-<p>综上所示，粒子放疗、硼中子俘获治疗、闪光放疗等在未来具有临床前景，与此同时放疗技术也在向精确治疗发展；<strong>但从一种技术手段发展为常规临床治疗手段还需要深入开展以下方面的工作</strong>：①放疗设备/部件国产化研制；②放射生物学机制的基础探索；③多维影像重建/多模式影像融合技术研究；④照射野参数的正向/逆向确定技术研究；⑤图像引导及自适应修正方法；⑥三维剂量仿真及模型验证技术研究；⑦放疗在线监测成像技术研究等。</p>
+<h3 id="❗传统机器学习面临的困境"><a href="#❗传统机器学习面临的困境" class="headerlink" title="❗传统机器学习面临的困境"></a>❗传统机器学习面临的困境</h3><ol>
+<li>大数据与少标注之间的矛盾。</li>
+</ol>
+<p>机器学习模型的训练和更新，均依赖于数据的标注。然而，尽管我们可以获 取到海量的数据，这些数据往往是很初级的原始形态，很少有数据被加以正确的人工标注。 数据的标注是一个耗时且昂贵的操作，目前为止，尚未有行之有效的方式来解决这一问题。 这给机器学习和深度学习的模型训练和更新带来了挑战。反过来说，特定的领域，因为没有 足够的标定数据用来学习，使得这些领域一直不能很好的发展。</p>
+<ol start="2">
+<li>大数据与弱计算之间的矛盾</li>
+</ol>
+<p>大数据，就需要大设备、强计算能力的设备来进行存储和计算。然而，大数据的大计算 能力，是” 有钱人” 才能玩得起的游戏。比如 Google，Facebook，Microsoft，这些巨无霸 公司有着雄厚的计算能力去利用这些数据训练模型。例如，ResNet 需要很长的时间进行训 练。Google TPU 也都是有钱人的才可以用得起的。 绝大多数普通用户是不可能具有这些强计算能力的。这就引发了大数据和弱计算之间 的矛盾。在这种情况下，普通人想要利用这些海量的大数据去训练模型完成自己的任务，基 本上不太可能。那么如何让普通人也能利用这些数据和模型？</p>
+<ol start="3">
+<li>普适化模型与个性化需求之间的矛盾</li>
+</ol>
+<p>机器学习的目标是构建一个尽可能通用的模型，使得这个模型对于不同用户、不同设 备、不同环境、不同需求，都可以很好地进行满足。这是我们的美好愿景。这就是要尽可能地提高机器学习模型的泛化能力，使之适应不同的数据情形。基于这样的愿望，我们构建了 多种多样的普适化模型，来服务于现实应用。然而，这只能是我们竭尽全力想要做的，目前 却始终无法彻底解决的问题。人们的个性化需求五花八门，短期内根本无法用一个通用的 模型去满足。比如导航模型，可以定位及导航所有的路线。但是不同的人有不同的需求。比 如有的人喜欢走高速，有的人喜欢走偏僻小路，这就是个性化需求。并且，不同的用户，通 常都有不同的隐私需求。这也是构建应用需要着重考虑的。<br>所以目前的情况是，我们对于每一个通用的任务都构建了一个通用的模型。这个模型 可以解决绝大多数的公共问题。但是具体到每个个体、每个需求，都存在其唯一性和特异 性，一个普适化的通用模型根本无法满足。那么，能否将这个通用的模型加以改造和适配， 使其更好地服务于人们的个性化需求？</p>
+<ol start="4">
+<li>特定应用的需求</li>
+</ol>
+<p>机器学习已经被广泛应用于现实生活中。在这些应用中，也存在着一些特定的应用，它 们面临着一些现实存在的问题。比如推荐系统的冷启动问题。一个新的推荐系统，没有足够 的用户数据，如何进行精准的推荐? 一个崭新的图片标注系统，没有足够的标签，如何进行 精准的服务？现实世界中的应用驱动着我们去开发更加便捷更加高效的机器学习方法来加 以解决。</p>
+<h3 id="👁‍🗨迁移学习是如何进行解决的呢"><a href="#👁‍🗨迁移学习是如何进行解决的呢" class="headerlink" title="👁‍🗨迁移学习是如何进行解决的呢?"></a>👁‍🗨迁移学习是如何进行解决的呢?</h3><ol>
+<li>大数据与少标注：迁移数据标注<br>单纯地凭借少量的标注数据，无法准确地训练高可用度的模型。为了解决这个问题，我 们直观的想法是：多增加一些标注数据不就行了？但是不依赖于人工，如何增加标注数据？<br>利用迁移学习的思想，我们可以寻找一些与目标数据相近的有标注的数据，从而利用 这些数据来构建模型，增加我们目标数据的标注。</li>
+<li>大数据与弱计算：模型迁移<br>不可能所有人都有能力利用大数据快速进行模型的训练。利用迁移学习的思想，我们 可以将那些大公司在大数据上训练好的模型，迁移到我们的任务中。针对于我们的任务进 行微调，从而我们也可以拥有在大数据上训练好的模型。更进一步，我们可以将这些模型针 对我们的任务进行自适应更新，从而取得更好的效果。</li>
+<li>普适化模型与个性化需求：自适应学习<br>为了解决个性化需求的挑战，我们利用迁移学习的思想，进行自适应的学习。考虑到不 同用户之间的相似性和差异性，我们对普适化模型进行灵活的调整，以便完成我们的任务。</li>
+<li>特定应用的需求：相似领域知识迁移<br>为了满足特定领域应用的需求，我们可以利用上述介绍过的手段，从数据和模型方法 上进行迁移学习。<br><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210301223124770.png" alt="image-20210301223124770"></li>
+</ol>
+<h2 id="✅与已有概念的区别与联系"><a href="#✅与已有概念的区别与联系" class="headerlink" title="✅与已有概念的区别与联系"></a>✅与已有概念的区别与联系</h2><ol>
+<li><p>迁移学习 VS 传统机器学习：<br>迁移学习属于机器学习的一类，但它在如下几个方面有别于传统的机器学习</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210301230620912.png" alt="image-20210301230620912"></p>
+</li>
+<li><p>迁移学习 VS 多任务学习：<br>多任务学习指多个相关的任务一起协同学习；迁移学习则强调知识由一个领域迁移到 另一个领域的过程。迁移是思想，多任务是其中的一个具体形式。</p>
+</li>
+<li><p>迁移学习 VS 终身学习：<br>终身学习可以认为是序列化的多任务学习，在已经学习好若干个任务之后，面对新的 任务可以继续学习而不遗忘之前学习的任务。迁移学习则侧重于模型的迁移和共同学习。</p>
+</li>
+<li><p>迁移学习 VS 领域自适应：<br>领域自适应问题是迁移学习的研究内容之一，它侧重于解决特征空间一致、类别空间 一致，仅特征分布不一致的问题。而迁移学习也可以解决上述内容不一致的情况。</p>
+</li>
+<li><p>迁移学习 VS 增量学习：<br>增量学习侧重解决数据不断到来，模型不断更新的问题。迁移学习显然和其有着不同 之处。</p>
+</li>
+<li><p>迁移学习 VS 自我学习：<br>自我学习指的是模型不断地从自身处进行更新，而迁移学习强调知识在不同的领域间 进行迁移。</p>
+</li>
+<li><p>迁移学习 VS 协方差漂移<br>协方差漂移指数据的边缘概率分布发生变化。领域自适应研究问题解决的就是协方差 漂移现象。</p>
+</li>
+</ol>
+<h2 id="💌负迁移"><a href="#💌负迁移" class="headerlink" title="💌负迁移"></a>💌负迁移</h2><p>我们都希望迁移学习能够比较顺利地进行，我们得到的结果也是满足我们要求的，皆 大欢喜。然而，事情却并不总是那么顺利。这就引入了迁移学习中的一个负面现象，也就是 所谓的负迁移。</p>
+<p>用我们熟悉的成语来描述：如果说成功的迁移学习是“举一反三”、“照猫画虎”，那么 负迁移则是“东施效颦”。东施已经模仿西施捂着胸口皱着眉头，为什么她还是那么丑?</p>
+<p>要理解负迁移，首先要理解什么是迁移学习。迁移学习指的是，利用数据和领域之间存 在的相似性关系，把之前学习到的知识，应用于新的未知领域。迁移学习的核心问题是，找 到两个领域的相似性。找到了这个相似性，就可以合理地利用，从而很好地完成迁移学习任 务。比如，之前会骑自行车，要学习骑摩托车，这种相似性指的就是自行车和摩托车之间的 相似性以及骑车体验的相似性。这种相似性在我们人类看来是可以接受的。</p>
+<p>所以，如果这个相似性找的不合理，也就是说，两个领域之间不存在相似性，或者基本 不相似，那么，就会大大损害迁移学习的效果。还是拿骑自行车来说，你要拿骑自行车的经 验来学习开汽车，这显然是不太可能的。因为自行车和汽车之间基本不存在什么相似性。所 以，这个任务基本上完不成。这时候，我们可以说出现了负迁移 (Negative Transfer)。</p>
+<p>所以，为什么东施和西施做了一样的动作，反而变得更丑了？因为东施和西施之间压根 就不存在相似性。</p>
+<p>负迁移指的是，在源域上学习到的知识，对于目标域上的学习产生负面作用。</p>
+<p>产生负迁移的原因主要有：</p>
+<ul>
+<li>数据问题：源域和目标域压根不相似，谈何迁移？</li>
+<li>方法问题：源域和目标域是相似的，但是，迁移学习方法不够好，没找到可迁移的成 分。<br>负迁移给迁移学习的研究和应用带来了负面影响。在实际应用中，找到合理的相似性， 并且选择或开发合理的迁移学习方法，能够避免负迁移现象。</li>
+</ul>
+<h3 id="最新研究成果"><a href="#最新研究成果" class="headerlink" title="最新研究成果"></a>最新研究成果</h3><p>随着研究的深入，已经有新的研究成果在逐渐克服负迁移的影响。杨强教授团队 2015 在 数据挖掘领域顶级会议KDD上发表了传递迁移学习文章Transitive transfer learning ， 提出了传递迁移学习的思想。传统迁移学习就好比是踩着一块石头过河，传递迁移学习就 好比是踩着连续的两块石头。 更进一步，杨强教授团队在 2017 年人工智能领域顶级会议 AAAI 上发表了远领域迁 移学习的文章 Distant domain transfer learning ，可以用人脸来识别飞机！ 这就好比是踩着一连串石头过河。这些研究的意义在于，传统迁移学习只有两个领域足够 相似才可以完成，而当两个领域不相似时，传递迁移学习却可以利用处于这两个领域之间 的若干领域，将知识传递式的完成迁移。这个是很有意义的工作，可以视为解决负迁移的有 效思想和方法。可以预见在未来会有更多的应用前景。</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210301231518157.png" alt="image-20210301231518157"></p>
 <p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>
 
     </div>
@@ -338,23 +377,16 @@
 
 
       <footer class="post-footer">
-          
-          <div class="post-tags">
-              <a href="/tags/%E6%94%BE%E7%96%97/" rel="tag"><i class="fa fa-tag"></i> 放疗</a>
-          </div>
 
         
 
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/02/27/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F%E7%89%A9%E7%90%86/" rel="prev" title="医学影像物理">
-      <i class="fa fa-chevron-left"></i> 医学影像物理
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/02/27/%E6%A0%B8%E5%8C%BB%E5%AD%A6%E7%89%A9%E7%90%86%E8%8C%83%E7%95%B4/" rel="next" title="核医学物理范畴">
-      核医学物理范畴 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/02/27/%E8%BE%90%E5%B0%84%E5%9C%BA%E6%BA%90%E9%A1%B9%E5%8F%8D%E6%BC%94%E6%96%B9%E6%B3%95/" rel="next" title="辐射场源项反演方法">
+      辐射场源项反演方法 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -415,7 +447,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%82%BF%E7%98%A4%E6%94%BE%E5%B0%84%E7%89%A9%E7%90%86%EF%BC%88ROP%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">肿瘤放射物理（ROP）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%82%BF%E7%98%A4%E7%85%A7%E5%B0%84%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">肿瘤照射方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%BE%E7%96%97%E6%8A%80%E6%9C%AF"><span class="nav-number">1.2.</span> <span class="nav-text">放疗技术</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9D%93%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">❓为什么需要迁移学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9D%97%E4%BC%A0%E7%BB%9F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9D%A2%E4%B8%B4%E7%9A%84%E5%9B%B0%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">❗传统机器学习面临的困境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%81%E2%80%8D%F0%9F%97%A8%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E8%A7%A3%E5%86%B3%E7%9A%84%E5%91%A2"><span class="nav-number">1.2.</span> <span class="nav-text">👁‍🗨迁移学习是如何进行解决的呢?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%85%E4%B8%8E%E5%B7%B2%E6%9C%89%E6%A6%82%E5%BF%B5%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">✅与已有概念的区别与联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%8C%E8%B4%9F%E8%BF%81%E7%A7%BB"><span class="nav-number">3.</span> <span class="nav-text">💌负迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E6%96%B0%E7%A0%94%E7%A9%B6%E6%88%90%E6%9E%9C"><span class="nav-number">3.1.</span> <span class="nav-text">最新研究成果</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
