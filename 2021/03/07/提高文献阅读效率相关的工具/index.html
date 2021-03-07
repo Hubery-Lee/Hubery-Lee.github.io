@@ -21,20 +21,29 @@
     var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="geant detector construction 几何旋转符合左手法则及RotationMatrix的使用经过验证geant4中的rotate符合左手法则  1234G4RotationMatrix *rot&#x3D;new G4RotationMatrix;rot-&gt;rotateX(90*degree);rot-&gt;rotateY(90*degree);rot-&gt;rotateZ(9">
+  <meta name="description" content="提高文献阅读效率相关的工具[toc]  1. 文献管理工具✏ Citavi官网 https:&#x2F;&#x2F;www.citavi.com&#x2F;en 中文官网 https:&#x2F;&#x2F;www.softhead-citavi.com&#x2F; Citavi 是瑞士学术软件公司开发、广受研究者欢迎的应用程序,它的功能主要可以分为五大项:收集及储存文献数据,查询及管理文献数据,以及帮助研究者快速地使用正确的论文格式撰写文章，知识组织整理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="geant4DetectorConstruction">
-<meta property="og:url" content="https://hubery-lee.github.io/2018/09/11/geant4DetectorConstruction/index.html">
+<meta property="og:title" content="提高文献阅读效率相关的工具">
+<meta property="og:url" content="https://hubery-lee.github.io/2021/03/07/%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="geant detector construction 几何旋转符合左手法则及RotationMatrix的使用经过验证geant4中的rotate符合左手法则  1234G4RotationMatrix *rot&#x3D;new G4RotationMatrix;rot-&gt;rotateX(90*degree);rot-&gt;rotateY(90*degree);rot-&gt;rotateZ(9">
+<meta property="og:description" content="提高文献阅读效率相关的工具[toc]  1. 文献管理工具✏ Citavi官网 https:&#x2F;&#x2F;www.citavi.com&#x2F;en 中文官网 https:&#x2F;&#x2F;www.softhead-citavi.com&#x2F; Citavi 是瑞士学术软件公司开发、广受研究者欢迎的应用程序,它的功能主要可以分为五大项:收集及储存文献数据,查询及管理文献数据,以及帮助研究者快速地使用正确的论文格式撰写文章，知识组织整理">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-09-11T03:39:07.000Z">
-<meta property="article:modified_time" content="2018-09-14T10:29:32.000Z">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/qrsearch2.png">
+<meta property="og:image" content="https://www.softhead-citavi.com/wp-content/uploads/2017/07/c.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307204327760.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307204359013.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307204417703.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/screenshot-1.4.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307212847273.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307213811886.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
+<meta property="article:published_time" content="2021-03-07T13:58:13.000Z">
+<meta property="article:modified_time" content="2021-03-07T14:11:16.177Z">
 <meta property="article:author" content="李会">
-<meta property="article:tag" content="geant4">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/qrsearch2.png">
 
-<link rel="canonical" href="https://hubery-lee.github.io/2018/09/11/geant4DetectorConstruction/">
+<link rel="canonical" href="https://hubery-lee.github.io/2021/03/07/%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7/">
 
 
 <script id="page-configurations">
@@ -47,7 +56,7 @@
   };
 </script>
 
-  <title>geant4DetectorConstruction | Hubery-Lee</title>
+  <title>提高文献阅读效率相关的工具 | Hubery-Lee</title>
   
 
 
@@ -200,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2018/09/11/geant4DetectorConstruction/">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/03/07/%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/owl.jpg">
@@ -213,7 +222,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          geant4DetectorConstruction
+          提高文献阅读效率相关的工具
         </h1>
 
         <div class="post-meta">
@@ -223,16 +232,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-09-11 11:39:07" itemprop="dateCreated datePublished" datetime="2018-09-11T11:39:07+08:00">2018-09-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Geant4%E5%8F%8ARoot%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">Geant4及Root应用</span></a>
-                </span>
+              <time title="创建时间：2021-03-07 21:58:13" itemprop="dateCreated datePublished" datetime="2021-03-07T21:58:13+08:00">2021-03-07</time>
             </span>
 
           
@@ -244,8 +244,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/09/11/geant4DetectorConstruction/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/09/11/geant4DetectorConstruction/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/03/07/%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/07/%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -260,20 +260,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="geant-detector-construction"><a href="#geant-detector-construction" class="headerlink" title="geant detector construction"></a>geant detector construction</h2><ol>
-<li>几何旋转符合<code>左手法则</code>及RotationMatrix的使用<br>经过验证geant4中的rotate符合<code>左手法则</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">G4RotationMatrix *rot=new G4RotationMatrix;</span><br><span class="line">rot-&gt;rotateX(90*degree);</span><br><span class="line">rot-&gt;rotateY(90*degree);</span><br><span class="line">rot-&gt;rotateZ(90*degree);</span><br></pre></td></tr></table></figure>
-<p>注意，再次对rot重复赋值无效，如对上述代码再作如下操作<code>rot-&gt;rotateX(180*degree)</code>,该操作将无效，不会改变之前的rot；<br>那么，要对rot再次赋值该怎么办呢？如下：只需在再次赋值前加<code>rot =new G4RotationMatrix</code>即可；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">  G4RotationMatrix* rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(G4int x_col_num = 0; x_col_num &lt;=NBD_colNb; x_col_num++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(x_col_num==0)&#123;  // the center colume</span><br><span class="line">      NBDx = NBDx0;</span><br><span class="line">      <span class="keyword">for</span>(G4int y_row_num = 0; y_row_num &lt;=NBD_rowNb; y_row_num++ )&#123;</span><br><span class="line">index// NBDx = NBDx0;</span><br><span class="line">indexNBDy = NBDy0+R*sin(y_row_num*theta);</span><br><span class="line">indexNBDz = NBDz0+R*(1-cos(y_row_num*theta));</span><br><span class="line"></span><br><span class="line">index<span class="keyword">if</span>(y_row_num==0)&#123;</span><br><span class="line">index  // center position</span><br><span class="line">index  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">index  rotationMatrix_X-&gt;rotateX(y_row_num*theta);</span><br><span class="line"></span><br><span class="line">index  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">indexindexindex    G4ThreeVector(NBDx,NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">indexindexindex    logicAssembleNBD,                    //its logical volume</span><br><span class="line">indexindexindex    <span class="string">&quot;AssembleNBD&quot;</span>,         //its name</span><br><span class="line">indexindexindex    expHall_logV,          //its mother  volume</span><br><span class="line">indexindexindex    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">indexindexindex    0,                     //copy number</span><br><span class="line">indexindexindex    <span class="literal">true</span>);                    //overlaps checking    </span><br><span class="line">index&#125;</span><br><span class="line">index<span class="keyword">else</span>&#123;</span><br><span class="line">index  //+y++</span><br><span class="line">index  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">index  rotationMatrix_X-&gt;rotateX(-y_row_num*theta);</span><br><span class="line"></span><br><span class="line">index  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">indexindexindex    G4ThreeVector(NBDx,NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">indexindexindex    logicAssembleNBD,                    //its logical volume</span><br><span class="line">indexindexindex    <span class="string">&quot;AssembleNBD&quot;</span>,         //its name</span><br><span class="line">indexindexindex    expHall_logV,          //its mother  volume</span><br><span class="line">indexindexindex    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">indexindexindex    0,                     //copy number</span><br><span class="line">indexindexindex    <span class="literal">true</span>);               // overlaps checking </span><br><span class="line">index  //-y++</span><br><span class="line">index  rotationMatrix_X = new G4RotationMatrix;</span><br><span class="line">index  rotationMatrix_X-&gt;rotateX(y_row_num*theta);</span><br><span class="line">index  new G4PVPlacement(rotationMatrix_X,                      //no rotation</span><br><span class="line">indexindexindex    G4ThreeVector(NBDx,-NBDy,NBDz),       //at (0,0,0)</span><br><span class="line">indexindexindex    logicAssembleNBD,                    //its logical volume</span><br><span class="line">indexindexindex    <span class="string">&quot;AssembleNBD&quot;</span>,         //its name</span><br><span class="line">indexindexindex    expHall_logV,          //its mother  volume</span><br><span class="line">indexindexindex    <span class="literal">false</span>,                 //no boolean operation</span><br><span class="line">indexindexindex    0,                     //copy number</span><br><span class="line">indexindexindex    <span class="literal">true</span>);               // overlaps checking    </span><br><span class="line">index&#125;</span><br><span class="line">      &#125;</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>G4VParameterisation()的使用</li>
-</ol>
+        <h1 id="提高文献阅读效率相关的工具"><a href="#提高文献阅读效率相关的工具" class="headerlink" title="提高文献阅读效率相关的工具"></a>提高文献阅读效率相关的工具</h1><p>[toc]</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/qrsearch2.png" alt="qrsearch2"></p>
+<h2 id="1-文献管理工具"><a href="#1-文献管理工具" class="headerlink" title="1. 文献管理工具"></a>1. 文献管理工具</h2><h3 id="✏-Citavi"><a href="#✏-Citavi" class="headerlink" title="✏ Citavi"></a>✏ Citavi</h3><p>官网 <span class="exturl" data-url="aHR0cHM6Ly93d3cuY2l0YXZpLmNvbS9lbg==">https://www.citavi.com/en<i class="fa fa-external-link-alt"></i></span></p>
+<p>中文官网 <span class="exturl" data-url="aHR0cHM6Ly93d3cuc29mdGhlYWQtY2l0YXZpLmNvbS8=">https://www.softhead-citavi.com/<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2l0YXZpLmNvbS9lbg==">Citavi<i class="fa fa-external-link-alt"></i></span> 是瑞士学术软件公司开发、广受研究者欢迎的应用程序,它的功能主要可以分为五大项:收集及储存文献数据,查询及管理文献数据,以及帮助研究者快速地使用正确的论文格式撰写文章，知识组织整理，日常任务规划。我们可以将 Citavi 的设计概念理解为是在模拟一座属于自己的图书馆( Citavi Library),这座图书馆由原先空无一物开始,由我们将数据一笔一笔地或一次多笔地放进图书馆中,这些数据包含图书、期刊论文、影音媒体、法律文件、图片等。当图书馆内的数据多起来时,还可以通过群组将数据归类。检索的功能则可轻松调阅所需数据,方式与查询图书馆馆藏目录一样的便利。到了撰写论文的阶段,通过 Citavi 内建的论文模板和自动形成引用格式的功能可以大幅地减少各项文书工作的时间。</p>
+<p><img src="https://www.softhead-citavi.com/wp-content/uploads/2017/07/c.png" alt="img"></p>
+<p>citavi可谓是文献管理中的战斗机，功能最为强大，除了跨平台和启动慢外，暂时没有发现有什么 其他缺点。</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307204327760.png" alt="image-20210307204327760"></p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307204359013.png" alt="image-20210307204359013"></p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307204417703.png" alt="image-20210307204417703"></p>
+<h3 id="🖌-Zotero"><a href="#🖌-Zotero" class="headerlink" title="🖌 Zotero"></a>🖌 Zotero</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuem90ZXJvLm9yZy8=">https://www.zotero.org/<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuem90ZXJvLm9yZy8=">Zotero<i class="fa fa-external-link-alt"></i></span>是一个开放源码的工具，可以轻松地收集、组织、引用和分享研究资源，可以使用网络浏览器扩展和电脑上的独立程序。由于此网站是开源的，因此是完全免费的。Zotero是一个很好的参考管理器，特别是对于学生来说，因为它可以在个人设备(笔记本电脑、iPad、手机等)上同时运行网络服务和离线服务。Zotero不仅可以存储和格式化书目信息，还可以组织、标记和搜索这些信息，自动、无缝地从书籍、期刊文章和其他在线资源中提取信息，使得创建参考列表的整个过程变得轻松。</p>
+<p>特点是跨平台，对中文兼容性好</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/screenshot-1.4.png" alt="Screenshot of the Zotero desktop application"></p>
+<h3 id="🖍-Mendeley"><a href="#🖍-Mendeley" class="headerlink" title="🖍 Mendeley"></a>🖍 Mendeley</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWVuZGVsZXkuY29tLz9pbnRlcmFjdGlvbl9yZXF1aXJlZD10cnVl">https://www.mendeley.com/?interaction_required=true<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWVuZGVsZXkuY29tLz9pbnRlcmFjdGlvbl9yZXF1aXJlZD10cnVl">Mendeley<i class="fa fa-external-link-alt"></i></span>与前面两个的功能差不多，老用户比较多；Mendeley是一个免费的学术文献交流平台，所有人都可以在Mendeley上搜索到世界各地的学术文献，而这些学术文献都是由用户自己上传进Mendeley “图书馆(Library)”进行编辑管理。美国媒体2013年4月9日爆出消息，老牌科技出版巨头Elsevier将收购Mendeley ，收购价格将在6900 万美元到1 亿美元之间 [1] 。</p>
+<p>Elsevier收购Mendeley之后，将能够把自己的线上渠道打通，也能够整合线上内容资源。Elsevier对外承诺，将会保持Mendeley开放的特性。</p>
+<h3 id="🖋-EndNote"><a href="#🖋-EndNote" class="headerlink" title="🖋 EndNote"></a>🖋 EndNote</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZW5kbm90ZS5jb20v">EndNote<i class="fa fa-external-link-alt"></i></span>与前面几个的功能差不多，可以说是文献管理领域的元老了，以前大部分高校都用的是EndNote；<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9FbmRub3Rl">Endnote<i class="fa fa-external-link-alt"></i></span>由Thomson Corporation下属的Thomson ResearchSoft 开发。 Thomson ResearchSoft是以学术信息市场化和开发学术软件为宗旨的子公司。Thomson Corporation总部位于<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS/nvo7lm70vMTI1NDg2">美国<i class="fa fa-external-link-alt"></i></span>康涅狄格州的Stanford。</p>
+<h2 id="2-翻译工具"><a href="#2-翻译工具" class="headerlink" title="2. 翻译工具"></a>2. 翻译工具</h2><p>知名在线翻译工具主要有以下几个：</p>
 <ul>
-<li><code>ComputeTransformation</code> defines where one of the copies is placed</li>
-<li><code>ComputeDimensions</code> defines the size of one copy, and a constructor that initializes any member variables that are required.</li>
+<li>百度翻译 <span class="exturl" data-url="aHR0cHM6Ly9mYW55aS5iYWlkdS5jb20vP2FsZHR5cGU9MTYwNDcjYXV0by96aA==">https://fanyi.baidu.com/?aldtype=16047#auto/zh<i class="fa fa-external-link-alt"></i></span></li>
+<li>谷歌翻译 <span class="exturl" data-url="aHR0cHM6Ly90cmFuc2xhdGUuZ29vZ2xlLmNuLw==">https://translate.google.cn/<i class="fa fa-external-link-alt"></i></span></li>
+<li>DeepL翻译  <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVlcGwuY29tL3RyYW5zbGF0b3I=">https://www.deepl.com/translator<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
-<p>G4VParameterisation的具体应用可参看Basics/B2/B2b</p>
+<p>划词翻译工具推荐 <code>copytranslator和百度翻译电脑版</code>，我个人已经不用<code>知云翻译</code>,你们如果感兴趣可以用。</p>
+<h3 id="🔰-CopyTranslator"><a href="#🔰-CopyTranslator" class="headerlink" title="🔰 CopyTranslator"></a>🔰 CopyTranslator</h3><p>有多种方式的翻译对比，复制立即翻译，但是翻译速度比较慢</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307212847273.png" alt="image-20210307212847273"></p>
+<h3 id="🚀-百度翻译"><a href="#🚀-百度翻译" class="headerlink" title="🚀 百度翻译"></a>🚀 百度翻译</h3><p>也是复制翻译，特点是速度快</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210307213811886.png" alt="image-20210307213811886"></p>
+<h3 id="🏡-知云翻译阅读器"><a href="#🏡-知云翻译阅读器" class="headerlink" title="🏡 知云翻译阅读器"></a>🏡 知云翻译阅读器</h3><p>特点是ipdf阅读器集成划词翻译功能，但是窗口调节不方便，想用adobe pdf阅读器的话，就不要用这个了。</p>
+<h2 id="3-笔记工具"><a href="#3-笔记工具" class="headerlink" title="3.  笔记工具"></a>3.  笔记工具</h2><ul>
+<li>onenote</li>
+<li>印象笔记</li>
+<li>有道云笔记</li>
+<li>或者直接自己用建文件夹，用typora写笔记，放到云盘里</li>
+</ul>
+<h2 id="4-云盘推荐"><a href="#4-云盘推荐" class="headerlink" title="4.云盘推荐"></a>4.云盘推荐</h2><ul>
+<li>onedrive 微软自带，免费5G容量</li>
+<li>坚果云 国内厂商，类似onedrive，比较好用</li>
+<li>阿里云盘</li>
+<li>百度网盘</li>
+<li>华为云盘</li>
+<li>蓝奏云</li>
+<li>dropbox</li>
+<li>google云盘</li>
+<li>office 365云盘</li>
+</ul>
+<p>好了，今天的介绍就到这里，大家可以按自己的喜好挑选自己的顺手的工具，希望大家能提高工作效率呀！！！</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>
 
     </div>
 
@@ -336,23 +371,16 @@
 
 
       <footer class="post-footer">
-          
-          <div class="post-tags">
-              <a href="/tags/geant4/" rel="tag"><i class="fa fa-tag"></i> geant4</a>
-          </div>
 
         
 
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2018/09/11/The-use-of-gnomescreenshot-command/" rel="prev" title="The use of gnome-screenshot command">
-      <i class="fa fa-chevron-left"></i> The use of gnome-screenshot command
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2018/09/09/G4Color%E9%80%89%E9%A1%B9/" rel="next" title="G4Color选项">
-      G4Color选项 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/03/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0/" rel="next" title="小样本学习研究综述">
+      小样本学习研究综述 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -413,7 +441,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#geant-detector-construction"><span class="nav-number">1.</span> <span class="nav-text">geant detector construction</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">提高文献阅读效率相关的工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">1. 文献管理工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9C%8F-Citavi"><span class="nav-number">1.1.1.</span> <span class="nav-text">✏ Citavi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%96%8C-Zotero"><span class="nav-number">1.1.2.</span> <span class="nav-text">🖌 Zotero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%96%8D-Mendeley"><span class="nav-number">1.1.3.</span> <span class="nav-text">🖍 Mendeley</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%96%8B-EndNote"><span class="nav-number">1.1.4.</span> <span class="nav-text">🖋 EndNote</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BF%BB%E8%AF%91%E5%B7%A5%E5%85%B7"><span class="nav-number">1.2.</span> <span class="nav-text">2. 翻译工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%B0-CopyTranslator"><span class="nav-number">1.2.1.</span> <span class="nav-text">🔰 CopyTranslator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%9A%80-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91"><span class="nav-number">1.2.2.</span> <span class="nav-text">🚀 百度翻译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8F%A1-%E7%9F%A5%E4%BA%91%E7%BF%BB%E8%AF%91%E9%98%85%E8%AF%BB%E5%99%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">🏡 知云翻译阅读器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">1.3.</span> <span class="nav-text">3.  笔记工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BA%91%E7%9B%98%E6%8E%A8%E8%8D%90"><span class="nav-number">1.4.</span> <span class="nav-text">4.云盘推荐</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
