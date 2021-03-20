@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="Portable Gamma Camera for Nuclear Power PlantsSONG *YuShou1, *LI Hui 1, HU Liyuan1, HOU Yingwei1, LIU Huilan1  Abstract: Gamma camera is a powerful tool to locate radioactive sources and contamination">
+<meta property="og:type" content="article">
+<meta property="og:title" content="综述-便携式gamma相机">
+<meta property="og:url" content="https://hubery-lee.github.io/2021/03/20/%E7%BB%BC%E8%BF%B0-%E4%BE%BF%E6%90%BA%E5%BC%8Fgamma%E7%9B%B8%E6%9C%BA/index.html">
+<meta property="og:site_name" content="Hubery-Lee">
+<meta property="og:description" content="Portable Gamma Camera for Nuclear Power PlantsSONG *YuShou1, *LI Hui 1, HU Liyuan1, HOU Yingwei1, LIU Huilan1  Abstract: Gamma camera is a powerful tool to locate radioactive sources and contamination">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115551843.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115617646.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115644300.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320120136574.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320120152625.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115729316.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2021/AppData/Roaming/Typora/typora-user-images/image-20210320115804200.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2021/AppData/Roaming/Typora/typora-user-images/image-20210320115813859.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115830895.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2021/AppData/Roaming/Typora/typora-user-images/image-20210320115858234.png">
+<meta property="og:image" content="https://hubery-lee.github.io/2021/AppData/Roaming/Typora/typora-user-images/image-20210320115906581.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115922630.png">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
+<meta property="article:published_time" content="2021-03-20T04:06:55.000Z">
+<meta property="article:modified_time" content="2021-03-20T04:08:01.306Z">
+<meta property="article:author" content="李会">
+<meta property="article:tag" content="gamma相机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115551843.png">
+
+<link rel="canonical" href="https://hubery-lee.github.io/2021/03/20/%E7%BB%BC%E8%BF%B0-%E4%BE%BF%E6%90%BA%E5%BC%8Fgamma%E7%9B%B8%E6%9C%BA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>综述-便携式gamma相机 | Hubery-Lee</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Hubery-Lee" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hubery-Lee</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">蒹葭苍苍，白露为霜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-introduction">
+
+    <a href="/introduction/" rel="section"><i class="fa fa-comment fa-fw"></i>introduction</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">40</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">20</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/03/20/%E7%BB%BC%E8%BF%B0-%E4%BE%BF%E6%90%BA%E5%BC%8Fgamma%E7%9B%B8%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          综述-便携式gamma相机
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-20 12:06:55" itemprop="dateCreated datePublished" datetime="2021-03-20T12:06:55+08:00">2021-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BE%90%E5%B0%84%E6%88%90%E5%83%8F/" itemprop="url" rel="index"><span itemprop="name">辐射成像</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/20/%E7%BB%BC%E8%BF%B0-%E4%BE%BF%E6%90%BA%E5%BC%8Fgamma%E7%9B%B8%E6%9C%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/20/%E7%BB%BC%E8%BF%B0-%E4%BE%BF%E6%90%BA%E5%BC%8Fgamma%E7%9B%B8%E6%9C%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Portable-Gamma-Camera-for-Nuclear-Power-Plants"><a href="#Portable-Gamma-Camera-for-Nuclear-Power-Plants" class="headerlink" title="Portable Gamma Camera for Nuclear Power Plants"></a>Portable Gamma Camera for Nuclear Power Plants</h1><p><strong>SONG *<em>YuShou1, *</em>LI</strong> <strong>Hui</strong> 1, <strong>HU Liyuan1,</strong> <strong>HOU</strong> <strong>Yingwei1</strong>, LIU Huilan1 </p>
+<p><strong>Abstract:</strong> Gamma camera is a powerful tool to locate radioactive sources and contaminations in nuclear facilities. It is widely used in activities decommission, decontamination, maintenance and emergency response of nuclear power plants (NPPs). In recent decades, especially after the Fukushima nuclear accident a big progress has been made for this technique. A brief review of the principles and characteristics of three predominant imaging approaches are presented. The existing practical applications are summarized and potential application fields are discussed. </p>
+<p><strong>Keyword:</strong> portable gamma camera; nuclear power plants; decommission; emergency response</p>
+<a id="more"></a>
+
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>The nuclear emergency response has attracted much attention since the most recent nuclear catastrophe in Fukushima in 2011[1,2]. The investigation of the radioactive isotopes is very important for the activities of response and evacuation of the citizens around the power plants. The excellent performance of a gamma camera in radiation detection had attracted much attention. The gamma camera application for nuclear disaster response can be retrospect to the Chernobyl nuclear power plants accident [3-5]. A gamma camera equipped with a pinhole collimator called Gamma-Visor was used in the emergency response. It was developed by the Kurchatov Institute of Russia.</p>
+<p>Before Chernobyl disaster, a series of devices for imaging gamma sources had been used in nuclear medicine and astrophysics research [6, 7]. Anger Camera is a famous gamma camera applied in nuclear medicine. Multichannel collimators are used to form gamma images on a position sensitive detector. However, the industrial products of gamma camera used in medicine and astrophysics are not fit to inspect the radiation of nuclear power plants (NPPs). The containment of an NPP is filled with instruments and there is high level of radiation. It requited that a gamma camera should a small dimensions and light weight and can be controlled remotely. Further, the multichannel collimator is not able to visualize the radiation contaminated objects at a distance. And the multichannel collimator intended for medical application is not able to image the radioactive object at a distance.</p>
+<p>Consequently, several research groups developed portable gamma cameras for NPPs [2, 4, 8, 9], which can be mounted on a tripod or a mobile robot. They can be used to access radiation premise in the NPPs (Nuclear Power Plants) and inspect the radiation distribution during emergency response [10-15] and decommissioning [16-22]. In accidents of nuclear power plants, gamma cameras are supposed to provide the information about the leakage, contamination of radioactive matter to the emergency response. With the developments of nuclear power industry for decades, a lot of commercial and research nuclear plants have reached the end of their operating lifetime and are being shut-down. Before disassembling the reactors, the instruments in the reactor need to be decontaminated. Optimal decontamination strategies need to be used to minimize the staff radiation exposure according to the character of the contamination. The gamma camera is also a powerful tool to investigate the radiation contaminations [16-21, 23].</p>
+<p>This report gives an overview of the different gamma cameras used for the NPPs. The following three sections (section 2 to section 4) describe the three imaging approaches of the existing gamma cameras: the pinhole[4], the coded mask[24, 25] and the Compton scatter[26-28], respectively. The evolution of image processes and radiation sensors is discussed in section 5 and section 6, and a future perspective is placed in section 7. A summary is given in the last section.</p>
+<h2 id="2-The-pinhole-gamma-camera"><a href="#2-The-pinhole-gamma-camera" class="headerlink" title="2 The pinhole gamma camera"></a>2 The pinhole gamma camera</h2><p>The pinhole collimated gamma camera is based on the pinhole imaging principle [3-5, 8, 29-31]. The schematic diagram of the measuring head of pinhole collimated gamma camera is shown in Fig. 1. It consists of pinhole collimator, portable position sensitive detector, lead or tungsten alloy shielding, video camera and collimator stopper (shutter or filter).</p>
+<p>​                 <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115551843.png" alt="image-20210320115551843">       </p>
+<p>Fig. 1 The schematic diagram of the gamma camera with the pinhole collimator</p>
+<p>The overturned gamma image of the visualized radioactive object is projected by the two-cone pinhole collimator. The diameter of the mini part of the collimator is less than 10mm. The distance between the pinhole and the scintillator is a constant as designed. Position sensitive scintillator matrix is connected with the image intensifier. The image intensifier composes of fiber tapers and photomultiplier or photodiode. The image intensifier connects with the CCD matrix to convert the radiation signal to digital signal which can be saved to the computer and used to reconstruct the composited image. A feature of this kind of gamma camera is the shutter in front of the collimator. When the shutter is closed, the background is measured, which may be used to eliminate the specific background from the image measured with the shutter open. With the shutter, one may increase the signal-to-noise ratio, meanwhile not increase the shielding.</p>
+<p>In the 1980s, researchers began to use gamma cameras in the field of searching the radiation source at NPPs. The Kurchatov Institute of Russia and the European research team CEA (French Alternative Energies and Atomic Energy Commission) developed their gamma cameras respectively [2, 4, 8, 9].</p>
+<p>The Gamma Visor prototype was designed by the Kurchatov Institute. The industrial products were applied to inspect the near-reactor premises under the complex gamma field conditions of high contaminated nuclear facilities in Russia and Germany. It is shown that the application of the portable gamma-ray imager is the fastest way for search and identification of the most contaminated fragments of equipment. In addition, it is verified that the major contaminated parts of the pipelines are their bends, places of pipes connection, and valves [3-5, 30, 31]. The gamma-ray imager also discovered some fragments with high contamination level which were not known earlier. For example, around the connection of two pipes the radioactive contamination concentrated much more at the weld place rather than the connecting place.</p>
+<p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115617646.png" alt="image-20210320115617646"></p>
+<p>Fig. 2 The schematic diagram of gamma camera imaging on films</p>
+<p>At the same time, CEA also developed a pinhole-collimated gamma camera independently. It images gamma radiation and visual-light on films[29]. The schematic diagram is showed in Fig. 2. Two different types of films are presented for gamma ray sources and visible-light objects imaging respectively. The images are formed by exposing twice: once for the gamma rays sources with the shutter closed, and the second time for visual-lights objects with the shutter open. This device obtained a typical image which revealed the contamination inside a valve during a measurement campaign in the EDF power station at Bugey in 1985[29]. The brief design and its simple operation ensure the reliability in industrial applications. The most distinctive characteristic is that the device does not require electronic signal processing system and external power supply. The film allows for a wide dynamic energy range and permits simultaneous exposure of several emulsions with different sensitivities to cover a wide range of dose rates. The apparent disadvantage is its inherent offline measurement. The unit has to be placed blindly and the interesting field of view (FOV) can not be determined without the knowledge of the premises. The device must be set up after each exposure; and the handling operations before and after each exposure (cutting film sheets, placing them in the proper sequence, insertion in the chamber, removal, development, drying, etc.) must be performed with considerable care. The most serious drawback is the long exposure time (up to 24 hours) necessary to obtain a suitable image, which limits the application as a real-time monitor.</p>
+<p>CEA improved the film gamma camera to be an advanced online measuring system later [29]. It developed ALADIN, which adopted a scintillator radiation sensor CsI and an electronic data acquisition system. The angular resolution ranged from 1°to over 4°which depended on the radiation energy, the type of collimators used and the FOV of the device. A novel feature of ALADIN is that the visible-light image and gamma image are both obtained using the same acquisition system. </p>
+<p>In recent years, the Argonne National Laboratory developed a gamma camera using pinhole collimator RadSearch. It employs a sensitive and highly collimated LaBr3 scintillator as the detector head. An optical camera with controllable zoom and focus and a laser range finder are used to localize the objects. The schematic diagram of RadSearch detector head is shown in Fig. 3. The radiation sensor LaBr3 scintillator is shielded by tungsten. The collimator is made up of steel barrel and steel filter insert which has the similar function as the shutter of Gamma Visor.</p>
+<p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115644300.png" alt="image-20210320115644300"></p>
+<p>Fig. 3 The schematic diagram of RadSearch detector head</p>
+<p>The detector head is mounted on a pan/tilt mechanism with a range of motion of 360 degree (pan) and 180 degree (tilt). The scan process is based on a rectangular grid scan of an area or object, which is known as the Scan Area or Scan Grid. The Scan Area is divided into rectangular Scan Elements, each of which is either equal to or less than the detector field of view, either 4 degrees with the collimator barrel fitted or 18 degrees with the collimator barrel removed. In normal operation, RadSearch provides a video image of the object or surface with a colored overlay showing the distribution of radioactivity. A gamma-ray spectrum is obtained for each Scan Element. From each measured spectrum a number of different radionuclides can be identified. And the radioactive source distribution can be determined according to the distribution of the counting rates in the scan area. The activity of different radionuclides and their spatial distribution in a waste container can be given by this instrument. Based on such information, one may establish the approach to assay canisters prior to processing [22, 32, 33]. </p>
+<p>The instrument is portable and the combined weight of all the components (including the tripod) is less than 54 kg. Therefore, it can be deployed by a single person in less than 10 min. During the measurement, the device can be controlled remotely. The device can be controlled wireless and modularized. Thus, it can be mounted on a tripod or mobile robot. The remote monitoring station makes up of a notebook computer and small power supply unit. RadSearch is normally operated from a notebook computer, which can be located up to 100 meters away from the detector head with the power supply unit. The device can be deployed readily indoors or in the field by an operator. Software allows both automatic and manual operation; and an operator can specify coordinates to search a specific position or area. A search can be conducted automatically in 4π steradians, using the full capabilities of the pan/tilt mechanism.</p>
+<p>China Academy of Engineering Physics developed a portable radionuclide identification system[34]. This system is a gamma ray spectrometer using a scintillator detector and a pulse height multi-channel analyzer. It can help to inspect the outflow of NPPs securing the radioactive safety. This portable gamma spectrometer consists of alternative LaBr3 or NaI detector (according to user demand) and a panel computer. The communication between the panel computer and the detector can be by Bluetooth and USB. With the Bluetooth type connection, the maximum distance between the detector and the panel computer is 15 meters. It has two types of measurement model, 30 s and 120 s for identifying different radionuclides. The experimental test shows that 30 s is long enough to identify radionuclides successfully. The data for different radionuclide is saved in the panel computer. The artificial neutral network algorithm is adopted to perform the nuclide identification.</p>
+<h2 id="3-The-coded-mask-gamma-camera"><a href="#3-The-coded-mask-gamma-camera" class="headerlink" title="3 The coded mask gamma camera"></a>3 The coded mask gamma camera</h2><p>During the development of these pinhole gamma camera products, researchers found out the fact that the sensitivity of a gamma camera increases and the angle resolution decreases with enlarging the diameter of the pinhole aperture. For example, two pinhole collimators with FOVs of 30°and 50°were provided to form gamma image for CARTOGAM. In Table 1 the FWHM values measured at 660keV (137Cs) and 1.25MeV (60Co) are listed for different camera configurations. According to Table 1, we can see that gamma cameras equipped with 30°pinhole collimator has better spatial resolution than fixed with 50°pinhole collimator. And if a gamma camera equips with the same FOV collimator, the 2 millimeter thick scintillator has better spatial resolution.</p>
+<p><strong>Table 1</strong> <strong>The angular response (FWHM) of CARTOGAM measured for different gamma energies, scintillator thicknesses and collimator types</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>241Am  (59keV)</th>
+<th>137Cs  (660keV)</th>
+<th>60Co  (1.25MeV)</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Thickness</td>
+<td>4mm</td>
+<td>2mm</td>
+<td>4mm</td>
+<td>2mm</td>
+<td>4mm</td>
+</tr>
+<tr>
+<td>30°collimator</td>
+<td>2.0°</td>
+<td>1.9°</td>
+<td>2.3°</td>
+<td>2.8°</td>
+<td>3.2°</td>
+</tr>
+<tr>
+<td>50°collimator</td>
+<td>3.1°</td>
+<td>3.3°</td>
+<td>4.6°</td>
+<td>6.1°</td>
+<td>6.7°</td>
+</tr>
+</tbody></table>
+<p>Using a pinhole to image is very simple in principle but very inefficient in practice. A highly attractive alternative is to substitute the pinhole with a coded mask collimator. The coded mask collimated gamma camera is also composed of a radiation detector and a video camera. The radiation detector consists of a coded mask, a scintillator plate, image intensifiers, and CCD matrix. The principle of the measuring process is as follows. </p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320120136574.png" alt="image-20210320120136574"></p>
+<p>(a)</p>
+<p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320120152625.png" alt="image-20210320120152625"></p>
+<p>(b)</p>
+<p>Fig.4 The imaging procedure for a camera with code masks collimator (a) and its structural schematic (b). </p>
+<p>Gamma rays interact with scintillator crystal, fluorescing and forming the radiation image which is modulated by the coded mask. The coded images should be decoded by the computer to get the images which reflect the radiation distribution accurately (Fig.4 (a)). Such coded masks have been designed and used for several decades, mainly for astrophysical applications [6, 7], but in most cases their size is of the magnitude of 1m. So that it can not be used in the premises of NPPs. And the video camera obtains the visual light images. The schematic diagram of gamma-imaging structural using coded mask collimator is shown in Fig.4 (b).</p>
+<p>CEA and the Kurchatov Institute both had their products using coded mask collimators. The ALADIN and CARTOGAM gamma camera developed by the CEA was tested combining with a very compact coded-mask [25, 35-37]. Based on the experience of developing the pinhole gamma camera, Gamma Visor, the Kurchatov Institute used coded mask collimators on gamma cameras for nuclear reactor decontamination and decommissioning missions for the first time in 1999[31, 38-41]. </p>
+<p>The coded aperture mask is used to optimize the trade-off between the sensitivity and the spatial resolution. Three HURA (hexagonal uniformly redundant array) masks had been fabricated and tested, with different numbers of holes and thicknesses (Table 2), and fixed to ALADIN and CARTOGAM. The results of the first tests in laboratory showed a gain of a factor between 5 and 20 in sensitivity (according to the exposure) compared to the pinhole configuration, and a factor between 2 and 2.5 in angular resolution (according to gamma energy)[25]. They also demonstrated the ability of this device to efficiently remove the background noise, thanks to a mask pattern anti-symmetric by 60 degree rotation.</p>
+<p><strong>Table</strong> <strong>2</strong> <strong>Characteristics of the masks</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mask</th>
+<th>Rank 6</th>
+<th>Rank 9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Thickness</td>
+<td>12mm</td>
+<td>6mm</td>
+</tr>
+<tr>
+<td>Distance  between holes</td>
+<td>1.85mm</td>
+<td>1.26mm</td>
+</tr>
+<tr>
+<td>Number of  holes in central pattern</td>
+<td>64</td>
+<td>136</td>
+</tr>
+<tr>
+<td>Open area</td>
+<td>1.9cm2</td>
+<td>1.9cm2</td>
+</tr>
+</tbody></table>
+<p>Mask/anti-mask procedure was applied to CARTOGAM and it can also base on a ninety degrees rotation of the coded mask (Fig. 5). Two acquisitions were required (one in mask position, the other in anti-mask position) and the raw image is obtained by decoding the subtraction of these two gamma images. A measurement carried out in the NPPs site illustrates the mask/anti-mask procedure is efficient in removing the background radiation.</p>
+<p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115729316.png" alt="image-20210320115729316"></p>
+<p>Fig.5. Coded masks. On the left: mask position. On the right: anti-mask position (nighty degrees rotation of the mask)</p>
+<h2 id="4-The-Compton-gamma-camera"><a href="#4-The-Compton-gamma-camera" class="headerlink" title="4 The Compton gamma camera"></a>4 The Compton gamma camera</h2><p>The pinhole and the coded mask cameras are supposed to give 2D radiation source distributions. To acquire the distance between the gamma camera and the radiation source, laser range finder is invoked.  Or measurements more than twice at different positions are performed (see Fig 6). The distance can be calculated by triangulation [42-44]. </p>
+<p> <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20210320115804200.png" alt="image-20210320115804200"></p>
+<p>Fig. 6 The principle of locating the source position in three dimensions</p>
+<p>In order to obtain the 3D radiation distribution more conveniently and effectively, a Compton camera has been was proposed. Compton camera is a device which can locate the incident direction of gamma rays based on the Compton kinetics by measuring the energy deposition and interaction positions in the scatter and absorber (Fig. 7). </p>
+<p> <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20210320115813859.png" alt="image-20210320115813859"></p>
+<p>Fig. 7 The schematic diagram of the Compton gamma camera</p>
+<p>The scatter and absorber scintillator are position sensitive. Actually, if the two interaction position of a gamma ray in the radiation sensor can be determined, the incident direction of the gamma ray can be calculated by equation (1). </p>
+<p>​         <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115830895.png" alt="image-20210320115830895">    (1)</p>
+<p>In the equation (1), θe is the Compton scatter angle. E1 is the energy deposited in scatter and E2 is the energy deposited in the absorber. me is the energy mass of scattered photoelectron. The direction of each incident photon is on the surface of a cone with its vertex at the first interaction position. The line connecting the scattering point and absorption point is the axis of symmetry. The back-projection cone of each photon passes through the source position. Thus, the source direction can be reconstructed with the overlap of the cones.</p>
+<p>A research team from Japan developed a handheld Compton camera for the catastrophe in the Fukushima Daiichi Nuclear Power Station [1, 2]. This device can be used to detect the depth of the radioactive sources embedded under the contaminated surface[1]. The Compton camera (14cmÍ15cmÍ 16cm, 2.5kg) uses Ce:GAGG (Ce doped Gd3Al2Ga3O12) crystal as the detector [1, 2, 26, 45]. The angular resolution is ~8 degree (FWHM) for a 137Cs source. The handheld Compton camera realizes a 180 degree FOV with sensitivity   1% for 662 keV gamma rays. The performance is satisfied in tests. </p>
+<p>Dan Xu et al. from the University of Michigan also developed a compact Compton camera Polaris-H imaging spectrometer supported by DOE and DHS in 2004 [27, 28, 46, 47]. Polaris-H was designed to obtain the radiation distribution and identify isotopic composition of the sources on nuclear power plants premises. It integrates a 3D-position sensitive pixelated CdZnTe detector (20mmÍ20mmÍ15mm), associated with readout electronics, an embedded computer, a 5h battery, and an optical camera in a portable waterproof enclosure [9, 48-55]. The total mass is about 4 kg, and the system startup time is 2 min. The energy resolution is nearly 1.0% (FWHM) for 137Cs. </p>
+<h2 id="5-The-visible-light-image"><a href="#5-The-visible-light-image" class="headerlink" title="5 The visible-light image"></a>5 The visible-light image</h2><p>In order to investigate the distribution of surface contamination and to locate the radioactive sources, a gamma camera is usually qualified with both radiation and vision imaging. The radiation detector is used to acquire radiation image and the optical camera is used to obtain optical image within the same detection direction and correlative FOV. Both ALADIN and Gamma Visor provide vision image in addition to the radiation image. The independent visible light imaging system of Gamma Visor performs better in the field testing in comparison with ALADIN. With separate imaging systems for radiation and visible light, the dual images usually are composited by the algorithm of maximum likelihood expectation maximization (MLEM) method or wavelet transform. </p>
+<p> <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20210320115858234.png" alt="image-20210320115858234"></p>
+<p>(a)</p>
+<p> <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20210320115906581.png" alt="image-20210320115906581"></p>
+<p>(b)</p>
+<p>Fig. 8 Two principles of combining the FOV of gamma camera with optical camera</p>
+<p>But the prerequisite is to make the detect direction and FOV of optical camera and radiation detector as consistent as possible (Fig.8) [56-58]. Usually the FOV of an optical camera is bigger than a radiation detector. It is feasible that we just make FOV of radiation detector central axis combine with that of optical camera as close as possible (Fig.8 (a)). Therefore, composited image will reflect the radioactive source contamination position in the scene precisely. This method has been most widely applied to gamma camera. It not only used in NPPs, but also used in medicine and astrophysical research.</p>
+<p>There is another way to get the FOV of optical camera agreed with gamma detector by using a mirror to separate visible lights and gamma rays (Fig.8 (b)). It can improve the location accuracy of the radioactive source in the measuring site from the superimposed image. It can also protect the optical camera from the radiation damage and it reduces the influence of the electronics noise caused by the irradiation. However, the device is heavy shielded owing to the gamma detector and the optical camera both locating after the collimator and the shielding material. Using mirror to get the FOV of the optical camera and radiation detector consistent is usually applied to the gamma camera used in medicines for the low environment radiation level and no limited volume size. Actually, if the distance between gamma camera and the radiation source is far away, there is not much difference on the radiation location accuracy adopting measuring method Fig 8.</p>
+<h2 id="6-The-radiation-sensor"><a href="#6-The-radiation-sensor" class="headerlink" title="6 The radiation sensor"></a>6 The radiation sensor</h2><p>The radiation sensor is the critical component of a gamma camera, which in some degree determines the sensitivity and the spatial resolution. </p>
+<p>The inorganic scintillator, such as NaI(Tl), CsI(Tl), CdWO4 and LaBr3 are widely used to detect gamma rays. Comparing with other scintillators, NaI(Tl) scintillator crystal has the highest light response. Cesium having larger Z than sodium, CsI has higher detection efficiency than NaI. That is why the CsI is widely used in a gamma camera, for example, Gamma Visor and ALADIN. In comparison with other inorganic scintillator, the light response of CdWO4 crystal is more stable against temperature change. This is the reason it can be used in high radiation level premises. Its’ signal decay time is longer and the wavelength of the emission spectrum is in the range of 400-500nm, which make it fit for coupling with photodiode. The CdWO4 radiation sensor is used in the detection system of the MR and RTF research reactor decommission mission [16, 18, 21]. The recently appearing LaBr3 with an energy resolution of 2.5% to 3% is an excellent room-temperature working scintillator. It has been applied to RadSearch. The energy resolution of LaBr3 detector is much better than NaI detector.</p>
+<p>However, Gamma Visor, ALADIN and RadSearch are still very heavy and the weight of each of them is more than 30 kg. Semiconductor radiation sensor is becoming a new research hotspot for its portable volume, high energy resolution and fast readout speed. The hybrid detector combining the Medipix/Timepix with semiconductor detector has also appeared. CEA and the Kurchatov Institute developed a new gamma camera GAMPIX using the hybrid detector (Fig. 9)[24, 59, 60]. GAMPIX has achieved technological breakthroughs in terms of sensitivity (energy range from 241Am to 60Co), portability (1 kg) and deployment time (a few minutes) in comparison with the existing industrial gamma camera [24, 25, 35-37, 41, 59-65]. When GAMPIX, ALADIN and CARTOGAM are equipped with a pinhole collimator with 50 degree aperture to image a 137Cs point source, GAMPIX achieves the best image quality, although its intrinsic detection efficiency is lower than that of the 4 mm CsI doped Thallium scintillator (4.5% vs. 13% at 662keV).</p>
+<p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/image-20210320115922630.png" alt="image-20210320115922630"></p>
+<p>Fig. 9 The schematic diagram of the semiconductor combined with Medipix/Timepix gamma camera with the coded mask</p>
+<h2 id="7-Future-perspectives"><a href="#7-Future-perspectives" class="headerlink" title="7 Future perspectives"></a>7 Future perspectives</h2><p>Gamma cameras have multi-applications in NPPs. It can be used to locate the primary source terms and to find discrete radioactive particles, helping to optimize the shielding of the individual working area by identifying the primary contribution to the dose from each isotope. It can also be used to locate isotopes in shipping containers, to locate and track crud in pipes and valves and to track sources through time. It can be applied to identify fuel failure, to verify clean-up work quality and to determine the spatial extent of contamination, too. Further, it can be used to characterize and qualify isotopes, to fill in blank areas of traditional survey maps and to help to respond to an emergency. Different application instances of the gamma camera are stated in the following. As mentioned above, the Gamma Visor was used in the Chernobyl nuclear accident and the advanced coded mask Gamma Visor was used in decommissioning of the Russia MR and RTF research reactors in 2008[17, 20, 21]. The RadSearch was applied to detect the radiation distribution of the NPPs waste container for optimizing the arrangement of the waste container [22, 32, 33]. The handy Compton camera and the Polaris-H are used in accident of the Fukushima Daiichi Nuclear Power Station to investigate the radiation distribution for reactor emergency response [1, 2, 9, 28, 48]. Gamma camera can be mounted on the tripod or mobile robot for remotely controlled measurements. Kinoshita H, Tayama R, Kometani E Y, et al developed a vehicle mounted Gamma Camera associating with plastic scintillator fiber to detect the gamma radiation of the premises of the Fukushima Daiichi Nuclear Power Station[13]. Japanese also developed many nuclear emergency robots, such as SMERT-M, SMERT-K and MARs, on which the gamma camera mounted [10-15]. Besides, the Canadian research team of University of Ontario Institute of Technology developed a semi-autonomous directional and spectroscopic radiation detection mobile platform, the gamma camera mounted on this platform just can detect the direction on which source located without other sensitive information[66]. </p>
+<p>The different characters of the different gamma cameras are shown in Table 3. The main differences between pinhole and coded mask gamma camera are the collimator and the imaging process. Compared with the pinhole collimator, the coded mask camera has achieved a trade-off between sensitivity and spatial resolution[25, 67]. Their common ability is to obtain 2D images of the radiation source distribution. To get the radiation 3D distribution, one may employee a Compton camera [28, 45, 46]. The big detection FOV allows Compton gamma camera to scan a contaminated area more quickly. At the same time, there are some issues supposed to be improved for the structure, data acquisition, and imaging process in the future [26-28, 68]. For example, the angle resolution of the handy Compton camera is ~8 degree, which is poorer than that of (4 degree) the traditional pinhole gamma camera ALADIN.</p>
+<p>Benefitting from the development of semiconductor industry and large scale integrated circuit technology the radiation sensor and electric readout system have been improved dramatically in recent decades. The weight of any one of ALADIN, CARTOGAM and Gamma-Visor is more than 15 kg. However, GAMPIX adopting semiconductor radiation sensor is only 2kg weight and can be arranged with pinhole collimator or coded mask. Further, the high angular resolution will make them more conveniently used in the investigation of contamination distribution. The negative parts are the semiconductor chip can not be manufactured with big size and it degenerates with the radiation dose increase. Because the semiconductor devices on the chip are highly integrated, heat dissipation auxiliary should be equipped, e.g. an air cooling fans is fixed for Polaris-H.</p>
+<p>In addition to improve the working performance of the contents of a gamma camera, some innovations on design also appear in recent years. Shifeng Sun et al. from China developed a panorama coded-aperture gamma camera for radiation detection[69]. The overall dimensions of this device are about 42Í42Í80 cm3; the system is based on six typical coded-aperture gamma camera which arranged in a hexagonal shape with a 10 mm thick copper shield. Every detector module is isolated from its adjacent modules by a 12 mm thick rectangular lead for radiation shielding. Three masks and three anti-masks are placed in front of six detector module at intervals. These masks form a mask layer isolated from the detector modules. And mask layer can rotate 60 degree for mask and anti-mask acquisition and subtraction. It is convenient to get mask and anti-mask switching by once set, because of that the adjacent masks are the anti-mask to current module. This panorama gamma camera has a FOV of 360 degree in the horizontal direction and 60 degree in the vertical direction. Compared with the standard coded mask gamma cameras, this system has higher detection efficiency and suitably applies to more complicated radiation environment. </p>
+<p>Pinhole and coded mask gamma cameras use mechanical collimation which relies on photon absorption with a FOV defined by the aperture size. While Compton gamma camera adopts electronic collimation to define the FOV, which based on the Compton scattering that relates the energy of a scattered photon to it direction. Because photo absorption is dominant in low energies, whereas Compton scattering prevails at higher energies, the effective energy range of a single gamma camera mentioned above is limited to either the low or the high energy ranges. Wonho Lee [43, 70] combined these two collimation models in one gamma camera. The scattering-layer scintillator detectors and the mask make up a coded mask gamma camera. At the same time the scattering-layer scintillator matrix and the absorbing-layer scintillator matrix constitutes a Compton gamma camera. So it can be seen as a hybrid of coded mask gamma camera and Compton gamma camera, simultaneously collecting information from both mechanical and electronic collimation to reconstruct a single composited image. The hybrid system performs better in a wide energy range. To improve the detection efficiency of this hybrid system and improve the image quality, some researchers replaced the convention collimator with scintillating crystals and called it an active collimation [71-73]. The scintillation crystals mask can not only shield the radiation, but also obtain position and energy deposition.</p>
+<p><strong>Table3</strong> <strong>Different characteristics</strong> <strong>of</strong> <strong>multi-type</strong> <strong>gamma cameras</strong></p>
+<table>
+<thead>
+<tr>
+<th>Characters</th>
+<th>Pinhole gamma camera</th>
+<th>Coded mask gamma camera</th>
+<th>Compton gamma camera</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Collimator</td>
+<td>Two conical collimator</td>
+<td>Coded multi aperture  collimator</td>
+<td>Without collimator</td>
+</tr>
+<tr>
+<td>Decoding Image process</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>3D positioning</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Sensitivity</td>
+<td>Low</td>
+<td>Relative high</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Measurement time</td>
+<td>Hours to day</td>
+<td>Several minutes to hours</td>
+<td>Several minutes to hours</td>
+</tr>
+<tr>
+<td>Angular resolution</td>
+<td>High</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>Remote</td>
+<td>Remote</td>
+<td>Remote</td>
+</tr>
+</tbody></table>
+<h2 id="8-Summary"><a href="#8-Summary" class="headerlink" title="8 Summary"></a>8 Summary</h2><p>Gamma cameras used in NPPs are compact, modular and have high sensitivity and angular resolution. Efforts have been made to improve these performances. A gamma camera can be equipped with both pinhole collimator and coded mask collimator. A larger diameter of the collimator hole means higher sensitivity but lower angular resolution. One may balance the sensitivity and spatial resolution according to a concrete application. A Compton camera obtains images without a collimator, so that it gets rid of the limitation of sensitivity and angular resolution due to the collimator. However, the angle resolution of a Compton camera is not as good as a pinhole or a coded mask gamma camera. The radiation sensor also influences the detection efficiency, energy resolution and image quality. Scintillator (e.g. CsI(Tl) ) is widely used as the radiation sensor in a portable gamma camera. Semiconductor has superiorities in the compact volume and integration of the sensor and the electronic readout system. The spatial resolution can also be improved for semiconductor detectors for their high energy resolution. Besides the improvements on the performance of components of gamma camera, some innovate design of gamma cameras have also been proposed recent years. </p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]   Y. IWAMOTO, J. KATAOKA, A. KISHIMOTO.: Novel methods for estimating 3D distributions of radioactive isotopes in materials, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 831 (2016) 295-300.</p>
+<p>[2]   J. KATAOKA, A. KISHIMOTO, T. NISHIYAMA.: Handy Compton camera using 3D position-sensitive scintillators coupled with large-area monolithic MPPC arrays, Nuclear Instruments &amp; Methods in Physics Research, 732 (2013) 403-407.</p>
+<p>[3]   O.P. IVANOV, A.V. CHESNOKOV, V.E. STEPANOV.: Gamma-vision camera real-time system for creating images of gamma-radioactive objects, International Conference on Systems, Man and Cybernetics, 1993. &#39;systems Engineering in the Service of Humans&#39;, Conference Proceedings, 1993, pp. 1-6 vol.3.</p>
+<p>[4]   A.N. SUDARKIN, O.P. IVANOV, V.E. STEPANOV.: Portable gamma-ray imager and its application for the inspection of the near-reactor premises contaminated by radioactive substances, Nuclear Instruments &amp; Methods in Physics Research, 414 (1998) 418-426.</p>
+<p>[5]   A.G. VOLKOVICH, O.P. IVANOV, V.E. STEPANOV.: Application of a gamma viewer for examining reactors, Atomic Energy, 79 (1995) 772-775.</p>
+<p>[6]   E. CAROLI, J.B. STEPHEN, G.D. COCCO.: Coded aperture imaging in X- and gamma-ray astronomy, Space Science Reviews, 45 (1987) 349-403.</p>
+<p>[7]   R.H. DICKE.: Scatter-Hole Cameras for X-Rays and Gamma Rays, Astrophysical Journal, 153 (1968) L101.</p>
+<p>[8]   K.A. HUGHES, J.A. LIGHTFOOT.: RadScan 600-a portable instrument for the remote imaging of gamma contamination: its design and use in aiding decommissioning strategy, Nuclear Science Symposium, 1996. Conference Record, 1996, pp. 930-933 vol.932.</p>
+<p>[9]   C.G. WAHL, W.R. KAYE, W. WANG, F. ZHANG.: The Polaris-H imaging spectrometer, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 784 (2015) 377-381.</p>
+<p>[10]  J. ABOUAF.: Trial by fire: teleoperated robot targets chernobyl, IEEE Computer Graphics and Applications, 18 (1998) 10-14.</p>
+<p>[11]  Y. HOSODA, H. YAMAMOTO, M. HATTORI.: &#39;SWAN&#39;: A robot for nuclear disaster prevention support, Advanced Robotics, 16 (2002) 485-488.</p>
+<p>[12]  Y. ISOZAKI, K. NAKAI.: Development of a work robot with a manipulator and a transport robot for nuclear facility emergency preparedness, Advanced Robotics, 16 (2002) 489-492.</p>
+<p>[13]  H. KINOSHITA, R. TAYAMA, E.Y. KOMETANI.: Development of new technology for Fukushima Daiichi nuclear power station reconstruction, Hitachi Review, 63 (2014) 183.</p>
+<p>[14]  M. OTAKI.: Environmental monitoring robots for nuclear emergencies, Advanced Robotics, 16 (2002) 501-504.</p>
+<p>[15]  Y. YUGUCHI, Y. SATOH.: Development of a robotic system for nuclear facility emergency preparedness—observing and work-assisting robot system, Advanced Robotics, 16 (2002) 481-484.</p>
+<p>[16]  A. CHESNOKOV, O. IVANOV, V. KOLYADIN.: HLRW Management During MR Reactor Decommissioning in NRC “Kurchatov Institute”, ASME 2013 15th International Conference on Environmental Remediation and Radioactive Waste Management, American Society of Mechanical Engineers, 2013, pp. V001T002A008-V001T002A008.</p>
+<p>[17]  A. DANILOVICH, O. IVANOV, A. LEMUS.: Radiological survey of contaminated installations of research reactor before dismantling in high dose conditions with complex for remote measurements of radioactivity. 2012, WM2012 Conference, February, 2012.</p>
+<p>[18]  O. IVANOV, A. DANILOVICH, V. STEPANOV.: Remote Measurements of Radioactivity Distribution With BROKK Robotic System, ASME 2009 12th International Conference on Environmental Remediation and Radioactive Waste Management, American Society of Mechanical Engineers, 2009, pp. 157-159.</p>
+<p>[19]  O. IVANOV, V. STEPANOV, V. VOLKOV.: Application of portable gamma camera during an extraction of the radioactive wastes from temporal storage at territory of RRC Kurchatov institute, ICEM, pp. 4-8.</p>
+<p>[20]  V. STEPANOV, A. DANILOVICH, O. IVANOV.: Experience of application of new remote controlled instruments for scanning of distribution of radioactive contamination in rooms with high dose rate, ASME 2011 14th International Conference on Environmental Remediation and Radioactive Waste Management, American Society of Mechanical Engineers, 2011, pp. 89-93.</p>
+<p>[21]  V. VOLKOV, A. VOLKOVICH, A. DANILOVICH.: RADIATION SURVEY AND PREPARING FOR THE DECOMMISSIONING OF RESEARCH REACTOR MR, RRC “KURCHATOV INSTITUTE”, 2010.</p>
+<p>[22]  M.R. LOOMAN, J.A. MASON, ANTECH.: ANTECH Corporation 9050 Marshall Court, Westminster, Colorado, 80031, USA, DOI.</p>
+<p>[23]  O. IVANOV, V. STEPANOV, A. DANILOVICH.: The remote methods for radwaste and SNF control, Journal of Physics: Conference Series, IOP Publishing, 2017, pp. 012014.</p>
+<p>[24]  F. CARREL, R.A. KHALIL, S. COLAS.: GAMPIX: A new gamma imaging system for radiological safety and Homeland Security Purposes, 6963 (2011) 4739-4744.</p>
+<p>[25]  O. GAL, M. GMAR, O.P. IVANOV.: Development of a portable gamma camera with coded aperture, Nuclear Instruments &amp; Methods in Physics Research, 563 (2006) 233-237.</p>
+<p>[26]  T. NISHIYAMA, J. KATAOKA, A. KISHIMOTO.: Current status and optimization of handy compton camera using 3D position-sensitive scintillators, Nuclear Science Symposium and Medical Imaging Conference, 2013, pp. 1-5.</p>
+<p>[27]  D. XU, Z. HE.: Gamma-ray energy-imaging integrated spectral deconvolution, Nuclear Instruments &amp; Methods in Physics Research, 574 (2007) 98-109.</p>
+<p>[28]  D. XU, Z. HE, F. ZHANG.: 4-pi Compton imaging with single 3D position-sensitive CdZnTe detector, Proceedings of SPIE - The International Society for Optical Engineering, 5540 (2004) 144-155.</p>
+<p>[29]  C.L. GOALLER, G. IMBARD, H. CARCREFF.: The development and improvement of the Aladin gamma camera to localise gamma activity in nuclear installations: final report, DOI (1998).</p>
+<p>[30]  K.E. IVANOV, N.N. PONOMAREV-STEPNOI, B.S. STEPENNOV.: Remote measurement of the radiation dose rate on solid radwaste temporary storage site, Atomic Energy, 105 (2008) 133-137.</p>
+<p>[31]  A.N. SUDARKIN, O.P. IVANOV, V.E. STEPANOV.: High-energy radiation visualizer (HERV): a new system for imaging in X-ray and gamma-ray emission regions, IEEE Transactions on Nuclear Science, 43 (1996) 2427-2433.</p>
+<p>[32]  J.A. MASON, M.R. LOOMAN, A.J. POUNDALL.: Development and Testing of a Novel Gamma Ray Camera for Radiation Surveying, contamination measurement and radiation detection, Proceedings of INMM, DOI (2012).</p>
+<p>[33]  J.A. MASON, M.R. LOOMAN, A.J. POUNDALL.: Testing and Performance Validation of a Sensitive Gamma Ray Camera Designed for Radiation Detection and Decommissioning Measurements in Nuclear Facilities-13044, WM Symposia, 1628 E. Southern Avenue, Suite 9-332, Tempe, AZ 85282 (United States), 2013.</p>
+<p>[34]  L. ZHAO, C. CHENGSHENG.: Prototype Development of a Portable Radionuclide Identification System, Radiation Protection, China, 34 (2014) 381-385.</p>
+<p>[35]  O. GAL, B. DESSUS, F. JEAN.: Operation of the CARTOGAM portable gamma camera in a photon-counting mode, IEEE Transactions on Nuclear Science, 48 (2001) 1198-1204.</p>
+<p>[36]  O. GAL, C. IZAC, F. JEAN.: CARTOGAM – a portable gamma camera for remote localisation of radioactive sources in nuclear facilities ☆, Nuclear Instruments &amp; Methods in Physics Research, 460 (2001) 138-145.</p>
+<p>[37]  O. GAL, F. JEAN, F. LAINE.: The CARTOGAM portable gamma imaging system, IEEE Transactions on Nuclear Science, 47 (2000) 952-956.</p>
+<p>[38]  A.V. STEPANOV, O.P. IVANOV, V.E. STEPANOV.: Simulation of Safe Methods for Performing Decontamination Work, Atomic Energy, 90 (2001) 495-499.</p>
+<p>[39]  A.N. SUDARKIN, O.P. IVANOV, V.E. STEPANOV.: Portable gamma-ray imager and its application for the inspection of the near-reactor premises contaminated by radioactive substances, Nuclear Instruments &amp; Methods in Physics Research, 414 (1998) 418-426.</p>
+<p>[40]  A.G. VOLKOVICH, O.P. IVANOV, V.E. STEPANOV.: Application of a gamma viewer for examining reactors, Atomic Energy, 79 (1995) 772-775.</p>
+<p>[41]  O.P. IVANOV, A.N. SUDARKIN, V.E. STEPANOV.: Portable X-ray and gamma-ray imager with coded mask: performance characteristics and methods of image reconstruction, Nuclear Instruments &amp; Methods in Physics Research, 422 (1999) 729-734.</p>
+<p>[42]  W. LEE, D. WEHE.: 3D position of radiation sources using an automated gamma camera and ML algorithm with energy-dependent response functions, Nuclear Science Symposium Conference Record, 2004, pp. 737-741 Vol.732.</p>
+<p>[43]  W. LEE, D. WEHE.: Hybrid gamma ray imaging—Model and results, Nuclear Inst &amp; Methods in Physics Research A, 579 (2007) 200-204.</p>
+<p>[44]  W. LEE, D.K. WEHE.: 3-D isotropic imaging of environmental sources using a compact gamma camera, IEEE Transactions on Nuclear Science, 51 (2004) 2267-2272.</p>
+<p>[45]  T. TAYA, J. KATAOKA, A. KISHIMOTO.: First demonstration of real-time gamma imaging by using a handheld Compton camera for particle therapy, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 831 (2016) 355-361.</p>
+<p>[46]  Z. HE, W. LI, G.F. KNOLL.: 3-D position sensitive CdZnTe gamma-ray spectrometers, Nuclear Instruments &amp; Methods in Physics Research, 422 (1999) 173-178.</p>
+<p>[47]  L.J. MENG, Z. HE.: Exploring the limiting timing resolution for large volume CZT detectors with waveform analysis, Nuclear Instruments &amp; Methods in Physics Research, 550 (2011) págs. 435-445.</p>
+<p>[48]  C.G. WAHL, W. KAYE, W. WANG.: Polaris-H measurements and performance, Nuclear Science Symposium and Medical Imaging Conference (NSS/MIC), 2014 IEEE, IEEE, 2014, pp. 1-4.</p>
+<p>[49]  Y. DU, Z. HE, G. KNOLL.: Evaluation of a Compton scattering camera using 3-D position sensitive CdZnTe detectors, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 457 (2001) 203-211.</p>
+<p>[50]  Z. HE, G. KNOLL, D. WEHE.: Coplanar grid patterns and their effect on energy resolution of CdZnTe detectors, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 411 (1998) 107-113.</p>
+<p>[51]  Z. HE, G. KNOLL, D. WEHE.: Position-sensitive single carrier CdZnTe detectors, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 388 (1997) 180-185.</p>
+<p>[52]  J.C. KIM, S.E. ANDERSON, W. KAYE.: Charge sharing in common-grid pixelated CdZnTe detectors, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 654 (2011) 233-243.</p>
+<p>[53]  J.C. KIM, W.R. KAYE, W. WANG.: Impact of drift time variation on the Compton image from large-volume CdZnTe crystals, Nuclear instruments and methods in physics research section A: Accelerators, spectrometers, detectors and associated equipment, 683 (2012) 53-62.</p>
+<p>[54]  P. LUKE, M. AMMAN, J. LEE.: Coplanar-grid CdZnTe detector with three-dimensional position sensitivity, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 439 (2000) 611-618.</p>
+<p>[55]  F. ZHANG, Z. HE.: New readout electronics for 3-D position sensitive CdZnTe/HgI $ _2 $ detector arrays, IEEE Transactions on Nuclear Science, 53 (2006) 3021-3027.</p>
+<p>[56]  H.I. KIM, J.A. SU, H.C. YONG.: Development of an all-in-one gamma camera/CCD system for safeguard verification, Journal of the Korean Physical Society, 65 (2014) 2013-2016.</p>
+<p>[57]  J.E. LEES, D.J. BASSFORD, O.E. BLAKE.: A high resolution Small Field Of View (SFOV) gamma camera: a columnar scintillator coated CCD imager for medical applications, Journal of Instrumentation, 6 (2011) 570-582.</p>
+<p>[58]  J.E. LEES, S.L. BUGBY, A.P. BARK.: A hybrid camera for locating sources of gamma radiation in the environment, Journal of Instrumentation, 8 (2013) P10021-P10021.</p>
+<p>[59]  M. GMAR, M. AGELOU, F. CARREL.: GAMPIX: A new generation of gamma camera, Nuclear Instruments &amp; Methods in Physics Research, 652 (2011) 638-640.</p>
+<p>[60]  H. LEMAIRE, K. AMGAROU, R.A. KHALIL.: Implementation of an imaging spectrometer for localization and identification of radioactive sources, International Conference on Advancements in Nuclear Instrumentation Measurement Methods and Their Applications, 2013, pp. 1-5.</p>
+<p>[61]  M. GMAR, O. GAL, C.L. GOALLER.: Development of coded-aperture imaging with a compact gamma camera, Nuclear Science Symposium Conference Record, 2003, pp. 1052-1056 Vol.1052.</p>
+<p>[62]  O.P. IVANOV.: Control and image decoding software for portable gamma-ray imaging system with coded aperture, Nuclear Science Symposium, 1999. Conference Record, 2002, pp. 459-463 vol.451.</p>
+<p>[63]  X. LLOPART, M. CAMPBELL.: First test measurements of a 64k pixel readout chip working in single photon counting mode, Nuclear Instruments &amp; Methods in Physics Research, 509 (2003) 157-163.</p>
+<p>[64]  G.A.D. VREE, A.H. WESTRA, I. MOODY.: Photon-counting gamma camera based on an electron-multiplying CCD, IEEE Transactions on Nuclear Science, 52 (2005) 580-588.</p>
+<p>[65]  M. WOODRING, D. SOUZA, S. TIPNIS.: Advanced radiation imaging of low-intensity gamma-ray sources, Nuclear Instruments &amp; Methods in Physics Research, 422 (1999) 709-712.</p>
+<p>[66]  A. MILLER, R. MACHRAFI, A. MOHANY.: Development of a semi-autonomous directional and spectroscopic radiation detection mobile platform, Radiation Measurements, 72 (2015) 53-59.</p>
+<p>[67]  O. IVANOV, I. SEMIN, V. POTAPOV.: Ultra-Light Gamma-Camera for Security and Emergency Situation, DOI (2014).</p>
+<p>[68]  W. WANG, W.R. KAYE, J. KIM.: Improvement of Compton imaging efficiency by using side-neighbor events, Nuclear Science Symposium Conference Record, 2010, pp. 1101-1103.</p>
+<p>[69]  S. SUN, Z. ZHANG, L. SHUAI.: Development of a panorama coded-aperture gamma camera for radiation detection, Radiation Measurements, 77 (2015) 34-40.</p>
+<p>[70]  T. LEE, W. LEE.: Compact hybrid gamma camera with a coded aperture for investigation of nuclear materials, Nuclear Inst &amp; Methods in Physics Research A, 767 (2014) 5-13.</p>
+<p>[71]  M.F. CUNNINGHAM, E. BLAKEMAN, L. FABRIS.: Active-mask coded-aperture imaging, Nuclear Science Symposium Conference Record, 2007. NSS &#39;07. IEEE, 2007, pp. 1217-1221.</p>
+<p>[72]  L.J. SCHULTZ, M.S. WALLACE, M.C. GALASSI.: Hybrid coded aperture and Compton imaging using an active mask, Nuclear Instruments &amp; Methods in Physics Research, 608 (2009) 267-274.</p>
+<p>[73]  T. LEE, W. LEE.: A cubic gamma camera with an active collimator, Applied Radiation &amp; Isotopes Including Data Instrumentation &amp; Methods for Use in Agriculture Industry &amp; Medicine, 90 (2014) 102.</p>
+<p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
+
+            <span class="label">CSDN</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/gamma%E7%9B%B8%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> gamma相机</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/07/%E6%8F%90%E9%AB%98%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E5%85%B7/" rel="next" title="提高文献阅读效率相关的工具">
+      提高文献阅读效率相关的工具 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Portable-Gamma-Camera-for-Nuclear-Power-Plants"><span class="nav-number">1.</span> <span class="nav-text">Portable Gamma Camera for Nuclear Power Plants</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">1 Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-The-pinhole-gamma-camera"><span class="nav-number">1.2.</span> <span class="nav-text">2 The pinhole gamma camera</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-The-coded-mask-gamma-camera"><span class="nav-number">1.3.</span> <span class="nav-text">3 The coded mask gamma camera</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-The-Compton-gamma-camera"><span class="nav-number">1.4.</span> <span class="nav-text">4 The Compton gamma camera</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-The-visible-light-image"><span class="nav-number">1.5.</span> <span class="nav-text">5 The visible-light image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-The-radiation-sensor"><span class="nav-number">1.6.</span> <span class="nav-text">6 The radiation sensor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Future-perspectives"><span class="nav-number">1.7.</span> <span class="nav-text">7 Future perspectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Summary"><span class="nav-number">1.8.</span> <span class="nav-text">8 Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">1.9.</span> <span class="nav-text">References</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李会"
+      src="/images/owl.jpg">
+  <p class="site-author-name" itemprop="name">李会</p>
+  <div class="site-description" itemprop="description">Get busy living or get busy dying.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
+        </li>
+    </ul>
+  </div>
+<div class="cc-license motion-element" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李会</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ooozwlclX00aJabPvk1WTj7J-gzGzoHsz',
+      appKey     : 'CnXrRUVdUdMXgEvGbdolWGYX',
+      placeholder: "若有想咨询的事情，请留下你的邮箱！",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
