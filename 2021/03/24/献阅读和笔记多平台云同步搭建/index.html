@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="🏡文献阅读和笔记多平台云同步搭建1.坚果云平台常用的云平台见往期 提高文献阅读效率相关的工具 坚果云是一款免费的网盘，每个月具有1G的上传流量和3G下载流量，非常适合用于储存文献阅读资料；若需要用它进行照片或视频备份，那么流量和空间肯定不够，需要付费购买空间。 此外坚果云不同于国内的百度网盘，其文件同步设置跟onedrive有点类似，直接将本地文件夹设置成同步即可，而不打乱本地知识管理布局。 考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文献阅读和笔记多平台云同步搭建">
+<meta property="og:url" content="https://hubery-lee.github.io/2021/03/24/%E7%8C%AE%E9%98%85%E8%AF%BB%E5%92%8C%E7%AC%94%E8%AE%B0%E5%A4%9A%E5%B9%B3%E5%8F%B0%E4%BA%91%E5%90%8C%E6%AD%A5%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Hubery-Lee">
+<meta property="og:description" content="🏡文献阅读和笔记多平台云同步搭建1.坚果云平台常用的云平台见往期 提高文献阅读效率相关的工具 坚果云是一款免费的网盘，每个月具有1G的上传流量和3G下载流量，非常适合用于储存文献阅读资料；若需要用它进行照片或视频备份，那么流量和空间肯定不够，需要付费购买空间。 此外坚果云不同于国内的百度网盘，其文件同步设置跟onedrive有点类似，直接将本地文件夹设置成同步即可，而不打乱本地知识管理布局。 考">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://help.jianguoyun.com/wp-content/uploads/2018/03/0.jpg">
+<meta property="og:image" content="http://help.jianguoyun.com/wp-content/uploads/2018/03/2.jpg">
+<meta property="og:image" content="https://r.sinaimg.cn/large/article/eab344d588f33eeed03ba132d740b9f6">
+<meta property="og:image" content="http://help.jianguoyun.com/wp-content/uploads/2018/03/3.jpg">
+<meta property="og:image" content="https://r.sinaimg.cn/large/article/456a465b104edd77272ea961c75bbe74">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-6a5d78ebb1910843ff4d2872580d21a5_720w.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-83da997e41df3d5a366492075e84e8c6_720w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-e571ed50235f2f82661b5b1315419bd5_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-44a4581b8e0ac9a0bc6747ee9b507a0e_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-11790828fe9ce436ea6d92fbe1c0662f_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-7fd17e45105b65c13c9c7e260a5b6d87_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-c0bc93a55fc118fb9731371af0c8a702_720w.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-09207edcefff7852c91abcc3df3c5ba0_720w.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-bc612193330f4235b8c887dc95a77f68_720w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-9d8ba0adb98d509d3de8c1b615c68353_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-7d9e998d82ae965fe7f1ddd93d59d48a_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-499cfcbda9cbd6c4f5c8e23f30e382cc_720w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-f782ba2cb965931f00798322d42d3e54_720w.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-7d18d14d530df892f48202f683947fcc_720w.jpg">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
+<meta property="article:published_time" content="2021-03-24T07:48:59.000Z">
+<meta property="article:modified_time" content="2021-03-24T07:50:49.721Z">
+<meta property="article:author" content="李会">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://help.jianguoyun.com/wp-content/uploads/2018/03/0.jpg">
+
+<link rel="canonical" href="https://hubery-lee.github.io/2021/03/24/%E7%8C%AE%E9%98%85%E8%AF%BB%E5%92%8C%E7%AC%94%E8%AE%B0%E5%A4%9A%E5%B9%B3%E5%8F%B0%E4%BA%91%E5%90%8C%E6%AD%A5%E6%90%AD%E5%BB%BA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>文献阅读和笔记多平台云同步搭建 | Hubery-Lee</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Hubery-Lee" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hubery-Lee</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">蒹葭苍苍，白露为霜</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-introduction">
+
+    <a href="/introduction/" rel="section"><i class="fa fa-comment fa-fw"></i>introduction</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">40</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">20</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/03/24/%E7%8C%AE%E9%98%85%E8%AF%BB%E5%92%8C%E7%AC%94%E8%AE%B0%E5%A4%9A%E5%B9%B3%E5%8F%B0%E4%BA%91%E5%90%8C%E6%AD%A5%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          文献阅读和笔记多平台云同步搭建
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-24 15:48:59" itemprop="dateCreated datePublished" datetime="2021-03-24T15:48:59+08:00">2021-03-24</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/24/%E7%8C%AE%E9%98%85%E8%AF%BB%E5%92%8C%E7%AC%94%E8%AE%B0%E5%A4%9A%E5%B9%B3%E5%8F%B0%E4%BA%91%E5%90%8C%E6%AD%A5%E6%90%AD%E5%BB%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/24/%E7%8C%AE%E9%98%85%E8%AF%BB%E5%92%8C%E7%AC%94%E8%AE%B0%E5%A4%9A%E5%B9%B3%E5%8F%B0%E4%BA%91%E5%90%8C%E6%AD%A5%E6%90%AD%E5%BB%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="🏡文献阅读和笔记多平台云同步搭建"><a href="#🏡文献阅读和笔记多平台云同步搭建" class="headerlink" title="🏡文献阅读和笔记多平台云同步搭建"></a>🏡文献阅读和笔记多平台云同步搭建</h1><h2 id="1-坚果云平台"><a href="#1-坚果云平台" class="headerlink" title="1.坚果云平台"></a>1.坚果云平台</h2><p>常用的云平台见往期</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9odWJlcnktbGVlLmNuLzIwMjEvMDMvMDcvJUU2JThGJTkwJUU5JUFCJTk4JUU2JTk2JTg3JUU3JThDJUFFJUU5JTk4JTg1JUU4JUFGJUJCJUU2JTk1JTg4JUU3JThFJTg3JUU3JTlCJUI4JUU1JTg1JUIzJUU3JTlBJTg0JUU1JUI3JUE1JUU1JTg1JUI3Lw==">提高文献阅读效率相关的工具<i class="fa fa-external-link-alt"></i></span></p>
+<p>坚果云是一款免费的网盘，<code>每个月具有1G的上传流量和3G下载流量</code>，非常适合用于储存文献阅读资料；若需要用它进行照片或视频备份，那么流量和空间肯定不够，需要付费购买空间。</p>
+<p>此外坚果云不同于国内的<code>百度网盘</code>，其文件同步设置跟<code>onedrive</code>有点类似，直接将本地文件夹设置成同步即可，而不打乱本地知识管理布局。</p>
+<p>考虑文献阅读资料相对较少网盘空间占用少以及本地使用便携，文献和笔记资料储存云平台选用<code>坚果云</code>。</p>
+<a id="more"></a>
+
+<h2 id="2-zotero"><a href="#2-zotero" class="headerlink" title="2. zotero"></a>2. zotero</h2><p>常见文献管理工具见往期</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9odWJlcnktbGVlLmNuLzIwMjEvMDMvMDcvJUU2JThGJTkwJUU5JUFCJTk4JUU2JTk2JTg3JUU3JThDJUFFJUU5JTk4JTg1JUU4JUFGJUJCJUU2JTk1JTg4JUU3JThFJTg3JUU3JTlCJUI4JUU1JTg1JUIzJUU3JTlBJTg0JUU1JUI3JUE1JUU1JTg1JUI3Lw==">提高文献阅读效率相关的工具<i class="fa fa-external-link-alt"></i></span></p>
+<p>zotero 虽然不及citavi功能强大，但其是由<code>开源社区维护、插件丰富和跨平台</code>这三个特点，注定其将站在文献管理软件的金字塔顶端。下面将介绍zotero的跨平台配置；</p>
+<ul>
+<li>zotero 及浏览器connetor安装（简单不做介绍）</li>
+<li>官网注册用户</li>
+<li>使用坚果云平台配置</li>
+</ul>
+<p>坚果云官网说明<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmppYW5ndW95dW4uY29tLz9wPTQxOTA=">https://help.jianguoyun.com/?p=4190<i class="fa fa-external-link-alt"></i></span></p>
+<p>注册完之后，打开软件：编辑——首选项——同步——设置，输入用户名和密码进行登陆。</p>
+<p><img src="http://help.jianguoyun.com/wp-content/uploads/2018/03/0.jpg" alt="0"></p>
+<ul>
+<li><p>zotero附件的同步</p>
+<p>Zotero的存储空间只有100M，使用起肯定是不够用的，土豪可以直接付费升级存储空间。免费扩容的方式是<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbmd1b3l1bi5jb20v">坚果云<i class="fa fa-external-link-alt"></i></span>的webDAV功能，该功能一个好处是，在iOS移动端的<span class="exturl" data-url="aHR0cDovL2xpbmsuemhpaHUuY29tLz90YXJnZXQ9aHR0cO+8hTNBLy93d3cucGFwZXJzaGlwYXBwLmNvbS8=">papership<i class="fa fa-external-link-alt"></i></span>也可以通过webDAV读取资料库，目前使用的是这种方式。</p>
+<p>想要连接Zotero的话，得开启坚果云的第三方应用管理。具体步骤如下：</p>
+<p>（1）登录网页端坚果云账号，点击右上角的账号名称——账户信息——安全选项——第三方应用管理——添加应用密码。应用名称我写的zotero，之后会自己生成一个应用密码。如下图所示：</p>
+<p><img src="http://help.jianguoyun.com/wp-content/uploads/2018/03/2.jpg" alt="2"></p>
+<p><img src="https://r.sinaimg.cn/large/article/eab344d588f33eeed03ba132d740b9f6" alt="img"></p>
+<p>（2）打开zotero,编辑——首选项——同步——文件同步，使用zotero改成WebDAV，然后复制刚才坚果云内第三方应用管理的服务器地址、账户和密码，密码点击下面zotero对应的”显示“复制即可。全部填入后点击下面”Verify Server“按钮。</p>
+<p><img src="http://help.jianguoyun.com/wp-content/uploads/2018/03/3.jpg" alt="3"></p>
+<p><img src="https://r.sinaimg.cn/large/article/456a465b104edd77272ea961c75bbe74" alt="img"></p>
+<p>在<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbmd1b3l1bi5jb20v">坚果云<i class="fa fa-external-link-alt"></i></span>网页端手动建立一个zotero根目录，或者建立works/zotero目录，与zotero填的地址对应即可，不要在”我的坚果云“文件夹下建立！这是为了避免软件不支持中文。</p>
+<p>如果出现verify失败的情况，在坚果云网页端zotero文件夹下新建一个<code>lastsync.txt</code>文件，再进行验证即可；</p>
+</li>
+</ul>
+<h2 id="3-typora-picgo"><a href="#3-typora-picgo" class="headerlink" title="3. typora+picgo"></a>3. typora+picgo</h2><p>typora是一款所见即所得的markdown编辑器。用它来做笔记同步存在的问题是图片为无法同步，那么可以考虑采用图床。PicGO是搭建图窗的最好工具。</p>
+<p>在此，采用gitee作为图床平台（国内gitee速度比github快）</p>
+<p>（1）. 安装</p>
+<ul>
+<li>PicGo</li>
+<li>picgo-plugin-gitee-uploader插件</li>
+</ul>
+<h3 id="首先打开picgo官网，下载安装包"><a href="#首先打开picgo官网，下载安装包" class="headerlink" title="首先打开picgo官网，下载安装包"></a>首先打开<span class="exturl" data-url="aHR0cHM6Ly9saW5rLnpoaWh1LmNvbS8/dGFyZ2V0PWh0dHBzJTNBLy9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dv">picgo官网<i class="fa fa-external-link-alt"></i></span>，下载安装包</h3><p><img src="https://pic2.zhimg.com/80/v2-6a5d78ebb1910843ff4d2872580d21a5_720w.png" alt="img"></p>
+<p>速度有点慢，没关系，PicGo2.1.2的安装包下面链接自取</p>
+<h3 id="安装之后打开主界面"><a href="#安装之后打开主界面" class="headerlink" title="安装之后打开主界面"></a>安装之后打开主界面</h3><p><img src="https://pic3.zhimg.com/80/v2-83da997e41df3d5a366492075e84e8c6_720w.jpg" alt="img"></p>
+<h3 id="选择最底下的插件设置，搜索gitee"><a href="#选择最底下的插件设置，搜索gitee" class="headerlink" title="选择最底下的插件设置，搜索gitee"></a>选择最底下的插件设置，搜索<strong>gitee</strong></h3><p><img src="https://pic2.zhimg.com/80/v2-e571ed50235f2f82661b5b1315419bd5_720w.jpg" alt="img"></p>
+<h3 id="点击右边的gitee-uploader-1-1-2开始安装"><a href="#点击右边的gitee-uploader-1-1-2开始安装" class="headerlink" title="点击右边的gitee-uploader 1.1.2开始安装"></a>点击右边的gitee-uploader 1.1.2开始安装</h3><blockquote>
+<p>这里注意一下，必须要先安装<span class="exturl" data-url="aHR0cHM6Ly9saW5rLnpoaWh1LmNvbS8/dGFyZ2V0PWh0dHBzJTNBLy9ub2RlanMub3JnL2VuLw==">node.js<i class="fa fa-external-link-alt"></i></span>才能安装插件，没装的自己装一下，然后重启就行。</p>
+</blockquote>
+<p>这个地方有两个插件，我试了一遍，两个都能用，大家看心情选择，先说一下右边这个<strong>gitee-uploader 1.1.2</strong>，用不了的同学就选左边那个，我都会讲一遍配置</p>
+<hr>
+<p>（2）. 建立gitee（码云）图床库</p>
+<p>注册码云的方法很简单，网站引导都是中文，不多说了，我们直接建立自己的图床库。</p>
+<h3 id="点击右上角的-号，新建仓库"><a href="#点击右上角的-号，新建仓库" class="headerlink" title="点击右上角的+号，新建仓库"></a>点击右上角的+号，新建仓库</h3><p><img src="https://pic3.zhimg.com/80/v2-44a4581b8e0ac9a0bc6747ee9b507a0e_720w.jpg" alt="img"></p>
+<p>新建仓库的要点如下：</p>
+<ol>
+<li>输入一个仓库名称</li>
+<li>其次将仓库设为公开</li>
+<li>勾选使用Readme文件初始化这个仓库</li>
+</ol>
+<p><strong>这个选项勾上，这样码云会自动给你的仓库建立master分支，这点很重要!!!</strong> 我因为这点折腾了很久，因为使用github做图床picgo好像会自动帮你生成master分支，而picgo里的gitee插件不会帮你自动生成分支。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-11790828fe9ce436ea6d92fbe1c0662f_720w.jpg" alt="img"></p>
+<p>点击创建进入下一步</p>
+<hr>
+<p>（3）. 配置PicGo</p>
+<p>安装了<strong>gitee-uploader 1.1.2</strong>插件之后，我们开始配置插件</p>
+<h3 id="配置插件的要点如下："><a href="#配置插件的要点如下：" class="headerlink" title="配置插件的要点如下："></a>配置插件的要点如下：</h3><p><img src="https://pic4.zhimg.com/80/v2-7fd17e45105b65c13c9c7e260a5b6d87_720w.jpg" alt="img"></p>
+<ul>
+<li>repo：用户名/仓库名称，比如我自己的仓库leonG7/blogImage，找不到的可以直接复制仓库的url</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-c0bc93a55fc118fb9731371af0c8a702_720w.png" alt="img"></p>
+<ul>
+<li>branch：分支，这里写上master</li>
+<li>token：填入码云的私人令牌</li>
+<li>path：路径，一般写上img</li>
+<li>customPath：提交消息，这一项和下一项customURL都不用填。在提交到码云后，会显示提交消息，插件默认提交的是 <code>Upload 图片名 by picGo - 时间</code></li>
+</ul>
+<h3 id="这个token怎么获取，下面登录进自己的码云"><a href="#这个token怎么获取，下面登录进自己的码云" class="headerlink" title="这个token怎么获取，下面登录进自己的码云"></a>这个token怎么获取，下面登录进自己的码云</h3><p>点击头像，进入设置</p>
+<p><img src="https://pic1.zhimg.com/80/v2-09207edcefff7852c91abcc3df3c5ba0_720w.png" alt="img"></p>
+<p>找到右边安全设置里面的私人令牌</p>
+<p><img src="https://pic1.zhimg.com/80/v2-bc612193330f4235b8c887dc95a77f68_720w.jpg" alt="img"></p>
+<p>点击<code>生成新令牌</code>，把<strong>projects</strong>这一项勾上，其他的不用勾，然后提交</p>
+<p><img src="https://pic4.zhimg.com/80/v2-9d8ba0adb98d509d3de8c1b615c68353_720w.jpg" alt="img"></p>
+<p>这里需要验证一下密码，验证密码之后会出来一串数字，这一串数字就是你的token，将这串数字复制到刚才的配置里面去。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-7d9e998d82ae965fe7f1ddd93d59d48a_720w.jpg" alt="img"></p>
+<blockquote>
+<p>注意：这个令牌只会明文显示一次，建议在配置插件的时候再来生成令牌，直接复制进去，搞丢了又要重新生成一个。</p>
+</blockquote>
+<h3 id="现在保存你刚才的配置，然后将它设置为默认图床，大功告成。"><a href="#现在保存你刚才的配置，然后将它设置为默认图床，大功告成。" class="headerlink" title="现在保存你刚才的配置，然后将它设置为默认图床，大功告成。"></a>现在保存你刚才的配置，然后将它设置为默认图床，大功告成。</h3><p>还有一个插件<strong>gitee 1.2.2-beta</strong>，功能差不多，<code>刚才那个能用的话就不需要用这个</code>，配置的内容有点差别，简单说一下：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-499cfcbda9cbd6c4f5c8e23f30e382cc_720w.jpg" alt="img"></p>
+<ul>
+<li>url：图床网站，这里写码云的主页 <span class="exturl" data-url="aHR0cHM6Ly9saW5rLnpoaWh1LmNvbS8/dGFyZ2V0PWh0dHBzJTNBLy9naXRlZS5jb20=">https://gitee.com<i class="fa fa-external-link-alt"></i></span></li>
+<li>owner：所有者，写上你的码云账号名，如果你不知道你的账号名，进入你刚才的仓库，浏览器url里面有</li>
+</ul>
+<p><img src="https://pic1.zhimg.com/80/v2-f782ba2cb965931f00798322d42d3e54_720w.png" alt="img"></p>
+<ul>
+<li>repo：仓库名称，只要写上仓库名称就行，比如我自己的仓库blogImage</li>
+<li>path：写上路径，一般是img，<strong>这几个项都不用加“ / “符号</strong></li>
+<li>token：刚才你获取的个人令牌，两个插件是通用的，如果你用了另一个再来用这个，它会自动读取另一个插件的部分配置，不用重新申请</li>
+<li>message：不用填</li>
+</ul>
+<hr>
+<p>（4）. 测试</p>
+<p>随便选一张图片上传（picgo也支持剪贴板上传，截图工具推荐win10的<em>Snipaste</em>神器！），试试看</p>
+<h3 id="超级快有木有！比github快很多，0-1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！"><a href="#超级快有木有！比github快很多，0-1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！" class="headerlink" title="超级快有木有！比github快很多，0.1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！"></a>超级快有木有！比github快很多，0.1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！</h3><p><img src="https://pic1.zhimg.com/80/v2-7d18d14d530df892f48202f683947fcc_720w.jpg" alt="img"></p>
+<h3 id="上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！"><a href="#上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！" class="headerlink" title="上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！"></a>上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！</h3><p>博客写作套件<strong>Typora + PicGo + Snipaste</strong>，Typora写文档，Snipaste一键截图，PicGo一键上传图片返回链接。</p>
+<p>以上windows平台配置主要参考：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDI1OTQ1NTQ=">https://zhuanlan.zhihu.com/p/102594554<i class="fa fa-external-link-alt"></i></span></p>
+<p>linux PigGO平台的配置稍微要复杂一些，可以参考：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9kZjE2OWFlMGU2ZWU=">https://www.jianshu.com/p/df169ae0e6ee<i class="fa fa-external-link-alt"></i></span></p>
+<p>粘贴工具得考虑使用snipaste类似，否则使用不方便；</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="文献同步"><a href="#文献同步" class="headerlink" title="文献同步"></a>文献同步</h3><p>linux和mac: 与上述windows端配置类似</p>
+<p>手机端：</p>
+<ul>
+<li><p>Android  安装zoo，登录zotero ，云同步使用webDAV与之前坚果云配置一样</p>
+</li>
+<li><p>IOS 安装PaperShip，登录zotero, 云同步使用webDAV与之前坚果云配置一样</p>
+</li>
+</ul>
+<h3 id="笔记同步"><a href="#笔记同步" class="headerlink" title="笔记同步"></a>笔记同步</h3><p>采用typora+picgo方式，利用坚果云存储文件即可；</p>
+<p>如果需要编辑博客或公众号直接发布即可；</p>
+<p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
+
+            <span class="label">CSDN</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/20/%E7%BB%BC%E8%BF%B0-%E4%BE%BF%E6%90%BA%E5%BC%8Fgamma%E7%9B%B8%E6%9C%BA/" rel="next" title="综述-便携式gamma相机">
+      综述-便携式gamma相机 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%8F%A1%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E5%92%8C%E7%AC%94%E8%AE%B0%E5%A4%9A%E5%B9%B3%E5%8F%B0%E4%BA%91%E5%90%8C%E6%AD%A5%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">🏡文献阅读和笔记多平台云同步搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.坚果云平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-zotero"><span class="nav-number">1.2.</span> <span class="nav-text">2. zotero</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-typora-picgo"><span class="nav-number">1.3.</span> <span class="nav-text">3. typora+picgo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E6%89%93%E5%BC%80picgo%E5%AE%98%E7%BD%91%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">1.3.1.</span> <span class="nav-text">首先打开picgo官网，下载安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B9%8B%E5%90%8E%E6%89%93%E5%BC%80%E4%B8%BB%E7%95%8C%E9%9D%A2"><span class="nav-number">1.3.2.</span> <span class="nav-text">安装之后打开主界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%9C%80%E5%BA%95%E4%B8%8B%E7%9A%84%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE%EF%BC%8C%E6%90%9C%E7%B4%A2gitee"><span class="nav-number">1.3.3.</span> <span class="nav-text">选择最底下的插件设置，搜索gitee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8F%B3%E8%BE%B9%E7%9A%84gitee-uploader-1-1-2%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">1.3.4.</span> <span class="nav-text">点击右边的gitee-uploader 1.1.2开始安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8F%B3%E4%B8%8A%E8%A7%92%E7%9A%84-%E5%8F%B7%EF%BC%8C%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">1.3.5.</span> <span class="nav-text">点击右上角的+号，新建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%E7%9A%84%E8%A6%81%E7%82%B9%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">1.3.6.</span> <span class="nav-text">配置插件的要点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%99%E4%B8%AAtoken%E6%80%8E%E4%B9%88%E8%8E%B7%E5%8F%96%EF%BC%8C%E4%B8%8B%E9%9D%A2%E7%99%BB%E5%BD%95%E8%BF%9B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%A0%81%E4%BA%91"><span class="nav-number">1.3.7.</span> <span class="nav-text">这个token怎么获取，下面登录进自己的码云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E5%9C%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%88%9A%E6%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%8C%E7%84%B6%E5%90%8E%E5%B0%86%E5%AE%83%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%BB%98%E8%AE%A4%E5%9B%BE%E5%BA%8A%EF%BC%8C%E5%A4%A7%E5%8A%9F%E5%91%8A%E6%88%90%E3%80%82"><span class="nav-number">1.3.8.</span> <span class="nav-text">现在保存你刚才的配置，然后将它设置为默认图床，大功告成。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E7%BA%A7%E5%BF%AB%E6%9C%89%E6%9C%A8%E6%9C%89%EF%BC%81%E6%AF%94github%E5%BF%AB%E5%BE%88%E5%A4%9A%EF%BC%8C0-1%E7%A7%92%E4%B8%8A%E4%BC%A0%EF%BC%8C%E8%80%8C%E4%B8%94%E5%AF%BC%E5%85%A5%E5%88%B0%E4%BD%A0%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8%E9%87%8C%E9%9D%A2%E4%B9%9F%E6%98%AF%E7%A7%92%E8%AF%86%E5%88%AB%E4%BD%A0%E7%9A%84%E5%9B%BE%E7%89%87%E5%86%85%E5%AE%B9%EF%BC%8C%E8%80%8C%E5%A6%82%E6%9E%9C%E6%98%AFgithub%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%A4%AA%E6%85%A2%E4%B8%8D%E8%AF%B4%E5%8F%AF%E8%83%BD%E8%BF%98%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%B8%8B%E9%9D%A2%E8%BF%99%E6%A0%B7%E8%AF%86%E5%88%AB%E4%B8%8D%E5%87%BA%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%81"><span class="nav-number">1.3.9.</span> <span class="nav-text">超级快有木有！比github快很多，0.1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E4%B9%8B%E5%90%8E%E9%BB%98%E8%AE%A4%E5%A4%8D%E5%88%B6%E9%93%BE%E6%8E%A5%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%B2%98%E8%B4%B4%E5%88%B0%E4%BD%A0%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8%E9%87%8C%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%84%89%E5%BF%AB%E7%9A%84%E8%BF%9B%E8%A1%8C%E5%86%99%E4%BD%9C%E4%BA%86%EF%BC%81"><span class="nav-number">1.3.10.</span> <span class="nav-text">上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E5%90%8C%E6%AD%A5"><span class="nav-number">1.4.1.</span> <span class="nav-text">文献同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%94%E8%AE%B0%E5%90%8C%E6%AD%A5"><span class="nav-number">1.4.2.</span> <span class="nav-text">笔记同步</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李会"
+      src="/images/owl.jpg">
+  <p class="site-author-name" itemprop="name">李会</p>
+  <div class="site-description" itemprop="description">Get busy living or get busy dying.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0h1YmVyeS1MZWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Hubery-Lee"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI5OTUwMDY1" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;baidu_29950065"><i class="fab fa-cuttlefish fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgyMzkyNjU5MC9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2823926590&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="fab fa-weibo fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM1NzY5MjU0Mg==" title="Netease → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;357692542"><i class="fas fa-music fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhyYmV1bGhAMTI2LmNvbQ==" title="E-Mail → mailto:hrbeulh@126.com"><i class="fas fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbQ==" title="Runoob → https:&#x2F;&#x2F;www.runoob.com"><i class="fas fa-cube fa-fw"></i></span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL2dlYW50NC53ZWIuY2Vybi5jaC8=" title="http:&#x2F;&#x2F;geant4.web.cern.ch&#x2F;">Geant4</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4uY2gv" title="https:&#x2F;&#x2F;root.cern.ch&#x2F;">Root</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL3d3dy5hcGMudW5pdi1wYXJpczcuZnIvfmZyYW5jby9nNGRveHk0LjEwL2h0bWwvYW5ub3RhdGVkLmh0bWw=" title="http:&#x2F;&#x2F;www.apc.univ-paris7.fr&#x2F;~franco&#x2F;g4doxy4.10&#x2F;html&#x2F;annotated.html">G4ClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vZG9jL21hc3Rlci9tb2R1bGVzLmh0bWw=" title="https:&#x2F;&#x2F;root.cern&#x2F;doc&#x2F;master&#x2F;modules.html">RootClassIndex</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93dWhvbmd5aS5jbg==" title="https:&#x2F;&#x2F;wuhongyi.cn">wuhongyi</span>
+        </li>
+    </ul>
+  </div>
+<div class="cc-license motion-element" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李会</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ooozwlclX00aJabPvk1WTj7J-gzGzoHsz',
+      appKey     : 'CnXrRUVdUdMXgEvGbdolWGYX',
+      placeholder: "若有想咨询的事情，请留下你的邮箱！",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
