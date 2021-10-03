@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubery-lee.github.io/"/>
-  <updated>2021-10-03T13:01:52.531Z</updated>
+  <updated>2021-10-03T13:14:39.286Z</updated>
   <id>https://hubery-lee.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hubery-lee.github.io/2021/10/03/Zotero%E7%AE%A1%E7%90%86%E6%96%87%E7%8C%AE/"/>
     <id>https://hubery-lee.github.io/2021/10/03/Zotero%E7%AE%A1%E7%90%86%E6%96%87%E7%8C%AE/</id>
     <published>2021-10-03T12:34:43.000Z</published>
-    <updated>2021-10-03T13:01:52.531Z</updated>
+    <updated>2021-10-03T13:14:39.286Z</updated>
     
-    <content type="html"><![CDATA[<p>之前曾介绍过citavi，文献管理中的战斗机，具有标记、计划、引用和思维记录等功能，但它的缺点也非常的明显，加载速度慢，文献获取没有zotero方便。自从转向zotero后，开始享受其带来的愉悦体验；</p> <a id="more"></a><h2 id="资料的快捷获取"><a href="#资料的快捷获取" class="headerlink" title="资料的快捷获取"></a>资料的快捷获取</h2><p>Zotero能通过Chrome插件zotero connector 快速抓取网页或文献资料，其最方便的地方在于抓取文献资料时能自动下载pdf文档。除此之外，Zotero还提供RSS资源订阅功能。</p><h3 id="网页内容抓取"><a href="#网页内容抓取" class="headerlink" title="网页内容抓取"></a>网页内容抓取</h3><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/dh.gif" alt></p><h3 id="RSS资源订阅"><a href="#RSS资源订阅" class="headerlink" title="RSS资源订阅"></a>RSS资源订阅</h3><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/%E5%8A%A8%E7%94%BB1.gif" alt></p><h2 id="标签与时间轴管理"><a href="#标签与时间轴管理" class="headerlink" title="标签与时间轴管理"></a>标签与时间轴管理</h2><p>通过添加标签和指派颜色能够对文献进行快速的分，通过时间轴来查看文献的时间</p><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/dh2.gif" alt></p><h2 id="笔记功能设置"><a href="#笔记功能设置" class="headerlink" title="笔记功能设置"></a>笔记功能设置</h2><p>Zotero的开源和插件特性使得其使用更具有自定义特性，zotFile插件的能够自动快速的添加文献，同时还能实现云端文献同步，此外，其还有具有pdf笔记自动提取功能，再结合Mdnotes插件进行markdown语言的读后感撰写，使得做笔记具有丝滑的感觉。为了让对文献进行统计分析可采用Excel或者Notion进行表格制作。</p><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/dh3.gif" alt></p><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/dh4.gif" alt></p><p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>]]></content>
+    <content type="html"><![CDATA[<p>之前曾介绍过citavi，文献管理中的战斗机，具有标记、计划、引用和思维记录等功能，但它的缺点也非常的明显，加载速度慢，文献获取没有zotero方便。自从转向zotero后，开始享受其带来的愉悦体验；</p> <a id="more"></a><h2 id="资料的快捷获取"><a href="#资料的快捷获取" class="headerlink" title="资料的快捷获取"></a>资料的快捷获取</h2><p>Zotero能通过Chrome插件zotero connector 快速抓取网页或文献资料，其最方便的地方在于抓取文献资料时能自动下载pdf文档。除此之外，Zotero还提供RSS资源订阅功能。</p><h3 id="网页内容抓取"><a href="#网页内容抓取" class="headerlink" title="网页内容抓取"></a>网页内容抓取</h3><p><img src="https://github.com/Hubery-Lee/Notes/blob/master/images/dh.gif" alt></p><h3 id="RSS资源订阅"><a href="#RSS资源订阅" class="headerlink" title="RSS资源订阅"></a>RSS资源订阅</h3><p><img src="https://github.com/Hubery-Lee/Notes/blob/master/images/%E5%8A%A8%E7%94%BB1.gif" alt></p><h2 id="标签与时间轴管理"><a href="#标签与时间轴管理" class="headerlink" title="标签与时间轴管理"></a>标签与时间轴管理</h2><p>通过添加标签和指派颜色能够对文献进行快速的分，通过时间轴来查看文献的时间<br><img src="https://github.com/Hubery-Lee/Notes/blob/master/images/dh2.gif" alt></p><h2 id="笔记功能设置"><a href="#笔记功能设置" class="headerlink" title="笔记功能设置"></a>笔记功能设置</h2><p>Zotero的开源和插件特性使得其使用更具有自定义特性，zotFile插件的能够自动快速的添加文献，同时还能实现云端文献同步，此外，其还有具有pdf笔记自动提取功能，再结合Mdnotes插件进行markdown语言的读后感撰写，使得做笔记具有丝滑的感觉。为了让对文献进行统计分析可采用Excel或者Notion进行表格制作。</p><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/dh3.gif" alt></p><p><img src="https://gitee.com/hubery_lee123/image-source/raw/master/dh4.gif" alt></p><p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>]]></content>
     
     <summary type="html">
     
