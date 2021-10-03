@@ -21,17 +21,21 @@
     var CONFIG = {"hostname":"hubery-lee.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="Get busy living or get busy dying.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hubery-Lee">
-<meta property="og:url" content="https://hubery-lee.github.io/archives/page/4/index.html">
+  <meta name="description" content="root的TMVA如何与pytorch结合使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="root的TMVA如何与pytorch结合使用">
+<meta property="og:url" content="https://hubery-lee.github.io/2021/04/30/root%E7%9A%84TMVA%E5%A6%82%E4%BD%95%E4%B8%8Epytorch%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hubery-Lee">
-<meta property="og:description" content="Get busy living or get busy dying.">
+<meta property="og:description" content="root的TMVA如何与pytorch结合使用">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
+<meta property="article:published_time" content="2021-04-30T08:54:42.000Z">
+<meta property="article:modified_time" content="2021-10-03T12:42:35.714Z">
 <meta property="article:author" content="李会">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png">
 
-<link rel="canonical" href="https://hubery-lee.github.io/archives/page/4/">
+<link rel="canonical" href="https://hubery-lee.github.io/2021/04/30/root%E7%9A%84TMVA%E5%A6%82%E4%BD%95%E4%B8%8Epytorch%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -39,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Hubery-Lee</title>
+  <title>root的TMVA如何与pytorch结合使用 | Hubery-Lee</title>
   
 
 
@@ -190,240 +194,179 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hubery-lee.github.io/2021/04/30/root%E7%9A%84TMVA%E5%A6%82%E4%BD%95%E4%B8%8Epytorch%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/owl.jpg">
+      <meta itemprop="name" content="李会">
+      <meta itemprop="description" content="Get busy living or get busy dying.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hubery-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          root的TMVA如何与pytorch结合使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-30 16:54:42" itemprop="dateCreated datePublished" datetime="2021-04-30T16:54:42+08:00">2021-04-30</time>
+            </span>
+
+          
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">还行! 目前共计 50 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/04/30/root%E7%9A%84TMVA%E5%A6%82%E4%BD%95%E4%B8%8Epytorch%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/30/root%E7%9A%84TMVA%E5%A6%82%E4%BD%95%E4%B8%8Epytorch%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2018</span>
+        <h1 id="root的TMVA如何与pytorch结合使用"><a href="#root的TMVA如何与pytorch结合使用" class="headerlink" title="root的TMVA如何与pytorch结合使用"></a>root的TMVA如何与pytorch结合使用</h1><p> <img src="https://gitee.com/hubery_lee123/image-source/raw/master/Screenshot%202021-02-23%20120116%20(2).png" alt></p>
+ <a id="more"></a>
+
+<h2 id="1-什么是TMVA？"><a href="#1-什么是TMVA？" class="headerlink" title="1.什么是TMVA？"></a>1.什么是TMVA？</h2><p>The Toolkit for Multivariate Data Analysis with ROOT <span class="exturl" data-url="aHR0cHM6Ly9yb290LmNlcm4vbWFudWFsL3RtdmEv">TMVA<i class="fa fa-external-link-alt"></i></span>provides a machine learning environment for the processing and evaluation of multivariate classification, both binary and multi-class, and regression techniques targeting applications in high-energy physics. The package includes:</p>
+<ul>
+<li>Neural networks</li>
+<li>Deep networks</li>
+<li>Multilayer perceptron</li>
+<li>Boosted/Bagged decision trees</li>
+<li>Function discriminant analysis (FDA)</li>
+<li>Multidimensional probability density estimation (PDE - range-search approach)</li>
+<li>Multidimensional k-nearest neighbor classifier</li>
+<li>Predictive learning via rule ensembles (RuleFit)</li>
+<li>Projective likelihood estimation (PDE approach)</li>
+<li>Rectangular cut optimisation</li>
+<li>Support Vector Machine (SVM)</li>
+</ul>
+<h2 id="2-什么是pytorch"><a href="#2-什么是pytorch" class="headerlink" title="2.什么是pytorch?"></a>2.什么是pytorch?</h2><p><span class="exturl" data-url="aHR0cHM6Ly9weXRvcmNoLm9yZy8=">PyTorch<i class="fa fa-external-link-alt"></i></span> is a Python-based scientific package supporting automatic differentiation. An open-source machine learning framework that accelerates the path from research prototyping to production deployment.</p>
+<h2 id="3-为什么要将TMVA与pytorch集合？"><a href="#3-为什么要将TMVA与pytorch集合？" class="headerlink" title="3.为什么要将TMVA与pytorch集合？"></a>3.为什么要将TMVA与pytorch集合？</h2><p>TMVA already has a PyKeras interface which we all love, especially with Keras’ simple high-level tensor-flow API. If your work involves some elementary experiments, Keras maybe the goto framework due to its plug and play spirit.</p>
+<p>But things get interesting when one requires low level control and flexibility. That’s when the argument for Keras starts losing water. PyTorch on the other hand is amazing in terms of control, flexibility and raw power that it can provide to the user. Its lower-level approach is better suited for the more mathematically-inclined users.</p>
+<p>PyTorch is widely used among researchers and hence has a large community around it.</p>
+<ul>
+<li>ROOT + PyTorch: Allows to integrate ROOT methods which are good at handling HEP data and PyTorch for Machine Learning.</li>
+<li>Power &amp; Flexibility: Neural Nets are not easy to develop using TMVA, as they require complex configuration strings. Even with PyKeras Interface, designing custom layers is not feasible. PyTorch offers the power and flexibility to achieve complex models with custom layers, optimizers, loss functions and training methodologies.</li>
+<li>Ease of Debugging: PyTorch models make use of dynamic computation graphs and are based on eager execution. This makes it easier to use debugging tools like pdb.</li>
+<li>Performance: PyTorch is extremely fast due to its highly optimized C++ backend.</li>
+</ul>
+<h2 id="4-应用实例"><a href="#4-应用实例" class="headerlink" title="4.应用实例"></a>4.应用实例</h2><p><span class="exturl" data-url="aHR0cHM6Ly9hbmlydWRoZGFnYXIubWwvZ3NvYy90bXZhL3B5dG9yY2gvcm9vdC8yMDIwLzA4LzIxL1RNVkEtUHlUb3JjaC1UdXRvcmlhbC5odG1s">https://anirudhdagar.ml/gsoc/tmva/pytorch/root/2020/08/21/TMVA-PyTorch-Tutorial.html<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Jvb3QtcHJvamVjdC9yb290L3RyZWUvbWFzdGVyL3R1dG9yaWFscy90bXZh">https://github.com/root-project/root/tree/master/tutorials/tmva<i class="fa fa-external-link-alt"></i></span></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-11-23T00:20:51+08:00"
-              content="2018-11-23">
-          11-23
-        </time>
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.jpg" alt="李会 微信支付">
+        <p>微信支付</p>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/11/23/CMakeLists-txt%E7%BC%96%E5%86%99%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url">
-            <span itemprop="name">CMakeLists.txt编写基础知识</span>
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechatsubscrible.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
           </a>
-      </div>
+        </div>
 
-    </header>
-  </article>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Hubery-Lee">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-10-16T20:29:30+08:00"
-              content="2018-10-16">
-          10-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/10/16/Show%20RunTime%20and%20Solve%20Problem%20that%20Data%20ReadOut%20Are%20Disordered%20in%20Geant4%20Multi-thread%20Mode/" itemprop="url">
-            <span itemprop="name">Show RunTime and Solve Problem that Data ReadOut Are Disordered in Geant4 Multi-thread Mode</span>
+            <span class="label">GitHub</span>
           </a>
-      </div>
+        </div>
 
-    </header>
-  </article>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://blog.csdn.net/baidu_29950065">
+            <span class="icon">
+              <i class="fab fa-cuttlefish"></i>
+            </span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-10-11T22:07:58+08:00"
-              content="2018-10-11">
-          10-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/10/11/Emacs-yasnippets-and-markdown-configure/" itemprop="url">
-            <span itemprop="name">Emacs yasnippets and markdown configure</span>
+            <span class="label">CSDN</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-10-11T11:41:25+08:00"
-              content="2018-10-11">
-          10-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/10/11/G4-Detector-CopyNo-and-MotherCopyNo-access/" itemprop="url">
-            <span itemprop="name">G4 Detector CopyNo and MotherCopyNo access</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-23T13:04:15+08:00"
-              content="2018-09-23">
-          09-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/23/How-to-Use-Hit-to-Get-Primary-Information-in-Geant4/" itemprop="url">
-            <span itemprop="name">How to Use Hit to Get Primary Information in Geant4</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-23T13:04:11+08:00"
-              content="2018-09-23">
-          09-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/23/How-to-Use-Root-to-Draw-3D-Histogram/" itemprop="url">
-            <span itemprop="name">How to Use Root to Draw 3D Histogram</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-17T22:21:46+08:00"
-              content="2018-09-17">
-          09-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/17/G4DataReadOutMethods/" itemprop="url">
-            <span itemprop="name">Gean4 Data Read Out Methods</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-14T18:16:57+08:00"
-              content="2018-09-14">
-          09-14
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/14/Hexo-Next-theme-Setting/" itemprop="url">
-            <span itemprop="name">Hexo Next theme Setting</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-14T15:45:38+08:00"
-              content="2018-09-14">
-          09-14
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/14/icon-download-site/" itemprop="url">
-            <span itemprop="name">icon download site</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-09-14T15:10:01+08:00"
-              content="2018-09-14">
-          09-14
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/09/14/Geant4-and-Root-Class-Index/" itemprop="url">
-            <span itemprop="name">Geant4 and Root Class Index</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/28/python%E7%BB%98%E5%9B%BE-%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E6%96%B9%E6%B3%95/" rel="next" title="python绘图-文本数据读取方法">
+      python绘图-文本数据读取方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+  
+  
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -470,6 +413,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#root%E7%9A%84TMVA%E5%A6%82%E4%BD%95%E4%B8%8Epytorch%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">root的TMVA如何与pytorch结合使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFTMVA%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1.什么是TMVA？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AFpytorch"><span class="nav-number">1.2.</span> <span class="nav-text">2.什么是pytorch?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%B0%86TMVA%E4%B8%8Epytorch%E9%9B%86%E5%90%88%EF%BC%9F"><span class="nav-number">1.3.</span> <span class="nav-text">3.为什么要将TMVA与pytorch集合？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">4.应用实例</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
