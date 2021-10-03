@@ -259,47 +259,6 @@
 <li>parquet</li>
 <li>...</li>
 </ul>
-<p>pd.dtypes</p>
-<p>pd.info()</p>
-<p>pd.head()</p>
-<p>pd.tail()</p>
-<blockquote>
-<ul>
-<li>Import the package, aka <code>import pandas as pd</code></li>
-<li>A table of data is stored as a pandas <code>DataFrame</code></li>
-<li>Each column in a <code>DataFrame</code> is a <code>Series</code></li>
-<li>You can do things by applying a method to a <code>DataFrame</code> or <code>Series</code></li>
-<li>Getting data in to pandas from many different file formats or data sources is supported by read_* functions.</li>
-<li>Exporting data out of pandas is provided by different to_*methods.</li>
-<li>The head/tail/info methods and the dtypes attribute are convenient for a first check.</li>
-<li>When selecting subsets of data, square brackets [] are used.</li>
-<li>Inside these brackets, you can use a single column/row label, a list of column/row labels, a slice of labels, a conditional expression or a colon.</li>
-<li>Select specific rows and/or columns using loc when using the row and column names</li>
-<li>Select specific rows and/or columns using iloc when using the positions in the table</li>
-<li>You can assign new values to a selection based on loc/iloc.</li>
-<li>The <code>.plot.*</code> methods are applicable on both Series and DataFrames</li>
-<li>By default, each of the columns is plotted as a different element (line, boxplot,…)</li>
-<li>Any plot created by pandas is a Matplotlib object.</li>
-<li>Create a new column by assigning the output to the DataFrame with a new column name in between the <code>[]</code>.</li>
-<li>Operations are element-wise, no need to loop over rows.</li>
-<li>Use <code>rename</code> with a dictionary or function to rename row labels or column names.</li>
-<li>Aggregation statistics can be calculated on entire columns or rows</li>
-<li><code>groupby</code> provides the power of the <em>split-apply-combine</em> pattern</li>
-<li><code>value_counts</code> is a convenient shortcut to count the number of entries in each category of a variable</li>
-<li>Sorting by one or more columns is supported by <code>sort_values</code></li>
-<li>The <code>pivot</code> function is purely restructuring of the data, <code>pivot_table</code> supports aggregations</li>
-<li>The reverse of <code>pivot</code> (long to wide format) is <code>melt</code> (wide to long format)</li>
-<li>Multiple tables can be concatenated both column-wise and row-wise using the <code>concat</code> function.</li>
-<li>For database-like merging/joining of tables, use the <code>merge</code> function.</li>
-<li>Valid date strings can be converted to datetime objects using <code>to_datetime</code> function or as part of read functions.</li>
-<li>Datetime objects in pandas support calculations, logical operations and convenient date-related properties using the <code>dt</code> accessor.</li>
-<li>A <code>DatetimeIndex</code> contains these date-related properties and supports convenient slicing.</li>
-<li><code>Resample</code> is a powerful method to change the frequency of a time series.</li>
-<li>String methods are available using the <code>str</code> accessor.</li>
-<li>String methods work element-wise and can be used for conditional indexing.</li>
-<li>The <code>replace</code> method is a convenient method to convert values according to a given dictionary.</li>
-</ul>
-</blockquote>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/28/python%E7%BB%98%E5%9B%BE-%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E6%96%B9%E6%B3%95/#more" rel="contents">
